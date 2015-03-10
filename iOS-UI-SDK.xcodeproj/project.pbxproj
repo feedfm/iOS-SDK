@@ -6,6 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		97E1C7E41AAE7704005AF723 /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 97E1C7E51AAE7704005AF723 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				97E1C7EC1AAE789C005AF723 /* Create distribution .zip */,
+			);
+			dependencies = (
+				97E1C7EB1AAE7715005AF723 /* PBXTargetDependency */,
+				97E1C7E91AAE770F005AF723 /* PBXTargetDependency */,
+			);
+			name = Distribution;
+			productName = Distribution;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		97E1C75B1AAE65F7005AF723 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75A1AAE65F7005AF723 /* main.m */; };
 		97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75D1AAE65F7005AF723 /* AppDelegate.m */; };
@@ -44,6 +60,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 97D93C901A9FC38C0022A51B;
 			remoteInfo = FeedMedia;
+		};
+		97E1C7E81AAE770F005AF723 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 97D93CDB1A9FC6D20022A51B;
+			remoteInfo = Framework;
+		};
+		97E1C7EA1AAE7715005AF723 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97E1C74D1AAE65F7005AF723 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97E1C7541AAE65F7005AF723;
+			remoteInfo = "iOS-UI-SDK";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -240,6 +270,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 97E1C7541AAE65F7005AF723;
 					};
+					97E1C7E41AAE7704005AF723 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 97E1C7501AAE65F7005AF723 /* Build configuration list for PBXProject "iOS-UI-SDK" */;
@@ -263,6 +296,7 @@
 			targets = (
 				97E1C7541AAE65F7005AF723 /* iOS-UI-SDK */,
 				97E1C76D1AAE65F7005AF723 /* iOS-UI-SDKTests */,
+				97E1C7E41AAE7704005AF723 /* Distribution */,
 			);
 		};
 /* End PBXProject section */
@@ -299,6 +333,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97E1C7EC1AAE789C005AF723 /* Create distribution .zip */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create distribution .zip";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nrm -f ${PROJECT_DIR}/FeedMedia.zip\n\ncd ${BUILT_PRODUCTS_DIR}\nzip -r --symlinks ${PROJECT_DIR}/FeedMedia.zip *.framework\n\ncd \"${PROJECT_DIR}/${PROJECT_NAME}/Dist\"\nzip -r --symlinks -u ${PROJECT_DIR}/FeedMedia.zip *\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97E1C7511AAE65F7005AF723 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,6 +382,16 @@
 			isa = PBXTargetDependency;
 			name = FeedMedia;
 			targetProxy = 97E1C7E21AAE75B0005AF723 /* PBXContainerItemProxy */;
+		};
+		97E1C7E91AAE770F005AF723 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Framework;
+			targetProxy = 97E1C7E81AAE770F005AF723 /* PBXContainerItemProxy */;
+		};
+		97E1C7EB1AAE7715005AF723 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97E1C7541AAE65F7005AF723 /* iOS-UI-SDK */;
+			targetProxy = 97E1C7EA1AAE7715005AF723 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -486,6 +547,20 @@
 			};
 			name = Release;
 		};
+		97E1C7E61AAE7704005AF723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		97E1C7E71AAE7704005AF723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,6 +586,14 @@
 			buildConfigurations = (
 				97E1C77C1AAE65F7005AF723 /* Debug */,
 				97E1C77D1AAE65F7005AF723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97E1C7E51AAE7704005AF723 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97E1C7E61AAE7704005AF723 /* Debug */,
+				97E1C7E71AAE7704005AF723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
