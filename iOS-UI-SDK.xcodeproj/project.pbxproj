@@ -38,6 +38,13 @@
 			remoteGlobalIDString = 97D93C911A9FC38C0022A51B;
 			remoteInfo = FeedMedia;
 		};
+		97E1C7E21AAE75B0005AF723 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 97D93C901A9FC38C0022A51B;
+			remoteInfo = FeedMedia;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -111,8 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */,
-				97E1C77E1AAE660D005AF723 /* Views */,
-				97E1C7E11AAE719C005AF723 /* Resources */,
+				97E1C77E1AAE660D005AF723 /* Dist */,
 				97E1C75C1AAE65F7005AF723 /* AppDelegate.h */,
 				97E1C75D1AAE65F7005AF723 /* AppDelegate.m */,
 				97E1C75F1AAE65F7005AF723 /* ViewController.h */,
@@ -151,14 +157,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		97E1C77E1AAE660D005AF723 /* Views */ = {
+		97E1C77E1AAE660D005AF723 /* Dist */ = {
 			isa = PBXGroup;
 			children = (
 				97E1C7811AAE6625005AF723 /* FMPlayPauseButton.h */,
 				97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */,
+				97E1C7E11AAE719C005AF723 /* Resources */,
 			);
-			name = Views;
-			path = "iOS-UI-SDK/Views";
+			name = Dist;
+			path = "iOS-UI-SDK/Dist";
 			sourceTree = SOURCE_ROOT;
 		};
 		97E1C7891AAE6657005AF723 /* Products */ = {
@@ -175,9 +182,8 @@
 				97E1C78F1AAE674A005AF723 /* play.png */,
 				97E1C7901AAE674A005AF723 /* pause.png */,
 			);
-			name = Resources;
-			path = "iOS-UI-SDK/Resources";
-			sourceTree = SOURCE_ROOT;
+			path = Resources;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -193,6 +199,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				97E1C7E31AAE75B0005AF723 /* PBXTargetDependency */,
 			);
 			name = "iOS-UI-SDK";
 			productName = "iOS-UI-SDK";
@@ -319,6 +326,11 @@
 			isa = PBXTargetDependency;
 			target = 97E1C7541AAE65F7005AF723 /* iOS-UI-SDK */;
 			targetProxy = 97E1C76F1AAE65F7005AF723 /* PBXContainerItemProxy */;
+		};
+		97E1C7E31AAE75B0005AF723 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FeedMedia;
+			targetProxy = 97E1C7E21AAE75B0005AF723 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
