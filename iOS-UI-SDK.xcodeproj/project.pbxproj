@@ -14,6 +14,13 @@
 		97E1C7661AAE65F7005AF723 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7651AAE65F7005AF723 /* Images.xcassets */; };
 		97E1C7691AAE65F7005AF723 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7671AAE65F7005AF723 /* LaunchScreen.xib */; };
 		97E1C7751AAE65F7005AF723 /* iOS_UI_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7741AAE65F7005AF723 /* iOS_UI_SDKTests.m */; };
+		97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */; };
+		97E1C7911AAE674A005AF723 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C78F1AAE674A005AF723 /* play.png */; };
+		97E1C7921AAE674A005AF723 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7901AAE674A005AF723 /* pause.png */; };
+		97E1C7931AAE69A6005AF723 /* libFeedMedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C78E1AAE6657005AF723 /* libFeedMedia.a */; };
+		97E1C7951AAE69EE005AF723 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C7941AAE69EE005AF723 /* CoreMedia.framework */; };
+		97E1C7DE1AAE7143005AF723 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C7DD1AAE7143005AF723 /* AVFoundation.framework */; };
+		97E1C7E01AAE714B005AF723 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C7DF1AAE714B005AF723 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +30,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 97E1C7541AAE65F7005AF723;
 			remoteInfo = "iOS-UI-SDK";
+		};
+		97E1C78D1AAE6657005AF723 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 97D93C911A9FC38C0022A51B;
+			remoteInfo = FeedMedia;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +54,14 @@
 		97E1C76E1AAE65F7005AF723 /* iOS-UI-SDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-UI-SDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E1C7731AAE65F7005AF723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97E1C7741AAE65F7005AF723 /* iOS_UI_SDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_UI_SDKTests.m; sourceTree = "<group>"; };
+		97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPlayPauseButton.m; sourceTree = "<group>"; };
+		97E1C7811AAE6625005AF723 /* FMPlayPauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPlayPauseButton.h; sourceTree = "<group>"; };
+		97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FeedMedia.xcodeproj; path = "../../iOS-SDK/FeedMedia.xcodeproj"; sourceTree = "<group>"; };
+		97E1C78F1AAE674A005AF723 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		97E1C7901AAE674A005AF723 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		97E1C7941AAE69EE005AF723 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		97E1C7DD1AAE7143005AF723 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		97E1C7DF1AAE714B005AF723 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E1C7E01AAE714B005AF723 /* MediaPlayer.framework in Frameworks */,
+				97E1C7DE1AAE7143005AF723 /* AVFoundation.framework in Frameworks */,
+				97E1C7951AAE69EE005AF723 /* CoreMedia.framework in Frameworks */,
+				97E1C7931AAE69A6005AF723 /* libFeedMedia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +89,9 @@
 		97E1C74C1AAE65F7005AF723 = {
 			isa = PBXGroup;
 			children = (
+				97E1C7DF1AAE714B005AF723 /* MediaPlayer.framework */,
+				97E1C7DD1AAE7143005AF723 /* AVFoundation.framework */,
+				97E1C7941AAE69EE005AF723 /* CoreMedia.framework */,
 				97E1C7571AAE65F7005AF723 /* iOS-UI-SDK */,
 				97E1C7711AAE65F7005AF723 /* iOS-UI-SDKTests */,
 				97E1C7561AAE65F7005AF723 /* Products */,
@@ -81,6 +110,9 @@
 		97E1C7571AAE65F7005AF723 /* iOS-UI-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */,
+				97E1C77E1AAE660D005AF723 /* Views */,
+				97E1C7E11AAE719C005AF723 /* Resources */,
 				97E1C75C1AAE65F7005AF723 /* AppDelegate.h */,
 				97E1C75D1AAE65F7005AF723 /* AppDelegate.m */,
 				97E1C75F1AAE65F7005AF723 /* ViewController.h */,
@@ -118,6 +150,34 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		97E1C77E1AAE660D005AF723 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97E1C7811AAE6625005AF723 /* FMPlayPauseButton.h */,
+				97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */,
+			);
+			name = Views;
+			path = "iOS-UI-SDK/Views";
+			sourceTree = SOURCE_ROOT;
+		};
+		97E1C7891AAE6657005AF723 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97E1C78E1AAE6657005AF723 /* libFeedMedia.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97E1C7E11AAE719C005AF723 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				97E1C78F1AAE674A005AF723 /* play.png */,
+				97E1C7901AAE674A005AF723 /* pause.png */,
+			);
+			name = Resources;
+			path = "iOS-UI-SDK/Resources";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -186,6 +246,12 @@
 			mainGroup = 97E1C74C1AAE65F7005AF723;
 			productRefGroup = 97E1C7561AAE65F7005AF723 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 97E1C7891AAE6657005AF723 /* Products */;
+					ProjectRef = 97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				97E1C7541AAE65F7005AF723 /* iOS-UI-SDK */,
@@ -194,12 +260,24 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		97E1C78E1AAE6657005AF723 /* libFeedMedia.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFeedMedia.a;
+			remoteRef = 97E1C78D1AAE6657005AF723 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		97E1C7531AAE65F7005AF723 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				97E1C7641AAE65F7005AF723 /* Main.storyboard in Resources */,
+				97E1C7911AAE674A005AF723 /* play.png in Resources */,
+				97E1C7921AAE674A005AF723 /* pause.png in Resources */,
 				97E1C7691AAE65F7005AF723 /* LaunchScreen.xib in Resources */,
 				97E1C7661AAE65F7005AF723 /* Images.xcassets in Resources */,
 			);
@@ -220,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */,
+				97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */,
 				97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */,
 				97E1C75B1AAE65F7005AF723 /* main.m in Sources */,
 			);
