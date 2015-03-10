@@ -47,6 +47,15 @@
     return self;
 }
 
+#if !TARGET_INTERFACE_BUILDER
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#endif
+
+
 - (void) setBackgroundColor: (UIColor *) color {
     super.backgroundColor = [UIColor clearColor];
 }
@@ -94,17 +103,17 @@
     
 }
 
-- (void) onPlayClick {
 #if !TARGET_INTERFACE_BUILDER
+
+- (void) onPlayClick {
     [_feedPlayer play];
-#endif
 }
 
 - (void) onPauseClick {
-#if !TARGET_INTERFACE_BUILDER
     [_feedPlayer pause];
-#endif
 }
+
+#endif
 
 - (void) setPlayTitle:(NSString *)playTitle {
     _playTitle = playTitle;
@@ -179,14 +188,12 @@
         case FMAudioPlayerPlaybackStateReadyToPlay:
         case FMAudioPlayerPlaybackStatePaused:
             [_spinner stopAnimating];
-            _playButton.enabled = YES;
             _playButton.hidden = NO;
             _pauseButton.hidden = YES;
             break;
         case FMAudioPlayerPlaybackStatePlaying:
             [_spinner stopAnimating];
             _playButton.hidden = YES;
-            _pauseButton.enabled = YES;
             _pauseButton.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateStalled:
@@ -201,7 +208,6 @@
             break;
         case FMAudioPlayerPlaybackStateComplete:
             [_spinner stopAnimating];
-            _playButton.enabled = YES;
             _playButton.hidden = NO;
             _pauseButton.hidden = YES;
             break;

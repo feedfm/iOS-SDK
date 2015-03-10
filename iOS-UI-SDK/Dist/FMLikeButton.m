@@ -54,12 +54,18 @@
     
     [self addTarget:self action:@selector(onLikeClick) forControlEvents:UIControlEventTouchUpInside];
     ;
+
+    [self updatePlayerState];
 #endif
     
-    [self updatePlayerState];
 }
 
 #if !TARGET_INTERFACE_BUILDER
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void) onLikeClick {
     BOOL liked = _feedPlayer.currentItem.liked;
 
@@ -71,7 +77,6 @@
     
     [self updatePlayerState];
 }
-#endif
 
 - (void) playerUpdated: (NSNotification *)notification {
     [self updatePlayerState];
@@ -81,13 +86,9 @@
     FMAudioPlayerPlaybackState newState;
     BOOL liked;
     
-#if !TARGET_INTERFACE_BUILDER
     newState = _feedPlayer.playbackState;
     liked = _feedPlayer.currentItem.liked;
-#else
-    newState = FMAudioPlayerPlaybackStatePlaying;
-    liked = NO;
-#endif
+
     
     switch (newState) {
         case FMAudioPlayerPlaybackStatePaused:
@@ -106,6 +107,6 @@
     }
 }
 
-
+#endif
 
 @end

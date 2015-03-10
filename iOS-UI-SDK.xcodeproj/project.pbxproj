@@ -52,6 +52,9 @@
 		97E1C84E1AAF8046005AF723 /* thumbsdown-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C84C1AAF8046005AF723 /* thumbsdown-selected.png */; };
 		97E1C84F1AAF8046005AF723 /* thumbsup-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C84D1AAF8046005AF723 /* thumbsup-selected.png */; };
 		97E1C8521AAF82D7005AF723 /* FMDislikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C8511AAF82D7005AF723 /* FMDislikeButton.m */; };
+		97E1C8551AAF869F005AF723 /* FMTrackLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C8541AAF869F005AF723 /* FMTrackLabel.m */; };
+		97E1C8581AAF8BBB005AF723 /* FMArtistLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C8571AAF8BBB005AF723 /* FMArtistLabel.m */; };
+		97E1C85B1AAF8E6C005AF723 /* FMAlbumLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C85A1AAF8E6C005AF723 /* FMAlbumLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,12 @@
 		97E1C84D1AAF8046005AF723 /* thumbsup-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbsup-selected.png"; sourceTree = "<group>"; };
 		97E1C8501AAF82D7005AF723 /* FMDislikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDislikeButton.h; sourceTree = "<group>"; };
 		97E1C8511AAF82D7005AF723 /* FMDislikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDislikeButton.m; sourceTree = "<group>"; };
+		97E1C8531AAF869F005AF723 /* FMTrackLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTrackLabel.h; sourceTree = "<group>"; };
+		97E1C8541AAF869F005AF723 /* FMTrackLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTrackLabel.m; sourceTree = "<group>"; };
+		97E1C8561AAF8BBB005AF723 /* FMArtistLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMArtistLabel.h; sourceTree = "<group>"; };
+		97E1C8571AAF8BBB005AF723 /* FMArtistLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMArtistLabel.m; sourceTree = "<group>"; };
+		97E1C8591AAF8E6C005AF723 /* FMAlbumLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAlbumLabel.h; sourceTree = "<group>"; };
+		97E1C85A1AAF8E6C005AF723 /* FMAlbumLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAlbumLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +240,12 @@
 				97E1C8511AAF82D7005AF723 /* FMDislikeButton.m */,
 				97E1C7811AAE6625005AF723 /* FMPlayPauseButton.h */,
 				97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */,
+				97E1C8531AAF869F005AF723 /* FMTrackLabel.h */,
+				97E1C8541AAF869F005AF723 /* FMTrackLabel.m */,
+				97E1C8561AAF8BBB005AF723 /* FMArtistLabel.h */,
+				97E1C8571AAF8BBB005AF723 /* FMArtistLabel.m */,
+				97E1C8591AAF8E6C005AF723 /* FMAlbumLabel.h */,
+				97E1C85A1AAF8E6C005AF723 /* FMAlbumLabel.m */,
 				97E1C7E11AAE719C005AF723 /* Resources */,
 			);
 			name = Dist;
@@ -419,12 +434,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */,
+				97E1C8551AAF869F005AF723 /* FMTrackLabel.m in Sources */,
 				97E1C8521AAF82D7005AF723 /* FMDislikeButton.m in Sources */,
 				97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */,
 				97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */,
 				97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */,
+				97E1C8581AAF8BBB005AF723 /* FMArtistLabel.m in Sources */,
 				97E1C75B1AAE65F7005AF723 /* main.m in Sources */,
 				97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */,
+				97E1C85B1AAF8E6C005AF723 /* FMAlbumLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,9 @@
 
 @interface FMSkipButton ()
 
+#if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
+#endif
 
 @end
 
@@ -41,6 +43,13 @@
     return self;
 }
 
+- (void) dealloc {
+    
+#if !TARGET_INTERFACE_BUILDER
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+#endif
+}
+
 - (void) setup {
  
 #if !TARGET_INTERFACE_BUILDER
@@ -50,10 +59,13 @@
     
     [self addTarget:self action:@selector(onSkipClick) forControlEvents:UIControlEventTouchUpInside];
 ;
-#endif
     
     [self updatePlayerState];
+    
+#endif
 }
+
+#if !TARGET_INTERFACE_BUILDER
 
 - (void) onSkipClick {
     [_feedPlayer skip];
@@ -64,13 +76,7 @@
 }
 
 - (void) updatePlayerState {
-    FMAudioPlayerPlaybackState newState;
-    
-#if !TARGET_INTERFACE_BUILDER
-    newState = _feedPlayer.playbackState;
-#else
-    newState = FMAudioPlayerPlaybackStatePlaying;
-#endif
+    FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateRequestingSkip:
@@ -87,6 +93,6 @@
     }
 }
 
-
+#endif
 
 @end

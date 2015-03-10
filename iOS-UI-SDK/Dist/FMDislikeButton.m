@@ -54,12 +54,19 @@
     
     [self addTarget:self action:@selector(onDislikeClick) forControlEvents:UIControlEventTouchUpInside];
     ;
+
+    [self updatePlayerState];
+
 #endif
     
-    [self updatePlayerState];
 }
 
 #if !TARGET_INTERFACE_BUILDER
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void) onDislikeClick {
     BOOL disliked = _feedPlayer.currentItem.disliked;
     
@@ -71,7 +78,6 @@
     
     [self updatePlayerState];
 }
-#endif
 
 - (void) playerUpdated: (NSNotification *)notification {
     [self updatePlayerState];
@@ -81,13 +87,8 @@
     FMAudioPlayerPlaybackState newState;
     BOOL disliked;
     
-#if !TARGET_INTERFACE_BUILDER
     newState = _feedPlayer.playbackState;
     disliked = _feedPlayer.currentItem.disliked;
-#else
-    newState = FMAudioPlayerPlaybackStatePlaying;
-    disliked = NO;
-#endif
     
     switch (newState) {
         case FMAudioPlayerPlaybackStatePaused:
@@ -105,5 +106,7 @@
             self.selected = NO;
     }
 }
+
+#endif
 
 @end
