@@ -11,7 +11,9 @@
 
 @interface FMPlayPauseButton ()
 
+#if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
+#endif
 
 @property (strong, nonatomic) UIButton *playButton;
 @property (strong, nonatomic) UIButton *pauseButton;
@@ -50,10 +52,18 @@
 }
 
 - (void) setup {
+#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
+#endif
     
     self.backgroundColor = [UIColor clearColor];
-    
+    self.playTitle = @"play";
+    self.pauseTitle = @"pause";
+
+#if TARGET_INTERFACE_BUILDER
+    self.previewPlayButton = YES;
+#endif
+
     _playButton = [[UIButton alloc] init];
     _playButton.frame = self.bounds;
     _playButton.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -73,20 +83,27 @@
     [_spinner stopAnimating];
     [self addSubview:_spinner];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.feedPlayer];
-    
-    [self updatePlayerState];
+#if !TARGET_INTERFACE_BUILDER
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
     [_playButton addTarget:self action:@selector(onPlayClick) forControlEvents:UIControlEventTouchUpInside];
     [_pauseButton addTarget:self action:@selector(onPauseClick) forControlEvents:UIControlEventTouchUpInside];
+#endif
+    
+    [self updatePlayerState];
+    
 }
 
 - (void) onPlayClick {
-    [[FMAudioPlayer sharedPlayer] play];
+#if !TARGET_INTERFACE_BUILDER
+    [_feedPlayer play];
+#endif
 }
 
 - (void) onPauseClick {
-    [[FMAudioPlayer sharedPlayer] pause];
+#if !TARGET_INTERFACE_BUILDER
+    [_feedPlayer pause];
+#endif
 }
 
 - (void) setPlayTitle:(NSString *)playTitle {
@@ -113,27 +130,27 @@
     [self stylePauseButton:_pauseButton withImage:_pauseImage andTitle:_pauseTitle];
 }
 
+#if TARGET_INTERFACE_BUILDER
+- (void) setPreviewPlayButton: (BOOL)yesOrNo {
+    _previewPlayButton = yesOrNo;
+    
+    [self updatePlayerState];
+}
+#endif
+
 - (void) stylePlayButton:(UIButton *)button withImage:(UIImage *) image andTitle:(NSString *) title {
-    if ((image == nil) && (title == nil)) {
-        [self styleButton:button withImage:nil andTitle:@"play"];
-    } else {
-        [self styleButton:button withImage:image andTitle:title];
-    }
+    [self styleButton:button withImage:image andTitle:title];
 }
 
 - (void) stylePauseButton:(UIButton *)button withImage:(UIImage *) image andTitle:(NSString *) title {
-    if ((image == nil) && (title == nil)) {
-        [self styleButton:button withImage:nil andTitle:@"pause"];
-    } else {
-        [self styleButton:button withImage:image andTitle:title];
-    }
+    [self styleButton:button withImage:image andTitle:title];
 }
 
 - (void) styleButton:(UIButton *)button withImage:(UIImage *) image andTitle:(NSString *) title {
     [button setImage:image forState:UIControlStateNormal];
     [button setTitle:title forState:UIControlStateNormal];
 
-    button.backgroundColor = self.backgroundColor;
+    button.backgroundColor = [UIColor clearColor];
 }
 
 - (void) styleSpinner:(UIActivityIndicatorView *) spinner {
@@ -145,7 +162,13 @@
 }
 
 - (void) updatePlayerState {
-    FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
+    FMAudioPlayerPlaybackState newState;
+    
+#if !TARGET_INTERFACE_BUILDER
+    newState = _feedPlayer.playbackState;
+#else
+    newState = self.previewPlayButton ? FMAudioPlayerPlaybackStateReadyToPlay : FMAudioPlayerPlaybackStatePlaying;
+#endif
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:

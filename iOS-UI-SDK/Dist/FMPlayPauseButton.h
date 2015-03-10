@@ -17,6 +17,10 @@ IB_DESIGNABLE
 @property (weak, nonatomic) IBInspectable NSString *playTitle;
 @property (weak, nonatomic) IBInspectable NSString *pauseTitle;
 
+#if TARGET_INTERFACE_BUILDER
+@property (nonatomic) IBInspectable BOOL previewPlayButton;
+#endif
+
 - (void) stylePlayButton:(UIButton *)button withImage:(UIImage *) image andTitle:(NSString *) title;
 - (void) stylePauseButton:(UIButton *)button withImage:(UIImage *) image andTitle:(NSString *) title;
 - (void) styleSpinner:(UIActivityIndicatorView *) spinner;

@@ -16,10 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3M-rO-DWf" customClass="FMPlayPauseButton">
-                                <rect key="frame" x="138" y="78" width="40" height="40"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z93-FR-JBI" customClass="FMPlayPauseButton">
+                                <rect key="frame" x="71" y="43" width="50" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="playTitle" value="play"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="pauseTitle" value="pause"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="previewPlayButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJN-LR-a1H" customClass="FMSkipButton">
+                                <rect key="frame" x="38" y="101" width="116" height="42"/>
+                                <state key="normal" image="skip.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FP-qW-g6F" customClass="FMLikeButton">
+                                <rect key="frame" x="15" y="164" width="163" height="42"/>
+                                <state key="normal" image="thumbsup.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="thumbsup-selected.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0M-LH-oIl" customClass="FMDislikeButton">
+                                <rect key="frame" x="77" y="229" width="39" height="42"/>
+                                <state key="normal" image="thumbsdown.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="thumbsdown-selected.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -28,4 +53,11 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="skip.png" width="61" height="42"/>
+        <image name="thumbsdown-selected.png" width="39" height="42"/>
+        <image name="thumbsdown.png" width="39" height="42"/>
+        <image name="thumbsup-selected.png" width="38" height="42"/>
+        <image name="thumbsup.png" width="38" height="42"/>
+    </resources>
 </document>
