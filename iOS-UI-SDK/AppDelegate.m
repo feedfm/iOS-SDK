@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     
     [FMAudioPlayer setClientToken:@"counting" secret:@"counting"];
+    [[FMAudioPlayer sharedPlayer] prepareToPlay];
 
     return YES;
 }

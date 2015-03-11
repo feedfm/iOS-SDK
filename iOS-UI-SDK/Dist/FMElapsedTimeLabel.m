@@ -1,17 +1,17 @@
 //
-//  FMProgressView.m
+//  FMElapsedTimeLabel.m
 //  iOS-UI-SDK
 //
 //  Created by Eric Lambrecht on 3/10/15.
 //  Copyright (c) 2015 Feed Media. All rights reserved.
 //
 
-#import "FMProgressView.h"
+#import "FMElapsedTimeLabel.h"
 #import "FeedMedia/FMAudioPlayer.h"
 
 #define kFMProgressBarUpdateTimeInterval 0.5
 
-@interface FMProgressView () {
+@interface FMElapsedTimeLabel () {
     NSTimer *_progressTimer;
 }
 
@@ -21,7 +21,8 @@
 
 @end
 
-@implementation FMProgressView
+
+@implementation FMElapsedTimeLabel
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -60,8 +61,14 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
-    [self resetProgress];
+    [self updateProgress:nil];
 #endif
+    
+    [super setText:@"-:--"];
+}
+
+- (void) setText: (NSString *)text {
+    // ignore
 }
 
 #if !TARGET_INTERFACE_BUILDER
@@ -75,13 +82,13 @@
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
-            [self resetProgress];
+            [self updateProgress:nil];
             
         case FMAudioPlayerPlaybackStateComplete:
             [self cancelProgressTimer];
             [self updateProgress:nil];
             break;
-
+            
         case FMAudioPlayerPlaybackStatePaused:
         case FMAudioPlayerPlaybackStateReadyToPlay:
             [self cancelProgressTimer];
@@ -109,22 +116,22 @@
 - (void)updateProgress:(NSTimer *)timer {
     NSTimeInterval duration = _feedPlayer.currentItemDuration;
     if(duration > 0) {
-        [self setProgress:(_feedPlayer.currentPlaybackTime / duration)
-                                   animated: false];
+        long currentTime = lroundf(self.feedPlayer.currentPlaybackTime);
+        
+        [super setText: [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60]];
+        if (currentTime < 0) {
+            [super setText:@"0:00"];
+        }
+        
     }
     else {
-        [self setProgress: 0.0 animated:false];
+        [super setText:@"-:--"];
     }
 }
 
 - (void)cancelProgressTimer {
     [_progressTimer invalidate];
     _progressTimer = nil;
-}
-
-
-- (void)resetProgress {
-    [self setProgress: 0.0 animated:false];
 }
 
 

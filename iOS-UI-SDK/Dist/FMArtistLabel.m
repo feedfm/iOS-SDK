@@ -51,7 +51,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(songUpdated:) name:FMAudioPlayerCurrentItemDidChangeNotification object:self.feedPlayer];
     
     [self updateText];
+#else
+    super.text = @"artist placeholder";
 #endif
+}
+
+- (void) setText:(NSString *)text {
+    // nada
 }
 
 #if !TARGET_INTERFACE_BUILDER
@@ -68,9 +74,9 @@
     FMAudioItem *current = [_feedPlayer currentItem];
     
     if (current) {
-        self.text = current.artist;
+        super.text = current.artist;
     } else {
-        self.text = @"";
+        super.text = @"";
     }
     
 }

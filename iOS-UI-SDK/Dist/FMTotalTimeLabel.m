@@ -1,19 +1,17 @@
 //
-//  FMProgressView.m
+//  FMTotalTimeLabel.m
 //  iOS-UI-SDK
 //
 //  Created by Eric Lambrecht on 3/10/15.
 //  Copyright (c) 2015 Feed Media. All rights reserved.
 //
 
-#import "FMProgressView.h"
+#import "FMTotalTimeLabel.h"
 #import "FeedMedia/FMAudioPlayer.h"
 
 #define kFMProgressBarUpdateTimeInterval 0.5
 
-@interface FMProgressView () {
-    NSTimer *_progressTimer;
-}
+@interface FMTotalTimeLabel ()
 
 #if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
@@ -21,7 +19,9 @@
 
 @end
 
-@implementation FMProgressView
+
+@implementation FMTotalTimeLabel
+
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -60,8 +60,14 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
-    [self resetProgress];
+    [self updateProgress];
 #endif
+    
+    [super setText:@"-:--"];
+}
+
+- (void) setText: (NSString *)text {
+    // ignore
 }
 
 #if !TARGET_INTERFACE_BUILDER
@@ -78,17 +84,16 @@
             [self resetProgress];
             
         case FMAudioPlayerPlaybackStateComplete:
-            [self cancelProgressTimer];
-            [self updateProgress:nil];
+            [self resetProgress];
             break;
-
+            
         case FMAudioPlayerPlaybackStatePaused:
         case FMAudioPlayerPlaybackStateReadyToPlay:
-            [self cancelProgressTimer];
+            [self updateProgress];
             break;
             
         case FMAudioPlayerPlaybackStatePlaying:
-            [self startProgressTimer];
+            [self updateProgress];
             break;
             
         default:
@@ -97,40 +102,26 @@
     }
 }
 
-- (void)startProgressTimer {
-    [_progressTimer invalidate];
-    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:kFMProgressBarUpdateTimeInterval
-                                                      target:self
-                                                    selector:@selector(updateProgress:)
-                                                    userInfo:nil
-                                                     repeats:YES];
-}
-
-- (void)updateProgress:(NSTimer *)timer {
-    NSTimeInterval duration = _feedPlayer.currentItemDuration;
+- (void)updateProgress {
+    long duration = lroundf(_feedPlayer.currentItemDuration);
+    
     if(duration > 0) {
-        [self setProgress:(_feedPlayer.currentPlaybackTime / duration)
-                                   animated: false];
+        [super setText: [NSString stringWithFormat:@"%ld:%02ld", duration / 60, duration % 60]];
+        
     }
     else {
-        [self setProgress: 0.0 animated:false];
+        [super setText:@"0:00"];
     }
 }
 
-- (void)cancelProgressTimer {
-    [_progressTimer invalidate];
-    _progressTimer = nil;
-}
-
-
 - (void)resetProgress {
-    [self setProgress: 0.0 animated:false];
+    [super setText:@"-:--"];
 }
-
 
 #endif
 
 @end
 
 #undef kFMProgressBarUpdateTimeInterval
+
 

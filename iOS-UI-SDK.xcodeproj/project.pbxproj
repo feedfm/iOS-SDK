@@ -24,6 +24,8 @@
 
 /* Begin PBXBuildFile section */
 		976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98AE1AAFF9E3003FA42F /* FMProgressView.m */; };
+		976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */; };
+		976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */; };
 		97E1C75B1AAE65F7005AF723 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75A1AAE65F7005AF723 /* main.m */; };
 		97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75D1AAE65F7005AF723 /* AppDelegate.m */; };
 		97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7601AAE65F7005AF723 /* ViewController.m */; };
@@ -99,6 +101,10 @@
 /* Begin PBXFileReference section */
 		976B98AD1AAFF9E3003FA42F /* FMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
 		976B98AE1AAFF9E3003FA42F /* FMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
+		976B98B01AB00280003FA42F /* FMElapsedTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMElapsedTimeLabel.h; sourceTree = "<group>"; };
+		976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMElapsedTimeLabel.m; sourceTree = "<group>"; };
+		976B98B31AB0088C003FA42F /* FMTotalTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTotalTimeLabel.h; sourceTree = "<group>"; };
+		976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTotalTimeLabel.m; sourceTree = "<group>"; };
 		97E1C7551AAE65F7005AF723 /* iOS-UI-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UI-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E1C7591AAE65F7005AF723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97E1C75A1AAE65F7005AF723 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -237,6 +243,10 @@
 			children = (
 				976B98AD1AAFF9E3003FA42F /* FMProgressView.h */,
 				976B98AE1AAFF9E3003FA42F /* FMProgressView.m */,
+				976B98B31AB0088C003FA42F /* FMTotalTimeLabel.h */,
+				976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */,
+				976B98B01AB00280003FA42F /* FMElapsedTimeLabel.h */,
+				976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */,
 				97E1C8321AAF5CD4005AF723 /* FMSkipButton.h */,
 				97E1C8331AAF5CD4005AF723 /* FMSkipButton.m */,
 				97E1C8491AAF6D63005AF723 /* FMLikeButton.h */,
@@ -446,9 +456,11 @@
 				97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */,
 				97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */,
 				97E1C8581AAF8BBB005AF723 /* FMArtistLabel.m in Sources */,
+				976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */,
 				97E1C75B1AAE65F7005AF723 /* main.m in Sources */,
 				97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */,
 				97E1C85B1AAF8E6C005AF723 /* FMAlbumLabel.m in Sources */,
+				976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
