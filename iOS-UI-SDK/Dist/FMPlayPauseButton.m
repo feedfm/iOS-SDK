@@ -172,7 +172,7 @@
 
 - (void) updatePlayerState {
     FMAudioPlayerPlaybackState newState;
-    
+
 #if !TARGET_INTERFACE_BUILDER
     newState = _feedPlayer.playbackState;
 #else

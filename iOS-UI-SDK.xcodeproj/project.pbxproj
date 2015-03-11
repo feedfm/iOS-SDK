@@ -23,6 +23,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98AE1AAFF9E3003FA42F /* FMProgressView.m */; };
 		97E1C75B1AAE65F7005AF723 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75A1AAE65F7005AF723 /* main.m */; };
 		97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75D1AAE65F7005AF723 /* AppDelegate.m */; };
 		97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7601AAE65F7005AF723 /* ViewController.m */; };
@@ -96,6 +97,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		976B98AD1AAFF9E3003FA42F /* FMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
+		976B98AE1AAFF9E3003FA42F /* FMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
 		97E1C7551AAE65F7005AF723 /* iOS-UI-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UI-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E1C7591AAE65F7005AF723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97E1C75A1AAE65F7005AF723 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 		97E1C77E1AAE660D005AF723 /* Dist */ = {
 			isa = PBXGroup;
 			children = (
+				976B98AD1AAFF9E3003FA42F /* FMProgressView.h */,
+				976B98AE1AAFF9E3003FA42F /* FMProgressView.m */,
 				97E1C8321AAF5CD4005AF723 /* FMSkipButton.h */,
 				97E1C8331AAF5CD4005AF723 /* FMSkipButton.m */,
 				97E1C8491AAF6D63005AF723 /* FMLikeButton.h */,
@@ -436,6 +441,7 @@
 				97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */,
 				97E1C8551AAF869F005AF723 /* FMTrackLabel.m in Sources */,
 				97E1C8521AAF82D7005AF723 /* FMDislikeButton.m in Sources */,
+				976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */,
 				97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */,
 				97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */,
 				97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */,
@@ -664,6 +670,7 @@
 				97E1C77A1AAE65F7005AF723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97E1C77B1AAE65F7005AF723 /* Build configuration list for PBXNativeTarget "iOS-UI-SDKTests" */ = {
 			isa = XCConfigurationList;
@@ -672,6 +679,7 @@
 				97E1C77D1AAE65F7005AF723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97E1C7E51AAE7704005AF723 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +688,7 @@
 				97E1C7E71AAE7704005AF723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
