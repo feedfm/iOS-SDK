@@ -79,8 +79,6 @@
 - (void) updatePlayerState {
     FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
     
-    NSLog(@"new state is %lu", newState);
-    
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
             [self resetProgress];
