@@ -9,20 +9,8 @@
 #import <UIKit/UIKit.h>
 
 IB_DESIGNABLE
-@interface FMPlayPauseButton : UIView
+@interface FMPlayPauseButton : UIButton
 
-@property (weak, nonatomic) IBInspectable UIImage *playImage;
-@property (weak, nonatomic) IBInspectable UIImage *pauseImage;
-
-@property (weak, nonatomic) IBInspectable NSString *playTitle;
-@property (weak, nonatomic) IBInspectable NSString *pauseTitle;
-
-#if TARGET_INTERFACE_BUILDER
-@property (nonatomic) IBInspectable BOOL previewPlayButton;
-#endif
-
-- (void) stylePlayButton:(UIButton *)button withImage:(UIImage *) image andTitle:(NSString *) title;
-- (void) stylePauseButton:(UIButton *)button withImage:(UIImage *) image andTitle:(NSString *) title;
-- (void) styleSpinner:(UIActivityIndicatorView *) spinner;
+@property (nonatomic) IBInspectable BOOL hideWhenStalled;
 
 @end

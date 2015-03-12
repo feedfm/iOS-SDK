@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,15 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z93-FR-JBI" customClass="FMPlayPauseButton">
-                                <rect key="frame" x="71" y="43" width="50" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="playTitle" value="play"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="pauseTitle" value="pause"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="previewPlayButton" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJN-LR-a1H" customClass="FMSkipButton">
                                 <rect key="frame" x="38" y="101" width="116" height="42"/>
                                 <state key="normal" image="skip.png">
@@ -78,8 +70,33 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3ak-8R-F3I" customClass="FMActivityIndicator">
+                                <rect key="frame" x="22" y="51" width="112" height="42"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPI-Gj-1Um" userLabel="playPause" customClass="FMPlayPauseButton">
+                                <rect key="frame" x="22" y="51" width="112" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="CWY-xM-fvu"/>
+                                    <constraint firstAttribute="width" constant="112" id="kyi-df-Gpg"/>
+                                </constraints>
+                                <state key="normal" image="play.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="pause.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GPI-Gj-1Um" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="0OQ-Zj-43l"/>
+                            <constraint firstItem="GPI-Gj-1Um" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="A9H-yD-sOM"/>
+                            <constraint firstItem="GPI-Gj-1Um" firstAttribute="width" secondItem="3ak-8R-F3I" secondAttribute="width" id="fYK-Et-2Zd"/>
+                            <constraint firstItem="GPI-Gj-1Um" firstAttribute="top" secondItem="3ak-8R-F3I" secondAttribute="top" id="fwn-2I-O1U"/>
+                            <constraint firstItem="GPI-Gj-1Um" firstAttribute="leading" secondItem="3ak-8R-F3I" secondAttribute="leading" id="lTr-oh-QBE"/>
+                            <constraint firstItem="GPI-Gj-1Um" firstAttribute="height" secondItem="3ak-8R-F3I" secondAttribute="height" id="n2C-I9-gdW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,6 +104,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pause.png" width="57" height="42"/>
+        <image name="play.png" width="57" height="42"/>
         <image name="skip.png" width="61" height="42"/>
         <image name="thumbsdown-selected.png" width="39" height="42"/>
         <image name="thumbsdown.png" width="39" height="42"/>

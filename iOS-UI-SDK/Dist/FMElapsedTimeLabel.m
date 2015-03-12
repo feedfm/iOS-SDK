@@ -82,11 +82,11 @@
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
-            [self updateProgress:nil];
+            [self emptyProgress];
             
         case FMAudioPlayerPlaybackStateComplete:
             [self cancelProgressTimer];
-            [self updateProgress:nil];
+            [self emptyProgress];
             break;
             
         case FMAudioPlayerPlaybackStatePaused:
@@ -111,6 +111,7 @@
                                                     selector:@selector(updateProgress:)
                                                     userInfo:nil
                                                      repeats:YES];
+    [self updateProgress:nil];
 }
 
 - (void)updateProgress:(NSTimer *)timer {
@@ -127,6 +128,10 @@
     else {
         [super setText:@"-:--"];
     }
+}
+
+- (void) emptyProgress {
+    [super setText:@"-:--"];
 }
 
 - (void)cancelProgressTimer {

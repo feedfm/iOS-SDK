@@ -79,6 +79,8 @@
 - (void) updatePlayerState {
     FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
     
+    NSLog(@"new state is %lu", newState);
+    
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
             [self resetProgress];
@@ -88,6 +90,7 @@
             break;
             
         case FMAudioPlayerPlaybackStatePaused:
+        case FMAudioPlayerPlaybackStateRequestingSkip:
         case FMAudioPlayerPlaybackStateReadyToPlay:
             [self updateProgress];
             break;
@@ -104,6 +107,8 @@
 
 - (void)updateProgress {
     long duration = lroundf(_feedPlayer.currentItemDuration);
+    
+    NSLog(@"updating progress. state is %lu. current item is %@", _feedPlayer.playbackState, _feedPlayer.currentItem);
     
     if(duration > 0) {
         [super setText: [NSString stringWithFormat:@"%ld:%02ld", duration / 60, duration % 60]];
