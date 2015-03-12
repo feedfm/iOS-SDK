@@ -4,8 +4,7 @@
 //
 //  This class extends UIProgressView so that it updates its progress
 //  automatically by listening to events from the FeedMedia
-//  player. The 'setProgress:' and 'setProgress:animated:' calls
-//  are stubbed out, so clients may not programmatically change the progress.
+//  player.
 //
 //  Created by Eric Lambrecht on 3/10/15.
 //  Copyright (c) 2015 Feed Media. All rights reserved.

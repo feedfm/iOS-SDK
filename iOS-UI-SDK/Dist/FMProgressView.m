@@ -48,19 +48,14 @@
 }
 
 #if !TARGET_INTERFACE_BUILDER
+
 - (void) dealloc {
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 #endif
 
-- (void) setProgress:(float)progress {
-    // nada
-}
-
-- (void) setProgress:(float)progress animated:(BOOL)animated {
-    // also nada
-}
 
 - (void) setup {
 #if !TARGET_INTERFACE_BUILDER
