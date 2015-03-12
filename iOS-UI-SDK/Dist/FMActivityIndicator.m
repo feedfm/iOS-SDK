@@ -58,8 +58,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
 #endif
     
-    [self setHidesWhenStopped:YES];
-    
     [self updatePlayerState];
     
 }

@@ -43,8 +43,6 @@
 
 - (void) setup {
     
-    NSLog(@"setup is being called now");
-    
 #if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
@@ -63,7 +61,6 @@
 }
 
 - (void) setImage:(UIImage *)image forState:(UIControlState)state {
-    NSLog(@"setting super image for state");
     [super setImage:image forState:state];
 }
 

@@ -64,7 +64,7 @@
     [self updateProgress:nil];
 #endif
     
-    [super setText:@"-:--"];
+    [super setText:_textForNoTime];
 }
 
 - (void) setText: (NSString *)text {
@@ -126,12 +126,12 @@
         
     }
     else {
-        [super setText:@"-:--"];
+        [super setText:_textForNoTime];
     }
 }
 
 - (void) emptyProgress {
-    [super setText:@"-:--"];
+    [super setText:_textForNoTime];
 }
 
 - (void)cancelProgressTimer {
@@ -139,8 +139,14 @@
     _progressTimer = nil;
 }
 
-
 #endif
+
+
+- (void) setTextForNoTime: (NSString *) text {
+    _textForNoTime = text;
+    [super setText:_textForNoTime];
+}
+
 
 @end
 

@@ -47,11 +47,19 @@
     return self;
 }
 
+#if !TARGET_INTERFACE_BUILDER
 - (void) dealloc {
     
-#if !TARGET_INTERFACE_BUILDER
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 #endif
+
+- (void) setProgress:(float)progress {
+    // nada
+}
+
+- (void) setProgress:(float)progress animated:(BOOL)animated {
+    // also nada
 }
 
 - (void) setup {
@@ -109,11 +117,11 @@
 - (void)updateProgress:(NSTimer *)timer {
     NSTimeInterval duration = _feedPlayer.currentItemDuration;
     if(duration > 0) {
-        [self setProgress:(_feedPlayer.currentPlaybackTime / duration)
+        [super setProgress:(_feedPlayer.currentPlaybackTime / duration)
                                    animated: false];
     }
     else {
-        [self setProgress: 0.0 animated:false];
+        [super setProgress: 0.0 animated:false];
     }
 }
 
@@ -124,7 +132,7 @@
 
 
 - (void)resetProgress {
-    [self setProgress: 0.0 animated:false];
+    [super setProgress: 0.0 animated:false];
 }
 
 

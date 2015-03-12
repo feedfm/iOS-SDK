@@ -60,10 +60,14 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
-    [self updateProgress];
-#endif
+    [self updatePlayerState];
     
-    [super setText:@"-:--"];
+#else 
+
+    [super setText:_textForNoTime];
+
+#endif
+
 }
 
 - (void) setText: (NSString *)text {
@@ -116,10 +120,16 @@
 }
 
 - (void)resetProgress {
-    [super setText:@"-:--"];
+    [super setText:_textForNoTime];
 }
 
 #endif
+
+- (void) setTextForNoTime: (NSString *) text {
+    _textForNoTime = text;
+    [super setText:_textForNoTime];
+}
+
 
 @end
 
