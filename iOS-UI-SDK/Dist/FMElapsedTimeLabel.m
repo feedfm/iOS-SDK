@@ -49,7 +49,6 @@
 }
 
 - (void) dealloc {
-    
 #if !TARGET_INTERFACE_BUILDER
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 #endif
@@ -61,10 +60,12 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
-    [self updateProgress:nil];
-#endif
-    
+    [self updatePlayerState];
+
+#else
     [super setText:_textForNoTime];
+    
+#endif
 }
 
 - (void) setText: (NSString *)text {
@@ -85,12 +86,17 @@
             [self emptyProgress];
             
         case FMAudioPlayerPlaybackStateComplete:
-            [self cancelProgressTimer];
             [self emptyProgress];
+            [self cancelProgressTimer];
             break;
             
         case FMAudioPlayerPlaybackStatePaused:
+            [self updateProgress:nil];
+            [self cancelProgressTimer];
+            break;
+            
         case FMAudioPlayerPlaybackStateReadyToPlay:
+            [self emptyProgress];
             [self cancelProgressTimer];
             break;
             
@@ -142,9 +148,14 @@
 #endif
 
 
-- (void) setTextForNoTime: (NSString *) text {
-    _textForNoTime = text;
+- (void) setTextForNoTime: (NSString *) theText {
+    _textForNoTime = theText;
+    
+#if !TARGET_INTERFACE_BUILDER
+    [self updatePlayerState];
+#else
     [super setText:_textForNoTime];
+#endif
 }
 
 

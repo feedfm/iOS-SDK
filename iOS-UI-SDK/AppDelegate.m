@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [FMAudioPlayer setClientToken:@"counting" secret:@"counting"];
+    [FMAudioPlayer setClientToken:@"demo" secret:@"demo"];
     [[FMAudioPlayer sharedPlayer] prepareToPlay];
 
     return YES;

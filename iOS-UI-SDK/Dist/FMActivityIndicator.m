@@ -23,7 +23,7 @@
     if (self = [super initWithFrame:frame]) {
         [self setup];
     }
-    
+
     return self;
 }
 

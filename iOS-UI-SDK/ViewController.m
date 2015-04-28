@@ -24,4 +24,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)presentFullPagePlayer:(id)sender {
+    UINib *uiNib = [UINib nibWithNibName:@"FMFullScreenPlayerViewController" bundle:nil];
+    
+    UIViewController *playerVC = [uiNib instantiateWithOwner:nil options:nil][0];
+    
+    [self presentViewController:playerVC animated:true completion:nil];
+}
+
 @end

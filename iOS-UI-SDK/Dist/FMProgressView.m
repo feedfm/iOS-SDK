@@ -63,7 +63,11 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
+    [self updatePlayerState];
+
+#else
     [self resetProgress];
+
 #endif
 }
 
@@ -78,15 +82,14 @@
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
+        case FMAudioPlayerPlaybackStateReadyToPlay:
             [self resetProgress];
+            [self cancelProgressTimer];
+            break;
             
         case FMAudioPlayerPlaybackStateComplete:
-            [self cancelProgressTimer];
-            [self updateProgress:nil];
-            break;
-
         case FMAudioPlayerPlaybackStatePaused:
-        case FMAudioPlayerPlaybackStateReadyToPlay:
+            [self updateProgress:nil];
             [self cancelProgressTimer];
             break;
             
@@ -125,13 +128,12 @@
     _progressTimer = nil;
 }
 
+#endif
 
 - (void)resetProgress {
     [super setProgress: 0.0 animated:false];
 }
 
-
-#endif
 
 @end
 

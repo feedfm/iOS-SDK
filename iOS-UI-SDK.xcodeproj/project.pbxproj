@@ -23,10 +23,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971272191AEF0F0600E4723A /* FMSkipWarningView.m */; };
+		9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */; };
 		976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98AE1AAFF9E3003FA42F /* FMProgressView.m */; };
 		976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */; };
 		976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */; };
 		976B993E1AB10C6B003FA42F /* FMActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B993D1AB10C6B003FA42F /* FMActivityIndicator.m */; };
+		97A491E91AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */; };
+		97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */; };
+		97A491EE1AECA94700726C0A /* FMFullScreenLegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */; };
+		97A491F11AED2F7B00726C0A /* FMFullScreenLegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A491F01AED2F7B00726C0A /* FMFullScreenLegalViewController.m */; };
 		97E1C75B1AAE65F7005AF723 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75A1AAE65F7005AF723 /* main.m */; };
 		97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75D1AAE65F7005AF723 /* AppDelegate.m */; };
 		97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7601AAE65F7005AF723 /* ViewController.m */; };
@@ -96,6 +102,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		971272181AEF0F0600E4723A /* FMSkipWarningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSkipWarningView.h; sourceTree = "<group>"; };
+		971272191AEF0F0600E4723A /* FMSkipWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSkipWarningView.m; sourceTree = "<group>"; };
+		9712721C1AEF1DC800E4723A /* FMMetadataLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMetadataLabel.h; sourceTree = "<group>"; };
+		9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMetadataLabel.m; sourceTree = "<group>"; };
 		976B98AD1AAFF9E3003FA42F /* FMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
 		976B98AE1AAFF9E3003FA42F /* FMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
 		976B98B01AB00280003FA42F /* FMElapsedTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMElapsedTimeLabel.h; sourceTree = "<group>"; };
@@ -104,6 +114,12 @@
 		976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTotalTimeLabel.m; sourceTree = "<group>"; };
 		976B993C1AB10C6B003FA42F /* FMActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMActivityIndicator.h; sourceTree = "<group>"; };
 		976B993D1AB10C6B003FA42F /* FMActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMActivityIndicator.m; sourceTree = "<group>"; };
+		97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMFullScreenPlayerViewController.xib; sourceTree = "<group>"; };
+		97A491EA1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFullScreenPlayerViewController.h; sourceTree = "<group>"; };
+		97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFullScreenPlayerViewController.m; sourceTree = "<group>"; };
+		97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMFullScreenLegalViewController.xib; sourceTree = "<group>"; };
+		97A491EF1AED2F7B00726C0A /* FMFullScreenLegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFullScreenLegalViewController.h; sourceTree = "<group>"; };
+		97A491F01AED2F7B00726C0A /* FMFullScreenLegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFullScreenLegalViewController.m; sourceTree = "<group>"; };
 		97E1C7551AAE65F7005AF723 /* iOS-UI-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UI-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E1C7591AAE65F7005AF723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97E1C75A1AAE65F7005AF723 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -258,7 +274,17 @@
 				97E1C8571AAF8BBB005AF723 /* FMArtistLabel.m */,
 				97E1C8591AAF8E6C005AF723 /* FMAlbumLabel.h */,
 				97E1C85A1AAF8E6C005AF723 /* FMAlbumLabel.m */,
+				9712721C1AEF1DC800E4723A /* FMMetadataLabel.h */,
+				9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */,
+				971272181AEF0F0600E4723A /* FMSkipWarningView.h */,
+				971272191AEF0F0600E4723A /* FMSkipWarningView.m */,
 				97E1C7E11AAE719C005AF723 /* Resources */,
+				97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */,
+				97A491EF1AED2F7B00726C0A /* FMFullScreenLegalViewController.h */,
+				97A491F01AED2F7B00726C0A /* FMFullScreenLegalViewController.m */,
+				97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */,
+				97A491EA1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.h */,
+				97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */,
 			);
 			name = Dist;
 			path = "iOS-UI-SDK/Dist";
@@ -390,6 +416,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A491EE1AECA94700726C0A /* FMFullScreenLegalViewController.xib in Resources */,
+				97A491E91AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib in Resources */,
 				97E1C8441AAF6ACD005AF723 /* thumbsup.png in Resources */,
 				97E1C83F1AAF6ACD005AF723 /* close.png in Resources */,
 				97E1C7641AAE65F7005AF723 /* Main.storyboard in Resources */,
@@ -439,12 +467,16 @@
 			files = (
 				97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */,
 				97E1C8551AAF869F005AF723 /* FMTrackLabel.m in Sources */,
+				97A491F11AED2F7B00726C0A /* FMFullScreenLegalViewController.m in Sources */,
 				97E1C8521AAF82D7005AF723 /* FMDislikeButton.m in Sources */,
 				976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */,
 				97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */,
 				97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */,
 				97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */,
+				9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */,
 				97E1C8581AAF8BBB005AF723 /* FMArtistLabel.m in Sources */,
+				9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */,
+				97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */,
 				976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */,
 				97E1C75B1AAE65F7005AF723 /* main.m in Sources */,
 				97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */,
