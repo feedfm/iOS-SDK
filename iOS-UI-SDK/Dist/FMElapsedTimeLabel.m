@@ -24,6 +24,8 @@
 
 @implementation FMElapsedTimeLabel
 
+#if !TARGET_INTERFACE_BUILDER
+
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setup];
@@ -48,34 +50,27 @@
     return self;
 }
 
-- (void) dealloc {
-#if !TARGET_INTERFACE_BUILDER
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-#endif
-}
-
 - (void) setup {
-#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPlayerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
     [self updatePlayerState];
-
-#else
-    [super setText:_textForNoTime];
-    
-#endif
 }
 
-- (void) setText: (NSString *)text {
-    // ignore
-}
-
-#if !TARGET_INTERFACE_BUILDER
-
-- (void) playerUpdated: (NSNotification *) notification {
+- (void) onPlayerUpdated: (NSNotification *) notification {
     [self updatePlayerState];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    [self cancelProgressTimer];
+}
+
+- (void) setText:(NSString *)text {
+    // ignore whatever is passed in during runtime
+    [self updateProgress];
 }
 
 - (void) updatePlayerState {
@@ -83,20 +78,10 @@
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
-            [self emptyProgress];
-            
         case FMAudioPlayerPlaybackStateComplete:
-            [self emptyProgress];
-            [self cancelProgressTimer];
-            break;
-            
-        case FMAudioPlayerPlaybackStatePaused:
-            [self updateProgress:nil];
-            [self cancelProgressTimer];
-            break;
-            
         case FMAudioPlayerPlaybackStateReadyToPlay:
-            [self emptyProgress];
+        case FMAudioPlayerPlaybackStatePaused:
+            [self updateProgress];
             [self cancelProgressTimer];
             break;
             
@@ -114,13 +99,24 @@
     [_progressTimer invalidate];
     _progressTimer = [NSTimer scheduledTimerWithTimeInterval:kFMProgressBarUpdateTimeInterval
                                                       target:self
-                                                    selector:@selector(updateProgress:)
+                                                    selector:@selector(onProgressTimerUpdate:)
                                                     userInfo:nil
                                                      repeats:YES];
-    [self updateProgress:nil];
+    [self updateProgress];
 }
 
-- (void)updateProgress:(NSTimer *)timer {
+- (void)onProgressTimerUpdate:(NSTimer *)timer {
+    [self updateProgress];
+}
+
+
+- (void)cancelProgressTimer {
+    [_progressTimer invalidate];
+    _progressTimer = nil;
+}
+
+
+- (void)updateProgress {
     NSTimeInterval duration = _feedPlayer.currentItemDuration;
     if(duration > 0) {
         long currentTime = lroundf(self.feedPlayer.currentPlaybackTime);
@@ -136,27 +132,14 @@
     }
 }
 
-- (void) emptyProgress {
-    [super setText:_textForNoTime];
-}
-
-- (void)cancelProgressTimer {
-    [_progressTimer invalidate];
-    _progressTimer = nil;
-}
-
-#endif
-
-
-- (void) setTextForNoTime: (NSString *) theText {
-    _textForNoTime = theText;
+- (void) setTextForNoTime: (NSString *) textForNoTime {
+    _textForNoTime = textForNoTime;
     
-#if !TARGET_INTERFACE_BUILDER
     [self updatePlayerState];
-#else
-    [super setText:_textForNoTime];
-#endif
 }
+
+#endif
+
 
 
 @end

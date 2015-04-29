@@ -22,6 +22,7 @@
 
 @implementation FMTotalTimeLabel
 
+#if !TARGET_INTERFACE_BUILDER
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -48,31 +49,20 @@
 }
 
 - (void) dealloc {
-#if !TARGET_INTERFACE_BUILDER
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-#endif
 }
 
 - (void) setup {
-#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
     [self updatePlayerState];
-    
-#else
-    [super setText:_textForNoTime];
-
-#endif
-
 }
 
 - (void) setText: (NSString *)text {
     // ignore
 }
-
-#if !TARGET_INTERFACE_BUILDER
 
 - (void) playerUpdated: (NSNotification *) notification {
     [self updatePlayerState];
@@ -112,8 +102,6 @@
     }
 }
 
-#endif
-
 - (void)resetProgress {
     [super setText:_textForNoTime];
 }
@@ -121,12 +109,10 @@
 - (void) setTextForNoTime: (NSString *) theText {
     _textForNoTime = theText;
 
-#if !TARGET_INTERFACE_BUILDER
     [self updatePlayerState];
-#else
-    [self resetProgress];
-#endif
 }
+
+#endif
 
 
 @end

@@ -1,15 +1,7 @@
 //
 //  FMMetadataLabel.m
 //  iOS-UI-SDK
-//
-//  This label sets its 'text' property to match its 'format' propery, but with
-//  the following strings replaced to reflect the currently playing song:
-//
-//   %ARTIST - the name of the current artist
-//   %TRACK  - the name of the current track
-//   %ALBUM  - the name of the current album
-//
-//  If no song is playing, then the text is set to the empty string.
+
 //
 //  Created by Eric Lambrecht on 4/27/15.
 //  Copyright (c) 2015 Feed Media. All rights reserved.
@@ -28,6 +20,7 @@
 
 @implementation FMMetadataLabel
 
+#if !TARGET_INTERFACE_BUILDER
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -54,24 +47,16 @@
 }
 
 - (void) setup {
-#if !TARGET_INTERFACE_BUILDER
-    self.feedPlayer = [FMAudioPlayer sharedPlayer];
+    _feedPlayer = [FMAudioPlayer sharedPlayer];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(songUpdated:) name:FMAudioPlayerCurrentItemDidChangeNotification object:self.feedPlayer];
     
     [self updateText];
-#else
-    
-    super.text = @"metadata placeholder";
-    
-#endif
 }
 
-- (void) setText:(NSString *)text {
-    // nada
+- (void) setText: (NSString *) text{
+    // when running live, only we get to set the text
 }
-
-#if !TARGET_INTERFACE_BUILDER
 
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -103,6 +88,14 @@
 
 #endif
 
+- (void) setFormat:(NSString *)format {
+    _format = format;
 
+#if !TARGET_INTERFACE_BUILDER
+    [self updateText];
+#else
+    [super setText:_format];
+#endif
+}
 
 @end

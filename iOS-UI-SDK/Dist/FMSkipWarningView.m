@@ -22,13 +22,7 @@
 
 @implementation FMSkipWarningView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+#if !TARGET_INTERFACE_BUILDER
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -49,14 +43,12 @@
 - (void)setup {
     self.showing = false;
 
-#if !TARGET_INTERFACE_BUILDER
     self.hidden = true;
 
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
     // register to receive notice when the user hits a skip limit
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(skipEncountered:) name:FMAudioPlayerSkipFailedNotification object:_feedPlayer];
-#endif
 }
 
 - (void) skipEncountered: (NSNotification *) notification {
@@ -73,9 +65,12 @@
             self.hidden = true;
             self.showing = false;
         
-            [self setNeedsDisplay];
+//            [self setNeedsDisplay];
         });
 }
+
+#endif
+
 
 @end
 

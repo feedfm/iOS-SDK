@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npS-lW-1cG" userLabel="legal text">
-                        <rect key="frame" x="122" y="107" width="357" height="192"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npS-lW-1cG" userLabel="legal text">
+                        <rect key="frame" x="66" y="107" width="468" height="84"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="357" id="xfz-sd-Irz"/>
                         </constraints>
@@ -25,12 +25,17 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xfz-sd-Irz"/>
+                            </mask>
+                        </variation>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bE-lq-96W" userLabel="close">
-                        <rect key="frame" x="544" y="20" width="40" height="40"/>
+                        <rect key="frame" x="556" y="20" width="28" height="28"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="bTs-03-K2I"/>
-                            <constraint firstAttribute="height" constant="40" id="k1Q-GG-mTz"/>
+                            <constraint firstAttribute="width" constant="28" id="bTs-03-K2I"/>
+                            <constraint firstAttribute="height" constant="28" id="k1Q-GG-mTz"/>
                         </constraints>
                         <state key="normal" image="close.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,9 +50,16 @@
                     <constraint firstItem="0bE-lq-96W" firstAttribute="top" secondItem="r9n-ah-BhL" secondAttribute="bottom" id="Xda-6q-A6Q"/>
                     <constraint firstAttribute="trailingMargin" secondItem="0bE-lq-96W" secondAttribute="trailing" id="YKj-EI-Juu"/>
                     <constraint firstItem="k3X-zz-ldY" firstAttribute="top" secondItem="npS-lW-1cG" secondAttribute="bottom" constant="301" id="bch-NT-bgR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="npS-lW-1cG" secondAttribute="trailing" constant="50" id="dC0-mH-gy7"/>
+                    <constraint firstItem="npS-lW-1cG" firstAttribute="leading" secondItem="leU-Qn-5lN" secondAttribute="leadingMargin" constant="50" id="dfq-cD-bLV"/>
                     <constraint firstItem="npS-lW-1cG" firstAttribute="top" secondItem="r9n-ah-BhL" secondAttribute="bottom" constant="87" id="r3N-pQ-3xm"/>
                     <constraint firstItem="npS-lW-1cG" firstAttribute="centerX" secondItem="leU-Qn-5lN" secondAttribute="centerX" id="vlP-q3-Nyv"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="bch-NT-bgR"/>
+                    </mask>
+                </variation>
             </view>
             <point key="canvasLocation" x="345" y="328"/>
         </viewController>

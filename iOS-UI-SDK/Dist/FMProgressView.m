@@ -17,11 +17,14 @@
 
 #if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
+@property float actualProgress;
 #endif
 
 @end
 
 @implementation FMProgressView
+
+#if !TARGET_INTERFACE_BUILDER
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -47,31 +50,28 @@
     return self;
 }
 
-#if !TARGET_INTERFACE_BUILDER
-
 - (void) dealloc {
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#endif
-
-
 - (void) setup {
-#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
     [self updatePlayerState];
-
-#else
-    [self resetProgress];
-
-#endif
 }
 
-#if !TARGET_INTERFACE_BUILDER
+- (void) setProgress: (float) progress {
+    // ignore passed in values, and just use what we've calculated
+    [super setProgress:_actualProgress];
+}
+
+- (void) setProgress:(float)progress animated:(BOOL)animated {
+    // ignore passed in values, and just use what we've calculated
+    [super setProgress:_actualProgress animated:animated];
+}
 
 - (void) playerUpdated: (NSNotification *) notification {
     [self updatePlayerState];
@@ -83,13 +83,13 @@
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
         case FMAudioPlayerPlaybackStateReadyToPlay:
-            [self resetProgress];
+            [self updateProgress];
             [self cancelProgressTimer];
             break;
             
         case FMAudioPlayerPlaybackStateComplete:
         case FMAudioPlayerPlaybackStatePaused:
-            [self updateProgress:nil];
+            [self updateProgress];
             [self cancelProgressTimer];
             break;
             
@@ -113,26 +113,34 @@
 }
 
 - (void)updateProgress:(NSTimer *)timer {
-    NSTimeInterval duration = _feedPlayer.currentItemDuration;
-    if(duration > 0) {
-        [super setProgress:(_feedPlayer.currentPlaybackTime / duration)
-                                   animated: false];
-    }
-    else {
-        [super setProgress: 0.0 animated:false];
-    }
+    [self updateProgress];
 }
+
 
 - (void)cancelProgressTimer {
     [_progressTimer invalidate];
     _progressTimer = nil;
 }
 
-#endif
+- (void)updateProgress {
+    NSTimeInterval duration = _feedPlayer.currentItemDuration;
+    if(duration > 0) {
+        _actualProgress = _feedPlayer.currentPlaybackTime / duration;
+        [super setProgress:_actualProgress animated:false];
+    }
+    else {
+        _actualProgress = 0.0;
+        [super setProgress:_actualProgress animated:false];
+    }
+}
 
 - (void)resetProgress {
-    [super setProgress: 0.0 animated:false];
+    _actualProgress = 0.0;
+    [super setProgress: _actualProgress animated:false];
 }
+
+#endif
+
 
 
 @end
