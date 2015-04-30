@@ -21,6 +21,7 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface FMMetadataLabel : UILabel
 
 @property (strong, nonatomic) IBInspectable NSString *format;

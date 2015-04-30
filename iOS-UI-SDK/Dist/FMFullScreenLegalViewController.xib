@@ -44,6 +44,9 @@
                             <action selector="close:" destination="lXj-yy-9Bg" eventType="touchUpInside" id="igv-zD-1uT"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedfm-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-ep-lHg">
+                        <rect key="frame" x="222" y="239" width="157" height="36"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                 <constraints>
@@ -52,6 +55,8 @@
                     <constraint firstItem="k3X-zz-ldY" firstAttribute="top" secondItem="npS-lW-1cG" secondAttribute="bottom" constant="301" id="bch-NT-bgR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="npS-lW-1cG" secondAttribute="trailing" constant="50" id="dC0-mH-gy7"/>
                     <constraint firstItem="npS-lW-1cG" firstAttribute="leading" secondItem="leU-Qn-5lN" secondAttribute="leadingMargin" constant="50" id="dfq-cD-bLV"/>
+                    <constraint firstAttribute="centerX" secondItem="vgK-ep-lHg" secondAttribute="centerX" constant="-0.5" id="hqy-hK-PWs"/>
+                    <constraint firstItem="vgK-ep-lHg" firstAttribute="top" secondItem="npS-lW-1cG" secondAttribute="bottom" constant="48" id="kZx-sN-7ad"/>
                     <constraint firstItem="npS-lW-1cG" firstAttribute="top" secondItem="r9n-ah-BhL" secondAttribute="bottom" constant="87" id="r3N-pQ-3xm"/>
                     <constraint firstItem="npS-lW-1cG" firstAttribute="centerX" secondItem="leU-Qn-5lN" secondAttribute="centerX" id="vlP-q3-Nyv"/>
                 </constraints>
@@ -66,5 +71,6 @@
     </objects>
     <resources>
         <image name="close.png" width="30" height="30"/>
+        <image name="feedfm-logo.png" width="157" height="36"/>
     </resources>
 </document>

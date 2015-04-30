@@ -25,6 +25,10 @@
 /* Begin PBXBuildFile section */
 		9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971272191AEF0F0600E4723A /* FMSkipWarningView.m */; };
 		9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */; };
+		972839081AF2D6FE005C90FC /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 972839071AF2D6FE005C90FC /* share.png */; };
+		9728390B1AF2D80B005C90FC /* FMShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9728390A1AF2D80B005C90FC /* FMShareButton.m */; };
+		9728390F1AF2E855005C90FC /* feedfm-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728390E1AF2E855005C90FC /* feedfm-logo.png */; };
+		972839111AF2E889005C90FC /* feedfm-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 972839101AF2E889005C90FC /* feedfm-circle.png */; };
 		976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98AE1AAFF9E3003FA42F /* FMProgressView.m */; };
 		976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */; };
 		976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */; };
@@ -49,7 +53,6 @@
 		97E1C7E01AAE714B005AF723 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C7DF1AAE714B005AF723 /* MediaPlayer.framework */; };
 		97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C8331AAF5CD4005AF723 /* FMSkipButton.m */; };
 		97E1C83F1AAF6ACD005AF723 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8351AAF6ACC005AF723 /* close.png */; };
-		97E1C8401AAF6ACD005AF723 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8361AAF6ACD005AF723 /* share.png */; };
 		97E1C8411AAF6ACD005AF723 /* skip.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8371AAF6ACD005AF723 /* skip.png */; };
 		97E1C8421AAF6ACD005AF723 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8381AAF6ACD005AF723 /* slider.png */; };
 		97E1C8431AAF6ACD005AF723 /* thumbsdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8391AAF6ACD005AF723 /* thumbsdown.png */; };
@@ -103,6 +106,11 @@
 		971272191AEF0F0600E4723A /* FMSkipWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSkipWarningView.m; sourceTree = "<group>"; };
 		9712721C1AEF1DC800E4723A /* FMMetadataLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMetadataLabel.h; sourceTree = "<group>"; };
 		9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMetadataLabel.m; sourceTree = "<group>"; };
+		972839071AF2D6FE005C90FC /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		972839091AF2D80B005C90FC /* FMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMShareButton.h; sourceTree = "<group>"; };
+		9728390A1AF2D80B005C90FC /* FMShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMShareButton.m; sourceTree = "<group>"; };
+		9728390E1AF2E855005C90FC /* feedfm-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-logo.png"; sourceTree = "<group>"; };
+		972839101AF2E889005C90FC /* feedfm-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-circle.png"; sourceTree = "<group>"; };
 		976B98AD1AAFF9E3003FA42F /* FMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
 		976B98AE1AAFF9E3003FA42F /* FMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
 		976B98B01AB00280003FA42F /* FMElapsedTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMElapsedTimeLabel.h; sourceTree = "<group>"; };
@@ -141,7 +149,6 @@
 		97E1C8321AAF5CD4005AF723 /* FMSkipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSkipButton.h; sourceTree = "<group>"; };
 		97E1C8331AAF5CD4005AF723 /* FMSkipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSkipButton.m; sourceTree = "<group>"; };
 		97E1C8351AAF6ACC005AF723 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
-		97E1C8361AAF6ACD005AF723 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		97E1C8371AAF6ACD005AF723 /* skip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip.png; sourceTree = "<group>"; };
 		97E1C8381AAF6ACD005AF723 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
 		97E1C8391AAF6ACD005AF723 /* thumbsdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbsdown.png; sourceTree = "<group>"; };
@@ -263,6 +270,8 @@
 				9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */,
 				971272181AEF0F0600E4723A /* FMSkipWarningView.h */,
 				971272191AEF0F0600E4723A /* FMSkipWarningView.m */,
+				972839091AF2D80B005C90FC /* FMShareButton.h */,
+				9728390A1AF2D80B005C90FC /* FMShareButton.m */,
 				97E1C7E11AAE719C005AF723 /* Resources */,
 				97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */,
 				97A491EF1AED2F7B00726C0A /* FMFullScreenLegalViewController.h */,
@@ -287,8 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				97E1C8351AAF6ACC005AF723 /* close.png */,
-				97E1C8361AAF6ACD005AF723 /* share.png */,
 				97E1C8371AAF6ACD005AF723 /* skip.png */,
+				972839071AF2D6FE005C90FC /* share.png */,
 				97E1C8381AAF6ACD005AF723 /* slider.png */,
 				97E1C8391AAF6ACD005AF723 /* thumbsdown.png */,
 				97E1C84C1AAF8046005AF723 /* thumbsdown-selected.png */,
@@ -296,6 +305,8 @@
 				97E1C83A1AAF6ACD005AF723 /* thumbsup.png */,
 				97E1C78F1AAE674A005AF723 /* play.png */,
 				97E1C7901AAE674A005AF723 /* pause.png */,
+				972839101AF2E889005C90FC /* feedfm-circle.png */,
+				9728390E1AF2E855005C90FC /* feedfm-logo.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -408,12 +419,14 @@
 				97E1C7641AAE65F7005AF723 /* Main.storyboard in Resources */,
 				97E1C8411AAF6ACD005AF723 /* skip.png in Resources */,
 				97E1C7911AAE674A005AF723 /* play.png in Resources */,
+				972839081AF2D6FE005C90FC /* share.png in Resources */,
 				97E1C8431AAF6ACD005AF723 /* thumbsdown.png in Resources */,
-				97E1C8401AAF6ACD005AF723 /* share.png in Resources */,
 				97E1C7921AAE674A005AF723 /* pause.png in Resources */,
 				97E1C84E1AAF8046005AF723 /* thumbsdown-selected.png in Resources */,
 				97E1C84F1AAF8046005AF723 /* thumbsup-selected.png in Resources */,
 				97E1C7691AAE65F7005AF723 /* LaunchScreen.xib in Resources */,
+				9728390F1AF2E855005C90FC /* feedfm-logo.png in Resources */,
+				972839111AF2E889005C90FC /* feedfm-circle.png in Resources */,
 				97E1C8421AAF6ACD005AF723 /* slider.png in Resources */,
 				97E1C7661AAE65F7005AF723 /* Images.xcassets in Resources */,
 			);
@@ -462,6 +475,7 @@
 				97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */,
 				976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */,
 				97E1C75B1AAE65F7005AF723 /* main.m in Sources */,
+				9728390B1AF2D80B005C90FC /* FMShareButton.m in Sources */,
 				97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */,
 				976B993E1AB10C6B003FA42F /* FMActivityIndicator.m in Sources */,
 				976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */,

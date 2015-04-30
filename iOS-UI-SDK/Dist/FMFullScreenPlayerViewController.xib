@@ -121,8 +121,23 @@
                                     <constraint firstAttribute="width" constant="186" id="MOL-vx-gzX"/>
                                 </constraints>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kx-4T-ler" userLabel="share button" customClass="FMShareButton">
+                                <rect key="frame" x="53" y="192" width="15" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="5C8-lg-Cgf"/>
+                                    <constraint firstAttribute="height" constant="21" id="bGo-uW-had"/>
+                                </constraints>
+                                <state key="normal" image="share.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shareText" value="I love this music!"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shareUrl" value="http://feed.fm"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="shareImage" value="feedfm-circle.png"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ss-q7-ccM" userLabel="powered by feed">
-                                <rect key="frame" x="103" y="192" width="115" height="27"/>
+                                <rect key="frame" x="160" y="189" width="115" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="powered by Feed.fm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -138,6 +153,7 @@
                             <constraint firstItem="3VD-hA-3pW" firstAttribute="top" secondItem="YIR-3s-5Ye" secondAttribute="top" constant="147" id="2up-we-DkO"/>
                             <constraint firstItem="NtB-SA-4y9" firstAttribute="leading" secondItem="YIR-3s-5Ye" secondAttribute="leading" id="3qM-TG-wyM"/>
                             <constraint firstAttribute="trailing" secondItem="NtB-SA-4y9" secondAttribute="trailing" id="4n8-X7-HQg"/>
+                            <constraint firstAttribute="bottom" secondItem="1Kx-4T-ler" secondAttribute="bottom" constant="16" id="6mQ-PT-wRc"/>
                             <constraint firstAttribute="centerX" secondItem="ZBZ-QT-HbB" secondAttribute="centerX" id="7Jr-Cb-qGL"/>
                             <constraint firstAttribute="centerX" secondItem="NtB-SA-4y9" secondAttribute="centerX" id="ACg-Lf-HGN"/>
                             <constraint firstAttribute="centerX" secondItem="9Y6-ju-S8u" secondAttribute="centerX" constant="100" id="BYI-FU-O8g"/>
@@ -156,13 +172,14 @@
                             <constraint firstAttribute="centerX" secondItem="3VD-hA-3pW" secondAttribute="centerX" constant="34" id="gOY-Y2-Kaw"/>
                             <constraint firstAttribute="centerX" secondItem="u7g-mS-F4g" secondAttribute="centerX" constant="-34" id="h8M-25-Bbi"/>
                             <constraint firstItem="F4n-a6-1LM" firstAttribute="top" secondItem="YIR-3s-5Ye" secondAttribute="top" constant="119" id="idw-tw-agD"/>
-                            <constraint firstAttribute="bottom" secondItem="8Ss-q7-ccM" secondAttribute="bottom" constant="10" id="k0z-hv-Um2"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ss-q7-ccM" secondAttribute="bottom" constant="13" id="k0z-hv-Um2"/>
                             <constraint firstItem="j33-Kc-sqF" firstAttribute="leading" secondItem="YIR-3s-5Ye" secondAttribute="leading" id="kuq-oz-wlT"/>
                             <constraint firstAttribute="height" constant="229" id="n9u-cd-na7"/>
                             <constraint firstItem="rfn-pA-JY2" firstAttribute="top" secondItem="YIR-3s-5Ye" secondAttribute="top" constant="109" id="nYK-gg-nCk"/>
                             <constraint firstAttribute="width" constant="320" id="ojL-gH-WRQ"/>
                             <constraint firstItem="u7g-mS-F4g" firstAttribute="top" secondItem="YIR-3s-5Ye" secondAttribute="top" constant="147" id="uG0-rb-VHF"/>
-                            <constraint firstAttribute="centerX" secondItem="8Ss-q7-ccM" secondAttribute="centerX" id="w41-qc-dXS"/>
+                            <constraint firstAttribute="centerX" secondItem="8Ss-q7-ccM" secondAttribute="centerX" constant="-57.5" id="w41-qc-dXS"/>
+                            <constraint firstAttribute="centerX" secondItem="1Kx-4T-ler" secondAttribute="centerX" constant="99.5" id="w9H-LI-UAq"/>
                             <constraint firstItem="NtB-SA-4y9" firstAttribute="top" secondItem="YIR-3s-5Ye" secondAttribute="top" constant="40" id="wY3-xo-TpQ"/>
                             <constraint firstAttribute="centerX" secondItem="F4n-a6-1LM" secondAttribute="centerX" id="xdY-dH-HDn"/>
                         </constraints>
@@ -226,8 +243,10 @@
     </objects>
     <resources>
         <image name="close.png" width="30" height="30"/>
+        <image name="feedfm-circle.png" width="128" height="128"/>
         <image name="pause.png" width="57" height="42"/>
         <image name="play.png" width="57" height="42"/>
+        <image name="share.png" width="30" height="42"/>
         <image name="skip.png" width="61" height="42"/>
         <image name="thumbsdown-selected.png" width="39" height="42"/>
         <image name="thumbsdown.png" width="39" height="42"/>

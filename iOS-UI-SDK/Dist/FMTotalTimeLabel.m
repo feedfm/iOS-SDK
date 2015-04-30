@@ -106,13 +106,18 @@
     [super setText:_textForNoTime];
 }
 
+#endif
+
 - (void) setTextForNoTime: (NSString *) theText {
     _textForNoTime = theText;
 
+#if !TARGET_INTERFACE_BUILDER
     [self updatePlayerState];
+#else
+    [super setText:theText];
+#endif
 }
 
-#endif
 
 
 @end

@@ -19,6 +19,7 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface FMSkipWarningView : UIView
 
 @end
