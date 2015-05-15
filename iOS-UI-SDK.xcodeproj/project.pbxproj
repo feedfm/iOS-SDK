@@ -25,6 +25,7 @@
 /* Begin PBXBuildFile section */
 		9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971272191AEF0F0600E4723A /* FMSkipWarningView.m */; };
 		9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */; };
+		971E8E081B05AECB008E4FB2 /* FMStationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 971E8E071B05AECB008E4FB2 /* FMStationButton.m */; };
 		972839081AF2D6FE005C90FC /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 972839071AF2D6FE005C90FC /* share.png */; };
 		9728390B1AF2D80B005C90FC /* FMShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9728390A1AF2D80B005C90FC /* FMShareButton.m */; };
 		9728390F1AF2E855005C90FC /* feedfm-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728390E1AF2E855005C90FC /* feedfm-logo.png */; };
@@ -106,6 +107,8 @@
 		971272191AEF0F0600E4723A /* FMSkipWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSkipWarningView.m; sourceTree = "<group>"; };
 		9712721C1AEF1DC800E4723A /* FMMetadataLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMetadataLabel.h; sourceTree = "<group>"; };
 		9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMetadataLabel.m; sourceTree = "<group>"; };
+		971E8E061B05AECB008E4FB2 /* FMStationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStationButton.h; sourceTree = "<group>"; };
+		971E8E071B05AECB008E4FB2 /* FMStationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStationButton.m; sourceTree = "<group>"; };
 		972839071AF2D6FE005C90FC /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		972839091AF2D80B005C90FC /* FMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMShareButton.h; sourceTree = "<group>"; };
 		9728390A1AF2D80B005C90FC /* FMShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMShareButton.m; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				97E1C84A1AAF6D63005AF723 /* FMLikeButton.m */,
 				97E1C8501AAF82D7005AF723 /* FMDislikeButton.h */,
 				97E1C8511AAF82D7005AF723 /* FMDislikeButton.m */,
+				971E8E061B05AECB008E4FB2 /* FMStationButton.h */,
+				971E8E071B05AECB008E4FB2 /* FMStationButton.m */,
 				97E1C7811AAE6625005AF723 /* FMPlayPauseButton.h */,
 				97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */,
 				976B993C1AB10C6B003FA42F /* FMActivityIndicator.h */,
@@ -470,6 +475,7 @@
 				97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */,
 				97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */,
 				97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */,
+				971E8E081B05AECB008E4FB2 /* FMStationButton.m in Sources */,
 				9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */,
 				9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */,
 				97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */,

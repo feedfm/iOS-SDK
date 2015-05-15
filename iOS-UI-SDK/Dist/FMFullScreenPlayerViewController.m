@@ -7,6 +7,7 @@
 //
 
 #import "FMFullScreenPlayerViewController.h"
+#import "FeedMedia/FMAudioPlayer.h"
 
 @interface FMFullScreenPlayerViewController ()
 
@@ -23,7 +24,6 @@
     
     [self presentViewController:vc animated:true completion:nil];
 }
-
 
 - (IBAction)close:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:true completion:nil];

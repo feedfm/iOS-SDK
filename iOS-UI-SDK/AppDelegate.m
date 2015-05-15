@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FeedMedia/FMLog.h"
 #import "FeedMedia/FMAudioPlayer.h"
 
 @interface AppDelegate ()
@@ -19,8 +20,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    FMLogSetLevel(FMLogLevelDebug);
+    
     [FMAudioPlayer setClientToken:@"demo" secret:@"demo"];
-    [[FMAudioPlayer sharedPlayer] prepareToPlay];
+    
+    [[FMAudioPlayer sharedPlayer] whenAvailable:^{
+        //FMLogDebug(@"things are ready!");
+        
+        [[FMAudioPlayer sharedPlayer] prepareToPlay];
+        
+    } notAvailable:^{
+        FMLogDebug(@"things are NOT ready!");
+
+    }];
 
     return YES;
 }
