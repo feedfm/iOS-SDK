@@ -11,9 +11,7 @@
 
 #define kFMProgressBarUpdateTimeInterval 0.5
 
-@interface FMProgressView () {
-    NSTimer *_progressTimer;
-}
+@interface FMProgressView ()
 
 #if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
@@ -51,15 +49,16 @@
 }
 
 - (void) dealloc {
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void) setup {
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPlayerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPlayerUpdated:) name:FMAudioPlayerTimeElapseNotification object:_feedPlayer];
+
     [self updatePlayerState];
 }
 
@@ -73,7 +72,7 @@
     [super setProgress:_actualProgress animated:animated];
 }
 
-- (void) playerUpdated: (NSNotification *) notification {
+- (void) onPlayerUpdated: (NSNotification *) notification {
     [self updatePlayerState];
 }
 
@@ -83,43 +82,16 @@
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
         case FMAudioPlayerPlaybackStateReadyToPlay:
-            [self updateProgress];
-            [self cancelProgressTimer];
-            break;
-            
         case FMAudioPlayerPlaybackStateComplete:
         case FMAudioPlayerPlaybackStatePaused:
-            [self updateProgress];
-            [self cancelProgressTimer];
-            break;
-            
         case FMAudioPlayerPlaybackStatePlaying:
-            [self startProgressTimer];
+            [self updateProgress];
             break;
             
         default:
             // nada
             break;
     }
-}
-
-- (void)startProgressTimer {
-    [_progressTimer invalidate];
-    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:kFMProgressBarUpdateTimeInterval
-                                                      target:self
-                                                    selector:@selector(updateProgress:)
-                                                    userInfo:nil
-                                                     repeats:YES];
-}
-
-- (void)updateProgress:(NSTimer *)timer {
-    [self updateProgress];
-}
-
-
-- (void)cancelProgressTimer {
-    [_progressTimer invalidate];
-    _progressTimer = nil;
 }
 
 - (void)updateProgress {

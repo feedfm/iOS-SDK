@@ -11,9 +11,7 @@
 
 #define kFMProgressBarUpdateTimeInterval 0.5
 
-@interface FMElapsedTimeLabel () {
-    NSTimer *_progressTimer;
-}
+@interface FMElapsedTimeLabel ()
 
 #if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
@@ -55,6 +53,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPlayerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPlayerUpdated:) name:FMAudioPlayerTimeElapseNotification object:_feedPlayer];
+    
     [self updatePlayerState];
 }
 
@@ -64,8 +64,6 @@
 
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    [self cancelProgressTimer];
 }
 
 - (void) setText:(NSString *)text {
@@ -81,12 +79,8 @@
         case FMAudioPlayerPlaybackStateComplete:
         case FMAudioPlayerPlaybackStateReadyToPlay:
         case FMAudioPlayerPlaybackStatePaused:
-            [self updateProgress];
-            [self cancelProgressTimer];
-            break;
-            
         case FMAudioPlayerPlaybackStatePlaying:
-            [self startProgressTimer];
+            [self updateProgress];
             break;
             
         default:
@@ -94,27 +88,6 @@
             break;
     }
 }
-
-- (void)startProgressTimer {
-    [_progressTimer invalidate];
-    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:kFMProgressBarUpdateTimeInterval
-                                                      target:self
-                                                    selector:@selector(onProgressTimerUpdate:)
-                                                    userInfo:nil
-                                                     repeats:YES];
-    [self updateProgress];
-}
-
-- (void)onProgressTimerUpdate:(NSTimer *)timer {
-    [self updateProgress];
-}
-
-
-- (void)cancelProgressTimer {
-    [_progressTimer invalidate];
-    _progressTimer = nil;
-}
-
 
 - (void)updateProgress {
     NSTimeInterval duration = _feedPlayer.currentItemDuration;
