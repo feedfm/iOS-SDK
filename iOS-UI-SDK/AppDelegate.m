@@ -29,6 +29,12 @@
         
         [[FMAudioPlayer sharedPlayer] prepareToPlay];
         
+        // display any station options, for giggles
+        for (FMStation *station in [[FMAudioPlayer sharedPlayer] stationList]) {
+            NSLog(@"options for station '%@' are %@", [station name], [station options]);
+        }
+
+        
     } notAvailable:^{
         FMLogDebug(@"things are NOT ready!");
 
