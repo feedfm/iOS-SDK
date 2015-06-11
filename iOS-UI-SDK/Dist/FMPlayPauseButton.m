@@ -9,15 +9,19 @@
 #import "FeedMedia/FMAudioPlayer.h"
 #import "FMPlayPauseButton.h"
 
+#if !TARGET_INTERFACE_BUILDER
+
 @interface FMPlayPauseButton ()
 
-#if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
-#endif
 
 @end
 
+#endif
+
 @implementation FMPlayPauseButton
+
+#if !TARGET_INTERFACE_BUILDER
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -43,27 +47,20 @@
     return self;
 }
 
-#if !TARGET_INTERFACE_BUILDER
-
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#endif
-
 - (void) setup {
-#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
     [self addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
-#endif
     
     [self updatePlayerState];
 }
 
-#if !TARGET_INTERFACE_BUILDER
 
 - (void) onClick {
     if ((_feedPlayer.playbackState == FMAudioPlayerPlaybackStatePaused) ||
@@ -79,17 +76,11 @@
     [self updatePlayerState];
 }
 
-#endif
-
 - (void) updatePlayerState {
     FMAudioPlayerPlaybackState newState;
 
-#if !TARGET_INTERFACE_BUILDER
     newState = _feedPlayer.playbackState;
-#else
-    newState = FMAudioPlayerPlaybackStateReadyToPlay;
-#endif
-    
+
     // selected = YES = show the pause button
     // selected = NO = show the play button
     
@@ -132,6 +123,9 @@
             }
             break;
     }
+    
+    
 }
+#endif
 
 @end

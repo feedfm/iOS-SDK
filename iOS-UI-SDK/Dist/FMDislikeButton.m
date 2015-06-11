@@ -17,6 +17,8 @@
 
 @implementation FMDislikeButton
 
+#if !TARGET_INTERFACE_BUILDER
+
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setup];
@@ -43,7 +45,6 @@
 
 - (void) setup {
     
-#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
@@ -57,11 +58,7 @@
 
     [self updatePlayerState];
 
-#endif
-    
 }
-
-#if !TARGET_INTERFACE_BUILDER
 
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

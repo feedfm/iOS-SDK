@@ -11,13 +11,15 @@
 
 #define kFMProgressBarUpdateTimeInterval 0.5
 
+#if !TARGET_INTERFACE_BUILDER
+
 @interface FMTotalTimeLabel ()
 
-#if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
-#endif
 
 @end
+
+#endif
 
 
 @implementation FMTotalTimeLabel

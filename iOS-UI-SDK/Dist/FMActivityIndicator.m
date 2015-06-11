@@ -8,16 +8,19 @@
 
 #import "FMActivityIndicator.h"
 
+#if !TARGET_INTERFACE_BUILDER
+
 @interface FMActivityIndicator ()
 
-#if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
-#endif
 
 @end
 
+#endif
 
 @implementation FMActivityIndicator
+
+#if !TARGET_INTERFACE_BUILDER
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -43,20 +46,15 @@
     return self;
 }
 
-#if !TARGET_INTERFACE_BUILDER
 
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#endif
-
 - (void) setup {
-#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
-#endif
     
     [self updatePlayerState];
     
@@ -69,11 +67,8 @@
 - (void) updatePlayerState {
     FMAudioPlayerPlaybackState newState;
     
-#if !TARGET_INTERFACE_BUILDER
     newState = _feedPlayer.playbackState;
-#else
-    newState = FMAudioPlayerPlaybackStatePlaying;
-#endif
+
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateReadyToPlay:
@@ -91,6 +86,6 @@
     }
 }
 
-
+#endif
 
 @end
