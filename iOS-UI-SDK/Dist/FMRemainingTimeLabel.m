@@ -1,17 +1,19 @@
 //
-//  FMElapsedTimeLabel.m
+//  FMRemainingTimeLabel.m
 //  iOS-UI-SDK
 //
-//  Created by Eric Lambrecht on 3/10/15.
+//  Created by Eric Lambrecht on 6/10/15.
 //  Copyright (c) 2015 Feed Media. All rights reserved.
 //
+
+#import "FMRemainingTimeLabel.h"
 
 #import "FMElapsedTimeLabel.h"
 #import "FeedMedia/FMAudioPlayer.h"
 
 #define kFMProgressBarUpdateTimeInterval 0.5
 
-@interface FMElapsedTimeLabel ()
+@interface FMRemainingTimeLabel ()
 
 #if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
@@ -20,7 +22,7 @@
 @end
 
 
-@implementation FMElapsedTimeLabel
+@implementation FMRemainingTimeLabel
 
 #if !TARGET_INTERFACE_BUILDER
 
@@ -92,12 +94,12 @@
 - (void)updateProgress {
     NSTimeInterval duration = _feedPlayer.currentItemDuration;
     if(duration > 0) {
-        long currentTime = lroundf(self.feedPlayer.currentPlaybackTime);
-        
-        if (currentTime < 0) {
+        long remainingTime = lroundf(duration - self.feedPlayer.currentPlaybackTime);
+
+        if (remainingTime < 0) {
             [super setText:@"0:00"];
         } else {
-            [super setText: [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60]];
+            [super setText: [NSString stringWithFormat:@"-%ld:%02ld", remainingTime / 60, remainingTime % 60]];
         }
         
     }
@@ -116,7 +118,7 @@
 #else
     [super setText:textForNoTime];
 #endif
-
+    
 }
 
 

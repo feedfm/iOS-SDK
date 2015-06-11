@@ -34,6 +34,7 @@
 		976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */; };
 		976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */; };
 		976B993E1AB10C6B003FA42F /* FMActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B993D1AB10C6B003FA42F /* FMActivityIndicator.m */; };
+		978F14F91B29467C002DD201 /* FMRemainingTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978F14F81B29467C002DD201 /* FMRemainingTimeLabel.m */; };
 		97A491E91AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */; };
 		97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */; };
 		97A491EE1AECA94700726C0A /* FMFullScreenLegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */; };
@@ -122,6 +123,8 @@
 		976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTotalTimeLabel.m; sourceTree = "<group>"; };
 		976B993C1AB10C6B003FA42F /* FMActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMActivityIndicator.h; sourceTree = "<group>"; };
 		976B993D1AB10C6B003FA42F /* FMActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMActivityIndicator.m; sourceTree = "<group>"; };
+		978F14F71B29467C002DD201 /* FMRemainingTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRemainingTimeLabel.h; sourceTree = "<group>"; };
+		978F14F81B29467C002DD201 /* FMRemainingTimeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRemainingTimeLabel.m; sourceTree = "<group>"; };
 		97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMFullScreenPlayerViewController.xib; sourceTree = "<group>"; };
 		97A491EA1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFullScreenPlayerViewController.h; sourceTree = "<group>"; };
 		97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFullScreenPlayerViewController.m; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				976B98AE1AAFF9E3003FA42F /* FMProgressView.m */,
 				976B98B31AB0088C003FA42F /* FMTotalTimeLabel.h */,
 				976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */,
+				978F14F71B29467C002DD201 /* FMRemainingTimeLabel.h */,
+				978F14F81B29467C002DD201 /* FMRemainingTimeLabel.m */,
 				976B98B01AB00280003FA42F /* FMElapsedTimeLabel.h */,
 				976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */,
 				97E1C8321AAF5CD4005AF723 /* FMSkipButton.h */,
@@ -477,6 +482,7 @@
 				97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */,
 				971E8E081B05AECB008E4FB2 /* FMStationButton.m in Sources */,
 				9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */,
+				978F14F91B29467C002DD201 /* FMRemainingTimeLabel.m in Sources */,
 				9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */,
 				97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */,
 				976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */,

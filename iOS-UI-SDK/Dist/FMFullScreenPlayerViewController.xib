@@ -102,7 +102,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="textForNoTime" value="-:--"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfn-pA-JY2" userLabel="total time" customClass="FMTotalTimeLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfn-pA-JY2" userLabel="total time" customClass="FMRemainingTimeLabel">
                                 <rect key="frame" x="261" y="109" width="38" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ZJK-wx-S21"/>
