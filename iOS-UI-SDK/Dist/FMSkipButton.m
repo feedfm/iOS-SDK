@@ -9,15 +9,19 @@
 #import "FMSkipButton.h"
 #import "FeedMedia/FMAudioPlayer.h"
 
+#if !TARGET_INTERFACE_BUILDER
+
 @interface FMSkipButton ()
 
-#if !TARGET_INTERFACE_BUILDER
 @property (strong, nonatomic) FMAudioPlayer *feedPlayer;
-#endif
 
 @end
 
+#endif
+
 @implementation FMSkipButton
+
+#if !TARGET_INTERFACE_BUILDER
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -44,54 +48,71 @@
 }
 
 - (void) dealloc {
-    
-#if !TARGET_INTERFACE_BUILDER
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-#endif
 }
 
 - (void) setup {
  
-#if !TARGET_INTERFACE_BUILDER
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
+    NSNotificationCenter *ns = [NSNotificationCenter defaultCenter];
+    [ns addObserver:self selector:@selector(onPlaybackStateDidChange:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
+    [ns addObserver:self selector:@selector(onCurrentItemDidChange:) name:FMAudioPlayerCurrentItemDidChangeNotification object:_feedPlayer];
+    [ns addObserver:self selector:@selector(onSkipDidFail:) name:FMAudioPlayerSkipFailedNotification object:_feedPlayer];
+    [ns addObserver:self selector:@selector(onSkipStatusChanged:) name:FMAudioPlayerSkipStatusNotification object:_feedPlayer];
     
     [self addTarget:self action:@selector(onSkipClick) forControlEvents:UIControlEventTouchUpInside];
 ;
     
     [self updatePlayerState];
-    
-#endif
 }
-
-#if !TARGET_INTERFACE_BUILDER
 
 - (void) onSkipClick {
     [_feedPlayer skip];
 }
 
-- (void) playerUpdated: (NSNotification *)notification {
+- (void) onPlaybackStateDidChange: (NSNotification *)notification {
+    [self updatePlayerState];
+}
+
+- (void) onCurrentItemDidChange: (NSNotification *)notification {
     [self updatePlayerState];
 }
 
 - (void) updatePlayerState {
-    FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
+    if (_feedPlayer.currentItem == nil) {
+        [self setEnabled:NO];
+
+    } else if (!_feedPlayer.canSkip) {
+        [self setEnabled:NO];
+        
+    } else {
+        FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
     
-    switch (newState) {
-        case FMAudioPlayerPlaybackStateRequestingSkip:
-        case FMAudioPlayerPlaybackStateWaitingForItem:
-        case FMAudioPlayerPlaybackStateComplete:
-        case FMAudioPlayerPlaybackStateReadyToPlay:
-            [self setEnabled:NO];
-            break;
-        case FMAudioPlayerPlaybackStatePaused:
-        case FMAudioPlayerPlaybackStatePlaying:
-        case FMAudioPlayerPlaybackStateStalled:
-            [self setEnabled:YES];
-            break;
+        switch (newState) {
+            case FMAudioPlayerPlaybackStateRequestingSkip:
+            case FMAudioPlayerPlaybackStateWaitingForItem:
+            case FMAudioPlayerPlaybackStateComplete:
+            case FMAudioPlayerPlaybackStateReadyToPlay:
+                [self setEnabled:NO];
+                break;
+            case FMAudioPlayerPlaybackStatePaused:
+            case FMAudioPlayerPlaybackStatePlaying:
+            case FMAudioPlayerPlaybackStateStalled:
+                [self setEnabled:YES];
+                break;
+        }
     }
 }
+
+- (void) onSkipDidFail: (NSNotification *)notification {
+    [self setEnabled:NO];
+}
+
+- (void) onSkipStatusChanged: (NSNotification *)notification {
+    [self updatePlayerState];
+}
+
 
 #endif
 

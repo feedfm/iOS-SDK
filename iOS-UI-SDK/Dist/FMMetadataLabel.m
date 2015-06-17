@@ -58,6 +58,15 @@
     // when running live, only we get to set the text
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    // When created from nib, the 'text' attribute might be set without
+    // going through our overridden 'setText' method (!!). Let's override
+    // that here:
+    [self updateText];
+}
+
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -84,6 +93,9 @@
     [string replaceOccurrencesOfString:@"%ALBUM" withString:current.album options:NSLiteralSearch range:NSMakeRange(0, [string length])];
     
     super.text = string;
+
+    self.marqueeType = MLContinuous;
+
 }
 
 #endif

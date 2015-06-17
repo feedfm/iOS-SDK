@@ -25,7 +25,7 @@
 }
 
 - (IBAction)presentFullPagePlayer:(id)sender {
-    UINib *uiNib = [UINib nibWithNibName:@"FMFullScreenPlayerViewController" bundle:nil];
+    UINib *uiNib = [UINib nibWithNibName:@"Player" bundle:nil];
     
     UIViewController *playerVC = [uiNib instantiateWithOwner:nil options:nil][0];
     

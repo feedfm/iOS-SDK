@@ -1,18 +1,18 @@
 //
-//  FMFullScreenLegalViewController.m
+//  DisclaimerViewController.m
 //  iOS-UI-SDK
 //
-//  Created by Eric Lambrecht on 4/26/15.
+//  Created by Eric Lambrecht on 6/15/15.
 //  Copyright (c) 2015 Feed Media. All rights reserved.
 //
 
-#import "FMFullScreenLegalViewController.h"
+#import "DisclaimerViewController.h"
 
-@interface FMFullScreenLegalViewController ()
+@interface DisclaimerViewController ()
 
 @end
 
-@implementation FMFullScreenLegalViewController
+@implementation DisclaimerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onClose: (id) view {
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -33,9 +37,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)close:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:true completion:nil];
-}
 
 @end

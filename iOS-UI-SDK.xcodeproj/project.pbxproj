@@ -30,15 +30,16 @@
 		9728390B1AF2D80B005C90FC /* FMShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9728390A1AF2D80B005C90FC /* FMShareButton.m */; };
 		9728390F1AF2E855005C90FC /* feedfm-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728390E1AF2E855005C90FC /* feedfm-logo.png */; };
 		972839111AF2E889005C90FC /* feedfm-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 972839101AF2E889005C90FC /* feedfm-circle.png */; };
+		974713601B323B6100C9058A /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974713571B323B6100C9058A /* Player.storyboard */; };
+		974713611B323B6100C9058A /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 974713591B323B6100C9058A /* PlayerViewController.m */; };
+		974713621B323B6100C9058A /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135B1B323B6100C9058A /* DisclaimerViewController.m */; };
+		974713631B323B6100C9058A /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135D1B323B6100C9058A /* MarqueeLabel.m */; };
+		974713641B323B6100C9058A /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135F1B323B6100C9058A /* RadioViewController.m */; };
 		976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98AE1AAFF9E3003FA42F /* FMProgressView.m */; };
 		976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */; };
 		976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */; };
 		976B993E1AB10C6B003FA42F /* FMActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B993D1AB10C6B003FA42F /* FMActivityIndicator.m */; };
 		978F14F91B29467C002DD201 /* FMRemainingTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978F14F81B29467C002DD201 /* FMRemainingTimeLabel.m */; };
-		97A491E91AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */; };
-		97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */; };
-		97A491EE1AECA94700726C0A /* FMFullScreenLegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */; };
-		97A491F11AED2F7B00726C0A /* FMFullScreenLegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A491F01AED2F7B00726C0A /* FMFullScreenLegalViewController.m */; };
 		97E1C75B1AAE65F7005AF723 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75A1AAE65F7005AF723 /* main.m */; };
 		97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75D1AAE65F7005AF723 /* AppDelegate.m */; };
 		97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7601AAE65F7005AF723 /* ViewController.m */; };
@@ -115,6 +116,15 @@
 		9728390A1AF2D80B005C90FC /* FMShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMShareButton.m; sourceTree = "<group>"; };
 		9728390E1AF2E855005C90FC /* feedfm-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-logo.png"; sourceTree = "<group>"; };
 		972839101AF2E889005C90FC /* feedfm-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-circle.png"; sourceTree = "<group>"; };
+		974713571B323B6100C9058A /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
+		974713581B323B6100C9058A /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		974713591B323B6100C9058A /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		9747135A1B323B6100C9058A /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
+		9747135B1B323B6100C9058A /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
+		9747135C1B323B6100C9058A /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
+		9747135D1B323B6100C9058A /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
+		9747135E1B323B6100C9058A /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
+		9747135F1B323B6100C9058A /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioViewController.m; sourceTree = "<group>"; };
 		976B98AD1AAFF9E3003FA42F /* FMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
 		976B98AE1AAFF9E3003FA42F /* FMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
 		976B98B01AB00280003FA42F /* FMElapsedTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMElapsedTimeLabel.h; sourceTree = "<group>"; };
@@ -125,12 +135,6 @@
 		976B993D1AB10C6B003FA42F /* FMActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMActivityIndicator.m; sourceTree = "<group>"; };
 		978F14F71B29467C002DD201 /* FMRemainingTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRemainingTimeLabel.h; sourceTree = "<group>"; };
 		978F14F81B29467C002DD201 /* FMRemainingTimeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRemainingTimeLabel.m; sourceTree = "<group>"; };
-		97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMFullScreenPlayerViewController.xib; sourceTree = "<group>"; };
-		97A491EA1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFullScreenPlayerViewController.h; sourceTree = "<group>"; };
-		97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFullScreenPlayerViewController.m; sourceTree = "<group>"; };
-		97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMFullScreenLegalViewController.xib; sourceTree = "<group>"; };
-		97A491EF1AED2F7B00726C0A /* FMFullScreenLegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFullScreenLegalViewController.h; sourceTree = "<group>"; };
-		97A491F01AED2F7B00726C0A /* FMFullScreenLegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFullScreenLegalViewController.m; sourceTree = "<group>"; };
 		97E1C7551AAE65F7005AF723 /* iOS-UI-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UI-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E1C7591AAE65F7005AF723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97E1C75A1AAE65F7005AF723 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -256,6 +260,15 @@
 		97E1C77E1AAE660D005AF723 /* Dist */ = {
 			isa = PBXGroup;
 			children = (
+				974713571B323B6100C9058A /* Player.storyboard */,
+				974713581B323B6100C9058A /* PlayerViewController.h */,
+				974713591B323B6100C9058A /* PlayerViewController.m */,
+				9747135A1B323B6100C9058A /* DisclaimerViewController.h */,
+				9747135B1B323B6100C9058A /* DisclaimerViewController.m */,
+				9747135C1B323B6100C9058A /* MarqueeLabel.h */,
+				9747135D1B323B6100C9058A /* MarqueeLabel.m */,
+				9747135E1B323B6100C9058A /* RadioViewController.h */,
+				9747135F1B323B6100C9058A /* RadioViewController.m */,
 				976B98AD1AAFF9E3003FA42F /* FMProgressView.h */,
 				976B98AE1AAFF9E3003FA42F /* FMProgressView.m */,
 				976B98B31AB0088C003FA42F /* FMTotalTimeLabel.h */,
@@ -283,12 +296,6 @@
 				972839091AF2D80B005C90FC /* FMShareButton.h */,
 				9728390A1AF2D80B005C90FC /* FMShareButton.m */,
 				97E1C7E11AAE719C005AF723 /* Resources */,
-				97A491ED1AECA94700726C0A /* FMFullScreenLegalViewController.xib */,
-				97A491EF1AED2F7B00726C0A /* FMFullScreenLegalViewController.h */,
-				97A491F01AED2F7B00726C0A /* FMFullScreenLegalViewController.m */,
-				97A491E81AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib */,
-				97A491EA1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.h */,
-				97A491EB1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m */,
 			);
 			name = Dist;
 			path = "iOS-UI-SDK/Dist";
@@ -422,14 +429,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A491EE1AECA94700726C0A /* FMFullScreenLegalViewController.xib in Resources */,
-				97A491E91AEC6E6000726C0A /* FMFullScreenPlayerViewController.xib in Resources */,
 				97E1C8441AAF6ACD005AF723 /* thumbsup.png in Resources */,
 				97E1C83F1AAF6ACD005AF723 /* close.png in Resources */,
 				97E1C7641AAE65F7005AF723 /* Main.storyboard in Resources */,
 				97E1C8411AAF6ACD005AF723 /* skip.png in Resources */,
 				97E1C7911AAE674A005AF723 /* play.png in Resources */,
 				972839081AF2D6FE005C90FC /* share.png in Resources */,
+				974713601B323B6100C9058A /* Player.storyboard in Resources */,
 				97E1C8431AAF6ACD005AF723 /* thumbsdown.png in Resources */,
 				97E1C7921AAE674A005AF723 /* pause.png in Resources */,
 				97E1C84E1AAF8046005AF723 /* thumbsdown-selected.png in Resources */,
@@ -474,7 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */,
-				97A491F11AED2F7B00726C0A /* FMFullScreenLegalViewController.m in Sources */,
+				974713621B323B6100C9058A /* DisclaimerViewController.m in Sources */,
 				97E1C8521AAF82D7005AF723 /* FMDislikeButton.m in Sources */,
 				976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */,
 				97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */,
@@ -484,12 +490,14 @@
 				9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */,
 				978F14F91B29467C002DD201 /* FMRemainingTimeLabel.m in Sources */,
 				9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */,
-				97A491EC1AEC9B6F00726C0A /* FMFullScreenPlayerViewController.m in Sources */,
 				976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */,
 				97E1C75B1AAE65F7005AF723 /* main.m in Sources */,
 				9728390B1AF2D80B005C90FC /* FMShareButton.m in Sources */,
+				974713641B323B6100C9058A /* RadioViewController.m in Sources */,
 				97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */,
+				974713631B323B6100C9058A /* MarqueeLabel.m in Sources */,
 				976B993E1AB10C6B003FA42F /* FMActivityIndicator.m in Sources */,
+				974713611B323B6100C9058A /* PlayerViewController.m in Sources */,
 				976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

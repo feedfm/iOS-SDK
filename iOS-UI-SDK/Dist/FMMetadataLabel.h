@@ -20,9 +20,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MarqueeLabel.h"
 
 IB_DESIGNABLE
-@interface FMMetadataLabel : UILabel
+@interface FMMetadataLabel : MarqueeLabel
 
 @property (strong, nonatomic) IBInspectable NSString *format;
 
