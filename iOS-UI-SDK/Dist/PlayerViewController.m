@@ -8,7 +8,7 @@
 
 @import Foundation;
 
-#import "RadioViewController.h"
+#import "PlayerViewController.h"
 #import "FeedMedia/FMAudioPlayer.h"
 #import "FMMetadataLabel.h"
 #import "StationBackgroundState.h"
@@ -19,7 +19,7 @@
 #define kStationRotationIntervalInSeconds 60
 #define kMinimumStationRotationTimeInSeconds 2
 
-@interface RadioViewController () <UIPopoverPresentationControllerDelegate>
+@interface PlayerViewController () <UIPopoverPresentationControllerDelegate>
 
 @property (weak, nonatomic) FMAudioPlayer *player;
 @property (strong, nonatomic) StationBackgroundState *visibleStationBackground;
@@ -39,7 +39,7 @@
 
 static NSMutableDictionary *stations = nil;
 
-@implementation RadioViewController
+@implementation PlayerViewController
 
 
 - (void)viewDidLoad {

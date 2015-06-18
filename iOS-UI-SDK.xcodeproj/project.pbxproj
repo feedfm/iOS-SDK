@@ -33,7 +33,7 @@
 		974713601B323B6100C9058A /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974713571B323B6100C9058A /* Player.storyboard */; };
 		974713621B323B6100C9058A /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135B1B323B6100C9058A /* DisclaimerViewController.m */; };
 		974713631B323B6100C9058A /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135D1B323B6100C9058A /* MarqueeLabel.m */; };
-		974713641B323B6100C9058A /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135F1B323B6100C9058A /* RadioViewController.m */; };
+		974713641B323B6100C9058A /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135F1B323B6100C9058A /* PlayerViewController.m */; };
 		974713671B33402500C9058A /* StationBackgroundState.m in Sources */ = {isa = PBXBuildFile; fileRef = 974713661B33402500C9058A /* StationBackgroundState.m */; };
 		976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98AE1AAFF9E3003FA42F /* FMProgressView.m */; };
 		976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */; };
@@ -121,8 +121,8 @@
 		9747135B1B323B6100C9058A /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		9747135C1B323B6100C9058A /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
 		9747135D1B323B6100C9058A /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
-		9747135E1B323B6100C9058A /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
-		9747135F1B323B6100C9058A /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioViewController.m; sourceTree = "<group>"; };
+		9747135E1B323B6100C9058A /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		9747135F1B323B6100C9058A /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		974713651B33402500C9058A /* StationBackgroundState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationBackgroundState.h; sourceTree = "<group>"; };
 		974713661B33402500C9058A /* StationBackgroundState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationBackgroundState.m; sourceTree = "<group>"; };
 		976B98AD1AAFF9E3003FA42F /* FMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 				9747135B1B323B6100C9058A /* DisclaimerViewController.m */,
 				9747135C1B323B6100C9058A /* MarqueeLabel.h */,
 				9747135D1B323B6100C9058A /* MarqueeLabel.m */,
-				9747135E1B323B6100C9058A /* RadioViewController.h */,
-				9747135F1B323B6100C9058A /* RadioViewController.m */,
+				9747135E1B323B6100C9058A /* PlayerViewController.h */,
+				9747135F1B323B6100C9058A /* PlayerViewController.m */,
 				976B98AD1AAFF9E3003FA42F /* FMProgressView.h */,
 				976B98AE1AAFF9E3003FA42F /* FMProgressView.m */,
 				976B98B31AB0088C003FA42F /* FMTotalTimeLabel.h */,
@@ -494,7 +494,7 @@
 				976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */,
 				97E1C75B1AAE65F7005AF723 /* main.m in Sources */,
 				9728390B1AF2D80B005C90FC /* FMShareButton.m in Sources */,
-				974713641B323B6100C9058A /* RadioViewController.m in Sources */,
+				974713641B323B6100C9058A /* PlayerViewController.m in Sources */,
 				97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */,
 				974713631B323B6100C9058A /* MarqueeLabel.m in Sources */,
 				976B993E1AB10C6B003FA42F /* FMActivityIndicator.m in Sources */,

@@ -21,7 +21,7 @@
         <!--Radio-->
         <scene sceneID="cL2-gH-Xov">
             <objects>
-                <viewController storyboardIdentifier="playerViewController" title="Radio" id="oIi-MN-zYx" customClass="RadioViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="playerViewController" title="Radio" id="oIi-MN-zYx" customClass="PlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MJ2-ZP-mmX"/>
                         <viewControllerLayoutGuide type="bottom" id="Xkf-ch-oHg"/>
