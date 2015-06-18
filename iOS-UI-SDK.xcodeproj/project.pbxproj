@@ -31,10 +31,10 @@
 		9728390F1AF2E855005C90FC /* feedfm-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728390E1AF2E855005C90FC /* feedfm-logo.png */; };
 		972839111AF2E889005C90FC /* feedfm-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 972839101AF2E889005C90FC /* feedfm-circle.png */; };
 		974713601B323B6100C9058A /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974713571B323B6100C9058A /* Player.storyboard */; };
-		974713611B323B6100C9058A /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 974713591B323B6100C9058A /* PlayerViewController.m */; };
 		974713621B323B6100C9058A /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135B1B323B6100C9058A /* DisclaimerViewController.m */; };
 		974713631B323B6100C9058A /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135D1B323B6100C9058A /* MarqueeLabel.m */; };
 		974713641B323B6100C9058A /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135F1B323B6100C9058A /* RadioViewController.m */; };
+		974713671B33402500C9058A /* StationBackgroundState.m in Sources */ = {isa = PBXBuildFile; fileRef = 974713661B33402500C9058A /* StationBackgroundState.m */; };
 		976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98AE1AAFF9E3003FA42F /* FMProgressView.m */; };
 		976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B11AB00280003FA42F /* FMElapsedTimeLabel.m */; };
 		976B98B51AB0088C003FA42F /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B98B41AB0088C003FA42F /* FMTotalTimeLabel.m */; };
@@ -117,14 +117,14 @@
 		9728390E1AF2E855005C90FC /* feedfm-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-logo.png"; sourceTree = "<group>"; };
 		972839101AF2E889005C90FC /* feedfm-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-circle.png"; sourceTree = "<group>"; };
 		974713571B323B6100C9058A /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
-		974713581B323B6100C9058A /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
-		974713591B323B6100C9058A /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		9747135A1B323B6100C9058A /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		9747135B1B323B6100C9058A /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		9747135C1B323B6100C9058A /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
 		9747135D1B323B6100C9058A /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
 		9747135E1B323B6100C9058A /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
 		9747135F1B323B6100C9058A /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioViewController.m; sourceTree = "<group>"; };
+		974713651B33402500C9058A /* StationBackgroundState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationBackgroundState.h; sourceTree = "<group>"; };
+		974713661B33402500C9058A /* StationBackgroundState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationBackgroundState.m; sourceTree = "<group>"; };
 		976B98AD1AAFF9E3003FA42F /* FMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
 		976B98AE1AAFF9E3003FA42F /* FMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
 		976B98B01AB00280003FA42F /* FMElapsedTimeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMElapsedTimeLabel.h; sourceTree = "<group>"; };
@@ -261,8 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				974713571B323B6100C9058A /* Player.storyboard */,
-				974713581B323B6100C9058A /* PlayerViewController.h */,
-				974713591B323B6100C9058A /* PlayerViewController.m */,
+				974713651B33402500C9058A /* StationBackgroundState.h */,
+				974713661B33402500C9058A /* StationBackgroundState.m */,
 				9747135A1B323B6100C9058A /* DisclaimerViewController.h */,
 				9747135B1B323B6100C9058A /* DisclaimerViewController.m */,
 				9747135C1B323B6100C9058A /* MarqueeLabel.h */,
@@ -482,6 +482,7 @@
 				97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */,
 				974713621B323B6100C9058A /* DisclaimerViewController.m in Sources */,
 				97E1C8521AAF82D7005AF723 /* FMDislikeButton.m in Sources */,
+				974713671B33402500C9058A /* StationBackgroundState.m in Sources */,
 				976B98AF1AAFF9E3003FA42F /* FMProgressView.m in Sources */,
 				97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */,
 				97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */,
@@ -497,7 +498,6 @@
 				97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */,
 				974713631B323B6100C9058A /* MarqueeLabel.m in Sources */,
 				976B993E1AB10C6B003FA42F /* FMActivityIndicator.m in Sources */,
-				974713611B323B6100C9058A /* PlayerViewController.m in Sources */,
 				976B98B21AB00280003FA42F /* FMElapsedTimeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

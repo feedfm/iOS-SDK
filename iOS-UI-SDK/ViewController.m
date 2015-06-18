@@ -25,11 +25,11 @@
 }
 
 - (IBAction)presentFullPagePlayer:(id)sender {
-    UINib *uiNib = [UINib nibWithNibName:@"Player" bundle:nil];
-    
-    UIViewController *playerVC = [uiNib instantiateWithOwner:nil options:nil][0];
-    
-    [self presentViewController:playerVC animated:true completion:nil];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Player" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"playerViewController"];
+    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

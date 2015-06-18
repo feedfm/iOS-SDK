@@ -13,8 +13,8 @@
 #import "FMMetadataLabel.h"
 #import "StationBackgroundState.h"
 
-#define kAEOStationName @"American Eagle Radio"
-#define kAERIEStationName @"Aerie Radio"
+#define kStationOneName @"Station One"
+#define kStationTwoName @"Station Two"
 
 #define kStationRotationIntervalInSeconds 60
 #define kMinimumStationRotationTimeInSeconds 2
@@ -29,8 +29,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *pressPlay;
 
-@property (weak, nonatomic) IBOutlet UIButton *aeoStationButton;
-@property (weak, nonatomic) IBOutlet UIButton *aerieStationButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *stationsControl;
 
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *track;
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *artist;
@@ -38,15 +37,12 @@
 
 @end
 
-static bool playbackBegun = false;
 static NSMutableDictionary *stations = nil;
 
 @implementation RadioViewController
 
 
 - (void)viewDidLoad {
-    NSLog(@"view did load!");
-    
     [super viewDidLoad];
 
     _player = [FMAudioPlayer sharedPlayer];
@@ -56,30 +52,21 @@ static NSMutableDictionary *stations = nil;
     if (stations == nil) {
         stations = [[NSMutableDictionary alloc] init];
         
-        StationBackgroundState *sbs = [[StationBackgroundState alloc] init];
-        sbs.secondsRemainingForRotation = 0;
-        sbs.imageFilenameFormat = @"AEO-Background-%d";
-        sbs.currentImageOffset = 0;
-        sbs.lockScreenFilename = @"AEO-Lockscreen";
-        [stations setObject:sbs forKey:kAEOStationName];
+        StationBackgroundState *sbs;
+        sbs = [[StationBackgroundState alloc] initWithStationName:@"Station One" backgroundFilenameFormat:@"Station-One-Background-%d" lockScreenFilename:@"Station-One-Lockscreen"];
+        [stations setObject:sbs forKey:sbs.stationName];
 
-        sbs = [[StationBackgroundState alloc] init];
-        sbs.secondsRemainingForRotation = 0;
-        sbs.imageFilenameFormat = @"AERIE-Background-%d";
-        sbs.currentImageOffset = 0;
-        sbs.lockScreenFilename = @"AERIE-Lockscreen";
-        [stations setObject:sbs forKey:kAERIEStationName];
+        sbs = [[StationBackgroundState alloc] initWithStationName:@"Station Two" backgroundFilenameFormat:@"Station-Two-Background-%d" lockScreenFilename:@"Station-Two-Lockscreen"];
+        [stations setObject:sbs forKey:sbs.stationName];
     }
     
     [self matchLockScreenWithStationNamed:_player.activeStation.name];
     [self selectActiveStation:_player.activeStation.name];
-
-    [self updateSongDisplay];
+    [self selectActiveStationControl:_player.activeStation.name];
 
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
     [nc addObserver:self selector:@selector(onActiveStationChanged:) name:FMAudioPlayerActiveStationDidChangeNotification object:_player];
-    [nc addObserver:self selector:@selector(onPlaybackStateChange:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_player];
 }
 
 - (void)dealloc {
@@ -209,69 +196,37 @@ static NSMutableDictionary *stations = nil;
     [_player setLockScreenImage: image];
 }
 
-- (void) selectActiveStation:(NSString *)name {
-    UIFont *gothamMedium = [UIFont fontWithName:@"Gotham-Medium" size:17.0];
-    UIFont *gothamBook = [UIFont fontWithName:@"Gotham-Book" size:17.0];
+- (IBAction) stationChanged: (id) sender {
+    NSString *stationName = [_stationsControl titleForSegmentAtIndex:_stationsControl.selectedSegmentIndex];
     
-    if ([name isEqualToString:kAERIEStationName]) {
-        _aeoStationButton.selected = NO;
-        _aeoStationButton.backgroundColor = [UIColor whiteColor];
-        _aeoStationButton.titleLabel.font = gothamMedium;
-        
-        _aerieStationButton.selected = YES;
-        _aerieStationButton.backgroundColor = [UIColor blackColor];
-        _aerieStationButton.titleLabel.font = gothamBook;
-        
-    } else { // if ([station.name isEqualToString:kAEOStationName])
-        _aeoStationButton.selected = YES;
-        _aeoStationButton.backgroundColor = [UIColor blackColor];
-        _aeoStationButton.titleLabel.font = gothamBook;
-        
-        _aerieStationButton.selected = NO;
-        _aerieStationButton.backgroundColor = [UIColor whiteColor];
-        _aerieStationButton.titleLabel.font = gothamMedium;
+    if (stationName == nil) {
+        NSLog(@"No station selected - whaaa?");
+        return;
     }
+    
+    [self selectActiveStation:stationName];
 }
 
-- (IBAction) onTouchAEO: (id) view {
-    if (![_player.activeStation.name isEqualToString:kAEOStationName]) {
-        [_player setActiveStationByName:kAEOStationName];
-        [_player play];
-    };
-}
-
-- (IBAction) onTouchAERIE: (id) view {
-    if (![_player.activeStation.name isEqualToString:kAERIEStationName]) {
-        [_player setActiveStationByName:kAERIEStationName];
-        [_player play];
+- (void) selectActiveStationControl: (NSString *)stationName {
+    for (int i = 0; i < _stationsControl.numberOfSegments; i++) {
+        if ([stationName isEqualToString:[_stationsControl titleForSegmentAtIndex:i]]) {
+            _stationsControl.selectedSegmentIndex = i;
+            return;
+        }
     }
+    
+    NSLog(@"Unable to find segment with active station name!");
 }
 
-
-- (void) updateSongDisplay {
-    if (playbackBegun) {
-        [self displaySongData];
+- (void) selectActiveStation: (NSString *)stationName {
+    StationBackgroundState *sbs = [stations objectForKey:stationName];
+    if (sbs == nil) {
+        NSLog(@"Trying to select station we don't know about: %@", stationName);
+        return;
     }
-}
-
-- (void)onPlaybackStateChange:(NSNotification *)notification {
-    // as soon as something happens, kick off metadata display
-    if (!playbackBegun) {
-        playbackBegun = true;
-        [self displaySongData];
-    }
-}
-
-- (void) displaySongData {
-    _pressPlay.hidden = YES;
-    _track.hidden = NO;
-    _artist.hidden = NO;
-    _album.hidden = NO;
-}
-
-
-- (IBAction)closePlayer:(id)sender {
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    
+    [_player setActiveStationByName:stationName];
+    [_player play];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
