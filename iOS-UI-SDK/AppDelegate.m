@@ -65,4 +65,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+    // necessary for remote control integration
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    if (event.type != UIEventTypeRemoteControl) return;
+    
+    // forward remote control events to the Feed Audio Player
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFMRemoteControlEvent object:event userInfo:nil];
+}
+
 @end
