@@ -42,7 +42,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-lf-4w0" userLabel="stations">
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-lf-4w0" userLabel="stations">
                                 <rect key="frame" x="214" y="24" width="173" height="29"/>
                                 <segments>
                                     <segment title="Station One"/>

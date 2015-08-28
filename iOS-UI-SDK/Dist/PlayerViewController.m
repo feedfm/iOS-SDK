@@ -61,7 +61,7 @@ static NSMutableDictionary *stations = nil;
     }
     
     [self matchLockScreenWithStationNamed:_player.activeStation.name];
-    [self selectActiveStation:_player.activeStation.name];
+//    [self selectActiveStation:_player.activeStation.name];
     [self selectActiveStationControl:_player.activeStation.name];
 
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
