@@ -25,7 +25,7 @@
     [FMAudioPlayer setClientToken:@"demo" secret:@"demo"];
     
     [[FMAudioPlayer sharedPlayer] whenAvailable:^{
-        //FMLogDebug(@"things are ready!");
+        //FMLogDebug(@"things are ready!");
         
         [[FMAudioPlayer sharedPlayer] prepareToPlay];
         
@@ -33,7 +33,6 @@
         for (FMStation *station in [[FMAudioPlayer sharedPlayer] stationList]) {
             NSLog(@"options for station '%@' are %@", [station name], [station options]);
         }
-
         
     } notAvailable:^{
         FMLogDebug(@"things are NOT ready!");
