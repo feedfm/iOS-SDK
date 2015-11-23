@@ -26,10 +26,7 @@
 		9712721A1AEF0F0600E4723A /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971272191AEF0F0600E4723A /* FMSkipWarningView.m */; };
 		9712721E1AEF1DC900E4723A /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */; };
 		971E8E081B05AECB008E4FB2 /* FMStationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 971E8E071B05AECB008E4FB2 /* FMStationButton.m */; };
-		972839081AF2D6FE005C90FC /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 972839071AF2D6FE005C90FC /* share.png */; };
 		9728390B1AF2D80B005C90FC /* FMShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9728390A1AF2D80B005C90FC /* FMShareButton.m */; };
-		9728390F1AF2E855005C90FC /* feedfm-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9728390E1AF2E855005C90FC /* feedfm-logo.png */; };
-		972839111AF2E889005C90FC /* feedfm-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 972839101AF2E889005C90FC /* feedfm-circle.png */; };
 		974713601B323B6100C9058A /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974713571B323B6100C9058A /* Player.storyboard */; };
 		974713621B323B6100C9058A /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135B1B323B6100C9058A /* DisclaimerViewController.m */; };
 		974713631B323B6100C9058A /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9747135D1B323B6100C9058A /* MarqueeLabel.m */; };
@@ -48,21 +45,12 @@
 		97E1C7691AAE65F7005AF723 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7671AAE65F7005AF723 /* LaunchScreen.xib */; };
 		97E1C7751AAE65F7005AF723 /* iOS_UI_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7741AAE65F7005AF723 /* iOS_UI_SDKTests.m */; };
 		97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */; };
-		97E1C7911AAE674A005AF723 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C78F1AAE674A005AF723 /* play.png */; };
-		97E1C7921AAE674A005AF723 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7901AAE674A005AF723 /* pause.png */; };
 		97E1C7931AAE69A6005AF723 /* libFeedMedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C78E1AAE6657005AF723 /* libFeedMedia.a */; };
 		97E1C7951AAE69EE005AF723 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C7941AAE69EE005AF723 /* CoreMedia.framework */; };
 		97E1C7DE1AAE7143005AF723 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C7DD1AAE7143005AF723 /* AVFoundation.framework */; };
 		97E1C7E01AAE714B005AF723 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1C7DF1AAE714B005AF723 /* MediaPlayer.framework */; };
 		97E1C8341AAF5CD4005AF723 /* FMSkipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C8331AAF5CD4005AF723 /* FMSkipButton.m */; };
-		97E1C83F1AAF6ACD005AF723 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8351AAF6ACC005AF723 /* close.png */; };
-		97E1C8411AAF6ACD005AF723 /* skip.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8371AAF6ACD005AF723 /* skip.png */; };
-		97E1C8421AAF6ACD005AF723 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8381AAF6ACD005AF723 /* slider.png */; };
-		97E1C8431AAF6ACD005AF723 /* thumbsdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C8391AAF6ACD005AF723 /* thumbsdown.png */; };
-		97E1C8441AAF6ACD005AF723 /* thumbsup.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C83A1AAF6ACD005AF723 /* thumbsup.png */; };
 		97E1C84B1AAF6D63005AF723 /* FMLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C84A1AAF6D63005AF723 /* FMLikeButton.m */; };
-		97E1C84E1AAF8046005AF723 /* thumbsdown-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C84C1AAF8046005AF723 /* thumbsdown-selected.png */; };
-		97E1C84F1AAF8046005AF723 /* thumbsup-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C84D1AAF8046005AF723 /* thumbsup-selected.png */; };
 		97E1C8521AAF82D7005AF723 /* FMDislikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C8511AAF82D7005AF723 /* FMDislikeButton.m */; };
 /* End PBXBuildFile section */
 
@@ -111,11 +99,8 @@
 		9712721D1AEF1DC900E4723A /* FMMetadataLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMetadataLabel.m; sourceTree = "<group>"; };
 		971E8E061B05AECB008E4FB2 /* FMStationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStationButton.h; sourceTree = "<group>"; };
 		971E8E071B05AECB008E4FB2 /* FMStationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStationButton.m; sourceTree = "<group>"; };
-		972839071AF2D6FE005C90FC /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		972839091AF2D80B005C90FC /* FMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMShareButton.h; sourceTree = "<group>"; };
 		9728390A1AF2D80B005C90FC /* FMShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMShareButton.m; sourceTree = "<group>"; };
-		9728390E1AF2E855005C90FC /* feedfm-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-logo.png"; sourceTree = "<group>"; };
-		972839101AF2E889005C90FC /* feedfm-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedfm-circle.png"; sourceTree = "<group>"; };
 		974713571B323B6100C9058A /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		9747135A1B323B6100C9058A /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		9747135B1B323B6100C9058A /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
@@ -151,22 +136,13 @@
 		97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPlayPauseButton.m; sourceTree = "<group>"; };
 		97E1C7811AAE6625005AF723 /* FMPlayPauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPlayPauseButton.h; sourceTree = "<group>"; };
 		97E1C7821AAE6653005AF723 /* FeedMedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FeedMedia.xcodeproj; path = "../../iOS-SDK/FeedMedia.xcodeproj"; sourceTree = "<group>"; };
-		97E1C78F1AAE674A005AF723 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		97E1C7901AAE674A005AF723 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		97E1C7941AAE69EE005AF723 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		97E1C7DD1AAE7143005AF723 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		97E1C7DF1AAE714B005AF723 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		97E1C8321AAF5CD4005AF723 /* FMSkipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSkipButton.h; sourceTree = "<group>"; };
 		97E1C8331AAF5CD4005AF723 /* FMSkipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSkipButton.m; sourceTree = "<group>"; };
-		97E1C8351AAF6ACC005AF723 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
-		97E1C8371AAF6ACD005AF723 /* skip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip.png; sourceTree = "<group>"; };
-		97E1C8381AAF6ACD005AF723 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
-		97E1C8391AAF6ACD005AF723 /* thumbsdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbsdown.png; sourceTree = "<group>"; };
-		97E1C83A1AAF6ACD005AF723 /* thumbsup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbsup.png; sourceTree = "<group>"; };
 		97E1C8491AAF6D63005AF723 /* FMLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMLikeButton.h; sourceTree = "<group>"; };
 		97E1C84A1AAF6D63005AF723 /* FMLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMLikeButton.m; sourceTree = "<group>"; };
-		97E1C84C1AAF8046005AF723 /* thumbsdown-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbsdown-selected.png"; sourceTree = "<group>"; };
-		97E1C84D1AAF8046005AF723 /* thumbsup-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbsup-selected.png"; sourceTree = "<group>"; };
 		97E1C8501AAF82D7005AF723 /* FMDislikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDislikeButton.h; sourceTree = "<group>"; };
 		97E1C8511AAF82D7005AF723 /* FMDislikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDislikeButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,7 +271,6 @@
 				971272191AEF0F0600E4723A /* FMSkipWarningView.m */,
 				972839091AF2D80B005C90FC /* FMShareButton.h */,
 				9728390A1AF2D80B005C90FC /* FMShareButton.m */,
-				97E1C7E11AAE719C005AF723 /* Resources */,
 			);
 			name = Dist;
 			path = "iOS-UI-SDK/Dist";
@@ -307,25 +282,6 @@
 				97E1C78E1AAE6657005AF723 /* libFeedMedia.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		97E1C7E11AAE719C005AF723 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				97E1C8351AAF6ACC005AF723 /* close.png */,
-				97E1C8371AAF6ACD005AF723 /* skip.png */,
-				972839071AF2D6FE005C90FC /* share.png */,
-				97E1C8381AAF6ACD005AF723 /* slider.png */,
-				97E1C8391AAF6ACD005AF723 /* thumbsdown.png */,
-				97E1C84C1AAF8046005AF723 /* thumbsdown-selected.png */,
-				97E1C84D1AAF8046005AF723 /* thumbsup-selected.png */,
-				97E1C83A1AAF6ACD005AF723 /* thumbsup.png */,
-				97E1C78F1AAE674A005AF723 /* play.png */,
-				97E1C7901AAE674A005AF723 /* pause.png */,
-				972839101AF2E889005C90FC /* feedfm-circle.png */,
-				9728390E1AF2E855005C90FC /* feedfm-logo.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,21 +390,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97E1C8441AAF6ACD005AF723 /* thumbsup.png in Resources */,
-				97E1C83F1AAF6ACD005AF723 /* close.png in Resources */,
 				97E1C7641AAE65F7005AF723 /* Main.storyboard in Resources */,
-				97E1C8411AAF6ACD005AF723 /* skip.png in Resources */,
-				97E1C7911AAE674A005AF723 /* play.png in Resources */,
-				972839081AF2D6FE005C90FC /* share.png in Resources */,
 				974713601B323B6100C9058A /* Player.storyboard in Resources */,
-				97E1C8431AAF6ACD005AF723 /* thumbsdown.png in Resources */,
-				97E1C7921AAE674A005AF723 /* pause.png in Resources */,
-				97E1C84E1AAF8046005AF723 /* thumbsdown-selected.png in Resources */,
-				97E1C84F1AAF8046005AF723 /* thumbsup-selected.png in Resources */,
 				97E1C7691AAE65F7005AF723 /* LaunchScreen.xib in Resources */,
-				9728390F1AF2E855005C90FC /* feedfm-logo.png in Resources */,
-				972839111AF2E889005C90FC /* feedfm-circle.png in Resources */,
-				97E1C8421AAF6ACD005AF723 /* slider.png in Resources */,
 				97E1C7661AAE65F7005AF723 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

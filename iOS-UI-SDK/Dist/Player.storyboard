@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oIi-MN-zYx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oIi-MN-zYx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -32,6 +33,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-fX-seV" userLabel="powered by feed.fm">
                                 <rect key="frame" x="251" y="577" width="100" height="23"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="9"/>
                                 <state key="normal" title="POWERED BY FEED.FM">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,6 +46,7 @@
                             </button>
                             <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-lf-4w0" userLabel="stations">
                                 <rect key="frame" x="214" y="24" width="173" height="29"/>
+                                <animations/>
                                 <segments>
                                     <segment title="Station One"/>
                                     <segment title="Station Two"/>
@@ -55,9 +58,11 @@
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Station-One-Background" translatesAutoresizingMaskIntoConstraints="NO" id="fUw-Y4-2ZN" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="56" width="600" height="354"/>
+                                <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-LN-RpI" userLabel="track" customClass="FMMetadataLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-LN-RpI" userLabel="track" customClass="FMMetadataLabel">
                                 <rect key="frame" x="20" y="416" width="568" height="24"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -68,8 +73,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-MO-tH5" userLabel="artist" customClass="FMMetadataLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-MO-tH5" userLabel="artist" customClass="FMMetadataLabel">
                                 <rect key="frame" x="20" y="441" width="560" height="19"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -80,8 +86,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJs-Gu-tUQ" userLabel="album" customClass="FMMetadataLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJs-Gu-tUQ" userLabel="album" customClass="FMMetadataLabel">
                                 <rect key="frame" x="20" y="464" width="560" height="16"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -97,6 +104,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-u3-7dr" userLabel="like" customClass="FMLikeButton">
                                         <rect key="frame" x="22" y="24" width="44" height="44"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="c9e-iu-LVD"/>
                                             <constraint firstAttribute="height" constant="44" id="vUo-5r-PbH"/>
@@ -108,6 +116,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a54-5g-3Rq" userLabel="dislike" customClass="FMDislikeButton">
                                         <rect key="frame" x="102" y="24" width="44" height="44"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3J0-ke-a1Y"/>
                                             <constraint firstAttribute="width" constant="44" id="FnZ-hE-FQs"/>
@@ -119,6 +128,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-7W-3Zf" userLabel="play/pause" customClass="FMPlayPauseButton">
                                         <rect key="frame" x="174" y="24" width="44" height="44"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Kew-vF-KwV"/>
                                             <constraint firstAttribute="width" constant="44" id="ed7-zi-UYO"/>
@@ -128,18 +138,9 @@
                                         </state>
                                         <state key="selected" image="pause"/>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe3-WI-6w2" userLabel="skip" customClass="FMSkipButton">
-                                        <rect key="frame" x="254" y="24" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="pkv-VR-JqQ"/>
-                                            <constraint firstAttribute="width" constant="44" id="yIf-t7-Km2"/>
-                                        </constraints>
-                                        <state key="normal" image="skip">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HgW-Ua-BdR" customClass="FMProgressView">
                                         <rect key="frame" x="44" y="10" width="232" height="2"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="232" id="SYH-b1-xAb"/>
                                         </constraints>
@@ -148,6 +149,7 @@
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-gr-Zlg" userLabel="elapsed" customClass="FMElapsedTimeLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="21"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="4Oo-PJ-YIW"/>
                                             <constraint firstAttribute="height" constant="21" id="ZxW-a4-zZo"/>
@@ -158,6 +160,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-5M-wzw" userLabel="remaining" customClass="FMRemainingTimeLabel">
                                         <rect key="frame" x="284" y="0.0" width="36" height="21"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="aHq-d0-LrB"/>
                                             <constraint firstAttribute="height" constant="21" id="tMZ-Xe-Odu"/>
@@ -166,7 +169,19 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe3-WI-6w2" userLabel="skip" customClass="FMSkipButton">
+                                        <rect key="frame" x="254" y="24" width="44" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="pkv-VR-JqQ"/>
+                                            <constraint firstAttribute="width" constant="44" id="yIf-t7-Km2"/>
+                                        </constraints>
+                                        <state key="normal" image="skip">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="pe3-WI-6w2" secondAttribute="bottom" id="2Rd-ub-mJ5"/>
@@ -188,6 +203,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PwR-lf-4w0" firstAttribute="top" secondItem="MJ2-ZP-mmX" secondAttribute="bottom" constant="4" id="14z-cK-hQw"/>
@@ -246,12 +262,14 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Feed-logo" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-LY-eEd">
                                 <rect key="frame" x="16" y="10" width="268" height="50"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1VE-Td-mlA"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-NT-T5D" userLabel="disclaimer" customClass="AttributedLabel">
                                 <rect key="frame" x="16" y="60" width="268" height="140"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="fIh-Gn-iiw"/>
                                 </constraints>
@@ -283,6 +301,7 @@
                                 </variation>
                             </label>
                         </subviews>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6Uu-LY-eEd" secondAttribute="trailing" id="8I8-Gq-0Ri"/>
                             <constraint firstItem="6Uu-LY-eEd" firstAttribute="top" secondItem="JdH-wv-MOB" secondAttribute="bottom" constant="10" id="JBY-ke-KxU"/>
