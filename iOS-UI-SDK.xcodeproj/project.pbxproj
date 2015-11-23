@@ -41,7 +41,7 @@
 		97E1C75E1AAE65F7005AF723 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C75D1AAE65F7005AF723 /* AppDelegate.m */; };
 		97E1C7611AAE65F7005AF723 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7601AAE65F7005AF723 /* ViewController.m */; };
 		97E1C7641AAE65F7005AF723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7621AAE65F7005AF723 /* Main.storyboard */; };
-		97E1C7661AAE65F7005AF723 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7651AAE65F7005AF723 /* Images.xcassets */; };
+		97E1C7661AAE65F7005AF723 /* FeedMediaPlayer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7651AAE65F7005AF723 /* FeedMediaPlayer.xcassets */; };
 		97E1C7691AAE65F7005AF723 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97E1C7671AAE65F7005AF723 /* LaunchScreen.xib */; };
 		97E1C7751AAE65F7005AF723 /* iOS_UI_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C7741AAE65F7005AF723 /* iOS_UI_SDKTests.m */; };
 		97E1C7801AAE661B005AF723 /* FMPlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E1C77F1AAE661B005AF723 /* FMPlayPauseButton.m */; };
@@ -128,7 +128,7 @@
 		97E1C75F1AAE65F7005AF723 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		97E1C7601AAE65F7005AF723 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		97E1C7631AAE65F7005AF723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		97E1C7651AAE65F7005AF723 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		97E1C7651AAE65F7005AF723 /* FeedMediaPlayer.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FeedMediaPlayer.xcassets; sourceTree = "<group>"; };
 		97E1C7681AAE65F7005AF723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		97E1C76E1AAE65F7005AF723 /* iOS-UI-SDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-UI-SDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E1C7731AAE65F7005AF723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				97E1C75F1AAE65F7005AF723 /* ViewController.h */,
 				97E1C7601AAE65F7005AF723 /* ViewController.m */,
 				97E1C7621AAE65F7005AF723 /* Main.storyboard */,
-				97E1C7651AAE65F7005AF723 /* Images.xcassets */,
+				97E1C7651AAE65F7005AF723 /* FeedMediaPlayer.xcassets */,
 				97E1C7671AAE65F7005AF723 /* LaunchScreen.xib */,
 				97E1C7581AAE65F7005AF723 /* Supporting Files */,
 			);
@@ -393,7 +393,7 @@
 				97E1C7641AAE65F7005AF723 /* Main.storyboard in Resources */,
 				974713601B323B6100C9058A /* Player.storyboard in Resources */,
 				97E1C7691AAE65F7005AF723 /* LaunchScreen.xib in Resources */,
-				97E1C7661AAE65F7005AF723 /* Images.xcassets in Resources */,
+				97E1C7661AAE65F7005AF723 /* FeedMediaPlayer.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
