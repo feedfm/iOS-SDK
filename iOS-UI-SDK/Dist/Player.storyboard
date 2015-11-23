@@ -44,19 +44,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-lf-4w0" userLabel="stations">
-                                <rect key="frame" x="214" y="24" width="173" height="29"/>
-                                <animations/>
-                                <segments>
-                                    <segment title="Station One"/>
-                                    <segment title="Station Two"/>
-                                </segments>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="stationChanged:" destination="oIi-MN-zYx" eventType="valueChanged" id="i3V-zE-61P"/>
-                                </connections>
-                            </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Station-One-Background" translatesAutoresizingMaskIntoConstraints="NO" id="fUw-Y4-2ZN" userLabel="backgroundImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Station-One-Background" translatesAutoresizingMaskIntoConstraints="NO" id="fUw-Y4-2ZN" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="56" width="600" height="354"/>
                                 <animations/>
                             </imageView>
@@ -206,13 +194,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PwR-lf-4w0" firstAttribute="top" secondItem="MJ2-ZP-mmX" secondAttribute="bottom" constant="4" id="14z-cK-hQw"/>
                             <constraint firstItem="Xkf-ch-oHg" firstAttribute="top" secondItem="AJs-Gu-tUQ" secondAttribute="bottom" constant="120" id="1AM-Ap-BDZ"/>
                             <constraint firstItem="fUw-Y4-2ZN" firstAttribute="leading" secondItem="r1d-Kf-s2Y" secondAttribute="leading" id="2DC-c2-rir"/>
                             <constraint firstItem="Xkf-ch-oHg" firstAttribute="top" secondItem="5NE-Pn-Pxv" secondAttribute="bottom" constant="39" id="8DF-pW-0xm"/>
                             <constraint firstItem="Tk4-MO-tH5" firstAttribute="leading" secondItem="r1d-Kf-s2Y" secondAttribute="leadingMargin" constant="4" id="9cu-m1-oOp"/>
                             <constraint firstAttribute="centerX" secondItem="5NE-Pn-Pxv" secondAttribute="centerX" id="CI9-do-5wD"/>
-                            <constraint firstAttribute="centerX" secondItem="PwR-lf-4w0" secondAttribute="centerX" id="DgX-t4-o2T"/>
                             <constraint firstAttribute="trailing" secondItem="fUw-Y4-2ZN" secondAttribute="trailing" id="Imf-Gh-1Kc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tk4-MO-tH5" secondAttribute="trailing" constant="4" id="JF3-tE-ewt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AJs-Gu-tUQ" secondAttribute="trailing" constant="4" id="JvL-az-X0U"/>
@@ -222,7 +208,6 @@
                             <constraint firstItem="AJs-Gu-tUQ" firstAttribute="leading" secondItem="r1d-Kf-s2Y" secondAttribute="leadingMargin" constant="4" id="Q39-Nv-8wW"/>
                             <constraint firstItem="Xkf-ch-oHg" firstAttribute="top" secondItem="fUw-Y4-2ZN" secondAttribute="bottom" constant="190" id="QRx-UC-5Kd"/>
                             <constraint firstItem="fUw-Y4-2ZN" firstAttribute="top" secondItem="MJ2-ZP-mmX" secondAttribute="bottom" id="R1F-rC-OYp"/>
-                            <constraint firstItem="fUw-Y4-2ZN" firstAttribute="top" secondItem="PwR-lf-4w0" secondAttribute="bottom" constant="4" id="WL7-qi-XQd"/>
                             <constraint firstItem="Mlg-LN-RpI" firstAttribute="trailing" secondItem="r1d-Kf-s2Y" secondAttribute="trailingMargin" constant="4" id="aYw-is-UtN"/>
                             <constraint firstItem="Xkf-ch-oHg" firstAttribute="bottom" secondItem="jpe-fX-seV" secondAttribute="bottom" id="hXp-MO-R1F"/>
                             <constraint firstItem="Mlg-LN-RpI" firstAttribute="leading" secondItem="r1d-Kf-s2Y" secondAttribute="leadingMargin" constant="4" id="zuM-Kr-XG1"/>
@@ -240,7 +225,6 @@
                         <outlet property="album" destination="AJs-Gu-tUQ" id="S4W-Ve-NUv"/>
                         <outlet property="artist" destination="Tk4-MO-tH5" id="GbB-7x-7Mt"/>
                         <outlet property="backgroundImage" destination="fUw-Y4-2ZN" id="g38-xx-FEa"/>
-                        <outlet property="stationsControl" destination="PwR-lf-4w0" id="7gY-eA-OVd"/>
                         <outlet property="track" destination="Mlg-LN-RpI" id="dbw-ge-Obw"/>
                     </connections>
                 </viewController>
