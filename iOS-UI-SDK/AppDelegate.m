@@ -73,8 +73,8 @@
 
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event
 {
-    if (![MPRemoteCommandCenter class]) {
-      if (event.type != UIEventTypeRemoteControl) return;
+    if (![MPRemoteCommandCenter class] && (event.type == UIEventTypeRemoteControl)) {
+      // pre iOS 7.1 remote control handling
     
       // forward remote control events to the Feed Audio Player
       [[NSNotificationCenter defaultCenter] postNotificationName:kFMRemoteControlEvent object:event userInfo:nil];
