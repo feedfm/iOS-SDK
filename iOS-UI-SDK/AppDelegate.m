@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FeedMedia/FMLog.h"
 #import "FeedMedia/FMAudioPlayer.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface AppDelegate ()
 
@@ -72,10 +73,13 @@
 
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event
 {
-    if (event.type != UIEventTypeRemoteControl) return;
+    if (![MPRemoteCommandCenter class]) {
+      if (event.type != UIEventTypeRemoteControl) return;
     
-    // forward remote control events to the Feed Audio Player
-    [[NSNotificationCenter defaultCenter] postNotificationName:kFMRemoteControlEvent object:event userInfo:nil];
+      // forward remote control events to the Feed Audio Player
+      [[NSNotificationCenter defaultCenter] postNotificationName:kFMRemoteControlEvent object:event userInfo:nil];
+    }
 }
+
 
 @end

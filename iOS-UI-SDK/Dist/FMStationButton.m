@@ -72,6 +72,12 @@
     }
 }
 
+- (void) setStationName:(NSString *)stationName {
+    _stationName = stationName;
+    
+    [self updatePlayerState];
+}
+
 - (void) updatePlayerState {
     if ([_feedPlayer.activeStation.name isEqualToString:_stationName]) {
         [self setSelected:YES];
