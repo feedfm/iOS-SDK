@@ -1,0 +1,33 @@
+{
+  "name": "FeedMediaUI",
+  "version": "0.1.0",
+  "summary": "UI elements for FeedMedia platform.",
+  "description": "longer description of what this thing does. 1. 2. 3. 4. 5.",
+  "homepage": "https://feed.fm/",
+  "license": "Feed Media",
+  "authors": {
+    "Eric Lambrecht": "eric@feed.fm",
+    "Feed Media": "support@feed.fm"
+  },
+  "source": {
+    "git": "git@github.com:feedfm/FeedMediaUI.git",
+    "tag": "v0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "compiler_flags": "-DNOT_IB_DESIGNABLE=",
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "FeedMediaUI": [
+      "Pod/Assets/**/*.png",
+      "Pod/Assets/**/*.storyboard"
+    ]
+  },
+  "dependencies": {
+    "FeedMedia": [
+      "~> 2.4.1"
+    ]
+  }
+}
