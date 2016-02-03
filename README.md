@@ -1,9 +1,11 @@
 # FeedMediaUI
 
+<!--
 [![CI Status](http://img.shields.io/travis/Eric Lambrecht/FeedMediaUI.svg?style=flat)](https://travis-ci.org/Eric Lambrecht/FeedMediaUI)
 [![Version](https://img.shields.io/cocoapods/v/FeedMediaUI.svg?style=flat)](http://cocoapods.org/pods/FeedMediaUI)
 [![License](https://img.shields.io/cocoapods/l/FeedMediaUI.svg?style=flat)](http://cocoapods.org/pods/FeedMediaUI)
 [![Platform](https://img.shields.io/cocoapods/p/FeedMediaUI.svg?style=flat)](http://cocoapods.org/pods/FeedMediaUI)
+-->
 
 ## Usage
 
@@ -18,6 +20,12 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "FeedMediaUI"
+```
+
+If you want to try it out before installing, run
+
+```bash
+pod try FeedMediaUI
 ```
 
 ## Author
