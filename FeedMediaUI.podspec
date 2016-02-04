@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FeedMediaUI"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "UI elements that interact with the 'FeedMedia' pod to retrieve and play music"
   s.description      = <<-DESC
     This is a collection of UI elements that build on top of the 'FeedMedia' cocoapod that
