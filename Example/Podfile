@@ -1,7 +1,5 @@
 
-source 'git@github.com:feedfm/cocoapod-repo.git'
-source 'https://github.com/CocoaPods/Specs.git'
-
+# currently does not work with frameworks!
 #use_frameworks!
 
 target 'FeedMediaUI_Example', :exclusive => true do
