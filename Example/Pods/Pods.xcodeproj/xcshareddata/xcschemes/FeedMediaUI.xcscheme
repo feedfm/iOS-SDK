@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B8C83FF383E8E05BF25E184B'
+               BlueprintIdentifier = 'D5DE52DF8D97C03EDCA18D9D'
                BlueprintName = 'FeedMediaUI'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libFeedMediaUI.a'>

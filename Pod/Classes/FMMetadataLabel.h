@@ -20,7 +20,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MarqueeLabel.h"
+#import <MarqueeLabel/MarqueeLabel.h>
 
 //NOT_IB_DESIGNABLE
 @interface FMMetadataLabel : MarqueeLabel

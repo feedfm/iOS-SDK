@@ -1,7 +1,9 @@
 PODS:
   - FeedMedia (2.4.2)
-  - FeedMediaUI (0.1.0):
+  - FeedMediaUI (0.1.2):
     - FeedMedia (~> 2.4.1)
+    - MarqueeLabel (~> 2.5)
+  - MarqueeLabel (2.5.0)
 
 DEPENDENCIES:
   - FeedMediaUI (from `../`)
@@ -11,7 +13,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FeedMedia: 027a0d3010cc882fc93a95cdee5fe326193c0b5c
-  FeedMediaUI: 187ae505285d65e86c6cb305f43b5f5de984010f
+  FeedMedia: ae540f925bd77f49eeef89eb3a3d709a5c845dfe
+  FeedMediaUI: c276bb7cfb54635b1ee2018c32346422b454be80
+  MarqueeLabel: 6b8ff6915c0536c5099ac30992b7d72f9807df20
 
 COCOAPODS: 0.39.0

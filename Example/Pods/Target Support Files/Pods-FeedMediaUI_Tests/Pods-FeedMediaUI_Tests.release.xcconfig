@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FeedMedia" "${PODS_ROOT}/Headers/Public/FeedMediaUI"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FeedMedia" "${PODS_ROOT}/Headers/Public/FeedMediaUI" "${PODS_ROOT}/Headers/Public/MarqueeLabel"
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/FeedMedia"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/FeedMedia" -isystem "${PODS_ROOT}/Headers/Public/FeedMediaUI"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"FeedMedia" -l"FeedMediaUI" -framework "AVFoundation" -framework "CoreMedia" -framework "MediaPlayer"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/FeedMedia" -isystem "${PODS_ROOT}/Headers/Public/FeedMediaUI" -isystem "${PODS_ROOT}/Headers/Public/MarqueeLabel"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"FeedMedia" -l"FeedMediaUI" -l"MarqueeLabel" -framework "AVFoundation" -framework "CoreMedia" -framework "MediaPlayer" -framework "QuartzCore"
 PODS_ROOT = ${SRCROOT}/Pods

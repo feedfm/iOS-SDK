@@ -1,23 +1,10 @@
-//
-//    Copyright (c) 2011-2013 Charles Powell
-//
-//    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-//    documentation files (the "Software"), to deal in the Software without restriction, including without limitation
-//    the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and
-//    to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-//
-//    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-//
-//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
-//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-//    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
-//    CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-//    IN THE SOFTWARE.
-//
-//  Available at: https://github.com/cbpowell/MarqueeLabel
+
 //
 //  MarqueeLabel.h
 //  
+//  Created by Charles Powell on 1/31/11.
+//  Copyright (c) 2011-2015 Charles Powell. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 
@@ -187,9 +174,11 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
  @see textAlignment
  */
 
-
+#if TARGET_INTERFACE_BUILDER
+@property (nonatomic, assign) IBInspectable NSInteger marqueeType;
+#else
 @property (nonatomic, assign) MarqueeType marqueeType;
-
+#endif
 
 /** Defines the duration of the scrolling animation.
  
@@ -259,15 +248,11 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
 @property (nonatomic, assign) IBInspectable CGFloat trailingBuffer;
 
 
-/** The additional amount of space (in points) inbetween the strings of a continuous-type label.
- 
- Defaults to `0`.
- 
- @see trailingBuffer
+/**
  @deprecated Use `trailingBuffer` instead. Values set to this property are simply forwarded to `trailingBuffer`.
  */
  
-@property (nonatomic, assign) CGFloat continuousMarqueeExtraBuffer DEPRECATED_MSG_ATTRIBUTE("Use trailingBuffer property instead.");
+@property (nonatomic, assign) CGFloat continuousMarqueeExtraBuffer DEPRECATED_ATTRIBUTE;
 
 
 /** The length of transparency fade at the left and right edges of the `MarqueeLabel` instance's frame.
@@ -292,13 +277,27 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
 /// @name Animation control
 ////////////////////////////////////////////////////////////////////////////////
 
-/** Immediately resets the label to the home position, and restarts the scroll animation if the appropriate conditions are met.
+/** Immediately resets the label to the home position, cancelling any in-flight scroll animation, and restarts the scroll animation if the appropriate conditions are met.
  
  @see resetLabel
  @see triggerScrollStart
  */
 
 - (void)restartLabel;
+
+
+/** Immediately resets the label to the home position, cancelling any in-flight scroll animation.
+ 
+ The text is immediately returned to the home position. Scrolling will not resume automatically after a call to this method. 
+ To re-initiate scrolling use a call to `restartLabel` or `triggerScrollStart`, or make a change to a UILabel property such as text, bounds/frame,
+ font, font size, etc.
+ 
+ @see restartLabel
+ @see triggerScrollStart
+ @since Available in 2.4.0 and later.
+ */
+
+- (void)shutdownLabel;
 
 
 /** Resets the label text, recalculating the scroll animation.
@@ -313,15 +312,18 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
 - (void)resetLabel;
 
 
-/** Pauses the text scrolling animation, at any point during the animation.
+/** Pauses the text scrolling animation, at any point during an in-progress animation.
  
+ @note This method has no effect if a scroll animation is NOT already in progress. To prevent automatic scrolling on a newly-initialized label prior to its presentation onscreen, see the `holdScrolling` property.
+ 
+ @see holdScrolling
  @see unpauseLabel
  */
 
 - (void)pauseLabel;
 
 
-/** Un-pauses a previously paused text scrolling animation
+/** Un-pauses a previously paused text scrolling animation. This method has no effect if the label was not previously paused using `pauseLabel`.
  
  @see pauseLabel
  */
@@ -451,18 +453,11 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
 + (void)controllerViewWillAppear:(UIViewController *)controller;
 
 
-/** Restarts all `MarqueeLabel` instances that have the specified view controller in their next responder chain.
- 
- This method is intended to be placed in the `viewDidAppear:` method of view controllers, and sends an `NSNotification`
- to all `MarqueeLabel` instances with the specified view controller in their next responder chain. These instances
- will be automatically restarted.
- 
- @param controller The view controller that has appeared.
- @see restartLabel
+/**
  @deprecated Use `controllerViewDidAppear:` instead.
  */
 
-+ (void)controllerViewAppearing:(UIViewController *)controller DEPRECATED_MSG_ATTRIBUTE("Use restartLabelsOfController: method");
++ (void)controllerViewAppearing:(UIViewController *)controller DEPRECATED_ATTRIBUTE;
 
 
 /** Labelizes all `MarqueeLabel` instances that have the specified view controller in their next responder chain.
