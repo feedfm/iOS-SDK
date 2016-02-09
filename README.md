@@ -7,11 +7,12 @@
 [![Platform](https://img.shields.io/cocoapods/p/FeedMediaUI.svg?style=flat)](http://cocoapods.org/pods/FeedMediaUI)
 -->
 
-## Usage
+## Introduction
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+[Feed.fm](https://feed.fm/) is a service that allows you to add popular
+music to your mobile app. The SDK hosted in this repository provides
+you with simple UI components that you can adapt or use directly in your
+app.
 
 ## Installation
 
@@ -27,6 +28,18 @@ If you want to try it out before installing, run
 ```bash
 pod try FeedMediaUI
 ```
+
+## Installation without CocoaPods
+
+If you aren't using CocoaPods but want to integrate this library in your
+application, we suggest you just download the latest version of _FeedMediaUI-iOS-X.X.X.zip_
+from [our repository at http://feed.fm/sdk/](http://feed.fm/sdk/).
+
+## Tell me more!
+
+Creating a custom music station requires you to create an account on
+[Feed.fm](https://feed.fm), but you can try out our sample app here
+that includes demo credentials.
 
 ## Author
 
