@@ -39,7 +39,7 @@ from [our repository at http://feed.fm/sdk/](http://feed.fm/sdk/).
 
 Creating a custom music station requires you to create an account on
 [Feed.fm](https://feed.fm), but you can try out our sample app here
-that includes demo credentials.
+with the included demo credentials.
 
 ## Author
 
