@@ -6,6 +6,36 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A982F45B1C69751B0015AE5E /* Populate dist folder */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A982F45C1C69751B0015AE5E /* Build configuration list for PBXAggregateTarget "Populate dist folder" */;
+			buildPhases = (
+				A982F4FE1C6982700015AE5E /* Make sure podspec version is up to date */,
+				A982F4611C69753E0015AE5E /* Create distribution zip */,
+			);
+			dependencies = (
+				A982F4601C69753B0015AE5E /* PBXTargetDependency */,
+			);
+			name = "Populate dist folder";
+			productName = Deploy;
+		};
+		A982F4F51C697BEB0015AE5E /* Deploy */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A982F4F61C697BEB0015AE5E /* Build configuration list for PBXAggregateTarget "Deploy" */;
+			buildPhases = (
+				A982F4FD1C697E430015AE5E /* Make sure things are checked in and tagged */,
+				A982F4FB1C697BF60015AE5E /* Copy release .zip to web server */,
+				A982F4FC1C697C730015AE5E /* Deploy cocoapod */,
+			);
+			dependencies = (
+				A982F4FA1C697BF10015AE5E /* PBXTargetDependency */,
+			);
+			name = Deploy;
+			productName = Deploy;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -35,6 +65,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = FeedMediaUI;
+		};
+		A982F45F1C69753B0015AE5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = FeedMediaUI_Example;
+		};
+		A982F4F91C697BF10015AE5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A982F45B1C69751B0015AE5E;
+			remoteInfo = "Populate dist folder";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -253,11 +297,20 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FM;
+				KnownAssetTags = (
+					Dependency,
+				);
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Eric Lambrecht";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					A982F45B1C69751B0015AE5E = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					A982F4F51C697BEB0015AE5E = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
@@ -276,6 +329,8 @@
 			targets = (
 				6003F589195388D20070C39A /* FeedMediaUI_Example */,
 				6003F5AD195388D20070C39A /* FeedMediaUI_Tests */,
+				A982F45B1C69751B0015AE5E /* Populate dist folder */,
+				A982F4F51C697BEB0015AE5E /* Deploy */,
 			);
 		};
 /* End PBXProject section */
@@ -347,6 +402,76 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedMediaUI_Tests/Pods-FeedMediaUI_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A982F4611C69753E0015AE5E /* Create distribution zip */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create distribution zip";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nset -e\n\n# If we're already inside this script then die\nif [ -n \"$MULTIPLATFORM_DIST_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport MULTIPLATFORM_DIST_IN_PROGRESS=1\n\nPOD_DIR=\"${PROJECT_DIR}/../Pod\";\n\n#\n# package the FeedMedia Pod up into a .framework\n#\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/FeedMedia.framework\"\n\nrm -fr \"${FRAMEWORK_LOCN}\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh Versions/Current/FeedMedia \"${FRAMEWORK_LOCN}/FeedMedia\"\n\n# Copy the public headers into the framework\nFEEDMEDIA_LOCN=\"${PROJECT_DIR}/Pods/FeedMedia\"\n/bin/cp -a \"${FEEDMEDIA_LOCN}/Headers/\" \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n#\n# Package everything up into a .zip\n#\n\n# pick the release version out of the header file\nVERSION=`cat \"${POD_DIR}/Classes/FeedMediaUI.h\" | perl -n -e '/#define FEED_MEDIA_UI_VERSION @\"(.*)\"/ && print $1;'`\nDIST_FILENAME=FeedMediaUI-iOS-${VERSION}.zip\n\nDIST_LOCN=\"${PROJECT_DIR}/../dist\"\n\n# empty and recreate dist dir\nrm -fr \"${DIST_LOCN}\"\nmkdir \"${DIST_LOCN}\"\n\nZIP_LOCN=\"${DIST_LOCN}/${DIST_FILENAME}\"\n\n# create zip file out of source code\ncd \"${POD_DIR}/Classes\"\nzip -r --symlinks \"${ZIP_LOCN}\" * -x \\*.gitkeep \\*.DS_Store\n\n# add in assets\ncd \"${POD_DIR}\"\nzip -r --symlinks \"${ZIP_LOCN}\" Assets -x \\*.gitkeep \\*.DS_Store\n\n# add in the FeedMedia.framework that we just built\ncd \"${BUILT_PRODUCTS_DIR}\"\nzip -r --symlinks \"${ZIP_LOCN}\" FeedMedia.framework -x \\*.gitkeep \\*.DS_Store\n\n# add in the MarqueeLabel code\nMARQUEELABEL_LOCN=\"${PROJECT_DIR}/Pods/MarqueeLabel\"\n\ncd \"${MARQUEELABEL_LOCN}\"\nzip -r -j --symlinks \"${ZIP_LOCN}\" MarqueeLabel.*\n\n# add in MarqueeLabel license\nMARQUEE_LICENSE=\"${BUILT_PRODUCTS_DIR}/LICENSE.marqueelabel\"\n\ncp \"${MARQUEELABEL_LOCN}/LICENSE\" \"${MARQUEE_LICENSE}\"\nzip -r -j --symlinks \"${ZIP_LOCN}\" \"${MARQUEE_LICENSE}\"\n\n# add in our license\nzip -r -j \"${ZIP_LOCN}\" \"${PROJECT_DIR}/../LICENSE.md\"\n\n";
+		};
+		A982F4FB1C697BF60015AE5E /* Copy release .zip to web server */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy release .zip to web server";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nPOD_DIR=\"${PROJECT_DIR}/../Pod\";\n\n# pick the release version out of the header file\nVERSION=`cat \"${POD_DIR}/Classes/FeedMediaUI.h\" | perl -n -e '/#define FEED_MEDIA_UI_VERSION @\"(.*)\"/ && print $1;'`\nDIST_FILENAME=FeedMediaUI-iOS-${VERSION}.zip\n\nDIST_LOCN=\"${PROJECT_DIR}/../dist\"\n\necho Deploying ${DIST_FILENAME}\n\nscp \"${DIST_LOCN}/${DIST_FILENAME}\" feed@static0:/home/feed/demo.feed.fm/sdk\n";
+		};
+		A982F4FC1C697C730015AE5E /* Deploy cocoapod */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Deploy cocoapod";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${PROJECT_DIR}/..\"\n\npod --verbose --use-libraries trunk push\n\n";
+		};
+		A982F4FD1C697E430015AE5E /* Make sure things are checked in and tagged */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make sure things are checked in and tagged";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# confirm everything is checked in\ncd \"${PROJECT_DIR}\"\n\nSTATUS=$(git status --porcelain 2> /dev/null)\nif [[ \"$STATUS\" != \"\" ]]; then\n  echo 'Code not checked in - unable to deploy!'\n  exit 1\nfi\n\n# pick the release version out of the header file\nVERSION=`cat \"${POD_DIR}/Classes/FeedMediaUI.h\" | perl -n -e '/#define FEED_MEDIA_UI_VERSION @\"(.*)\"/ && print $1;'`\n\n# confirm the release version is in the cocoapod spec\n\nSPEC=`grep \"version\\\\s*=\\\\s*\\\"${VERSION}\\\"\" \"${PROJECT_DIR}/../FeedMediaUI.podspec\"\nif [[ $SPEC = \"\" ]]; then\n  echo \"Version in podspec does not match version in FeedMediaUI.h\n  exit 1\"\nfi\n\n# confirm the release version is in the CHANGELOG\n\nCHANGE=`grep \"v${VERSION}\" \"${PROJECT_DIR}/../CHANGELOG.md\"`\nif [[ $CHANGE = \"\" ]]; then\n  echo \"This release version (${VERSION}) has no entry in the CHANGELOG\"\n  exit 1\nfi\n\n# create release tag\n\nTAG=$(git tag | grep \"v${VERSION}\")\n\nif [[ \"$TAG\" != \"\" ]]; then\n  echo \"Code already tagged - you must create a new version\"\n  exit 1\nfi\n\ngit tag  -a -m \"Release of version ${VERSION}\" \"v${VERSION}\"\n\ngit push\ngit push --tags\n\n";
+		};
+		A982F4FE1C6982700015AE5E /* Make sure podspec version is up to date */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make sure podspec version is up to date";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "POD_DIR=\"${PROJECT_DIR}/../Pod\";\n\n# pick the release version out of the header file\nVERSION=`cat \"${POD_DIR}/Classes/FeedMediaUI.h\" | perl -n -e '/#define FEED_MEDIA_UI_VERSION @\"(.*)\"/ && print $1;'`\n\nperl -pi -e \"s/s.version(\\\\s*)=(\\\\s*)\\\"[^\\\"]+\\\"/s.version\\$1=\\$2\\\"${VERSION}\\\"/;\" ${PROJECT_DIR}/../FeedMediaUI.podspec\n\n";
 		};
 		E927ED22A8FFA525967D0FEF /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -423,6 +548,16 @@
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* FeedMediaUI_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+		A982F4601C69753B0015AE5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* FeedMediaUI_Example */;
+			targetProxy = A982F45F1C69753B0015AE5E /* PBXContainerItemProxy */;
+		};
+		A982F4FA1C697BF10015AE5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A982F45B1C69751B0015AE5E /* Populate dist folder */;
+			targetProxy = A982F4F91C697BF10015AE5E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -595,6 +730,34 @@
 			};
 			name = Release;
 		};
+		A982F45D1C69751B0015AE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A982F45E1C69751B0015AE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A982F4F71C697BEB0015AE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A982F4F81C697BEB0015AE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -621,6 +784,24 @@
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
 				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A982F45C1C69751B0015AE5E /* Build configuration list for PBXAggregateTarget "Populate dist folder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A982F45D1C69751B0015AE5E /* Debug */,
+				A982F45E1C69751B0015AE5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A982F4F61C697BEB0015AE5E /* Build configuration list for PBXAggregateTarget "Deploy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A982F4F71C697BEB0015AE5E /* Debug */,
+				A982F4F81C697BEB0015AE5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
