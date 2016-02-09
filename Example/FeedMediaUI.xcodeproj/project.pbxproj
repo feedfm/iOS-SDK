@@ -443,7 +443,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"${PROJECT_DIR}/..\"\n\npod --verbose --use-libraries trunk push 2>/dev/null\n\n";
+			shellScript = "cd \"${PROJECT_DIR}/..\"\n\npod --use-libraries trunk push 2>/dev/null\n\n";
 		};
 		A982F4FD1C697E430015AE5E /* Make sure things are checked in and tagged */ = {
 			isa = PBXShellScriptBuildPhase;
