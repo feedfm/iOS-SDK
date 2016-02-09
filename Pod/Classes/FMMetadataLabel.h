@@ -20,7 +20,12 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#ifdef COCOAPODS
 #import <MarqueeLabel/MarqueeLabel.h>
+#else
+#import "MarqueeLabel.h"
+#endif
 
 //NOT_IB_DESIGNABLE
 @interface FMMetadataLabel : MarqueeLabel
