@@ -2,10 +2,10 @@
 # currently does not work with frameworks!
 #use_frameworks!
 
-target 'FeedMediaUI_Example', :exclusive => true do
+target 'FeedMediaUI_Example' do
   pod 'FeedMediaUI', :path => '../'
 end
 
-target 'FeedMediaUI_Tests', :exclusive => true do
+target 'FeedMediaUI_Tests' do
   pod 'FeedMediaUI', :path => '../'
 end
