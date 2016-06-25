@@ -44,6 +44,7 @@ typedef void(^MLAnimationCompletionBlock)(BOOL finished);
 @property (nonatomic, assign, readwrite) BOOL isPaused;
 
 // Support
+@property (nonatomic, copy) MLAnimationCompletionBlock scrollCompletionBlock;
 @property (nonatomic, strong) NSArray *gradientColors;
 CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
 
@@ -157,6 +158,11 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
     [self forwardPropertiesToSubLabel];
 }
 
+- (void)prepareForInterfaceBuilder {
+    [super prepareForInterfaceBuilder];
+    [self forwardPropertiesToSubLabel];
+}
+
 + (Class)layerClass {
     return [CAReplicatorLayer class];
 }
@@ -168,6 +174,10 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
     // Do NOT call super, to prevent UILabel superclass from drawing into context
     // Label drawing is handled by sublabel and CAReplicatorLayer layer class
+    
+    // Draw only background color
+    CGContextSetFillColorWithColor(ctx, self.backgroundColor.CGColor);
+    CGContextFillRect(ctx, layer.bounds);
 }
 
 - (void)forwardPropertiesToSubLabel {
@@ -211,6 +221,7 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
     [self addSubview:self.subLabel];
     
     // Setup default values
+    _marqueeType = MLContinuous;
     _awayOffset = 0.0f;
     _animationCurve = UIViewAnimationOptionCurveLinear;
     _labelize = NO;
@@ -229,26 +240,9 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(labelsShouldLabelize:) name:kMarqueeLabelShouldLabelizeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(labelsShouldAnimate:) name:kMarqueeLabelShouldAnimateNotification object:nil];
     
-    // UINavigationController view controller change notifications
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observedViewControllerChange:) name:@"UINavigationControllerDidShowViewControllerNotification" object:nil];
-    
     // UIApplication state notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restartLabel) name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shutdownLabel) name:UIApplicationDidEnterBackgroundNotification object:nil];
-}
-
-- (void)observedViewControllerChange:(NSNotification *)notification {
-    NSDictionary *userInfo = [notification userInfo];
-    id fromController = [userInfo objectForKey:@"UINavigationControllerLastVisibleViewController"];
-    id toController = [userInfo objectForKey:@"UINavigationControllerNextVisibleViewController"];
-    
-    id ownController = [self firstAvailableViewController];
-    if ([fromController isEqual:ownController]) {
-        [self shutdownLabel];
-    }
-    else if ([toController isEqual:ownController]) {
-        [self restartLabel];
-    }
 }
 
 - (void)minimizeLabelFrameWithMaximumSize:(CGSize)maxSize adjustHeight:(BOOL)adjustHeight {
@@ -290,7 +284,9 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
 }
 
 - (void)didMoveToWindow {
-    if (self.window) {
+    if (!self.window) {
+        [self shutdownLabel];
+    } else {
         [self updateSublabel];
     }
 }
@@ -446,8 +442,13 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
     
     // Get size of subLabel
     expectedLabelSize = [self.subLabel sizeThatFits:maximumLabelSize];
+#ifdef TARGET_OS_IOS
     // Sanitize width to 5461.0f (largest width a UILabel will draw on an iPhone 6S Plus)
     expectedLabelSize.width = MIN(expectedLabelSize.width, 5461.0f);
+#elif TARGET_OS_TV
+    // Sanitize width to 16384.0 (largest width a UILabel will draw on tvOS)
+    expectedLabelSize.width = MIN(expectedLabelSize.width, 16384.0f);
+#endif
     // Adjust to own height (make text baseline match normal label)
     expectedLabelSize.height = self.bounds.size.height;
     
@@ -469,7 +470,8 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
     }
     
     BOOL labelTooLarge = ([self subLabelSize].width + self.leadingBuffer > self.bounds.size.width);
-    return (!self.labelize && labelTooLarge);
+    BOOL animationHasDuration = (self.scrollDuration > 0.0f || self.rate > 0.0f);
+    return (!self.labelize && labelTooLarge && animationHasDuration);
 }
 
 - (BOOL)labelReadyForScroll {
@@ -549,22 +551,23 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
         [self.layer.mask addAnimation:gradAnim forKey:@"gradient"];
     }
     
-    MLAnimationCompletionBlock completionBlock = ^(BOOL finished) {
-        if (!finished) {
+    __weak __typeof__(self) weakSelf = self;
+    self.scrollCompletionBlock = ^(BOOL finished) {
+        if (!finished || !weakSelf) {
             // Do not continue into the next loop
             return;
         }
         // Call returned home method
-        [self labelReturnedToHome:YES];
+        [weakSelf labelReturnedToHome:YES];
         // Check to ensure that:
         // 1) We don't double fire if an animation already exists
         // 2) The instance is still attached to a window - this completion block is called for
         //    many reasons, including if the animation is removed due to the view being removed
         //    from the UIWindow (typically when the view controller is no longer the "top" view)
-        if (self.window && ![self.subLabel.layer animationForKey:@"position"]) {
+        if (self.window && ![weakSelf.subLabel.layer animationForKey:@"position"]) {
             // Begin again, if conditions met
-            if (self.labelShouldScroll && !self.tapToScroll && !self.holdScrolling) {
-                [self scrollAwayWithInterval:interval delayAmount:delayAmount];
+            if (weakSelf.labelShouldScroll && !weakSelf.tapToScroll && !weakSelf.holdScrolling) {
+                [weakSelf scrollAwayWithInterval:interval delayAmount:delayAmount];
             }
         }
     };
@@ -584,7 +587,7 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
                                                               interval:interval
                                                                  delay:delayAmount];
     // Add completion block
-    [awayAnim setValue:completionBlock forKey:kMarqueeLabelAnimationCompletionBlock];
+    [awayAnim setValue:@(YES) forKey:kMarqueeLabelAnimationCompletionBlock];
     
     // Add animation
     [self.subLabel.layer addAnimation:awayAnim forKey:@"position"];
@@ -593,6 +596,13 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
 }
 
 - (void)scrollContinuousWithInterval:(NSTimeInterval)interval after:(NSTimeInterval)delayAmount {
+    [self scrollContinuousWithInterval:interval after:delayAmount labelAnimation:nil gradientAnimation:nil];
+}
+
+- (void)scrollContinuousWithInterval:(NSTimeInterval)interval
+                               after:(NSTimeInterval)delayAmount
+                      labelAnimation:(CAKeyframeAnimation *)labelAnimation
+                   gradientAnimation:(CAKeyframeAnimation *)gradientAnimation {
     // Check for conditions which would prevent scrolling
     if (![self labelReadyForScroll]) {
         return;
@@ -612,48 +622,58 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
     
     // Create animation for gradient, if needed
     if (self.fadeLength != 0.0f) {
-        CAKeyframeAnimation *gradAnim = [self keyFrameAnimationForGradientFadeLength:self.fadeLength
-                                                                            interval:interval
-                                                                               delay:delayAmount];
-        [self.layer.mask addAnimation:gradAnim forKey:@"gradient"];
+        if (!gradientAnimation) {
+            gradientAnimation = [self keyFrameAnimationForGradientFadeLength:self.fadeLength
+                                                                    interval:interval
+                                                                       delay:delayAmount];
+        }
+        [self.layer.mask addAnimation:gradientAnimation forKey:@"gradient"];
     }
     
-    MLAnimationCompletionBlock completionBlock = ^(BOOL finished) {
-        if (!finished) {
+    // Create animation for sublabel positions, if needed
+    if (!labelAnimation) {
+        CGPoint homeOrigin = self.homeLabelFrame.origin;
+        CGPoint awayOrigin = MLOffsetCGPoint(self.homeLabelFrame.origin, self.awayOffset);
+        NSArray *values = @[[NSValue valueWithCGPoint:homeOrigin],      // Initial location, home
+                            [NSValue valueWithCGPoint:homeOrigin],      // Initial delay, at home
+                            [NSValue valueWithCGPoint:awayOrigin]];     // Animation to home
+        
+        labelAnimation = [self keyFrameAnimationForProperty:@"position"
+                                                     values:values
+                                                   interval:interval
+                                                      delay:delayAmount];
+    }
+    
+    __weak __typeof__(self) weakSelf = self;
+    self.scrollCompletionBlock = ^(BOOL finished) {
+        if (!finished || !weakSelf) {
             // Do not continue into the next loop
             return;
         }
         // Call returned home method
-        [self labelReturnedToHome:YES];
+        [weakSelf labelReturnedToHome:YES];
         // Check to ensure that:
         // 1) We don't double fire if an animation already exists
         // 2) The instance is still attached to a window - this completion block is called for
         //    many reasons, including if the animation is removed due to the view being removed
         //    from the UIWindow (typically when the view controller is no longer the "top" view)
-        if (self.window && ![self.subLabel.layer animationForKey:@"position"]) {
+        if (weakSelf.window && ![weakSelf.subLabel.layer animationForKey:@"position"]) {
             // Begin again, if conditions met
-            if (self.labelShouldScroll && !self.tapToScroll && !self.holdScrolling) {
-                [self scrollContinuousWithInterval:interval after:delayAmount];
+            if (weakSelf.labelShouldScroll && !weakSelf.tapToScroll && !weakSelf.holdScrolling) {
+                [weakSelf scrollContinuousWithInterval:interval
+                                             after:delayAmount
+                                    labelAnimation:labelAnimation
+                                 gradientAnimation:gradientAnimation];
             }
         }
     };
     
-    // Create animation for sublabel positions
-    CGPoint homeOrigin = self.homeLabelFrame.origin;
-    CGPoint awayOrigin = MLOffsetCGPoint(self.homeLabelFrame.origin, self.awayOffset);
-    NSArray *values = @[[NSValue valueWithCGPoint:homeOrigin],      // Initial location, home
-                        [NSValue valueWithCGPoint:homeOrigin],      // Initial delay, at home
-                        [NSValue valueWithCGPoint:awayOrigin]];     // Animation to home
     
-    CAKeyframeAnimation *awayAnim = [self keyFrameAnimationForProperty:@"position"
-                                                                values:values
-                                                              interval:interval
-                                                                 delay:delayAmount];
     // Attach completion block
-    [awayAnim setValue:completionBlock forKey:kMarqueeLabelAnimationCompletionBlock];
+    [labelAnimation setValue:@(YES) forKey:kMarqueeLabelAnimationCompletionBlock];
     
     // Add animation
-    [self.subLabel.layer addAnimation:awayAnim forKey:@"position"];
+    [self.subLabel.layer addAnimation:labelAnimation forKey:@"position"];
     
     [CATransaction commit];
 }
@@ -949,9 +969,8 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    MLAnimationCompletionBlock completionBlock = [anim valueForKey:kMarqueeLabelAnimationCompletionBlock];
-    if (completionBlock) {
-        completionBlock(flag);
+    if (self.scrollCompletionBlock) {
+        self.scrollCompletionBlock(flag);
     }
 }
 
@@ -1064,6 +1083,16 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
 #pragma mark - Modified UILabel Methods/Getters/Setters
 
 - (UIView *)viewForBaselineLayout {
+    // Use subLabel view for handling baseline layouts
+    return self.subLabel;
+}
+
+- (UIView *)viewForLastBaselineLayout {
+    // Use subLabel view for handling baseline layouts
+    return self.subLabel;
+}
+
+- (UIView *)viewForFirstBaselineLayout {
     // Use subLabel view for handling baseline layouts
     return self.subLabel;
 }
