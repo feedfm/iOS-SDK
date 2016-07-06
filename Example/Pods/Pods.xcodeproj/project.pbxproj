@@ -126,21 +126,17 @@
 		09FA1457173C826A45F3FADB8D067730 /* Pods-FeedMediaUI_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeedMediaUI_Tests-dummy.m"; sourceTree = "<group>"; };
 		0C999A693785489CAE34CB2080F552D0 /* play@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
 		10D33510EDDD95F0C577B52F14E31201 /* thumbsdown_selected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_selected@2x.png"; sourceTree = "<group>"; };
-		169950F059CBAB9987F51233BACBA775 /* FMLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMLog.h; path = Headers/FMLog.h; sourceTree = "<group>"; };
 		1727DF7DC26FAB947DBFD4339966B769 /* Pods-FeedMediaUI_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Tests-resources.sh"; sourceTree = "<group>"; };
 		1830DE795166BDFF7C0DCAD014AB4062 /* FMElapsedTimeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMElapsedTimeLabel.h; sourceTree = "<group>"; };
 		184796DFB13FD05E28C797780793FAF5 /* FMStationButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMStationButton.h; sourceTree = "<group>"; };
 		191230A17E57241F0A556492105D6BC5 /* FeedMediaUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FeedMediaUI-dummy.m"; sourceTree = "<group>"; };
 		19A6C9A3B45616719DAEE6E16912E750 /* feed_logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "feed_logo@2x.png"; sourceTree = "<group>"; };
-		1AB36063ADBE4A122D6DFD7E3416D798 /* FMError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMError.h; path = Headers/FMError.h; sourceTree = "<group>"; };
 		1D24F0D286B9AF571502863C24369C9F /* Pods-FeedMediaUI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeedMediaUI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1D724A9BEB0E1B6DC178925D13C39BA4 /* FMSkipButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMSkipButton.h; sourceTree = "<group>"; };
 		1F6C82C35EF09A7746F05DA2DC40157F /* FMActivityIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMActivityIndicator.m; sourceTree = "<group>"; };
 		23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		302D3F47E96117FDB04D8435215F50EE /* FMSkipButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMSkipButton.m; sourceTree = "<group>"; };
 		345BC256ECDB965749B8F555B005E04F /* FMProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
-		38E7BA5FC4007C9AFE9642D82B3E57E9 /* FMAudioItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMAudioItem.h; path = Headers/FMAudioItem.h; sourceTree = "<group>"; };
-		397DE4A5E649D2BC4739B9759C582EA9 /* FeedMedia.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FeedMedia.h; path = Headers/FeedMedia.h; sourceTree = "<group>"; };
 		3A13EE99F8666D7490D68C7D81A0E280 /* FeedMediaUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMediaUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC851D09E6662D65A0DBE7F9316FBF8 /* thumbsup_selected@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_selected@1x.png"; sourceTree = "<group>"; };
 		43EAA7D265B831C106FD3269B527D939 /* FMRemainingTimeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMRemainingTimeLabel.h; sourceTree = "<group>"; };
@@ -154,6 +150,7 @@
 		5C8B4B3CA38DEFA7E68ADF3A764A5E95 /* skip@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "skip@3x.png"; sourceTree = "<group>"; };
 		5E3D40F73D906E7194369582573B3AF5 /* Pods-FeedMediaUI_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Example-frameworks.sh"; sourceTree = "<group>"; };
 		603D49702EAD9B0B1652D0546E1733C4 /* thumbsup_selected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_selected@2x.png"; sourceTree = "<group>"; };
+		626683419C94222DD90A3A8D2D785985 /* libFeedMedia.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFeedMedia.a; path = dist/libFeedMedia.a; sourceTree = "<group>"; };
 		62E271B77AA276869A01C76F7B2011D7 /* MarqueeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MarqueeLabel.h; path = Sources/ObjC/MarqueeLabel.h; sourceTree = "<group>"; };
 		66DC4F428A9E42977EFB7B64B0389593 /* thumbsup_selected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_selected@3x.png"; sourceTree = "<group>"; };
 		6803BE4E877FE8B3EE085E5E32F7EE6F /* FMSkipWarningView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMSkipWarningView.h; sourceTree = "<group>"; };
@@ -165,9 +162,11 @@
 		6F6E969886F21CB3C110551355B4F7B9 /* FMShareButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMShareButton.h; sourceTree = "<group>"; };
 		718CF83A6FB3B0E296A8F6989E757A64 /* thumbsup_unselected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_unselected@3x.png"; sourceTree = "<group>"; };
 		741046EDE1906A01E389C21F25D76693 /* FMRemainingTimeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMRemainingTimeLabel.m; sourceTree = "<group>"; };
+		76E4FE345BE642ADB35634638EF73AE0 /* FMAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMAudioPlayer.h; path = FeedMedia/FMAudioPlayer.h; sourceTree = "<group>"; };
 		7715F1ACC982BBBC38929903264204DE /* libPods-FeedMediaUI_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedMediaUI_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		798C410F1DCA590A06AB37B657160435 /* Pods-FeedMediaUI_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		7C604099280CAFAF09F45EB5BD159B1F /* FeedMediaUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FeedMediaUI.h; sourceTree = "<group>"; };
+		7CB691C05640A20A360B7AC0EE548EC4 /* FMError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMError.h; path = FeedMedia/FMError.h; sourceTree = "<group>"; };
 		7CD7A94549AC21FC35EEDCEC13D7B216 /* FMProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
 		7E1E726CDE60B500E6EF4665ACE0B5CB /* FMMetadataLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMMetadataLabel.m; sourceTree = "<group>"; };
 		8102256443C00B31AA3D1002D018D154 /* libPods-FeedMediaUI_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedMediaUI_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,7 +178,6 @@
 		8FE3A56C18AE46D2CBF5CAB318D3AD4B /* FMSkipWarningView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMSkipWarningView.m; sourceTree = "<group>"; };
 		8FED35E58BA47D4994F9EAB233BF5962 /* thumbsdown_unselected@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_unselected@1x.png"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		960CD6D7CF84DAEEBACA3741CDAE32E2 /* FMAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMAudioPlayer.h; path = Headers/FMAudioPlayer.h; sourceTree = "<group>"; };
 		9B07B719417A489C0787165ECDF7E777 /* libFeedMediaUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFeedMediaUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEAEAD59B13EBDF79B96ADC9CEE5B3B /* libMarqueeLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarqueeLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D9060B69F44715DF0B82CE14819445 /* FMElapsedTimeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMElapsedTimeLabel.m; sourceTree = "<group>"; };
@@ -187,18 +185,20 @@
 		A61F4DA6EA47E30BAE6DEEF904DA32E2 /* FMLikeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMLikeButton.h; sourceTree = "<group>"; };
 		A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		AA133229E8B283747CBCE784C11B2F8E /* Pods-FeedMediaUI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeedMediaUI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA73B98AE091A5C865C0518588E7E25E /* FMAudioItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMAudioItem.h; path = FeedMedia/FMAudioItem.h; sourceTree = "<group>"; };
 		ADC6B6D249D7F70BEDF246FA8DF82B8E /* FeedMediaUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FeedMediaUI-prefix.pch"; sourceTree = "<group>"; };
 		B29FFDF34C0AD8F6C39D499A76CE0DCE /* FMTotalTimeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMTotalTimeLabel.m; sourceTree = "<group>"; };
-		B672B70CA83BBD215E3D0F02D4A41539 /* libFeedMedia.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFeedMedia.a; sourceTree = "<group>"; };
+		B557FB8DFE8BFD8E35D8365E9DCA3744 /* FeedMedia.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FeedMedia.h; path = FeedMedia/FeedMedia.h; sourceTree = "<group>"; };
 		BC603ECF91DCE5CB7DC691A3DA2EC874 /* play@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "play@1x.png"; sourceTree = "<group>"; };
+		BF466F292B88D25C34352E1CE5B6A4EF /* FMStation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMStation.h; path = FeedMedia/FMStation.h; sourceTree = "<group>"; };
 		C1298677CAF9049555F60DDFBB7546B4 /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
+		C6DA31D2779806C0DF98ECE2E5130ACC /* FMLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMLog.h; path = FeedMedia/FMLog.h; sourceTree = "<group>"; };
 		D11FD665500EEB4FB180DE33D6FF8E3E /* thumbsdown_unselected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_unselected@3x.png"; sourceTree = "<group>"; };
 		D6BBCA4C62C84160C06D7C5352B6E4C8 /* MarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.xcconfig; sourceTree = "<group>"; };
 		E0A272403B89CDDBD8FB8737BCCEA712 /* thumbsup_unselected@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_unselected@1x.png"; sourceTree = "<group>"; };
 		E5579A8F7F0B9D8EB985AA01CF437300 /* feed_logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "feed_logo@3x.png"; sourceTree = "<group>"; };
 		E72BEF8ED738F5FC4AD99CF5AC52C73D /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
 		E802691F288E2D042E369C9DB83EB87C /* Pods-FeedMediaUI_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Example-resources.sh"; sourceTree = "<group>"; };
-		E90F9451280309652542F681AFA0BBA2 /* FMStation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMStation.h; path = Headers/FMStation.h; sourceTree = "<group>"; };
 		E9AB0063D29381426A6A6EDCE31B2206 /* thumbsdown_selected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_selected@3x.png"; sourceTree = "<group>"; };
 		EB793B217B69BEB28550B593DDDC44BF /* MarqueeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MarqueeLabel.m; path = Sources/ObjC/MarqueeLabel.m; sourceTree = "<group>"; };
 		EBADB4B082D4206A83444C93FD5F9C82 /* FMPlayPauseButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMPlayPauseButton.m; sourceTree = "<group>"; };
@@ -340,14 +340,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		57348884F84F8011B6FAE947E2985F35 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B672B70CA83BBD215E3D0F02D4A41539 /* libFeedMedia.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5C5443E61EA05715D784F37BBBE5C977 /* pause */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,20 +370,6 @@
 				E595F8BDD0A98A28B393A686AE97DB4D /* Products */,
 				B39E05480E3E9CE91C767D86D219E5EF /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7E339730A1ED022E89E2F75243068C37 /* FeedMedia */ = {
-			isa = PBXGroup;
-			children = (
-				397DE4A5E649D2BC4739B9759C582EA9 /* FeedMedia.h */,
-				38E7BA5FC4007C9AFE9642D82B3E57E9 /* FMAudioItem.h */,
-				960CD6D7CF84DAEEBACA3741CDAE32E2 /* FMAudioPlayer.h */,
-				1AB36063ADBE4A122D6DFD7E3416D798 /* FMError.h */,
-				169950F059CBAB9987F51233BACBA775 /* FMLog.h */,
-				E90F9451280309652542F681AFA0BBA2 /* FMStation.h */,
-				57348884F84F8011B6FAE947E2985F35 /* Frameworks */,
-			);
-			path = FeedMedia;
 			sourceTree = "<group>";
 		};
 		8FB391E7E1A3DA0E2416683EC2076EEB /* Development Pods */ = {
@@ -503,10 +481,18 @@
 		C40EF1FA3D8F2931CCD83801A21A5CF6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7E339730A1ED022E89E2F75243068C37 /* FeedMedia */,
+				D9BE3FD95E3137E7520EDFDC7A61F94B /* FeedMedia */,
 				B129498A6350F2A618A5ECA7811A8A8D /* MarqueeLabel */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C6E0F5D2429355C2FA68EE1134878A15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				626683419C94222DD90A3A8D2D785985 /* libFeedMedia.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CCA2EB07F6FB02165649EC05692574B0 /* Support Files */ = {
@@ -533,6 +519,20 @@
 				03828F7B0B1A2A0C212B4A38E853D907 /* thumbsup_unselected */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		D9BE3FD95E3137E7520EDFDC7A61F94B /* FeedMedia */ = {
+			isa = PBXGroup;
+			children = (
+				B557FB8DFE8BFD8E35D8365E9DCA3744 /* FeedMedia.h */,
+				AA73B98AE091A5C865C0518588E7E25E /* FMAudioItem.h */,
+				76E4FE345BE642ADB35634638EF73AE0 /* FMAudioPlayer.h */,
+				7CB691C05640A20A360B7AC0EE548EC4 /* FMError.h */,
+				C6DA31D2779806C0DF98ECE2E5130ACC /* FMLog.h */,
+				BF466F292B88D25C34352E1CE5B6A4EF /* FMStation.h */,
+				C6E0F5D2429355C2FA68EE1134878A15 /* Frameworks */,
+			);
+			path = FeedMedia;
 			sourceTree = "<group>";
 		};
 		DFDE779C6E5D3445E0CB8CCB8D424449 /* iOS */ = {
