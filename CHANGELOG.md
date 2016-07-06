@@ -1,4 +1,7 @@
 
+= v0.1.8
+  - yet another update to latest FeedMedia pod
+
 = v0.1.7
   - update to latest FeedMedia pod, again again
 
