@@ -23,6 +23,6 @@
 #include "FMStationButton.h"
 #include "FMTotalTimeLabel.h"
 
-#define FEED_MEDIA_UI_VERSION @"0.1.8"
+#define FEED_MEDIA_UI_VERSION @"0.1.9"
 
 #endif /* FeedMediaUI_h */
