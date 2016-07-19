@@ -17,6 +17,6 @@
 #import "FMLog.h"
 #import "FMStation.h"
 
-#define FEED_MEDIA_CLIENT_VERSION @"2.4.9"
+#define FEED_MEDIA_CLIENT_VERSION @"2.4.10"
 
 #endif /* FeedMedia_h */
