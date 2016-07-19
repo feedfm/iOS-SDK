@@ -1,4 +1,8 @@
 
+
+= v0.1.10
+  - update to newer FeedMedia pod that improves Authorization fix
+
 = v0.1.9
   - update to newer FeedMedia pod that fixes missing Authorization problem
 
