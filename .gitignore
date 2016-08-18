@@ -33,3 +33,6 @@ Carthage
 # Pods/
 
 dist/
+!Example/Pods/FeedMedia/dist
+
+
