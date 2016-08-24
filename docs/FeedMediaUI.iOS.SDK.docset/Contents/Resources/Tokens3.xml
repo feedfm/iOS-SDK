@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FMElapsedTimeLabel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FMElapsedTimeLabel</TokenIdentifier>
+			<Abstract type="html">Label that updates its text property to reflect the
+amount of time that has elapsed since the start of the current song or,
+when no song is being played, a custom string.</Abstract>
+			<DeclaredIn>FMElapsedTimeLabel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMElapsedTimeLabel/setTextForNoTime:</TokenIdentifier>
+			<Abstract type="html">The string that should be displayed when no song is being played.</Abstract>
+			<DeclaredIn>FMElapsedTimeLabel.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *textForNoTime</Declaration>
+			
+			
+			<Anchor>//api/name/textForNoTime</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMElapsedTimeLabel/textForNoTime</TokenIdentifier>
+			<Abstract type="html">The string that should be displayed when no song is being played.</Abstract>
+			<DeclaredIn>FMElapsedTimeLabel.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *textForNoTime</Declaration>
+			
+			
+			<Anchor>//api/name/textForNoTime</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FMElapsedTimeLabel/textForNoTime</TokenIdentifier>
+			<Abstract type="html">The string that should be displayed when no song is being played.</Abstract>
+			<DeclaredIn>FMElapsedTimeLabel.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *textForNoTime</Declaration>
+			
+			
+			<Anchor>//api/name/textForNoTime</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

@@ -27,8 +27,36 @@
 #import "MarqueeLabel.h"
 #endif
 
+/**
+ 
+ Label that displays
+ text with substitutions based on the currently playing song.
+ 
+ If no song is being played, the `text` property is set to an empty string.
+ 
+ If a song is playing, the label will assing the value of `format` with
+ some substitutions to the `text` property. The following table shows the 
+ strings in the `format` property and what they are substituted with:
+ 
+ - %ARTIST is replaced with the name of the artist on the current song
+ - %ALBUM is replaced with the name of the album the current song appears on
+ - %TRACK is replaced with the title of the current song
+ 
+ This class subclasses `MarqueeLabel` so that the field is automatically
+ animated if it is too big to fully render its contents.
+ 
+ */
+
 //NOT_IB_DESIGNABLE
 @interface FMMetadataLabel : MarqueeLabel
+
+/**
+ 
+ This value is assigned to the `text` property with substitutions
+ whenever the currently playing song changes. See the class overview
+ for the list of substitutions.
+ 
+ */
 
 @property (strong, nonatomic) IBInspectable NSString *format;
 

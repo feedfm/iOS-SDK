@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FMShareButton.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FMShareButton</TokenIdentifier>
+			<Abstract type="html">This button will respond to a tap by bringing up an iOS sharing
+interface and passing to it some text, url, and image.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMShareButton/setShareText:</TokenIdentifier>
+			<Abstract type="html">Text to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *shareText</Declaration>
+			
+			
+			<Anchor>//api/name/shareText</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMShareButton/shareText</TokenIdentifier>
+			<Abstract type="html">Text to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *shareText</Declaration>
+			
+			
+			<Anchor>//api/name/shareText</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FMShareButton/shareText</TokenIdentifier>
+			<Abstract type="html">Text to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *shareText</Declaration>
+			
+			
+			<Anchor>//api/name/shareText</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMShareButton/setShareUrl:</TokenIdentifier>
+			<Abstract type="html">URL to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *shareUrl</Declaration>
+			
+			
+			<Anchor>//api/name/shareUrl</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMShareButton/shareUrl</TokenIdentifier>
+			<Abstract type="html">URL to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *shareUrl</Declaration>
+			
+			
+			<Anchor>//api/name/shareUrl</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FMShareButton/shareUrl</TokenIdentifier>
+			<Abstract type="html">URL to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable NSString *shareUrl</Declaration>
+			
+			
+			<Anchor>//api/name/shareUrl</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMShareButton/setShareImage:</TokenIdentifier>
+			<Abstract type="html">Image to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable UIImage *shareImage</Declaration>
+			
+			
+			<Anchor>//api/name/shareImage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMShareButton/shareImage</TokenIdentifier>
+			<Abstract type="html">Image to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable UIImage *shareImage</Declaration>
+			
+			
+			<Anchor>//api/name/shareImage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FMShareButton/shareImage</TokenIdentifier>
+			<Abstract type="html">Image to be shared, if any.</Abstract>
+			<DeclaredIn>FMShareButton.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBInspectable UIImage *shareImage</Declaration>
+			
+			
+			<Anchor>//api/name/shareImage</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

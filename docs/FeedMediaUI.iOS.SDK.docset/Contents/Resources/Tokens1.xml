@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FMActivityIndicator.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FMActivityIndicator</TokenIdentifier>
+			<Abstract type="html">Indicator view that starts animation automatically
+whenever the player is stalled, waiting for a song from the server, or
+asking the server for permission to skip the current song. The animation
+is stopped in all other states.</Abstract>
+			<DeclaredIn>FMActivityIndicator.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

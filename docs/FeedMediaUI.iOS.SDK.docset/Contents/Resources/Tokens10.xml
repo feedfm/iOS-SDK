@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FMSkipButton.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FMSkipButton</TokenIdentifier>
+			<Abstract type="html">This button automatically updates its enabled property to reflect wether
+the currently playing song (if any) can be skipped, and responds to taps by
+requesting that the current song be skipped.</Abstract>
+			<DeclaredIn>FMSkipButton.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

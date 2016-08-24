@@ -8,8 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+
+/**
+ 
+ Label that updates its `text` property to reflect the
+ amount of time remaining to be played for the current song or,
+ when no song is being played, a custom string.
+ 
+ The label displays the elapsed time in the format '-0:00'.
+ 
+ When no song is playing, the label will set `text` to the value
+ of `textFoNoTime`.
+ 
+ */
+
 //NOT_IB_DESIGNABLE
 @interface FMRemainingTimeLabel : UILabel
+
+/**
+ The string that should be displayed when no song is being played.
+ */
 
 @property (strong, nonatomic) IBInspectable NSString *textForNoTime;
 

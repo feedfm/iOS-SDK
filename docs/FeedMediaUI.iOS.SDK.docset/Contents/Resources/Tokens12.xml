@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FMStationButton.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FMStationButton</TokenIdentifier>
+			<Abstract type="html">This button sets its selected property to true if
+the current active station matches this buttons stationName
+property. This button will change the active station
+to the one with the same name as stationName when tapped,
+and optionally start music playback in that station if the
+playOnClick property is true.</Abstract>
+			<DeclaredIn>FMStationButton.h</DeclaredIn>
+            
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMStationButton/setStationName:</TokenIdentifier>
+			<Abstract type="html">This should be the exact name of a station that this
+button represents.</Abstract>
+			<DeclaredIn>FMStationButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable NSString *stationName</Declaration>
+			
+			
+			<Anchor>//api/name/stationName</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMStationButton/stationName</TokenIdentifier>
+			<Abstract type="html">This should be the exact name of a station that this
+button represents.</Abstract>
+			<DeclaredIn>FMStationButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable NSString *stationName</Declaration>
+			
+			
+			<Anchor>//api/name/stationName</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FMStationButton/stationName</TokenIdentifier>
+			<Abstract type="html">This should be the exact name of a station that this
+button represents.</Abstract>
+			<DeclaredIn>FMStationButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) IBInspectable NSString *stationName</Declaration>
+			
+			
+			<Anchor>//api/name/stationName</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMStationButton/setPlayOnClick:</TokenIdentifier>
+			<Abstract type="html">When true, the button will call [FMAudioPlayer play] after
+changing the station after a tap.</Abstract>
+			<DeclaredIn>FMStationButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) IBInspectable BOOL playOnClick</Declaration>
+			
+			
+			<Anchor>//api/name/playOnClick</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMStationButton/playOnClick</TokenIdentifier>
+			<Abstract type="html">When true, the button will call [FMAudioPlayer play] after
+changing the station after a tap.</Abstract>
+			<DeclaredIn>FMStationButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) IBInspectable BOOL playOnClick</Declaration>
+			
+			
+			<Anchor>//api/name/playOnClick</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/FMStationButton/playOnClick</TokenIdentifier>
+			<Abstract type="html">When true, the button will call [FMAudioPlayer play] after
+changing the station after a tap.</Abstract>
+			<DeclaredIn>FMStationButton.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) IBInspectable BOOL playOnClick</Declaration>
+			
+			
+			<Anchor>//api/name/playOnClick</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

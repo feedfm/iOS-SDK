@@ -34,6 +34,17 @@
 			name = Deploy;
 			productName = Deploy;
 		};
+		A9E5AA241D6E3471001974D6 /* Generate appledoc */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A9E5AA271D6E3471001974D6 /* Build configuration list for PBXAggregateTarget "Generate appledoc" */;
+			buildPhases = (
+				A9E5AA281D6E3477001974D6 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Generate appledoc";
+			productName = "Generate appledoc";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -311,6 +322,9 @@
 					A982F4F51C697BEB0015AE5E = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					A9E5AA241D6E3471001974D6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "FeedMediaUI" */;
@@ -330,6 +344,7 @@
 				6003F5AD195388D20070C39A /* FeedMediaUI_Tests */,
 				A982F45B1C69751B0015AE5E /* Populate dist folder */,
 				A982F4F51C697BEB0015AE5E /* Deploy */,
+				A9E5AA241D6E3471001974D6 /* Generate appledoc */,
 			);
 		};
 /* End PBXProject section */
@@ -503,6 +518,19 @@
 			shellPath = /bin/sh;
 			shellScript = "POD_DIR=\"${PROJECT_DIR}/../Pod\";\n\n# pick the release version out of the header file\nVERSION=`cat \"${POD_DIR}/Classes/FeedMediaUI.h\" | perl -n -e '/#define FEED_MEDIA_UI_VERSION @\"(.*)\"/ && print $1;'`\n\nperl -pi -e \"s/s.version(\\\\s*)=(\\\\s*)\\\"[^\\\"]+\\\"/s.version\\$1=\\$2\\\"${VERSION}\\\"/;\" ${PROJECT_DIR}/../FeedMediaUI.podspec\n\n";
 			showEnvVarsInLog = 0;
+		};
+		A9E5AA281D6E3477001974D6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/bash\n\n# Documentation generation script. May not work with appledoc versions newer than v2.2-963\ntype appledoc >/dev/null 2>&1 || { echo >&2 \"I require appledoc but it's not installed. Please visit https://github.com/tomaz/appledoc/releases/tag/v2.2-963 and follow installation instructions\"; exit 0; }\n\n\nPROJECT_TITLE=\"FeedMedia iOS UI SDK\"\nDOCS_DIR=\"${PROJECT_DIR}/../docs\"\ncompany=\"Feed Media\";\ncompanyID=\"com.fuzz\";\ncompanyURL=\"http://feed.fm\";\ntarget=\"iphoneos\";\n\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_TITLE}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${PROJECT_NAME}.atom\" \\\n--docset-bundle-filename \"${PROJECT_NAME}.docset\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--output \"${DOCS_DIR}\" \\\n--no-install-docset \\\n--create-docset \\\n--keep-intermediate-files \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--no-repeat-first-par \\\n--explicit-crossref \\\n--search-undocumented-doc \\\n--ignore \"*.m\" \\\n--ignore \"FeedMediaUI.h\" \\\n--exit-threshold 2 \\\n--verbose 5 \\\n\"${PROJECT_DIR}/../Pod/Classes\"\n\nif [ $? -eq 0 ]; then\nrm -fr \"${DOCS_DIR}/${PROJECT_NAME}.iOS.SDK.docset\"\nmv -f \"${DOCS_DIR}/docset\" \"${DOCS_DIR}/${PROJECT_NAME}.iOS.SDK.docset\"\nelse\nexit 2;\nfi";
 		};
 		B7B1648ABAD28BB09A9E4A7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -758,6 +786,20 @@
 			};
 			name = Release;
 		};
+		A9E5AA251D6E3471001974D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9E5AA261D6E3471001974D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -805,6 +847,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A9E5AA271D6E3471001974D6 /* Build configuration list for PBXAggregateTarget "Generate appledoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E5AA251D6E3471001974D6 /* Debug */,
+				A9E5AA261D6E3471001974D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

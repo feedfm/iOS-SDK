@@ -21,6 +21,15 @@
 #import <UIKit/UIKit.h>
 #import "FeedMedia/FMAudioPlayer.h"
 
+/**
+ 
+ Indicator view that starts animation automatically
+ whenever the player is stalled, waiting for a song from the server, or 
+ asking the server for permission to skip the current song. The animation
+ is stopped in all other states.
+ 
+ */
+
 //NOT_IB_DESIGNABLE
 @interface FMActivityIndicator : UIActivityIndicatorView
 

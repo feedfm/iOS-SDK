@@ -2,21 +2,6 @@
 //  FMPlayPauseButton.h
 //  UITests
 //
-//  This class extends UIButton so that, when clicked, it asks the
-//  Feed Media player to either start playing music, resume the
-//  currently paused song, or pause the currently playing song.
-//
-//  When the button is not selected, it should indicate that a click
-//  will start music playback (so you would display the text 'play'
-//  or the triangular 'play' icon), and when the button is selected
-//  it means we are currently playing music and a click will pause
-//  music playback.
-//
-//  If the 'hideWhenStalled' boolean is set to YES, then this
-//  button will hide itself from display. Presumably you have a
-//  FMActivityIndicator in the same location as the button that will
-//  then appear to indicate that the player is waiting for
-//  data from the network to continue.
 //
 //  Created by Eric Lambrecht on 3/6/15.
 //  Copyright (c) 2015 Feed Media. All rights reserved.
@@ -24,8 +9,36 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 
+ Button that automatically updates its `selected` property to reflect 
+ wether or not music is currently playing, and responds to touches by
+ calling `[FMAudioPlayer play]` or `[FMAudioPlayer pause]`.
+ 
+ When the button has `selected = false`, it should render an image to 
+ indicate that tapping the button will start music. When the button has
+ `selected = true` it should indicate that tapping the button will
+ pause music playback.
+
+ If the `hideWhenStalled` property is set to `YES`, then this button
+ will set its `hidden` property to true when the player is stalled
+ waiting for audio data over the network. Presumably there is an
+ `FMActivityIndicator` in the same location on the screen that becomes
+ visible at the same time and the user gets an indication that the
+ player is working, despite no music playing.
+
+ */
+ 
+
 //NOT_IB_DESIGNABLE
 @interface FMPlayPauseButton : UIButton
+
+/**
+ 
+ If true, this button will set its `hidden` property to `true` when
+ the `FMAudioPlayer` is stalled, and `false` otherwise.
+ 
+ */
 
 @property (nonatomic) IBInspectable BOOL hideWhenStalled;
 

@@ -10,6 +10,14 @@
 //  Copyright (c) 2015 Feed Media. All rights reserved.
 //
 
+/**
+ 
+ This progress view updates its `progress` value automatically to
+ reflect the playback progress into the currently playing song,
+ if any. If no song is playing, then the progress is set to 0.
+ 
+ */
+
 #import <UIKit/UIKit.h>
 
 //NOT_IB_DESIGNABLE

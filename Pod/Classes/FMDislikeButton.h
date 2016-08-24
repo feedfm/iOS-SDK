@@ -15,6 +15,30 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 
+ Button that automatically changes its `enabled` and `selected`
+ properties based on the state of the music player, and sends `dislike` and
+ `unlike` requests to the music player when tapped.
+ 
+ To properly render a 'dislike' button, the following images should be assigned to
+ the following states:
+ 
+ - when `enabled = false`, the button should render as disabled
+ - when `enabled = true` and `selected = true`, the button should render to indicate
+   the user *dislikes* the current song
+ - when `enabled = true` and `selected = false`, the button should render to indicate
+   the user has *not disliked* the current song
+ 
+ When a user taps on the button while it is enabled and selected, the button will call
+ `[FMAudioPlayer unlike]`. When a user taps on the button while it is enabled and not
+ selected, the button will call `[FMAudioPlayer dislike]`.
+ 
+ The button will listen for state change events from the `FMAudioPlayer` and update its
+ state accordingly.
+ 
+ */
+
 //NOT_IB_DESIGNABLE
 @interface FMDislikeButton : UIButton
 
