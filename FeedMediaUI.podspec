@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     'FeedMediaUI' => ['Pod/Assets/**/*.png']
   }
 
-  s.dependency "FeedMedia", "~> 2.4.11"
+  s.dependency "FeedMedia", "~> 2.4.13"
   s.dependency "MarqueeLabel", "~> 2.5"
 
 end
