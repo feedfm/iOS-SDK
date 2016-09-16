@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "FeedMedia": [
-      "~> 2.4.11"
+      "~> 2.4.13"
     ],
     "MarqueeLabel": [
       "~> 2.5"

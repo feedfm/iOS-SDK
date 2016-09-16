@@ -1,1209 +1,3373 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		084CB195626D494C8594F685E4B3059B /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58836A4156881EBF52B61666A41332F6 /* pause@2x.png */; };
-		0C66AFE6B302FD9B7EA19BB0A77CF311 /* FMLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8F67434977BB6E1511FB58FE8376B /* FMLikeButton.m */; };
-		0FC7CA55DDD11F050B314E2E6FA66AF6 /* thumbsdown_selected@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033DAEA3E97C768D7B34FCA18550E0E9 /* thumbsdown_selected@1x.png */; };
-		164252244E5E1500C7AD55FF2C174DE1 /* FMStationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ED25D5876AF3578A9325F1298ACA7C /* FMStationButton.m */; };
-		18645FDF0AA1F5DBDB46E5E94D245A32 /* FMProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 345BC256ECDB965749B8F555B005E04F /* FMProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A7F1C8372660602282D219C5B56FAD2 /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1298677CAF9049555F60DDFBB7546B4 /* MarqueeLabel-dummy.m */; };
-		1E3B77636DD6DE8C9C28EC706FE916CA /* FMTotalTimeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B3D2376BA1DC23CE2AA1EF5D73FAF9 /* FMTotalTimeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		205032F715EEF904849F6B0EBEB12E8B /* skip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 812C7DC9A97BEE15470A431CFC2B34D0 /* skip@2x.png */; };
-		22F0795766440DAF66CEC6CEA5F63A03 /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B29FFDF34C0AD8F6C39D499A76CE0DCE /* FMTotalTimeLabel.m */; };
-		260E540F54506A13EF94FE9C183AB69B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-		2DBE78A304DB08A1EB3283F671DB43EF /* feed_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5579A8F7F0B9D8EB985AA01CF437300 /* feed_logo@3x.png */; };
-		322FA2EF5B0EEDF96F9CEA7ADEE67DF5 /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9060B69F44715DF0B82CE14819445 /* FMElapsedTimeLabel.m */; };
-		33E4463E92F1187EA0E611466D8711FF /* FMRemainingTimeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EAA7D265B831C106FD3269B527D939 /* FMRemainingTimeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33E8F2825B590C7FE0711002B0666CA4 /* thumbsdown_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCF8A476470080D466155708379E252 /* thumbsdown_unselected@2x.png */; };
-		3A682AD9FC115BB0F06CAA12B70D295A /* thumbsup_selected@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC851D09E6662D65A0DBE7F9316FBF8 /* thumbsup_selected@1x.png */; };
-		3C3631AE12CF4E0ECEEDDA07C0E743B2 /* skip@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B765A69396BF99B63046879B688A2A2 /* skip@1x.png */; };
-		3F39C617ED74363288855A13618D1D2F /* FeedMediaUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 191230A17E57241F0A556492105D6BC5 /* FeedMediaUI-dummy.m */; };
-		423A049BDE0E93807A45FE16727AB2D5 /* pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA2426E81072D4EFB7AB52106DA538D /* pause@3x.png */; };
-		449A288E5D548CCFDC6218BEF74CFAB4 /* FMPlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EBADB4B082D4206A83444C93FD5F9C82 /* FMPlayPauseButton.m */; };
-		4BB3A7E8B7DCDAD7D5CF101DC0A73F16 /* thumbsup_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DC4F428A9E42977EFB7B64B0389593 /* thumbsup_selected@3x.png */; };
-		4E6EF4AE702A6C67EA644788DBEC98A9 /* feed_logo@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA5208504928361ABB5CCCE668BA9CC /* feed_logo@1x.png */; };
-		57FDCB9B730D3971AAE80F39DCF5D018 /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD7A94549AC21FC35EEDCEC13D7B216 /* FMProgressView.m */; };
-		58A68D9B4005314A42E3BB31F01C56D9 /* FMLikeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A61F4DA6EA47E30BAE6DEEF904DA32E2 /* FMLikeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C98F906EE99B6BD61031897E8254FD7 /* feed_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19A6C9A3B45616719DAEE6E16912E750 /* feed_logo@2x.png */; };
-		5DEEC0375995A9BFB4349719CD2B26AF /* skip@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C8B4B3CA38DEFA7E68ADF3A764A5E95 /* skip@3x.png */; };
-		632A5C1A9AF8991BE2BDE500BC362976 /* FMMetadataLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 591A8DCDA8B8868D00D88FC6F44B1409 /* FMMetadataLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		637CDF7A8DA98B2755D9B4FF782020A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */; };
-		69E1191ECA942098CE0B2EE5AF780779 /* Pods-FeedMediaUI_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA1457173C826A45F3FADB8D067730 /* Pods-FeedMediaUI_Tests-dummy.m */; };
-		70E9F122702892BB23849E5AD3FA7010 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-		724C40FD5EB64BC98D275E0C27532660 /* FMRemainingTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 741046EDE1906A01E389C21F25D76693 /* FMRemainingTimeLabel.m */; };
-		75831D4F8D73A8475CD3943CFF7DD1A2 /* FMSkipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D724A9BEB0E1B6DC178925D13C39BA4 /* FMSkipButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75B95B5E79B91D638ABF2438392C649B /* FeedMediaUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C604099280CAFAF09F45EB5BD159B1F /* FeedMediaUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C7D630498C6F31073515D9E5553788E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */; };
-		7CA98DF2F2A376AFA3044969979EE2E9 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C999A693785489CAE34CB2080F552D0 /* play@3x.png */; };
-		804E42DAFB9A273C2EE8D311FC8E1611 /* FMSkipWarningView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6803BE4E877FE8B3EE085E5E32F7EE6F /* FMSkipWarningView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		809FE42241DAC36ADC4F61A227D7A7CA /* FMStationButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 184796DFB13FD05E28C797780793FAF5 /* FMStationButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85C0319C06F866E42DB7E3506F513F9C /* Pods-FeedMediaUI_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB3B08F75D57D603910B8F9CDF045F6 /* Pods-FeedMediaUI_Example-dummy.m */; };
-		869DF33AC573E9AA68BEC5FED48B4DDF /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1E726CDE60B500E6EF4665ACE0B5CB /* FMMetadataLabel.m */; };
-		87D9764AD294DE76935A5C14DBF04793 /* thumbsup_unselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 718CF83A6FB3B0E296A8F6989E757A64 /* thumbsup_unselected@3x.png */; };
-		886A5BC84F332F1ADAC61CF8CD71AB9A /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3A56C18AE46D2CBF5CAB318D3AD4B /* FMSkipWarningView.m */; };
-		88DA57EDF56CCCC5D726C381FAAADDB2 /* FMDislikeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CF0403C3E4DB1A397A9265082E3E74 /* FMDislikeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		895E87208BCCAA23067BC38BD16BBDB7 /* thumbsdown_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9AB0063D29381426A6A6EDCE31B2206 /* thumbsdown_selected@3x.png */; };
-		9110E15DE2C6E994ECAB9000CF603B88 /* FMElapsedTimeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1830DE795166BDFF7C0DCAD014AB4062 /* FMElapsedTimeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		951AF58A72B8BBA7CEDA7D27F14B40EB /* thumbsdown_unselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D11FD665500EEB4FB180DE33D6FF8E3E /* thumbsdown_unselected@3x.png */; };
-		9548A6F5A42478132766CC7E2C9F0A29 /* thumbsdown_unselected@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FED35E58BA47D4994F9EAB233BF5962 /* thumbsdown_unselected@1x.png */; };
-		9709C578E6F276B99670A0AC0B92D9AC /* thumbsup_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C2910F7A77B85CE0A3DA21E5F7EFE /* thumbsup_unselected@2x.png */; };
-		97CCAD2988C1035E22772533F90E5096 /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB793B217B69BEB28550B593DDDC44BF /* MarqueeLabel.m */; };
-		9DA4BE104C9D1C4A6979759C6C10CA63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-		A0D0A60BEE583E89C9BE5FCD6E9E70AB /* thumbsup_unselected@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A272403B89CDDBD8FB8737BCCEA712 /* thumbsup_unselected@1x.png */; };
-		B0A064F32E2C4554634A9CC376D88DCE /* FMSkipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D3F47E96117FDB04D8435215F50EE /* FMSkipButton.m */; };
-		B802AD1AE87716F4121F61F1684CCEE0 /* play@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC603ECF91DCE5CB7DC691A3DA2EC874 /* play@1x.png */; };
-		B8C9D2F43FBB871A3F8878794BAB447D /* FMPlayPauseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EE980D8349F3E512CA58FF8A0185DACB /* FMPlayPauseButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA64FD0EACE7A4F4104F11F82CB7A7B6 /* FMActivityIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 47EABB485AE57EC825960A016825EA82 /* FMActivityIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5AA181D7C5AD37CFCA3AA2BBFBB0BF5 /* thumbsdown_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D33510EDDD95F0C577B52F14E31201 /* thumbsdown_selected@2x.png */; };
-		CB0C2A945FADC3575D33249B105945FA /* MarqueeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 62E271B77AA276869A01C76F7B2011D7 /* MarqueeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC6F939B28A777ED564E0099F8CE9CE2 /* FMShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0B9526D9F6AECCFF998053ECF5EBA3 /* FMShareButton.m */; };
-		E282822A674477182FC184E9999B1163 /* thumbsup_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603D49702EAD9B0B1652D0546E1733C4 /* thumbsup_selected@2x.png */; };
-		E8B5A289739A28B6A2B6C25F0AB8B903 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C4273C8D3F9E554FB023724459EC18 /* play@2x.png */; };
-		EE8936F65E785494A1192FC5A6AE07B3 /* FMDislikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4657291AD04195AC7A3700DDE6476B /* FMDislikeButton.m */; };
-		F321B65BDCAB0D89670DDDE222803E59 /* FMShareButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F6E969886F21CB3C110551355B4F7B9 /* FMShareButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FBAED6718E0E8F9C353E93BF6DDF1A71 /* pause@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44402670CC87476C56DD776B7114AB94 /* pause@1x.png */; };
-		FC149367C7C5015F0B549B69116905DE /* FMActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C82C35EF09A7746F05DA2DC40157F /* FMActivityIndicator.m */; };
-		FFFF9E4E1ADEB71E497C27CA3B3DA078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1483B29ABB9C9D136C3DB98969A9BA98 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99CDCE01E14467A0D420ECEEDBD00BE4;
-			remoteInfo = "FeedMediaUI-FeedMediaUI";
-		};
-		296D112C19364E9165902CADA308781F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8A293F85812CCF8A723EF886F609211A;
-			remoteInfo = MarqueeLabel;
-		};
-		58E31F3467C3A0FC152A5DC530EA7B18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8A293F85812CCF8A723EF886F609211A;
-			remoteInfo = MarqueeLabel;
-		};
-		CB1BC4349F40B0B0360F9D587CC3B909 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8A293F85812CCF8A723EF886F609211A;
-			remoteInfo = MarqueeLabel;
-		};
-		EF58989F060C0A7A2AE23048B8C07FF0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF76CE7DDBC205B74E5E2A740E8CDB16;
-			remoteInfo = FeedMediaUI;
-		};
-		F40E095F4A6E2D34B5C3A5D50C2BB0CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF76CE7DDBC205B74E5E2A740E8CDB16;
-			remoteInfo = FeedMediaUI;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		002590FF5E1E4016EE1CE0205195C3B5 /* FeedMediaUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FeedMediaUI.xcconfig; sourceTree = "<group>"; };
-		00B3D2376BA1DC23CE2AA1EF5D73FAF9 /* FMTotalTimeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMTotalTimeLabel.h; sourceTree = "<group>"; };
-		033DAEA3E97C768D7B34FCA18550E0E9 /* thumbsdown_selected@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_selected@1x.png"; sourceTree = "<group>"; };
-		091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		09CF0403C3E4DB1A397A9265082E3E74 /* FMDislikeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMDislikeButton.h; sourceTree = "<group>"; };
-		09FA1457173C826A45F3FADB8D067730 /* Pods-FeedMediaUI_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeedMediaUI_Tests-dummy.m"; sourceTree = "<group>"; };
-		0C999A693785489CAE34CB2080F552D0 /* play@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
-		10D33510EDDD95F0C577B52F14E31201 /* thumbsdown_selected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_selected@2x.png"; sourceTree = "<group>"; };
-		1727DF7DC26FAB947DBFD4339966B769 /* Pods-FeedMediaUI_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Tests-resources.sh"; sourceTree = "<group>"; };
-		1830DE795166BDFF7C0DCAD014AB4062 /* FMElapsedTimeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMElapsedTimeLabel.h; sourceTree = "<group>"; };
-		184796DFB13FD05E28C797780793FAF5 /* FMStationButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMStationButton.h; sourceTree = "<group>"; };
-		191230A17E57241F0A556492105D6BC5 /* FeedMediaUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FeedMediaUI-dummy.m"; sourceTree = "<group>"; };
-		19A6C9A3B45616719DAEE6E16912E750 /* feed_logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "feed_logo@2x.png"; sourceTree = "<group>"; };
-		1D24F0D286B9AF571502863C24369C9F /* Pods-FeedMediaUI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeedMediaUI_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1D724A9BEB0E1B6DC178925D13C39BA4 /* FMSkipButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMSkipButton.h; sourceTree = "<group>"; };
-		1F6C82C35EF09A7746F05DA2DC40157F /* FMActivityIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMActivityIndicator.m; sourceTree = "<group>"; };
-		23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		302D3F47E96117FDB04D8435215F50EE /* FMSkipButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMSkipButton.m; sourceTree = "<group>"; };
-		345BC256ECDB965749B8F555B005E04F /* FMProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMProgressView.h; sourceTree = "<group>"; };
-		3A13EE99F8666D7490D68C7D81A0E280 /* FeedMediaUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMediaUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BC851D09E6662D65A0DBE7F9316FBF8 /* thumbsup_selected@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_selected@1x.png"; sourceTree = "<group>"; };
-		43EAA7D265B831C106FD3269B527D939 /* FMRemainingTimeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMRemainingTimeLabel.h; sourceTree = "<group>"; };
-		44402670CC87476C56DD776B7114AB94 /* pause@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "pause@1x.png"; sourceTree = "<group>"; };
-		45ED25D5876AF3578A9325F1298ACA7C /* FMStationButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMStationButton.m; sourceTree = "<group>"; };
-		47EABB485AE57EC825960A016825EA82 /* FMActivityIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMActivityIndicator.h; sourceTree = "<group>"; };
-		4D9A339D2CF505BD1B69918728ADC13D /* Pods-FeedMediaUI_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeedMediaUI_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		58836A4156881EBF52B61666A41332F6 /* pause@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
-		591A8DCDA8B8868D00D88FC6F44B1409 /* FMMetadataLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMMetadataLabel.h; sourceTree = "<group>"; };
-		5B765A69396BF99B63046879B688A2A2 /* skip@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "skip@1x.png"; sourceTree = "<group>"; };
-		5C8B4B3CA38DEFA7E68ADF3A764A5E95 /* skip@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "skip@3x.png"; sourceTree = "<group>"; };
-		5E3D40F73D906E7194369582573B3AF5 /* Pods-FeedMediaUI_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Example-frameworks.sh"; sourceTree = "<group>"; };
-		603D49702EAD9B0B1652D0546E1733C4 /* thumbsup_selected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_selected@2x.png"; sourceTree = "<group>"; };
-		626683419C94222DD90A3A8D2D785985 /* libFeedMedia.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFeedMedia.a; path = dist/libFeedMedia.a; sourceTree = "<group>"; };
-		62E271B77AA276869A01C76F7B2011D7 /* MarqueeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MarqueeLabel.h; path = Sources/ObjC/MarqueeLabel.h; sourceTree = "<group>"; };
-		66DC4F428A9E42977EFB7B64B0389593 /* thumbsup_selected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_selected@3x.png"; sourceTree = "<group>"; };
-		6803BE4E877FE8B3EE085E5E32F7EE6F /* FMSkipWarningView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMSkipWarningView.h; sourceTree = "<group>"; };
-		6A3C2910F7A77B85CE0A3DA21E5F7EFE /* thumbsup_unselected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_unselected@2x.png"; sourceTree = "<group>"; };
-		6B0B9526D9F6AECCFF998053ECF5EBA3 /* FMShareButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMShareButton.m; sourceTree = "<group>"; };
-		6BCBE351F5B960145D765895FAA682E7 /* Pods-FeedMediaUI_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeedMediaUI_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		6E61F6241FDB672422E9C2FBCB970417 /* Pods-FeedMediaUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeedMediaUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6EA5208504928361ABB5CCCE668BA9CC /* feed_logo@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "feed_logo@1x.png"; sourceTree = "<group>"; };
-		6F6E969886F21CB3C110551355B4F7B9 /* FMShareButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMShareButton.h; sourceTree = "<group>"; };
-		718CF83A6FB3B0E296A8F6989E757A64 /* thumbsup_unselected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_unselected@3x.png"; sourceTree = "<group>"; };
-		741046EDE1906A01E389C21F25D76693 /* FMRemainingTimeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMRemainingTimeLabel.m; sourceTree = "<group>"; };
-		76E4FE345BE642ADB35634638EF73AE0 /* FMAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMAudioPlayer.h; path = FeedMedia/FMAudioPlayer.h; sourceTree = "<group>"; };
-		7715F1ACC982BBBC38929903264204DE /* libPods-FeedMediaUI_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedMediaUI_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		798C410F1DCA590A06AB37B657160435 /* Pods-FeedMediaUI_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		7C604099280CAFAF09F45EB5BD159B1F /* FeedMediaUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FeedMediaUI.h; sourceTree = "<group>"; };
-		7CB691C05640A20A360B7AC0EE548EC4 /* FMError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMError.h; path = FeedMedia/FMError.h; sourceTree = "<group>"; };
-		7CD7A94549AC21FC35EEDCEC13D7B216 /* FMProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMProgressView.m; sourceTree = "<group>"; };
-		7E1E726CDE60B500E6EF4665ACE0B5CB /* FMMetadataLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMMetadataLabel.m; sourceTree = "<group>"; };
-		8102256443C00B31AA3D1002D018D154 /* libPods-FeedMediaUI_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedMediaUI_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		812C7DC9A97BEE15470A431CFC2B34D0 /* skip@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "skip@2x.png"; sourceTree = "<group>"; };
-		84C4273C8D3F9E554FB023724459EC18 /* play@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
-		85395765E4A7FA55273FAEEAC4EBFE65 /* Pods-FeedMediaUI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeedMediaUI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B45D2EDEC7B4D6CF4BDC390DB8EC427 /* Pods-FeedMediaUI_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeedMediaUI_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8D4657291AD04195AC7A3700DDE6476B /* FMDislikeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMDislikeButton.m; sourceTree = "<group>"; };
-		8FE3A56C18AE46D2CBF5CAB318D3AD4B /* FMSkipWarningView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMSkipWarningView.m; sourceTree = "<group>"; };
-		8FED35E58BA47D4994F9EAB233BF5962 /* thumbsdown_unselected@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_unselected@1x.png"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B07B719417A489C0787165ECDF7E777 /* libFeedMediaUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFeedMediaUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CEAEAD59B13EBDF79B96ADC9CEE5B3B /* libMarqueeLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMarqueeLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0D9060B69F44715DF0B82CE14819445 /* FMElapsedTimeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMElapsedTimeLabel.m; sourceTree = "<group>"; };
-		A2E718D292AAA9CA4E6D5ACC47390193 /* Pods-FeedMediaUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeedMediaUI_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A61F4DA6EA47E30BAE6DEEF904DA32E2 /* FMLikeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMLikeButton.h; sourceTree = "<group>"; };
-		A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AA133229E8B283747CBCE784C11B2F8E /* Pods-FeedMediaUI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeedMediaUI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AA73B98AE091A5C865C0518588E7E25E /* FMAudioItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMAudioItem.h; path = FeedMedia/FMAudioItem.h; sourceTree = "<group>"; };
-		ADC6B6D249D7F70BEDF246FA8DF82B8E /* FeedMediaUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FeedMediaUI-prefix.pch"; sourceTree = "<group>"; };
-		B29FFDF34C0AD8F6C39D499A76CE0DCE /* FMTotalTimeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMTotalTimeLabel.m; sourceTree = "<group>"; };
-		B557FB8DFE8BFD8E35D8365E9DCA3744 /* FeedMedia.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FeedMedia.h; path = FeedMedia/FeedMedia.h; sourceTree = "<group>"; };
-		BC603ECF91DCE5CB7DC691A3DA2EC874 /* play@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "play@1x.png"; sourceTree = "<group>"; };
-		BF466F292B88D25C34352E1CE5B6A4EF /* FMStation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMStation.h; path = FeedMedia/FMStation.h; sourceTree = "<group>"; };
-		C1298677CAF9049555F60DDFBB7546B4 /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
-		C6DA31D2779806C0DF98ECE2E5130ACC /* FMLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMLog.h; path = FeedMedia/FMLog.h; sourceTree = "<group>"; };
-		D11FD665500EEB4FB180DE33D6FF8E3E /* thumbsdown_unselected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_unselected@3x.png"; sourceTree = "<group>"; };
-		D6BBCA4C62C84160C06D7C5352B6E4C8 /* MarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.xcconfig; sourceTree = "<group>"; };
-		E0A272403B89CDDBD8FB8737BCCEA712 /* thumbsup_unselected@1x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsup_unselected@1x.png"; sourceTree = "<group>"; };
-		E5579A8F7F0B9D8EB985AA01CF437300 /* feed_logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "feed_logo@3x.png"; sourceTree = "<group>"; };
-		E72BEF8ED738F5FC4AD99CF5AC52C73D /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
-		E802691F288E2D042E369C9DB83EB87C /* Pods-FeedMediaUI_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeedMediaUI_Example-resources.sh"; sourceTree = "<group>"; };
-		E9AB0063D29381426A6A6EDCE31B2206 /* thumbsdown_selected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_selected@3x.png"; sourceTree = "<group>"; };
-		EB793B217B69BEB28550B593DDDC44BF /* MarqueeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MarqueeLabel.m; path = Sources/ObjC/MarqueeLabel.m; sourceTree = "<group>"; };
-		EBADB4B082D4206A83444C93FD5F9C82 /* FMPlayPauseButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMPlayPauseButton.m; sourceTree = "<group>"; };
-		ECB3B08F75D57D603910B8F9CDF045F6 /* Pods-FeedMediaUI_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeedMediaUI_Example-dummy.m"; sourceTree = "<group>"; };
-		EE980D8349F3E512CA58FF8A0185DACB /* FMPlayPauseButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMPlayPauseButton.h; sourceTree = "<group>"; };
-		EFA2426E81072D4EFB7AB52106DA538D /* pause@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "pause@3x.png"; sourceTree = "<group>"; };
-		FCB8F67434977BB6E1511FB58FE8376B /* FMLikeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FMLikeButton.m; sourceTree = "<group>"; };
-		FEA13BAFE63D1A529685DFDA7347A6FC /* ResourceBundle-FeedMediaUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FeedMediaUI-Info.plist"; sourceTree = "<group>"; };
-		FFCF8A476470080D466155708379E252 /* thumbsdown_unselected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "thumbsdown_unselected@2x.png"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		2BB6DFF47DF00CC5DE7602A688C4E5AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9DA4BE104C9D1C4A6979759C6C10CA63 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88ACD360252601354411FC151E2366A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70E9F122702892BB23849E5AD3FA7010 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		902CB340C229D354BC5B5974FAB9512A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E529676E2B9B6EAA96AAA1168D2B8D54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				260E540F54506A13EF94FE9C183AB69B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F071465FF42D415A776BF7D9477886CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FFFF9E4E1ADEB71E497C27CA3B3DA078 /* Foundation.framework in Frameworks */,
-				7C7D630498C6F31073515D9E5553788E /* QuartzCore.framework in Frameworks */,
-				637CDF7A8DA98B2755D9B4FF782020A8 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		03828F7B0B1A2A0C212B4A38E853D907 /* thumbsup_unselected */ = {
-			isa = PBXGroup;
-			children = (
-				E0A272403B89CDDBD8FB8737BCCEA712 /* thumbsup_unselected@1x.png */,
-				6A3C2910F7A77B85CE0A3DA21E5F7EFE /* thumbsup_unselected@2x.png */,
-				718CF83A6FB3B0E296A8F6989E757A64 /* thumbsup_unselected@3x.png */,
-			);
-			path = thumbsup_unselected;
-			sourceTree = "<group>";
-		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DFDE779C6E5D3445E0CB8CCB8D424449 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		13B695932E545275E80B380E2A9C543C /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				62E271B77AA276869A01C76F7B2011D7 /* MarqueeLabel.h */,
-				EB793B217B69BEB28550B593DDDC44BF /* MarqueeLabel.m */,
-			);
-			name = ObjC;
-			sourceTree = "<group>";
-		};
-		1D953017FCEFD24DAC3066B0F844E53D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D57F69788266CD155266486404F08785 /* Assets */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		304BC29AF50D390D386D23F02E5E6102 /* skip */ = {
-			isa = PBXGroup;
-			children = (
-				5B765A69396BF99B63046879B688A2A2 /* skip@1x.png */,
-				812C7DC9A97BEE15470A431CFC2B34D0 /* skip@2x.png */,
-				5C8B4B3CA38DEFA7E68ADF3A764A5E95 /* skip@3x.png */,
-			);
-			path = skip;
-			sourceTree = "<group>";
-		};
-		46237969B06662F7560B8054913E6FE9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				002590FF5E1E4016EE1CE0205195C3B5 /* FeedMediaUI.xcconfig */,
-				191230A17E57241F0A556492105D6BC5 /* FeedMediaUI-dummy.m */,
-				ADC6B6D249D7F70BEDF246FA8DF82B8E /* FeedMediaUI-prefix.pch */,
-				FEA13BAFE63D1A529685DFDA7347A6FC /* ResourceBundle-FeedMediaUI-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/FeedMediaUI";
-			sourceTree = "<group>";
-		};
-		489B48D2276510CC161E25AC7DD4DEEA /* thumbsup_selected */ = {
-			isa = PBXGroup;
-			children = (
-				3BC851D09E6662D65A0DBE7F9316FBF8 /* thumbsup_selected@1x.png */,
-				603D49702EAD9B0B1652D0546E1733C4 /* thumbsup_selected@2x.png */,
-				66DC4F428A9E42977EFB7B64B0389593 /* thumbsup_selected@3x.png */,
-			);
-			path = thumbsup_selected;
-			sourceTree = "<group>";
-		};
-		4FC26EA2ABA669F15E7E438AE59C89E4 /* thumbsdown_unselected */ = {
-			isa = PBXGroup;
-			children = (
-				8FED35E58BA47D4994F9EAB233BF5962 /* thumbsdown_unselected@1x.png */,
-				FFCF8A476470080D466155708379E252 /* thumbsdown_unselected@2x.png */,
-				D11FD665500EEB4FB180DE33D6FF8E3E /* thumbsdown_unselected@3x.png */,
-			);
-			path = thumbsdown_unselected;
-			sourceTree = "<group>";
-		};
-		503D29CC5013121A12750233450B37C7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1D953017FCEFD24DAC3066B0F844E53D /* Pod */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		5C5443E61EA05715D784F37BBBE5C977 /* pause */ = {
-			isa = PBXGroup;
-			children = (
-				44402670CC87476C56DD776B7114AB94 /* pause@1x.png */,
-				58836A4156881EBF52B61666A41332F6 /* pause@2x.png */,
-				EFA2426E81072D4EFB7AB52106DA538D /* pause@3x.png */,
-			);
-			path = pause;
-			sourceTree = "<group>";
-		};
-		6CC81CD149115933491DE77CC6C0B111 /* play */ = {
-			isa = PBXGroup;
-			children = (
-				BC603ECF91DCE5CB7DC691A3DA2EC874 /* play@1x.png */,
-				84C4273C8D3F9E554FB023724459EC18 /* play@2x.png */,
-				0C999A693785489CAE34CB2080F552D0 /* play@3x.png */,
-			);
-			path = play;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				8FB391E7E1A3DA0E2416683EC2076EEB /* Development Pods */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				C40EF1FA3D8F2931CCD83801A21A5CF6 /* Pods */,
-				E595F8BDD0A98A28B393A686AE97DB4D /* Products */,
-				B39E05480E3E9CE91C767D86D219E5EF /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8FB391E7E1A3DA0E2416683EC2076EEB /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				98FDFF1D1BCDE71D0B40E379181DE763 /* FeedMediaUI */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		90C4873E93BD5C64A67F4F89653AE45F /* Pods-FeedMediaUI_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				AA133229E8B283747CBCE784C11B2F8E /* Pods-FeedMediaUI_Tests-acknowledgements.markdown */,
-				8B45D2EDEC7B4D6CF4BDC390DB8EC427 /* Pods-FeedMediaUI_Tests-acknowledgements.plist */,
-				09FA1457173C826A45F3FADB8D067730 /* Pods-FeedMediaUI_Tests-dummy.m */,
-				798C410F1DCA590A06AB37B657160435 /* Pods-FeedMediaUI_Tests-frameworks.sh */,
-				1727DF7DC26FAB947DBFD4339966B769 /* Pods-FeedMediaUI_Tests-resources.sh */,
-				85395765E4A7FA55273FAEEAC4EBFE65 /* Pods-FeedMediaUI_Tests.debug.xcconfig */,
-				1D24F0D286B9AF571502863C24369C9F /* Pods-FeedMediaUI_Tests.release.xcconfig */,
-			);
-			name = "Pods-FeedMediaUI_Tests";
-			path = "Target Support Files/Pods-FeedMediaUI_Tests";
-			sourceTree = "<group>";
-		};
-		98FDFF1D1BCDE71D0B40E379181DE763 /* FeedMediaUI */ = {
-			isa = PBXGroup;
-			children = (
-				E70FBD445CBBF7F89CDFE28A63C91E06 /* Pod */,
-				503D29CC5013121A12750233450B37C7 /* Resources */,
-				46237969B06662F7560B8054913E6FE9 /* Support Files */,
-			);
-			name = FeedMediaUI;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		A1D1A19F8AE0809FB4CAEFB3FEE8D6E0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				7C604099280CAFAF09F45EB5BD159B1F /* FeedMediaUI.h */,
-				47EABB485AE57EC825960A016825EA82 /* FMActivityIndicator.h */,
-				1F6C82C35EF09A7746F05DA2DC40157F /* FMActivityIndicator.m */,
-				09CF0403C3E4DB1A397A9265082E3E74 /* FMDislikeButton.h */,
-				8D4657291AD04195AC7A3700DDE6476B /* FMDislikeButton.m */,
-				1830DE795166BDFF7C0DCAD014AB4062 /* FMElapsedTimeLabel.h */,
-				A0D9060B69F44715DF0B82CE14819445 /* FMElapsedTimeLabel.m */,
-				A61F4DA6EA47E30BAE6DEEF904DA32E2 /* FMLikeButton.h */,
-				FCB8F67434977BB6E1511FB58FE8376B /* FMLikeButton.m */,
-				591A8DCDA8B8868D00D88FC6F44B1409 /* FMMetadataLabel.h */,
-				7E1E726CDE60B500E6EF4665ACE0B5CB /* FMMetadataLabel.m */,
-				EE980D8349F3E512CA58FF8A0185DACB /* FMPlayPauseButton.h */,
-				EBADB4B082D4206A83444C93FD5F9C82 /* FMPlayPauseButton.m */,
-				345BC256ECDB965749B8F555B005E04F /* FMProgressView.h */,
-				7CD7A94549AC21FC35EEDCEC13D7B216 /* FMProgressView.m */,
-				43EAA7D265B831C106FD3269B527D939 /* FMRemainingTimeLabel.h */,
-				741046EDE1906A01E389C21F25D76693 /* FMRemainingTimeLabel.m */,
-				6F6E969886F21CB3C110551355B4F7B9 /* FMShareButton.h */,
-				6B0B9526D9F6AECCFF998053ECF5EBA3 /* FMShareButton.m */,
-				1D724A9BEB0E1B6DC178925D13C39BA4 /* FMSkipButton.h */,
-				302D3F47E96117FDB04D8435215F50EE /* FMSkipButton.m */,
-				6803BE4E877FE8B3EE085E5E32F7EE6F /* FMSkipWarningView.h */,
-				8FE3A56C18AE46D2CBF5CAB318D3AD4B /* FMSkipWarningView.m */,
-				184796DFB13FD05E28C797780793FAF5 /* FMStationButton.h */,
-				45ED25D5876AF3578A9325F1298ACA7C /* FMStationButton.m */,
-				00B3D2376BA1DC23CE2AA1EF5D73FAF9 /* FMTotalTimeLabel.h */,
-				B29FFDF34C0AD8F6C39D499A76CE0DCE /* FMTotalTimeLabel.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		B129498A6350F2A618A5ECA7811A8A8D /* MarqueeLabel */ = {
-			isa = PBXGroup;
-			children = (
-				13B695932E545275E80B380E2A9C543C /* ObjC */,
-				CCA2EB07F6FB02165649EC05692574B0 /* Support Files */,
-			);
-			path = MarqueeLabel;
-			sourceTree = "<group>";
-		};
-		B39E05480E3E9CE91C767D86D219E5EF /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FDDF60698454B0B72675C1AF8E04BF26 /* Pods-FeedMediaUI_Example */,
-				90C4873E93BD5C64A67F4F89653AE45F /* Pods-FeedMediaUI_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B8FA666EE452B0D0F6F93DACE9859E72 /* feed_logo */ = {
-			isa = PBXGroup;
-			children = (
-				6EA5208504928361ABB5CCCE668BA9CC /* feed_logo@1x.png */,
-				19A6C9A3B45616719DAEE6E16912E750 /* feed_logo@2x.png */,
-				E5579A8F7F0B9D8EB985AA01CF437300 /* feed_logo@3x.png */,
-			);
-			path = feed_logo;
-			sourceTree = "<group>";
-		};
-		C289D786BCEA8D52F4F326BC235BD843 /* thumbsdown_selected */ = {
-			isa = PBXGroup;
-			children = (
-				033DAEA3E97C768D7B34FCA18550E0E9 /* thumbsdown_selected@1x.png */,
-				10D33510EDDD95F0C577B52F14E31201 /* thumbsdown_selected@2x.png */,
-				E9AB0063D29381426A6A6EDCE31B2206 /* thumbsdown_selected@3x.png */,
-			);
-			path = thumbsdown_selected;
-			sourceTree = "<group>";
-		};
-		C40EF1FA3D8F2931CCD83801A21A5CF6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D9BE3FD95E3137E7520EDFDC7A61F94B /* FeedMedia */,
-				B129498A6350F2A618A5ECA7811A8A8D /* MarqueeLabel */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C6E0F5D2429355C2FA68EE1134878A15 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				626683419C94222DD90A3A8D2D785985 /* libFeedMedia.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CCA2EB07F6FB02165649EC05692574B0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D6BBCA4C62C84160C06D7C5352B6E4C8 /* MarqueeLabel.xcconfig */,
-				C1298677CAF9049555F60DDFBB7546B4 /* MarqueeLabel-dummy.m */,
-				E72BEF8ED738F5FC4AD99CF5AC52C73D /* MarqueeLabel-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MarqueeLabel";
-			sourceTree = "<group>";
-		};
-		D57F69788266CD155266486404F08785 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				B8FA666EE452B0D0F6F93DACE9859E72 /* feed_logo */,
-				5C5443E61EA05715D784F37BBBE5C977 /* pause */,
-				6CC81CD149115933491DE77CC6C0B111 /* play */,
-				304BC29AF50D390D386D23F02E5E6102 /* skip */,
-				C289D786BCEA8D52F4F326BC235BD843 /* thumbsdown_selected */,
-				4FC26EA2ABA669F15E7E438AE59C89E4 /* thumbsdown_unselected */,
-				489B48D2276510CC161E25AC7DD4DEEA /* thumbsup_selected */,
-				03828F7B0B1A2A0C212B4A38E853D907 /* thumbsup_unselected */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		D9BE3FD95E3137E7520EDFDC7A61F94B /* FeedMedia */ = {
-			isa = PBXGroup;
-			children = (
-				B557FB8DFE8BFD8E35D8365E9DCA3744 /* FeedMedia.h */,
-				AA73B98AE091A5C865C0518588E7E25E /* FMAudioItem.h */,
-				76E4FE345BE642ADB35634638EF73AE0 /* FMAudioPlayer.h */,
-				7CB691C05640A20A360B7AC0EE548EC4 /* FMError.h */,
-				C6DA31D2779806C0DF98ECE2E5130ACC /* FMLog.h */,
-				BF466F292B88D25C34352E1CE5B6A4EF /* FMStation.h */,
-				C6E0F5D2429355C2FA68EE1134878A15 /* Frameworks */,
-			);
-			path = FeedMedia;
-			sourceTree = "<group>";
-		};
-		DFDE779C6E5D3445E0CB8CCB8D424449 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				A817CAE99C81EE68006DC1E60E295C0A /* Foundation.framework */,
-				23016F69B2480F44D0BB5526B39192FA /* QuartzCore.framework */,
-				091D54A73E1E8BB182C9D7D245AF1C2F /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E595F8BDD0A98A28B393A686AE97DB4D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3A13EE99F8666D7490D68C7D81A0E280 /* FeedMediaUI.bundle */,
-				9B07B719417A489C0787165ECDF7E777 /* libFeedMediaUI.a */,
-				9CEAEAD59B13EBDF79B96ADC9CEE5B3B /* libMarqueeLabel.a */,
-				7715F1ACC982BBBC38929903264204DE /* libPods-FeedMediaUI_Example.a */,
-				8102256443C00B31AA3D1002D018D154 /* libPods-FeedMediaUI_Tests.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E70FBD445CBBF7F89CDFE28A63C91E06 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A1D1A19F8AE0809FB4CAEFB3FEE8D6E0 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		FDDF60698454B0B72675C1AF8E04BF26 /* Pods-FeedMediaUI_Example */ = {
-			isa = PBXGroup;
-			children = (
-				4D9A339D2CF505BD1B69918728ADC13D /* Pods-FeedMediaUI_Example-acknowledgements.markdown */,
-				6BCBE351F5B960145D765895FAA682E7 /* Pods-FeedMediaUI_Example-acknowledgements.plist */,
-				ECB3B08F75D57D603910B8F9CDF045F6 /* Pods-FeedMediaUI_Example-dummy.m */,
-				5E3D40F73D906E7194369582573B3AF5 /* Pods-FeedMediaUI_Example-frameworks.sh */,
-				E802691F288E2D042E369C9DB83EB87C /* Pods-FeedMediaUI_Example-resources.sh */,
-				6E61F6241FDB672422E9C2FBCB970417 /* Pods-FeedMediaUI_Example.debug.xcconfig */,
-				A2E718D292AAA9CA4E6D5ACC47390193 /* Pods-FeedMediaUI_Example.release.xcconfig */,
-			);
-			name = "Pods-FeedMediaUI_Example";
-			path = "Target Support Files/Pods-FeedMediaUI_Example";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		6E48508F843A0578F8FA930841A9F4DA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB0C2A945FADC3575D33249B105945FA /* MarqueeLabel.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC9DFF211F6B0754F7A4414223CBE8E8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75B95B5E79B91D638ABF2438392C649B /* FeedMediaUI.h in Headers */,
-				BA64FD0EACE7A4F4104F11F82CB7A7B6 /* FMActivityIndicator.h in Headers */,
-				88DA57EDF56CCCC5D726C381FAAADDB2 /* FMDislikeButton.h in Headers */,
-				9110E15DE2C6E994ECAB9000CF603B88 /* FMElapsedTimeLabel.h in Headers */,
-				58A68D9B4005314A42E3BB31F01C56D9 /* FMLikeButton.h in Headers */,
-				632A5C1A9AF8991BE2BDE500BC362976 /* FMMetadataLabel.h in Headers */,
-				B8C9D2F43FBB871A3F8878794BAB447D /* FMPlayPauseButton.h in Headers */,
-				18645FDF0AA1F5DBDB46E5E94D245A32 /* FMProgressView.h in Headers */,
-				33E4463E92F1187EA0E611466D8711FF /* FMRemainingTimeLabel.h in Headers */,
-				F321B65BDCAB0D89670DDDE222803E59 /* FMShareButton.h in Headers */,
-				75831D4F8D73A8475CD3943CFF7DD1A2 /* FMSkipButton.h in Headers */,
-				804E42DAFB9A273C2EE8D311FC8E1611 /* FMSkipWarningView.h in Headers */,
-				809FE42241DAC36ADC4F61A227D7A7CA /* FMStationButton.h in Headers */,
-				1E3B77636DD6DE8C9C28EC706FE916CA /* FMTotalTimeLabel.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		74F66B165ED62A52F869652FED49CA05 /* Pods-FeedMediaUI_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 595B5B0BB850D12E1220F2DC06768344 /* Build configuration list for PBXNativeTarget "Pods-FeedMediaUI_Example" */;
-			buildPhases = (
-				9AAC61EAA9971032255F41678BF1275B /* Sources */,
-				88ACD360252601354411FC151E2366A7 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7C021E66A5E991DEB1FDA2B221B7E114 /* PBXTargetDependency */,
-				D74340C41B3ED06DDE3F568C5940B535 /* PBXTargetDependency */,
-			);
-			name = "Pods-FeedMediaUI_Example";
-			productName = "Pods-FeedMediaUI_Example";
-			productReference = 7715F1ACC982BBBC38929903264204DE /* libPods-FeedMediaUI_Example.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		8A293F85812CCF8A723EF886F609211A /* MarqueeLabel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE4DF5F99C3EF27198DD12EBDD03C356 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
-			buildPhases = (
-				CED8B8A25FCC44F057981F20753CD80D /* Sources */,
-				F071465FF42D415A776BF7D9477886CA /* Frameworks */,
-				6E48508F843A0578F8FA930841A9F4DA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MarqueeLabel;
-			productName = MarqueeLabel;
-			productReference = 9CEAEAD59B13EBDF79B96ADC9CEE5B3B /* libMarqueeLabel.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		99CDCE01E14467A0D420ECEEDBD00BE4 /* FeedMediaUI-FeedMediaUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7C72F4DA9273AD4DC76FE0A3D4862D8 /* Build configuration list for PBXNativeTarget "FeedMediaUI-FeedMediaUI" */;
-			buildPhases = (
-				C76E1D98EE711244FE1901A477F8183F /* Sources */,
-				902CB340C229D354BC5B5974FAB9512A /* Frameworks */,
-				AC7D3C6D9D65DCFE2B6147B76080A445 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "FeedMediaUI-FeedMediaUI";
-			productName = "FeedMediaUI-FeedMediaUI";
-			productReference = 3A13EE99F8666D7490D68C7D81A0E280 /* FeedMediaUI.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		AF33AC3A9524B4D4D0DCD8E5191BFA1B /* Pods-FeedMediaUI_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3D93816C81E7E4001294EE856B8EFE9 /* Build configuration list for PBXNativeTarget "Pods-FeedMediaUI_Tests" */;
-			buildPhases = (
-				A34084866BCB6810428E58627C434803 /* Sources */,
-				2BB6DFF47DF00CC5DE7602A688C4E5AA /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4974AE2B0CF34A39E5D131F5D10351BE /* PBXTargetDependency */,
-				A2C2CAFEFF261C46C4B2221971F29A37 /* PBXTargetDependency */,
-			);
-			name = "Pods-FeedMediaUI_Tests";
-			productName = "Pods-FeedMediaUI_Tests";
-			productReference = 8102256443C00B31AA3D1002D018D154 /* libPods-FeedMediaUI_Tests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		BF76CE7DDBC205B74E5E2A740E8CDB16 /* FeedMediaUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1D95F688F9FEE592A7DDAA84B234EB1 /* Build configuration list for PBXNativeTarget "FeedMediaUI" */;
-			buildPhases = (
-				27529735DD6C458EEF5F10E46666238E /* Sources */,
-				E529676E2B9B6EAA96AAA1168D2B8D54 /* Frameworks */,
-				AC9DFF211F6B0754F7A4414223CBE8E8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B91A4B702CA7E80C0D6DB1184073BBB8 /* PBXTargetDependency */,
-				5B2BA5EB6C258E1E07C22F8D9E09DCE6 /* PBXTargetDependency */,
-			);
-			name = FeedMediaUI;
-			productName = FeedMediaUI;
-			productReference = 9B07B719417A489C0787165ECDF7E777 /* libFeedMediaUI.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E595F8BDD0A98A28B393A686AE97DB4D /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				BF76CE7DDBC205B74E5E2A740E8CDB16 /* FeedMediaUI */,
-				99CDCE01E14467A0D420ECEEDBD00BE4 /* FeedMediaUI-FeedMediaUI */,
-				8A293F85812CCF8A723EF886F609211A /* MarqueeLabel */,
-				74F66B165ED62A52F869652FED49CA05 /* Pods-FeedMediaUI_Example */,
-				AF33AC3A9524B4D4D0DCD8E5191BFA1B /* Pods-FeedMediaUI_Tests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		AC7D3C6D9D65DCFE2B6147B76080A445 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E6EF4AE702A6C67EA644788DBEC98A9 /* feed_logo@1x.png in Resources */,
-				5C98F906EE99B6BD61031897E8254FD7 /* feed_logo@2x.png in Resources */,
-				2DBE78A304DB08A1EB3283F671DB43EF /* feed_logo@3x.png in Resources */,
-				FBAED6718E0E8F9C353E93BF6DDF1A71 /* pause@1x.png in Resources */,
-				084CB195626D494C8594F685E4B3059B /* pause@2x.png in Resources */,
-				423A049BDE0E93807A45FE16727AB2D5 /* pause@3x.png in Resources */,
-				B802AD1AE87716F4121F61F1684CCEE0 /* play@1x.png in Resources */,
-				E8B5A289739A28B6A2B6C25F0AB8B903 /* play@2x.png in Resources */,
-				7CA98DF2F2A376AFA3044969979EE2E9 /* play@3x.png in Resources */,
-				3C3631AE12CF4E0ECEEDDA07C0E743B2 /* skip@1x.png in Resources */,
-				205032F715EEF904849F6B0EBEB12E8B /* skip@2x.png in Resources */,
-				5DEEC0375995A9BFB4349719CD2B26AF /* skip@3x.png in Resources */,
-				0FC7CA55DDD11F050B314E2E6FA66AF6 /* thumbsdown_selected@1x.png in Resources */,
-				C5AA181D7C5AD37CFCA3AA2BBFBB0BF5 /* thumbsdown_selected@2x.png in Resources */,
-				895E87208BCCAA23067BC38BD16BBDB7 /* thumbsdown_selected@3x.png in Resources */,
-				9548A6F5A42478132766CC7E2C9F0A29 /* thumbsdown_unselected@1x.png in Resources */,
-				33E8F2825B590C7FE0711002B0666CA4 /* thumbsdown_unselected@2x.png in Resources */,
-				951AF58A72B8BBA7CEDA7D27F14B40EB /* thumbsdown_unselected@3x.png in Resources */,
-				3A682AD9FC115BB0F06CAA12B70D295A /* thumbsup_selected@1x.png in Resources */,
-				E282822A674477182FC184E9999B1163 /* thumbsup_selected@2x.png in Resources */,
-				4BB3A7E8B7DCDAD7D5CF101DC0A73F16 /* thumbsup_selected@3x.png in Resources */,
-				A0D0A60BEE583E89C9BE5FCD6E9E70AB /* thumbsup_unselected@1x.png in Resources */,
-				9709C578E6F276B99670A0AC0B92D9AC /* thumbsup_unselected@2x.png in Resources */,
-				87D9764AD294DE76935A5C14DBF04793 /* thumbsup_unselected@3x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		27529735DD6C458EEF5F10E46666238E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F39C617ED74363288855A13618D1D2F /* FeedMediaUI-dummy.m in Sources */,
-				FC149367C7C5015F0B549B69116905DE /* FMActivityIndicator.m in Sources */,
-				EE8936F65E785494A1192FC5A6AE07B3 /* FMDislikeButton.m in Sources */,
-				322FA2EF5B0EEDF96F9CEA7ADEE67DF5 /* FMElapsedTimeLabel.m in Sources */,
-				0C66AFE6B302FD9B7EA19BB0A77CF311 /* FMLikeButton.m in Sources */,
-				869DF33AC573E9AA68BEC5FED48B4DDF /* FMMetadataLabel.m in Sources */,
-				449A288E5D548CCFDC6218BEF74CFAB4 /* FMPlayPauseButton.m in Sources */,
-				57FDCB9B730D3971AAE80F39DCF5D018 /* FMProgressView.m in Sources */,
-				724C40FD5EB64BC98D275E0C27532660 /* FMRemainingTimeLabel.m in Sources */,
-				DC6F939B28A777ED564E0099F8CE9CE2 /* FMShareButton.m in Sources */,
-				B0A064F32E2C4554634A9CC376D88DCE /* FMSkipButton.m in Sources */,
-				886A5BC84F332F1ADAC61CF8CD71AB9A /* FMSkipWarningView.m in Sources */,
-				164252244E5E1500C7AD55FF2C174DE1 /* FMStationButton.m in Sources */,
-				22F0795766440DAF66CEC6CEA5F63A03 /* FMTotalTimeLabel.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AAC61EAA9971032255F41678BF1275B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85C0319C06F866E42DB7E3506F513F9C /* Pods-FeedMediaUI_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A34084866BCB6810428E58627C434803 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				69E1191ECA942098CE0B2EE5AF780779 /* Pods-FeedMediaUI_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C76E1D98EE711244FE1901A477F8183F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CED8B8A25FCC44F057981F20753CD80D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A7F1C8372660602282D219C5B56FAD2 /* MarqueeLabel-dummy.m in Sources */,
-				97CCAD2988C1035E22772533F90E5096 /* MarqueeLabel.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4974AE2B0CF34A39E5D131F5D10351BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FeedMediaUI;
-			target = BF76CE7DDBC205B74E5E2A740E8CDB16 /* FeedMediaUI */;
-			targetProxy = F40E095F4A6E2D34B5C3A5D50C2BB0CF /* PBXContainerItemProxy */;
-		};
-		5B2BA5EB6C258E1E07C22F8D9E09DCE6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MarqueeLabel;
-			target = 8A293F85812CCF8A723EF886F609211A /* MarqueeLabel */;
-			targetProxy = CB1BC4349F40B0B0360F9D587CC3B909 /* PBXContainerItemProxy */;
-		};
-		7C021E66A5E991DEB1FDA2B221B7E114 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FeedMediaUI;
-			target = BF76CE7DDBC205B74E5E2A740E8CDB16 /* FeedMediaUI */;
-			targetProxy = EF58989F060C0A7A2AE23048B8C07FF0 /* PBXContainerItemProxy */;
-		};
-		A2C2CAFEFF261C46C4B2221971F29A37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MarqueeLabel;
-			target = 8A293F85812CCF8A723EF886F609211A /* MarqueeLabel */;
-			targetProxy = 58E31F3467C3A0FC152A5DC530EA7B18 /* PBXContainerItemProxy */;
-		};
-		B91A4B702CA7E80C0D6DB1184073BBB8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "FeedMediaUI-FeedMediaUI";
-			target = 99CDCE01E14467A0D420ECEEDBD00BE4 /* FeedMediaUI-FeedMediaUI */;
-			targetProxy = 1483B29ABB9C9D136C3DB98969A9BA98 /* PBXContainerItemProxy */;
-		};
-		D74340C41B3ED06DDE3F568C5940B535 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MarqueeLabel;
-			target = 8A293F85812CCF8A723EF886F609211A /* MarqueeLabel */;
-			targetProxy = 296D112C19364E9165902CADA308781F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		04325A32116BDCE1947190435082A3B8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6BBCA4C62C84160C06D7C5352B6E4C8 /* MarqueeLabel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		058A83AA2BC04FAD84AE6A5579324038 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 002590FF5E1E4016EE1CE0205195C3B5 /* FeedMediaUI.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FeedMediaUI/FeedMediaUI-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		53B24DC53567B863A4EC939BA8C91EFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		5B209E4619E1D8571DE4C3AD03081456 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6BBCA4C62C84160C06D7C5352B6E4C8 /* MarqueeLabel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		68001B71E824FDE32C8991E7D643E7D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85395765E4A7FA55273FAEEAC4EBFE65 /* Pods-FeedMediaUI_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6E8650B586063F4B0A6C383981C0C203 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7072FD36D244D7890DCA084EE14045E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 002590FF5E1E4016EE1CE0205195C3B5 /* FeedMediaUI.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FeedMediaUI/FeedMediaUI-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		986670B315688734511D3D18FF11A43F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D24F0D286B9AF571502863C24369C9F /* Pods-FeedMediaUI_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A1BE772D1BC9C4ADCEEB20C0CFD1C550 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 002590FF5E1E4016EE1CE0205195C3B5 /* FeedMediaUI.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FeedMediaUI";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/FeedMediaUI/ResourceBundle-FeedMediaUI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = FeedMediaUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		AD4A0672E0A45FF2BE3860CD8F79C580 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E61F6241FDB672422E9C2FBCB970417 /* Pods-FeedMediaUI_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E2BF01D913C215CEC6CE7FB39EA4B2DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 002590FF5E1E4016EE1CE0205195C3B5 /* FeedMediaUI.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FeedMediaUI";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/FeedMediaUI/ResourceBundle-FeedMediaUI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = FeedMediaUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		F9868649E52F40E9423CAB45E9EEBC5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2E718D292AAA9CA4E6D5ACC47390193 /* Pods-FeedMediaUI_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53B24DC53567B863A4EC939BA8C91EFC /* Debug */,
-				6E8650B586063F4B0A6C383981C0C203 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		595B5B0BB850D12E1220F2DC06768344 /* Build configuration list for PBXNativeTarget "Pods-FeedMediaUI_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AD4A0672E0A45FF2BE3860CD8F79C580 /* Debug */,
-				F9868649E52F40E9423CAB45E9EEBC5B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D1D95F688F9FEE592A7DDAA84B234EB1 /* Build configuration list for PBXNativeTarget "FeedMediaUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7072FD36D244D7890DCA084EE14045E7 /* Debug */,
-				058A83AA2BC04FAD84AE6A5579324038 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D7C72F4DA9273AD4DC76FE0A3D4862D8 /* Build configuration list for PBXNativeTarget "FeedMediaUI-FeedMediaUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E2BF01D913C215CEC6CE7FB39EA4B2DA /* Debug */,
-				A1BE772D1BC9C4ADCEEB20C0CFD1C550 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3D93816C81E7E4001294EE856B8EFE9 /* Build configuration list for PBXNativeTarget "Pods-FeedMediaUI_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68001B71E824FDE32C8991E7D643E7D5 /* Debug */,
-				986670B315688734511D3D18FF11A43F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE4DF5F99C3EF27198DD12EBDD03C356 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B209E4619E1D8571DE4C3AD03081456 /* Debug */,
-				04325A32116BDCE1947190435082A3B8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>002590FF5E1E4016EE1CE0205195C3B5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>FeedMediaUI.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>00B3D2376BA1DC23CE2AA1EF5D73FAF9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMTotalTimeLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>033DAEA3E97C768D7B34FCA18550E0E9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsdown_selected@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>03828F7B0B1A2A0C212B4A38E853D907</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E0A272403B89CDDBD8FB8737BCCEA712</string>
+				<string>6A3C2910F7A77B85CE0A3DA21E5F7EFE</string>
+				<string>718CF83A6FB3B0E296A8F6989E757A64</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>thumbsup_unselected</string>
+			<key>path</key>
+			<string>thumbsup_unselected</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04325A32116BDCE1947190435082A3B8</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D6BBCA4C62C84160C06D7C5352B6E4C8</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>058A83AA2BC04FAD84AE6A5579324038</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>002590FF5E1E4016EE1CE0205195C3B5</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/FeedMediaUI/FeedMediaUI-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>084CB195626D494C8594F685E4B3059B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>58836A4156881EBF52B61666A41332F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>091D54A73E1E8BB182C9D7D245AF1C2F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>09CF0403C3E4DB1A397A9265082E3E74</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMDislikeButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>09FA1457173C826A45F3FADB8D067730</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Tests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C66AFE6B302FD9B7EA19BB0A77CF311</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FCB8F67434977BB6E1511FB58FE8376B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0C999A693785489CAE34CB2080F552D0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>play@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FC7CA55DDD11F050B314E2E6FA66AF6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>033DAEA3E97C768D7B34FCA18550E0E9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>10D33510EDDD95F0C577B52F14E31201</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsdown_selected@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>122DA2E5084A4393C29BE363C764795C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DFDE779C6E5D3445E0CB8CCB8D424449</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13B695932E545275E80B380E2A9C543C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>62E271B77AA276869A01C76F7B2011D7</string>
+				<string>EB793B217B69BEB28550B593DDDC44BF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ObjC</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1483B29ABB9C9D136C3DB98969A9BA98</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>99CDCE01E14467A0D420ECEEDBD00BE4</string>
+			<key>remoteInfo</key>
+			<string>FeedMediaUI-FeedMediaUI</string>
+		</dict>
+		<key>164252244E5E1500C7AD55FF2C174DE1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>45ED25D5876AF3578A9325F1298ACA7C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1727DF7DC26FAB947DBFD4339966B769</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Tests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1830DE795166BDFF7C0DCAD014AB4062</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMElapsedTimeLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>184796DFB13FD05E28C797780793FAF5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMStationButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>18645FDF0AA1F5DBDB46E5E94D245A32</key>
+		<dict>
+			<key>fileRef</key>
+			<string>345BC256ECDB965749B8F555B005E04F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>191230A17E57241F0A556492105D6BC5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FeedMediaUI-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>19A6C9A3B45616719DAEE6E16912E750</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>feed_logo@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1A7F1C8372660602282D219C5B56FAD2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C1298677CAF9049555F60DDFBB7546B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1D24F0D286B9AF571502863C24369C9F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1D724A9BEB0E1B6DC178925D13C39BA4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMSkipButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1D953017FCEFD24DAC3066B0F844E53D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D57F69788266CD155266486404F08785</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pod</string>
+			<key>path</key>
+			<string>Pod</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E3B77636DD6DE8C9C28EC706FE916CA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>00B3D2376BA1DC23CE2AA1EF5D73FAF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>1F6C82C35EF09A7746F05DA2DC40157F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMActivityIndicator.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>205032F715EEF904849F6B0EBEB12E8B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>812C7DC9A97BEE15470A431CFC2B34D0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>22F0795766440DAF66CEC6CEA5F63A03</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B29FFDF34C0AD8F6C39D499A76CE0DCE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>23016F69B2480F44D0BB5526B39192FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>260E540F54506A13EF94FE9C183AB69B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A817CAE99C81EE68006DC1E60E295C0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>27529735DD6C458EEF5F10E46666238E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3F39C617ED74363288855A13618D1D2F</string>
+				<string>FC149367C7C5015F0B549B69116905DE</string>
+				<string>EE8936F65E785494A1192FC5A6AE07B3</string>
+				<string>322FA2EF5B0EEDF96F9CEA7ADEE67DF5</string>
+				<string>0C66AFE6B302FD9B7EA19BB0A77CF311</string>
+				<string>869DF33AC573E9AA68BEC5FED48B4DDF</string>
+				<string>449A288E5D548CCFDC6218BEF74CFAB4</string>
+				<string>57FDCB9B730D3971AAE80F39DCF5D018</string>
+				<string>724C40FD5EB64BC98D275E0C27532660</string>
+				<string>DC6F939B28A777ED564E0099F8CE9CE2</string>
+				<string>B0A064F32E2C4554634A9CC376D88DCE</string>
+				<string>886A5BC84F332F1ADAC61CF8CD71AB9A</string>
+				<string>164252244E5E1500C7AD55FF2C174DE1</string>
+				<string>22F0795766440DAF66CEC6CEA5F63A03</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>296D112C19364E9165902CADA308781F</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>8A293F85812CCF8A723EF886F609211A</string>
+			<key>remoteInfo</key>
+			<string>MarqueeLabel</string>
+		</dict>
+		<key>2BB6DFF47DF00CC5DE7602A688C4E5AA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9DA4BE104C9D1C4A6979759C6C10CA63</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>53B24DC53567B863A4EC939BA8C91EFC</string>
+				<string>6E8650B586063F4B0A6C383981C0C203</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2DBE78A304DB08A1EB3283F671DB43EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E5579A8F7F0B9D8EB985AA01CF437300</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>302D3F47E96117FDB04D8435215F50EE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMSkipButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304BC29AF50D390D386D23F02E5E6102</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5B765A69396BF99B63046879B688A2A2</string>
+				<string>812C7DC9A97BEE15470A431CFC2B34D0</string>
+				<string>5C8B4B3CA38DEFA7E68ADF3A764A5E95</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>skip</string>
+			<key>path</key>
+			<string>skip</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>322FA2EF5B0EEDF96F9CEA7ADEE67DF5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A0D9060B69F44715DF0B82CE14819445</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>33E4463E92F1187EA0E611466D8711FF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>43EAA7D265B831C106FD3269B527D939</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>33E8F2825B590C7FE0711002B0666CA4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FFCF8A476470080D466155708379E252</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>345BC256ECDB965749B8F555B005E04F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMProgressView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A13EE99F8666D7490D68C7D81A0E280</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>FeedMediaUI.bundle</string>
+			<key>path</key>
+			<string>FeedMediaUI.bundle</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>3A682AD9FC115BB0F06CAA12B70D295A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3BC851D09E6662D65A0DBE7F9316FBF8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3BC851D09E6662D65A0DBE7F9316FBF8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsup_selected@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C3631AE12CF4E0ECEEDDA07C0E743B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5B765A69396BF99B63046879B688A2A2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3F39C617ED74363288855A13618D1D2F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>191230A17E57241F0A556492105D6BC5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>423A049BDE0E93807A45FE16727AB2D5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFA2426E81072D4EFB7AB52106DA538D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>43EAA7D265B831C106FD3269B527D939</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMRemainingTimeLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>44402670CC87476C56DD776B7114AB94</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>pause@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>449A288E5D548CCFDC6218BEF74CFAB4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EBADB4B082D4206A83444C93FD5F9C82</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>45ED25D5876AF3578A9325F1298ACA7C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMStationButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>46237969B06662F7560B8054913E6FE9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>002590FF5E1E4016EE1CE0205195C3B5</string>
+				<string>191230A17E57241F0A556492105D6BC5</string>
+				<string>ADC6B6D249D7F70BEDF246FA8DF82B8E</string>
+				<string>FEA13BAFE63D1A529685DFDA7347A6FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>Example/Pods/Target Support Files/FeedMediaUI</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>47EABB485AE57EC825960A016825EA82</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMActivityIndicator.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>489B48D2276510CC161E25AC7DD4DEEA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3BC851D09E6662D65A0DBE7F9316FBF8</string>
+				<string>603D49702EAD9B0B1652D0546E1733C4</string>
+				<string>66DC4F428A9E42977EFB7B64B0389593</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>thumbsup_selected</string>
+			<key>path</key>
+			<string>thumbsup_selected</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4974AE2B0CF34A39E5D131F5D10351BE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>FeedMediaUI</string>
+			<key>target</key>
+			<string>BF76CE7DDBC205B74E5E2A740E8CDB16</string>
+			<key>targetProxy</key>
+			<string>F40E095F4A6E2D34B5C3A5D50C2BB0CF</string>
+		</dict>
+		<key>4BB3A7E8B7DCDAD7D5CF101DC0A73F16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>66DC4F428A9E42977EFB7B64B0389593</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4D9A339D2CF505BD1B69918728ADC13D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Example-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4E6EF4AE702A6C67EA644788DBEC98A9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6EA5208504928361ABB5CCCE668BA9CC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4FC26EA2ABA669F15E7E438AE59C89E4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8FED35E58BA47D4994F9EAB233BF5962</string>
+				<string>FFCF8A476470080D466155708379E252</string>
+				<string>D11FD665500EEB4FB180DE33D6FF8E3E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>thumbsdown_unselected</string>
+			<key>path</key>
+			<string>thumbsdown_unselected</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>503D29CC5013121A12750233450B37C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1D953017FCEFD24DAC3066B0F844E53D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B24DC53567B863A4EC939BA8C91EFC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_DEBUG=1</string>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>57FDCB9B730D3971AAE80F39DCF5D018</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7CD7A94549AC21FC35EEDCEC13D7B216</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>58836A4156881EBF52B61666A41332F6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>pause@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>58A68D9B4005314A42E3BB31F01C56D9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A61F4DA6EA47E30BAE6DEEF904DA32E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>58E31F3467C3A0FC152A5DC530EA7B18</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>8A293F85812CCF8A723EF886F609211A</string>
+			<key>remoteInfo</key>
+			<string>MarqueeLabel</string>
+		</dict>
+		<key>591A8DCDA8B8868D00D88FC6F44B1409</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMMetadataLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>595B5B0BB850D12E1220F2DC06768344</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AD4A0672E0A45FF2BE3860CD8F79C580</string>
+				<string>F9868649E52F40E9423CAB45E9EEBC5B</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5B209E4619E1D8571DE4C3AD03081456</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D6BBCA4C62C84160C06D7C5352B6E4C8</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5B2BA5EB6C258E1E07C22F8D9E09DCE6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>target</key>
+			<string>8A293F85812CCF8A723EF886F609211A</string>
+			<key>targetProxy</key>
+			<string>CB1BC4349F40B0B0360F9D587CC3B909</string>
+		</dict>
+		<key>5B765A69396BF99B63046879B688A2A2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>skip@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C5443E61EA05715D784F37BBBE5C977</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>44402670CC87476C56DD776B7114AB94</string>
+				<string>58836A4156881EBF52B61666A41332F6</string>
+				<string>EFA2426E81072D4EFB7AB52106DA538D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>pause</string>
+			<key>path</key>
+			<string>pause</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C8B4B3CA38DEFA7E68ADF3A764A5E95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>skip@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C98F906EE99B6BD61031897E8254FD7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>19A6C9A3B45616719DAEE6E16912E750</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5DEEC0375995A9BFB4349719CD2B26AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5C8B4B3CA38DEFA7E68ADF3A764A5E95</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5E3D40F73D906E7194369582573B3AF5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Example-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>603D49702EAD9B0B1652D0546E1733C4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsup_selected@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>626683419C94222DD90A3A8D2D785985</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>archive.ar</string>
+			<key>name</key>
+			<string>libFeedMedia.a</string>
+			<key>path</key>
+			<string>dist/libFeedMedia.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>62E271B77AA276869A01C76F7B2011D7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MarqueeLabel.h</string>
+			<key>path</key>
+			<string>Sources/ObjC/MarqueeLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>632A5C1A9AF8991BE2BDE500BC362976</key>
+		<dict>
+			<key>fileRef</key>
+			<string>591A8DCDA8B8868D00D88FC6F44B1409</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>637CDF7A8DA98B2755D9B4FF782020A8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>091D54A73E1E8BB182C9D7D245AF1C2F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>66DC4F428A9E42977EFB7B64B0389593</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsup_selected@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68001B71E824FDE32C8991E7D643E7D5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>85395765E4A7FA55273FAEEAC4EBFE65</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>6803BE4E877FE8B3EE085E5E32F7EE6F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMSkipWarningView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69E1191ECA942098CE0B2EE5AF780779</key>
+		<dict>
+			<key>fileRef</key>
+			<string>09FA1457173C826A45F3FADB8D067730</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6A3C2910F7A77B85CE0A3DA21E5F7EFE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsup_unselected@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6B0B9526D9F6AECCFF998053ECF5EBA3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMShareButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6BCBE351F5B960145D765895FAA682E7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Example-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6CC81CD149115933491DE77CC6C0B111</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BC603ECF91DCE5CB7DC691A3DA2EC874</string>
+				<string>84C4273C8D3F9E554FB023724459EC18</string>
+				<string>0C999A693785489CAE34CB2080F552D0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>play</string>
+			<key>path</key>
+			<string>play</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6E48508F843A0578F8FA930841A9F4DA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CB0C2A945FADC3575D33249B105945FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6E61F6241FDB672422E9C2FBCB970417</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Example.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6E8650B586063F4B0A6C383981C0C203</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_RELEASE=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6EA5208504928361ABB5CCCE668BA9CC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>feed_logo@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6F6E969886F21CB3C110551355B4F7B9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMShareButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7072FD36D244D7890DCA084EE14045E7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>002590FF5E1E4016EE1CE0205195C3B5</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/FeedMediaUI/FeedMediaUI-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>70E9F122702892BB23849E5AD3FA7010</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A817CAE99C81EE68006DC1E60E295C0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>718CF83A6FB3B0E296A8F6989E757A64</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsup_unselected@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>724C40FD5EB64BC98D275E0C27532660</key>
+		<dict>
+			<key>fileRef</key>
+			<string>741046EDE1906A01E389C21F25D76693</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>741046EDE1906A01E389C21F25D76693</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMRemainingTimeLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>74F66B165ED62A52F869652FED49CA05</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>595B5B0BB850D12E1220F2DC06768344</string>
+			<key>buildPhases</key>
+			<array>
+				<string>9AAC61EAA9971032255F41678BF1275B</string>
+				<string>88ACD360252601354411FC151E2366A7</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>7C021E66A5E991DEB1FDA2B221B7E114</string>
+				<string>D74340C41B3ED06DDE3F568C5940B535</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-FeedMediaUI_Example</string>
+			<key>productName</key>
+			<string>Pods-FeedMediaUI_Example</string>
+			<key>productReference</key>
+			<string>7715F1ACC982BBBC38929903264204DE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>75831D4F8D73A8475CD3943CFF7DD1A2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1D724A9BEB0E1B6DC178925D13C39BA4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>75B95B5E79B91D638ABF2438392C649B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C604099280CAFAF09F45EB5BD159B1F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>76E4FE345BE642ADB35634638EF73AE0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FMAudioPlayer.h</string>
+			<key>path</key>
+			<string>FeedMedia/FMAudioPlayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7715F1ACC982BBBC38929903264204DE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-FeedMediaUI_Example.a</string>
+			<key>path</key>
+			<string>libPods-FeedMediaUI_Example.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>798C410F1DCA590A06AB37B657160435</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Tests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C021E66A5E991DEB1FDA2B221B7E114</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>FeedMediaUI</string>
+			<key>target</key>
+			<string>BF76CE7DDBC205B74E5E2A740E8CDB16</string>
+			<key>targetProxy</key>
+			<string>EF58989F060C0A7A2AE23048B8C07FF0</string>
+		</dict>
+		<key>7C604099280CAFAF09F45EB5BD159B1F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FeedMediaUI.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C7D630498C6F31073515D9E5553788E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>23016F69B2480F44D0BB5526B39192FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7CA98DF2F2A376AFA3044969979EE2E9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0C999A693785489CAE34CB2080F552D0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7CB691C05640A20A360B7AC0EE548EC4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FMError.h</string>
+			<key>path</key>
+			<string>FeedMedia/FMError.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7CD7A94549AC21FC35EEDCEC13D7B216</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMProgressView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
+				<string>8FB391E7E1A3DA0E2416683EC2076EEB</string>
+				<string>122DA2E5084A4393C29BE363C764795C</string>
+				<string>C40EF1FA3D8F2931CCD83801A21A5CF6</string>
+				<string>E595F8BDD0A98A28B393A686AE97DB4D</string>
+				<string>B39E05480E3E9CE91C767D86D219E5EF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7E1E726CDE60B500E6EF4665ACE0B5CB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMMetadataLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>804E42DAFB9A273C2EE8D311FC8E1611</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6803BE4E877FE8B3EE085E5E32F7EE6F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>809FE42241DAC36ADC4F61A227D7A7CA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>184796DFB13FD05E28C797780793FAF5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>8102256443C00B31AA3D1002D018D154</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-FeedMediaUI_Tests.a</string>
+			<key>path</key>
+			<string>libPods-FeedMediaUI_Tests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>812C7DC9A97BEE15470A431CFC2B34D0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>skip@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>84C4273C8D3F9E554FB023724459EC18</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>play@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>85395765E4A7FA55273FAEEAC4EBFE65</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Tests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>85C0319C06F866E42DB7E3506F513F9C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ECB3B08F75D57D603910B8F9CDF045F6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>869DF33AC573E9AA68BEC5FED48B4DDF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7E1E726CDE60B500E6EF4665ACE0B5CB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>87D9764AD294DE76935A5C14DBF04793</key>
+		<dict>
+			<key>fileRef</key>
+			<string>718CF83A6FB3B0E296A8F6989E757A64</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>886A5BC84F332F1ADAC61CF8CD71AB9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8FE3A56C18AE46D2CBF5CAB318D3AD4B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>88ACD360252601354411FC151E2366A7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>70E9F122702892BB23849E5AD3FA7010</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>88DA57EDF56CCCC5D726C381FAAADDB2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>09CF0403C3E4DB1A397A9265082E3E74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>895E87208BCCAA23067BC38BD16BBDB7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E9AB0063D29381426A6A6EDCE31B2206</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8A293F85812CCF8A723EF886F609211A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>FE4DF5F99C3EF27198DD12EBDD03C356</string>
+			<key>buildPhases</key>
+			<array>
+				<string>CED8B8A25FCC44F057981F20753CD80D</string>
+				<string>F071465FF42D415A776BF7D9477886CA</string>
+				<string>6E48508F843A0578F8FA930841A9F4DA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>productName</key>
+			<string>MarqueeLabel</string>
+			<key>productReference</key>
+			<string>9CEAEAD59B13EBDF79B96ADC9CEE5B3B</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>8B45D2EDEC7B4D6CF4BDC390DB8EC427</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Tests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8D4657291AD04195AC7A3700DDE6476B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMDislikeButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FB391E7E1A3DA0E2416683EC2076EEB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>98FDFF1D1BCDE71D0B40E379181DE763</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FE3A56C18AE46D2CBF5CAB318D3AD4B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMSkipWarningView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FED35E58BA47D4994F9EAB233BF5962</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsdown_unselected@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>902CB340C229D354BC5B5974FAB9512A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>90C4873E93BD5C64A67F4F89653AE45F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AA133229E8B283747CBCE784C11B2F8E</string>
+				<string>8B45D2EDEC7B4D6CF4BDC390DB8EC427</string>
+				<string>09FA1457173C826A45F3FADB8D067730</string>
+				<string>798C410F1DCA590A06AB37B657160435</string>
+				<string>1727DF7DC26FAB947DBFD4339966B769</string>
+				<string>85395765E4A7FA55273FAEEAC4EBFE65</string>
+				<string>1D24F0D286B9AF571502863C24369C9F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-FeedMediaUI_Tests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-FeedMediaUI_Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9110E15DE2C6E994ECAB9000CF603B88</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1830DE795166BDFF7C0DCAD014AB4062</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>text.script.ruby</string>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>951AF58A72B8BBA7CEDA7D27F14B40EB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D11FD665500EEB4FB180DE33D6FF8E3E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9548A6F5A42478132766CC7E2C9F0A29</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8FED35E58BA47D4994F9EAB233BF5962</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9709C578E6F276B99670A0AC0B92D9AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6A3C2910F7A77B85CE0A3DA21E5F7EFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>97CCAD2988C1035E22772533F90E5096</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EB793B217B69BEB28550B593DDDC44BF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>986670B315688734511D3D18FF11A43F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1D24F0D286B9AF571502863C24369C9F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>98FDFF1D1BCDE71D0B40E379181DE763</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E70FBD445CBBF7F89CDFE28A63C91E06</string>
+				<string>503D29CC5013121A12750233450B37C7</string>
+				<string>46237969B06662F7560B8054913E6FE9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>FeedMediaUI</string>
+			<key>path</key>
+			<string>../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>99CDCE01E14467A0D420ECEEDBD00BE4</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D7C72F4DA9273AD4DC76FE0A3D4862D8</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C76E1D98EE711244FE1901A477F8183F</string>
+				<string>902CB340C229D354BC5B5974FAB9512A</string>
+				<string>AC7D3C6D9D65DCFE2B6147B76080A445</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>FeedMediaUI-FeedMediaUI</string>
+			<key>productName</key>
+			<string>FeedMediaUI-FeedMediaUI</string>
+			<key>productReference</key>
+			<string>3A13EE99F8666D7490D68C7D81A0E280</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>9AAC61EAA9971032255F41678BF1275B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>85C0319C06F866E42DB7E3506F513F9C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9B07B719417A489C0787165ECDF7E777</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libFeedMediaUI.a</string>
+			<key>path</key>
+			<string>libFeedMediaUI.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9CEAEAD59B13EBDF79B96ADC9CEE5B3B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libMarqueeLabel.a</string>
+			<key>path</key>
+			<string>libMarqueeLabel.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9DA4BE104C9D1C4A6979759C6C10CA63</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A817CAE99C81EE68006DC1E60E295C0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A0D0A60BEE583E89C9BE5FCD6E9E70AB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E0A272403B89CDDBD8FB8737BCCEA712</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A0D9060B69F44715DF0B82CE14819445</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMElapsedTimeLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A1BE772D1BC9C4ADCEEB20C0CFD1C550</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>002590FF5E1E4016EE1CE0205195C3B5</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CONFIGURATION_BUILD_DIR</key>
+				<string>$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FeedMediaUI</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/FeedMediaUI/ResourceBundle-FeedMediaUI-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>FeedMediaUI</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A1D1A19F8AE0809FB4CAEFB3FEE8D6E0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C604099280CAFAF09F45EB5BD159B1F</string>
+				<string>47EABB485AE57EC825960A016825EA82</string>
+				<string>1F6C82C35EF09A7746F05DA2DC40157F</string>
+				<string>09CF0403C3E4DB1A397A9265082E3E74</string>
+				<string>8D4657291AD04195AC7A3700DDE6476B</string>
+				<string>1830DE795166BDFF7C0DCAD014AB4062</string>
+				<string>A0D9060B69F44715DF0B82CE14819445</string>
+				<string>A61F4DA6EA47E30BAE6DEEF904DA32E2</string>
+				<string>FCB8F67434977BB6E1511FB58FE8376B</string>
+				<string>591A8DCDA8B8868D00D88FC6F44B1409</string>
+				<string>7E1E726CDE60B500E6EF4665ACE0B5CB</string>
+				<string>EE980D8349F3E512CA58FF8A0185DACB</string>
+				<string>EBADB4B082D4206A83444C93FD5F9C82</string>
+				<string>345BC256ECDB965749B8F555B005E04F</string>
+				<string>7CD7A94549AC21FC35EEDCEC13D7B216</string>
+				<string>43EAA7D265B831C106FD3269B527D939</string>
+				<string>741046EDE1906A01E389C21F25D76693</string>
+				<string>6F6E969886F21CB3C110551355B4F7B9</string>
+				<string>6B0B9526D9F6AECCFF998053ECF5EBA3</string>
+				<string>1D724A9BEB0E1B6DC178925D13C39BA4</string>
+				<string>302D3F47E96117FDB04D8435215F50EE</string>
+				<string>6803BE4E877FE8B3EE085E5E32F7EE6F</string>
+				<string>8FE3A56C18AE46D2CBF5CAB318D3AD4B</string>
+				<string>184796DFB13FD05E28C797780793FAF5</string>
+				<string>45ED25D5876AF3578A9325F1298ACA7C</string>
+				<string>00B3D2376BA1DC23CE2AA1EF5D73FAF9</string>
+				<string>B29FFDF34C0AD8F6C39D499A76CE0DCE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2C2CAFEFF261C46C4B2221971F29A37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>target</key>
+			<string>8A293F85812CCF8A723EF886F609211A</string>
+			<key>targetProxy</key>
+			<string>58E31F3467C3A0FC152A5DC530EA7B18</string>
+		</dict>
+		<key>A2E718D292AAA9CA4E6D5ACC47390193</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A34084866BCB6810428E58627C434803</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>69E1191ECA942098CE0B2EE5AF780779</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A61F4DA6EA47E30BAE6DEEF904DA32E2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMLikeButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A817CAE99C81EE68006DC1E60E295C0A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>AA133229E8B283747CBCE784C11B2F8E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Tests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AA73B98AE091A5C865C0518588E7E25E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FMAudioItem.h</string>
+			<key>path</key>
+			<string>FeedMedia/FMAudioItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AC7D3C6D9D65DCFE2B6147B76080A445</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4E6EF4AE702A6C67EA644788DBEC98A9</string>
+				<string>5C98F906EE99B6BD61031897E8254FD7</string>
+				<string>2DBE78A304DB08A1EB3283F671DB43EF</string>
+				<string>FBAED6718E0E8F9C353E93BF6DDF1A71</string>
+				<string>084CB195626D494C8594F685E4B3059B</string>
+				<string>423A049BDE0E93807A45FE16727AB2D5</string>
+				<string>B802AD1AE87716F4121F61F1684CCEE0</string>
+				<string>E8B5A289739A28B6A2B6C25F0AB8B903</string>
+				<string>7CA98DF2F2A376AFA3044969979EE2E9</string>
+				<string>3C3631AE12CF4E0ECEEDDA07C0E743B2</string>
+				<string>205032F715EEF904849F6B0EBEB12E8B</string>
+				<string>5DEEC0375995A9BFB4349719CD2B26AF</string>
+				<string>0FC7CA55DDD11F050B314E2E6FA66AF6</string>
+				<string>C5AA181D7C5AD37CFCA3AA2BBFBB0BF5</string>
+				<string>895E87208BCCAA23067BC38BD16BBDB7</string>
+				<string>9548A6F5A42478132766CC7E2C9F0A29</string>
+				<string>33E8F2825B590C7FE0711002B0666CA4</string>
+				<string>951AF58A72B8BBA7CEDA7D27F14B40EB</string>
+				<string>3A682AD9FC115BB0F06CAA12B70D295A</string>
+				<string>E282822A674477182FC184E9999B1163</string>
+				<string>4BB3A7E8B7DCDAD7D5CF101DC0A73F16</string>
+				<string>A0D0A60BEE583E89C9BE5FCD6E9E70AB</string>
+				<string>9709C578E6F276B99670A0AC0B92D9AC</string>
+				<string>87D9764AD294DE76935A5C14DBF04793</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AC9DFF211F6B0754F7A4414223CBE8E8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>75B95B5E79B91D638ABF2438392C649B</string>
+				<string>BA64FD0EACE7A4F4104F11F82CB7A7B6</string>
+				<string>88DA57EDF56CCCC5D726C381FAAADDB2</string>
+				<string>9110E15DE2C6E994ECAB9000CF603B88</string>
+				<string>58A68D9B4005314A42E3BB31F01C56D9</string>
+				<string>632A5C1A9AF8991BE2BDE500BC362976</string>
+				<string>B8C9D2F43FBB871A3F8878794BAB447D</string>
+				<string>18645FDF0AA1F5DBDB46E5E94D245A32</string>
+				<string>33E4463E92F1187EA0E611466D8711FF</string>
+				<string>F321B65BDCAB0D89670DDDE222803E59</string>
+				<string>75831D4F8D73A8475CD3943CFF7DD1A2</string>
+				<string>804E42DAFB9A273C2EE8D311FC8E1611</string>
+				<string>809FE42241DAC36ADC4F61A227D7A7CA</string>
+				<string>1E3B77636DD6DE8C9C28EC706FE916CA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AD4A0672E0A45FF2BE3860CD8F79C580</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6E61F6241FDB672422E9C2FBCB970417</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>ADC6B6D249D7F70BEDF246FA8DF82B8E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FeedMediaUI-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF33AC3A9524B4D4D0DCD8E5191BFA1B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F3D93816C81E7E4001294EE856B8EFE9</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A34084866BCB6810428E58627C434803</string>
+				<string>2BB6DFF47DF00CC5DE7602A688C4E5AA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>4974AE2B0CF34A39E5D131F5D10351BE</string>
+				<string>A2C2CAFEFF261C46C4B2221971F29A37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-FeedMediaUI_Tests</string>
+			<key>productName</key>
+			<string>Pods-FeedMediaUI_Tests</string>
+			<key>productReference</key>
+			<string>8102256443C00B31AA3D1002D018D154</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>B0A064F32E2C4554634A9CC376D88DCE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>302D3F47E96117FDB04D8435215F50EE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B129498A6350F2A618A5ECA7811A8A8D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13B695932E545275E80B380E2A9C543C</string>
+				<string>CCA2EB07F6FB02165649EC05692574B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>path</key>
+			<string>MarqueeLabel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B29FFDF34C0AD8F6C39D499A76CE0DCE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMTotalTimeLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B39E05480E3E9CE91C767D86D219E5EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FDDF60698454B0B72675C1AF8E04BF26</string>
+				<string>90C4873E93BD5C64A67F4F89653AE45F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B557FB8DFE8BFD8E35D8365E9DCA3744</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FeedMedia.h</string>
+			<key>path</key>
+			<string>FeedMedia/FeedMedia.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B802AD1AE87716F4121F61F1684CCEE0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BC603ECF91DCE5CB7DC691A3DA2EC874</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B8C9D2F43FBB871A3F8878794BAB447D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EE980D8349F3E512CA58FF8A0185DACB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B8FA666EE452B0D0F6F93DACE9859E72</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6EA5208504928361ABB5CCCE668BA9CC</string>
+				<string>19A6C9A3B45616719DAEE6E16912E750</string>
+				<string>E5579A8F7F0B9D8EB985AA01CF437300</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>feed_logo</string>
+			<key>path</key>
+			<string>feed_logo</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B91A4B702CA7E80C0D6DB1184073BBB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>FeedMediaUI-FeedMediaUI</string>
+			<key>target</key>
+			<string>99CDCE01E14467A0D420ECEEDBD00BE4</string>
+			<key>targetProxy</key>
+			<string>1483B29ABB9C9D136C3DB98969A9BA98</string>
+		</dict>
+		<key>BA64FD0EACE7A4F4104F11F82CB7A7B6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>47EABB485AE57EC825960A016825EA82</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>BC603ECF91DCE5CB7DC691A3DA2EC874</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>play@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BF466F292B88D25C34352E1CE5B6A4EF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FMStation.h</string>
+			<key>path</key>
+			<string>FeedMedia/FMStation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BF76CE7DDBC205B74E5E2A740E8CDB16</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D1D95F688F9FEE592A7DDAA84B234EB1</string>
+			<key>buildPhases</key>
+			<array>
+				<string>27529735DD6C458EEF5F10E46666238E</string>
+				<string>E529676E2B9B6EAA96AAA1168D2B8D54</string>
+				<string>AC9DFF211F6B0754F7A4414223CBE8E8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>B91A4B702CA7E80C0D6DB1184073BBB8</string>
+				<string>5B2BA5EB6C258E1E07C22F8D9E09DCE6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>FeedMediaUI</string>
+			<key>productName</key>
+			<string>FeedMediaUI</string>
+			<key>productReference</key>
+			<string>9B07B719417A489C0787165ECDF7E777</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>C1298677CAF9049555F60DDFBB7546B4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MarqueeLabel-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C289D786BCEA8D52F4F326BC235BD843</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>033DAEA3E97C768D7B34FCA18550E0E9</string>
+				<string>10D33510EDDD95F0C577B52F14E31201</string>
+				<string>E9AB0063D29381426A6A6EDCE31B2206</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>thumbsdown_selected</string>
+			<key>path</key>
+			<string>thumbsdown_selected</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C40EF1FA3D8F2931CCD83801A21A5CF6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D9BE3FD95E3137E7520EDFDC7A61F94B</string>
+				<string>B129498A6350F2A618A5ECA7811A8A8D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C5AA181D7C5AD37CFCA3AA2BBFBB0BF5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>10D33510EDDD95F0C577B52F14E31201</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C6DA31D2779806C0DF98ECE2E5130ACC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FMLog.h</string>
+			<key>path</key>
+			<string>FeedMedia/FMLog.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C6E0F5D2429355C2FA68EE1134878A15</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>626683419C94222DD90A3A8D2D785985</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C76E1D98EE711244FE1901A477F8183F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CB0C2A945FADC3575D33249B105945FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>62E271B77AA276869A01C76F7B2011D7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CB1BC4349F40B0B0360F9D587CC3B909</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>8A293F85812CCF8A723EF886F609211A</string>
+			<key>remoteInfo</key>
+			<string>MarqueeLabel</string>
+		</dict>
+		<key>CCA2EB07F6FB02165649EC05692574B0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D6BBCA4C62C84160C06D7C5352B6E4C8</string>
+				<string>C1298677CAF9049555F60DDFBB7546B4</string>
+				<string>E72BEF8ED738F5FC4AD99CF5AC52C73D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MarqueeLabel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CED8B8A25FCC44F057981F20753CD80D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1A7F1C8372660602282D219C5B56FAD2</string>
+				<string>97CCAD2988C1035E22772533F90E5096</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D11FD665500EEB4FB180DE33D6FF8E3E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsdown_unselected@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1D95F688F9FEE592A7DDAA84B234EB1</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>7072FD36D244D7890DCA084EE14045E7</string>
+				<string>058A83AA2BC04FAD84AE6A5579324038</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>E595F8BDD0A98A28B393A686AE97DB4D</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>BF76CE7DDBC205B74E5E2A740E8CDB16</string>
+				<string>99CDCE01E14467A0D420ECEEDBD00BE4</string>
+				<string>8A293F85812CCF8A723EF886F609211A</string>
+				<string>74F66B165ED62A52F869652FED49CA05</string>
+				<string>AF33AC3A9524B4D4D0DCD8E5191BFA1B</string>
+			</array>
+		</dict>
+		<key>D57F69788266CD155266486404F08785</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B8FA666EE452B0D0F6F93DACE9859E72</string>
+				<string>5C5443E61EA05715D784F37BBBE5C977</string>
+				<string>6CC81CD149115933491DE77CC6C0B111</string>
+				<string>304BC29AF50D390D386D23F02E5E6102</string>
+				<string>C289D786BCEA8D52F4F326BC235BD843</string>
+				<string>4FC26EA2ABA669F15E7E438AE59C89E4</string>
+				<string>489B48D2276510CC161E25AC7DD4DEEA</string>
+				<string>03828F7B0B1A2A0C212B4A38E853D907</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Assets</string>
+			<key>path</key>
+			<string>Assets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D6BBCA4C62C84160C06D7C5352B6E4C8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>MarqueeLabel.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D74340C41B3ED06DDE3F568C5940B535</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>target</key>
+			<string>8A293F85812CCF8A723EF886F609211A</string>
+			<key>targetProxy</key>
+			<string>296D112C19364E9165902CADA308781F</string>
+		</dict>
+		<key>D7C72F4DA9273AD4DC76FE0A3D4862D8</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E2BF01D913C215CEC6CE7FB39EA4B2DA</string>
+				<string>A1BE772D1BC9C4ADCEEB20C0CFD1C550</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D9BE3FD95E3137E7520EDFDC7A61F94B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B557FB8DFE8BFD8E35D8365E9DCA3744</string>
+				<string>AA73B98AE091A5C865C0518588E7E25E</string>
+				<string>76E4FE345BE642ADB35634638EF73AE0</string>
+				<string>7CB691C05640A20A360B7AC0EE548EC4</string>
+				<string>C6DA31D2779806C0DF98ECE2E5130ACC</string>
+				<string>BF466F292B88D25C34352E1CE5B6A4EF</string>
+				<string>C6E0F5D2429355C2FA68EE1134878A15</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>FeedMedia</string>
+			<key>path</key>
+			<string>FeedMedia</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DC6F939B28A777ED564E0099F8CE9CE2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6B0B9526D9F6AECCFF998053ECF5EBA3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DFDE779C6E5D3445E0CB8CCB8D424449</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A817CAE99C81EE68006DC1E60E295C0A</string>
+				<string>23016F69B2480F44D0BB5526B39192FA</string>
+				<string>091D54A73E1E8BB182C9D7D245AF1C2F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E0A272403B89CDDBD8FB8737BCCEA712</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsup_unselected@1x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E282822A674477182FC184E9999B1163</key>
+		<dict>
+			<key>fileRef</key>
+			<string>603D49702EAD9B0B1652D0546E1733C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E2BF01D913C215CEC6CE7FB39EA4B2DA</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>002590FF5E1E4016EE1CE0205195C3B5</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CONFIGURATION_BUILD_DIR</key>
+				<string>$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FeedMediaUI</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/FeedMediaUI/ResourceBundle-FeedMediaUI-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>PRODUCT_NAME</key>
+				<string>FeedMediaUI</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E529676E2B9B6EAA96AAA1168D2B8D54</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>260E540F54506A13EF94FE9C183AB69B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E5579A8F7F0B9D8EB985AA01CF437300</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>feed_logo@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E595F8BDD0A98A28B393A686AE97DB4D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3A13EE99F8666D7490D68C7D81A0E280</string>
+				<string>9B07B719417A489C0787165ECDF7E777</string>
+				<string>9CEAEAD59B13EBDF79B96ADC9CEE5B3B</string>
+				<string>7715F1ACC982BBBC38929903264204DE</string>
+				<string>8102256443C00B31AA3D1002D018D154</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E70FBD445CBBF7F89CDFE28A63C91E06</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A1D1A19F8AE0809FB4CAEFB3FEE8D6E0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pod</string>
+			<key>path</key>
+			<string>Pod</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E72BEF8ED738F5FC4AD99CF5AC52C73D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MarqueeLabel-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E802691F288E2D042E369C9DB83EB87C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Example-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8B5A289739A28B6A2B6C25F0AB8B903</key>
+		<dict>
+			<key>fileRef</key>
+			<string>84C4273C8D3F9E554FB023724459EC18</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E9AB0063D29381426A6A6EDCE31B2206</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsdown_selected@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EB793B217B69BEB28550B593DDDC44BF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MarqueeLabel.m</string>
+			<key>path</key>
+			<string>Sources/ObjC/MarqueeLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EBADB4B082D4206A83444C93FD5F9C82</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMPlayPauseButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ECB3B08F75D57D603910B8F9CDF045F6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-FeedMediaUI_Example-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE8936F65E785494A1192FC5A6AE07B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8D4657291AD04195AC7A3700DDE6476B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EE980D8349F3E512CA58FF8A0185DACB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMPlayPauseButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF58989F060C0A7A2AE23048B8C07FF0</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>BF76CE7DDBC205B74E5E2A740E8CDB16</string>
+			<key>remoteInfo</key>
+			<string>FeedMediaUI</string>
+		</dict>
+		<key>EFA2426E81072D4EFB7AB52106DA538D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>pause@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F071465FF42D415A776BF7D9477886CA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FFFF9E4E1ADEB71E497C27CA3B3DA078</string>
+				<string>7C7D630498C6F31073515D9E5553788E</string>
+				<string>637CDF7A8DA98B2755D9B4FF782020A8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F321B65BDCAB0D89670DDDE222803E59</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6F6E969886F21CB3C110551355B4F7B9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F3D93816C81E7E4001294EE856B8EFE9</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>68001B71E824FDE32C8991E7D643E7D5</string>
+				<string>986670B315688734511D3D18FF11A43F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F40E095F4A6E2D34B5C3A5D50C2BB0CF</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>BF76CE7DDBC205B74E5E2A740E8CDB16</string>
+			<key>remoteInfo</key>
+			<string>FeedMediaUI</string>
+		</dict>
+		<key>F9868649E52F40E9423CAB45E9EEBC5B</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A2E718D292AAA9CA4E6D5ACC47390193</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>FBAED6718E0E8F9C353E93BF6DDF1A71</key>
+		<dict>
+			<key>fileRef</key>
+			<string>44402670CC87476C56DD776B7114AB94</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FC149367C7C5015F0B549B69116905DE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F6C82C35EF09A7746F05DA2DC40157F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FCB8F67434977BB6E1511FB58FE8376B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FMLikeButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FDDF60698454B0B72675C1AF8E04BF26</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4D9A339D2CF505BD1B69918728ADC13D</string>
+				<string>6BCBE351F5B960145D765895FAA682E7</string>
+				<string>ECB3B08F75D57D603910B8F9CDF045F6</string>
+				<string>5E3D40F73D906E7194369582573B3AF5</string>
+				<string>E802691F288E2D042E369C9DB83EB87C</string>
+				<string>6E61F6241FDB672422E9C2FBCB970417</string>
+				<string>A2E718D292AAA9CA4E6D5ACC47390193</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-FeedMediaUI_Example</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-FeedMediaUI_Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FE4DF5F99C3EF27198DD12EBDD03C356</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5B209E4619E1D8571DE4C3AD03081456</string>
+				<string>04325A32116BDCE1947190435082A3B8</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>FEA13BAFE63D1A529685DFDA7347A6FC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>ResourceBundle-FeedMediaUI-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FFCF8A476470080D466155708379E252</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>thumbsdown_unselected@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FFFF9E4E1ADEB71E497C27CA3B3DA078</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A817CAE99C81EE68006DC1E60E295C0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>

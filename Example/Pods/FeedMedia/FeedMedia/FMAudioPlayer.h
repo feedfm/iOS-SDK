@@ -3,7 +3,7 @@
 //  sdktest
 //
 //  Created by James Anthony on 3/7/13.
-//  Copyright (c) 2013 Feed Media, Inc. All rights reserved.
+//  Copyright (c) 2013-2016 Feed Media, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -99,37 +99,46 @@ extern NSString *const FMAudioFormatMP3;
 extern NSString *const FMAudioFormatAAC;
 
 /**
- *  @abstract Audio player state.
- *  @see FMAudioPlayerPlaybackStateDidChangeNotification
+ * This enum represents the various states the FMAudioPlayer can
+ * be in, as identified by the `[FMAudioPlayer playbackState]`.
  */
 typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
     /**
-     *  Audio player item is preparing for playback.
+     *  The player is waiting for the server to give it the next song for playback.
      */
     FMAudioPlayerPlaybackStateWaitingForItem,
+    
     /**
-     *  Initial state of the audio player
+     *  Initial state of the audio player.
      */
     FMAudioPlayerPlaybackStateReadyToPlay,
+    
     /**
-     *  Player is playing
+     *  Playback of audio is in progress
      */
     FMAudioPlayerPlaybackStatePlaying,
+    
     /**
      *  Playback is paused
      */
     FMAudioPlayerPlaybackStatePaused,
+    
     /**
-     *  Some media did not arrive in time to continue playback
+     *  Some media did not arrive in time to continue playback, and the 
+     *  player is waiting for more audio data to arrive.
      */
     FMAudioPlayerPlaybackStateStalled,
+    
     /**
-     *  It is just requested to skip current player item.
-     *  @see skip
+     * The user has requested that the current song be skipped, and the
+     * player is waiting for word back from the server if the skip
+     * will be allowed.
      */
     FMAudioPlayerPlaybackStateRequestingSkip,
+    
     /**
-     *  Some item has been sucessfully skipped or we don't have anything to play
+     * When there is no more music to play in the current station, the
+     * player enters this state.
      */
     FMAudioPlayerPlaybackStateComplete
 };
@@ -138,7 +147,18 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 #define kFMRemoteControlEvent @"FMRemoteControlEvent"
 
 
-// for logging:
+/**
+ When events are reported to the feed.fm servers via
+ `[FMAudioPlayer logEvent]` and `[FMAudioPlayer logEvent:withParameters]`,
+ those events will also be reported to any class implementing
+ this protocol and assigned to the `[FMAudioPlayer logger]` property.
+ 
+ The SDK uses the `[FMAudioPlayer logEvent]` internally, so this
+ is an interface for apps to receive copies of events that feed.fm
+ tracks internally so they may be passed on to other logging frameworks.
+ 
+*/
+
 @protocol FMAudioPlayerLogger<NSObject>
 /**
  *  Everything logged here goes back to Feed.fm and is also cc'd to the 'logger' property
@@ -158,123 +178,340 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @end
 
 /**
- *  Audio player.
- *  You should get reference to it using [FMAudioPlayer sharedPlayer]
- *  method.
- */
+ 
+ The SDK centers around a singleton instance of this `FMAudioPlayer` class, which 
+ has simple methods to control music playback (`play`, `pause`, `skip`). The
+ `FMAudioPlayer` holds a list of `FMStation` objects (`stationList`), one of which is always
+ considered the _active_ station (`activeStation`). Once music playback has begun, there
+ is a _current_ song (`currentSong`).
+ 
+ Typical initialization and setup is as follows:
+
+ As early as you can in your app's lifecycle (preferably in your `AppDelegate`
+ or initial `ViewController`) call
+
+     [FMAudioPlayer setclientToken:@"demo" secret:@"demo"]
+
+ to asynchronously contact the feed.fm servers, validate that the client is in a location
+ that can legally play music, and then retrieve a list of available music
+ stations.
+ 
+ There are a number of sample credentials you can use to assist
+ in testing your app out. Use one of the following strings for your
+ token and secret to get the desired behavior:
+ 
+ - 'demo' - 3 simple stations with no skip limits
+ - 'badgeo' - feed.fm will treat this client as if it were accessing from outside the US
+ - 'counting' - a station that just plays really short audio clips
+   of a voice saying the numbers 0 through 9
+
+ To receive notice that music is available or not available, use the
+ `whenAvailable:notAvailable:` method call:
+
+    FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
+ 
+    [player whenAvailable:^{
+      NSLog(@"music is available!");
+      // .. do something, like show music button or
+
+      // optionally start queueing up first song so playback starts as soon as
+      // the play button is pressed:
+      [player prepareToPlay]
+ 
+       // alternatively, start playback immediately
+       // [player play]
+
+
+     } notAvailable: ^{
+        NSLog(@"music is not available!");
+        // .. do something, like leave music button hidden
+
+     }];
+
+ Since music playback is restricted to US clients, we recommend you leave
+ music functionality hidden by default, and reveal it only when confirmation
+ is returned.
+
+ Once you can play music, use the `play`, `pause`, `skip` methods to
+ control playback. The `stationList` property will contain a list of
+ stations the user can switch to with the the `setActiveStationByName:` call.
+ 
+ The `FMAudioPlayer` registers with iOS so that
+ playback can be paused, skipped, liked, and disliked via the lock screen.
+ Additionally, iOS will display on the lock screen whatever image
+ you've assigned via `[FMAudioPlayer setLockScreenImage:]`.
+ 
+ The `FMAudioPlayer` generates events that can be hooked into
+ whatever analytics service your app uses. Just have an object in your app
+ (your `AppDelegate` is a good choice) implement the `FMAudioPlayerLogger`
+ protocol. You just need to implement two
+ methods: `logEvent:` and `logEvent:withParameters:`,
+ and assign the object to `[FeedMedia sharedPlayer].logger`.
+ 
+ For assistance with building music player UI, check out the
+ [UI library](http://demo.feed.fm/sdk/docs/ios/ui/latest/html)
+ documentation and check out our demo app:
+ 
+ [https://github.com/feedfm/iOS-RadioPlayer](https://github.com/feedfm/iOS-RadioPlayer)
+*/
+
 @interface FMAudioPlayer : NSObject
 
 ///-----------------------------------------------------
-/// @name Initial Setup
-///-----------------------------------------------------
-
-+ (void)setClientToken:(NSString *)token secret:(NSString *)secret;
-+ (FMAudioPlayer *)sharedPlayer;
-
-///-----------------------------------------------------
-/// @name Audio Playback
+/// @name Setup
 ///-----------------------------------------------------
 
 /**
- *  Prepares current audio item for the playback
+ * This method calls `setClientToken:secret:detectLocalMusic` with
+ * `detectLocalMusic` set to `false`.
+ *
+ * @param token public authentication token. Use `@"demo"` during testing/development.
+ * @param secret private authentication token. Use `@"demo"` during testing/development.
+ */
+
++ (void)setClientToken:(NSString *)token secret:(NSString *)secret;
+
+/**
+ * This method kicks off asynchronous initialization of the library and communication
+ * with the feed.fm servers. This call should be made as early as possible
+ * in the lifecycle of the app.
+ *
+ *
+ * @param token public authentication token. Use `@"demo"` during testing/development.
+ * @param secret private authentication token. Use `@"demo"` during testing/development.
+ * @param detectLocalMusic when true, the user's local media collection will be queried to
+ *      sample what type of music they listen to
+ */
+
++ (void)setClientToken:(NSString *)token secret:(NSString *)secret detectLocalMusic:(BOOL) detectLocalMusic;
+
+
+/**
+ * There is only one global `FMAudioPlayer` instance, and it
+ * is available via this static property.
+ */
+
++ (FMAudioPlayer *)sharedPlayer;
+
+/**
+ * Call one of the two callbacks as soon as we know if we pass geographic playback
+ * restrictions and the feed.fm servers are reachable. One of these two blocks is
+ * guaranteed to be called, and only one call will ever be made.
+ * Just before the onAvailable callback is made, the list of available stations
+ * is fully populated.
+ *
+ *  @param onAvailable    called when music becomes or already is available
+ *  @param onNotAvailable called when we determine music is not available
+ */
+
+- (void)whenAvailable: (void (^)()) onAvailable
+         notAvailable: (void (^)()) onNotAvailable;
+
+
+///-----------------------------------------------------
+/// @name Playback Controls
+///-----------------------------------------------------
+
+/**
+ * Starts asynchronous loading of the first song in the active station
+ * so that a future call to `play` will start music instantaneously.
  */
 - (void)prepareToPlay;
 
 /**
- *  Requests current item to play
+ * Starts retrieval and playback of music in the active station.
  */
 - (void)play;
 
 /**
- *  Pauses playback
+ * Pauses music playback.
  */
 - (void)pause;
 
 /**
- *  Stops playback
+ *  Stops music playback and discards any cached audio.
  */
 - (void)stop;
 
 /**
- *  Request to skip current player item.
- *  @see FMAudioPlayerPlaybackStateRequestingSkip
+ * Asynchronously request that the player skip the current song. If the
+ * request is successful, the current song will stop and the next will
+ * begin. If not, an `FMAudioPlayerSkipFailedNotification` will be posted
+ * to the default notification center and the current song will continue
+ * playback.
  */
 - (void)skip;
 
 /**
- *  value between 0.0 and 1.0 relative to system volume
+ *  Marks the current song as 'liked' and triggers an `FMAudioPlayerLikeStatusChangeNotification`
+ *  notification. Updates the `[FMAudioItem liked]` and `[FMAudioItem disliked]` properties.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
  */
-@property (nonatomic) float mixVolume;
-/**
- *  Current player statate
- */
-@property (nonatomic, readonly) FMAudioPlayerPlaybackState playbackState;
-/**
- *  The current time of the currently played item (readonly).
- */
-@property (nonatomic, readonly) NSTimeInterval currentPlaybackTime;
-/**
- *  Indicates the duration of the current item (readonly).
- */
-@property (nonatomic, readonly) NSTimeInterval currentItemDuration;
-/**
- *  The current rate of playback. Seeking is not supported, so this will always be 0.0 or 1.0
- */
-@property (nonatomic, readonly) float currentPlaybackRate;
-/**
- *  Indicates if current item is prepared to play (readonly).
- */
-@property (nonatomic, readonly) BOOL isPreparedToPlay;
-@property (nonatomic, readonly) FMAudioItem *currentItem;
-@property (nonatomic, weak) id<FMAudioPlayerLogger> logger;
-@property (nonatomic, readonly) NSArray *stationList;
-/**
- *  Indicates if you can skip current item (readonly).
- *  @see skip
- */
-@property (readonly) BOOL canSkip;
-
-///-----------------------------------------------------
-/// @name Configuring The Session
-///-----------------------------------------------------
+- (void)like;
 
 /**
- *  Active station
+ *  Marks the current song as 'disliked' and triggers an `FMAudioPlayerLikeStatusChangeNotification`
+ *  notification.  Updates the `[FMAudioItem liked]` and `[FMAudioItem disliked]` properties.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
  */
-@property (nonatomic, copy) FMStation *activeStation;
+- (void)dislike;
 
 /**
- *  Finds a station with the given name and sets it as active station
+ *  Mrks the current song as neither 'liked' nor 'disliked'. Does *not* trigger
+ * an `FMAudioPlayerLikeStatusChangeNotification` notification. Updates the
+ * `[FMAudioItem liked]` and `[FMAudioItem disliked]` properties.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+- (void)unlike;
+
+/**
+ *  Finds a station with the given name and assigns it to the `activeStation`.
  *
  *  @param name Station name. Should not be nil.
  *
  *  @return true if a station with the given name found
  *  @see activeStation
  */
+
 - (BOOL) setActiveStationByName: (NSString *)name;
 
 /**
- *  Call one of the callbacks as soon as we know if we pass geographic restrictions
- *
- *  @param onAvailable    called when available
- *  @param onNotAvailable called when becomes unavailable
+ *  A value between 0.0 and 1.0 relative to system volume
  */
-- (void)whenAvailable: (void (^)()) onAvailable
-         notAvailable: (void (^)()) onNotAvailable;
+
+@property (nonatomic) float mixVolume;
+
 
 /**
- *  Assigns an image to the lock screen when the player is playing
+ *  Assigns the image to be displayed on the lock screen when music is playing.
  *
  *  @param image The image to be added to the lock screen
  */
+
 - (void)setLockScreenImage: (UIImage *)image;
 
 
+///-----------------------------------------------------
+/// @name Playback Status
+///-----------------------------------------------------
+
 /**
- Order specifies priority (earlier elements are preferred).
- Nil-ing this property will allow any format to be served, but is not recommended.
- Set to @[FMAudioFormatMP3] to exclude AAC files.
- Defaults to @[FMAudioFormatAAC,FMAudioFormatMP3].
+ * Current player state. As this state changes, an `FMAudioPlayerPlaybackStateDidChangeNotification`
+ * is triggered with the default notification center.
+ */
+
+@property (nonatomic, readonly) FMAudioPlayerPlaybackState playbackState;
+
+/**
+ *  The elapsed playback time of the current item.
+ */
+
+@property (nonatomic, readonly) NSTimeInterval currentPlaybackTime;
+
+/**
+ *  Indicates the duration of the current item.
+ */
+
+@property (nonatomic, readonly) NSTimeInterval currentItemDuration;
+
+/**
+ *  The current rate of playback. Seeking is not supported, so this will always be 0.0 or 1.0
+ */
+
+@property (nonatomic, readonly) float currentPlaybackRate;
+
+/**
+ * Indicates if the SDK has retrieved the next song for playback from the
+ * server and is ready to start playing it.
+ */
+
+@property (nonatomic, readonly) BOOL isPreparedToPlay;
+
+/**
+ * The currently playing or paused song, or null if there
+ * is not one.
+ */
+@property (nonatomic, readonly) FMAudioItem *currentItem;
+
+/**
+ * This is a list of music stations retrieved from the server.
+ * This array will not change once populated.
+ **/
+
+@property (nonatomic, readonly) NSArray *stationList;
+
+/**
+ * The current station from which music is pulled. Any `FMStation` retrieved
+ * from the `stationList` property can be assigned here. Once music is
+ * available, this property is never null. When this value changes,
+ * `FMAudioPlayerActiveStationDidChangeNotification` is sent to the default
+ * notification center.
+ */
+
+@property (nonatomic, copy) FMStation *activeStation;
+
+/**
+ * If false, then the user may not skip the currently playing
+ * song. If true, the user may be able to skip the current song,
+ * but the server will be queried and possibly reject the request.
+ * This property is updated every time a new song
+ * starts playback or after a failed skip attempt, and a
+ * `FMAudioPlayerSkipStatusNotification notification` is sent any
+ * time this value changes.
+ *
+ *  @see skip
+ */
+
+@property (readonly) BOOL canSkip;
+
+///-----------------------------------------------------
+/// @name Logging and reporting
+///-----------------------------------------------------
+
+
+/**
+ * Any calls to `logEvent:` or `logEvent:withParameters:`
+ * are also sent to the logger assigned to this property, if
+ * any.
+ */
+
+@property (nonatomic, weak) id<FMAudioPlayerLogger> logger;
+
+/**
+ *  Everything logged here goes back to Feed.fm and is also cc'd to the `logger` property
+ *
+ *  @param event Log message
+ */
+- (void) logEvent: (NSString *)event;
+
+/**
+ *  Everything logged here goes back to Feed.fm and is also cc'd to the `logger` property
+ *
+ *  @param event      Log message
+ *  @param parameters Parameters
+ */
+- (void) logEvent: (NSString *)event
+   withParameters: (NSDictionary *)parameters;
+
+
+
+///-----------------------------------------------------
+/// @name Misc..
+///-----------------------------------------------------
+
+/**
+ * Order specifies priority (earlier elements are preferred).
+ * Nil-ing this property will allow any format to be served, but is not recommended.
+ * Set to `FMAudioFormatMP3` to exclude AAC files.
+ * Defaults to `@[FMAudioFormatAAC,FMAudioFormatMP3]`.
+ *
+ * In the normal course of events, clients do not need to make use of this.
  */
 @property (nonatomic, strong) NSArray *supportedAudioFormats;
 
@@ -284,38 +521,6 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 @property (nonatomic) NSInteger maxBitrate;
 
-/**
- *  Set the status like to the current <FMAudioItem> and sends FMAudioPlayerLikeStatusChangeNotification.
- *  @see [FMAudioItem like]
- */
-- (void)like;
-/**
- *  Set the status dislike to the current <FMAudioItem> and sends FMAudioPlayerLikeStatusChangeNotification.
- *  @see [FMAudioItem dislike]
- */
-- (void)dislike;
-
-/**
- *  Set the status unlike to the current <FMAudioItem>. Does *not* send
- *  FMAudioPlayerLikeStatusChangeNotification.
- */
-- (void)unlike;
-
-/**
- *  Everything logged here goes back to Feed.fm and is also cc'd to the 'logger' property
- *
- *  @param event Log message
- */
-- (void) logEvent: (NSString *)event;
-
-/**
- *  Everything logged here goes back to Feed.fm and is also cc'd to the 'logger' property
- *
- *  @param event      Log message
- *  @param parameters Parameters
- */
-- (void) logEvent: (NSString *)event
-   withParameters: (NSDictionary *)parameters;
 
 
 @end

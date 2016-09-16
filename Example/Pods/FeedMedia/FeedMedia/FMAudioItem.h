@@ -3,16 +3,17 @@
 //  sdktest
 //
 //  Created by James Anthony on 3/7/13.
-//  Copyright (c) 2013 Feed Media, Inc. All rights reserved.
+//  Copyright (c) 2013-2016 Feed Media, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 /**
- *  Represents audio track
+ * Represents an audio track. Instances of this become available via the `[FMAudioPlayer currentItem]`
+ * property.
  */
 @interface FMAudioItem : NSObject
 
-/**
+/*
  *  Track identifier. Two FMAudioItem objects treated as equal if their playId properties are equal.
  */
 @property (readonly) NSString *playId;
@@ -33,15 +34,15 @@
  *  Track duration in seconds
  */
 @property (readonly) NSTimeInterval duration;
-/**
+/*
  *  Track file URL
  */
 @property (readonly) NSURL *contentUrl;
-/**
+/*
  *  Codec used to encode track. For example: "he-aac"
  */
 @property (readonly) NSString *codec;
-/**
+/*
  *  Average track bitrate in Kbps
  */
 @property (readonly) double bitrate;
@@ -63,16 +64,26 @@
  */
 - (id)initWithJSON:(id)jsonDictionary;
 
-/**
- *  Assigns corresponding values to <liked> and <disliked> properties
+/*
+ *  Assigns corresponding values to <liked> and <disliked> properties. Note, this
+ *  is for internal use, and shouldn't be used to respond to user input -
+ *  use the `[FMAudioPlayer like]` method instead.
  */
 - (void)like;
-/**
- *  Assigns corresponding values to <liked> and <disliked> properties
+
+/*
+ *  Assigns corresponding values to <liked> and <disliked> properties. Note, this
+ *  is for internal use, and shouldn't be used to respond to user input -
+ *  use the `[FMAudioPlayer dislike]` method instead.
+
  */
 - (void)dislike;
-/**
- *  Assigns corresponding values to <liked> and <disliked> properties
+
+/*
+ *  Assigns corresponding values to <liked> and <disliked> properties. Note, this
+ *  is for internal use, and shouldn't be used to respond to user input -
+ *  use the `[FMAudioPlayer unlike]` method instead.
+
  */
 - (void)unlike;
 

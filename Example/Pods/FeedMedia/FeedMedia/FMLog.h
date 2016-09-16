@@ -3,7 +3,7 @@
 //  sdktest
 //
 //  Created by James Anthony on 10/1/12.
-//  Copyright (c) 2012 Feed Media Inc. All rights reserved.
+//  Copyright (c) 2012-2016 Feed Media Inc. All rights reserved.
 //
 #ifdef __cplusplus
 extern "C"{
