@@ -1,4 +1,7 @@
 
+= v1.0.0
+  - Split out ObjC and Swift subspecs. Use proper versioning. Technically
+    the API hasn`t changed at all from v0.1.10
 
 = v0.1.10
   - update to newer FeedMedia pod that improves Authorization fix
