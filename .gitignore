@@ -35,4 +35,5 @@ Carthage
 dist/
 !Example/Pods/FeedMedia/dist
 Example/FeedMediaUI.xcworkspace/
+docs/
 
