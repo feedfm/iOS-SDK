@@ -37,13 +37,13 @@ Pod::Spec.new do |s|
 
   s.dependency "MarqueeLabel", "~> 2.7.9"
 
+  sp.platform     = :ios, '8.0'
+
   s.subspec 'ObjC' do |sp|
-    sp.platform     = :ios, '7.0'
     sp.dependency "FeedMedia/ObjC", "~> 2.4.13"
   end
 
   s.subspec 'Swift' do |sp|
-    sp.platform     = :ios, '8.0'
     sp.dependency "FeedMedia/Swift", "~> 2.4.13"
   end
 
