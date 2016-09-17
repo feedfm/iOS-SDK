@@ -33,11 +33,9 @@ Pod::Spec.new do |s|
     'FeedMediaUI' => ['Pod/Assets/**/*.png']
   }
 
-  s.platform = :ios
+  s.platform     = :ios, '8.0'
 
   s.dependency "MarqueeLabel", "~> 2.7.9"
-
-  sp.platform     = :ios, '8.0'
 
   s.subspec 'ObjC' do |sp|
     sp.dependency "FeedMedia/ObjC", "~> 2.4.13"
