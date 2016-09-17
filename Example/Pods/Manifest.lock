@@ -1,8 +1,8 @@
 PODS:
-  - FeedMedia (2.4.15)
-  - FeedMediaUI (0.1.10):
-    - FeedMedia (~> 2.4.13)
-    - MarqueeLabel (~> 2.5)
+  - FeedMedia/ObjC (2.4.16)
+  - FeedMediaUI (1.0.0):
+    - FeedMedia/ObjC (~> 2.4.13)
+    - MarqueeLabel (~> 2.7.9)
   - MarqueeLabel (2.7.10):
     - MarqueeLabel/ObjC (= 2.7.10)
   - MarqueeLabel/ObjC (2.7.10)
@@ -15,10 +15,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FeedMedia: dc14e90a7eef95d812d64f546bac73dd3ed6246f
-  FeedMediaUI: e3c12095c8f53467916732bef2b8bdb25b984893
+  FeedMedia: bee17d78598d2aa226fdccf20dc90692f5a27eb8
+  FeedMediaUI: 57996773a0fb8a181a3881b01c7979eecffc59a1
   MarqueeLabel: 5d722a0bef353178feb301130621b9b8e8b3fcb5
 
 PODFILE CHECKSUM: ce3ee3d8656efbd912d55ffd049ea67f3c041bd2
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2

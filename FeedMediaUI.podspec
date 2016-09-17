@@ -15,6 +15,9 @@ Pod::Spec.new do |s|
 
     For a more full featured demo app, look at https://github.com/feedfm/iOS-RadioPlayer
 
+    If you are using this in a Swift project, use the 'FeedMediaUI/Swift' subspec and
+    make sure your Podfile has 'use_frameworks!' declared.
+
                        DESC
 
   s.homepage         = "https://feed.fm/"
@@ -23,7 +26,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/feedfm/iOS-UI-SDK.git", :tag => "v#{s.version}" }
   s.documentation_url = 'http://demo.feed.fm/sdk/docs/ios/ui/'
 
-  s.platform     = :ios, '7.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -31,16 +33,16 @@ Pod::Spec.new do |s|
     'FeedMediaUI' => ['Pod/Assets/**/*.png']
   }
 
-  s.dependency "MarqueeLabel", "~> 2.5"
-
-  s.subspec 'Swift' do |sp|
-    s.dependency "FeedMedia/Swift", "~> 2.4.13"
-  end
+  s.dependency "MarqueeLabel", "~> 2.7.9"
 
   s.subspec 'ObjC' do |sp|
-    s.dependency "FeedMedia/ObjC", "~> 2.4.13"
+    sp.platform     = :ios, '7.0'
+    sp.dependency "FeedMedia/ObjC", "~> 2.4.13"
   end
 
-  s.default_subspec = 'ObjC'
+  s.subspec 'Swift' do |sp|
+    sp.platform     = :ios, '8.0'
+    sp.dependency "FeedMedia/Swift", "~> 2.4.13"
+  end
 
 end
