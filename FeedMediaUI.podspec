@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FeedMediaUI"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "UI elements that interact with the 'FeedMedia' pod to retrieve and play music"
   s.description      = <<-DESC
     This is a collection of UI elements that build on top of the 'FeedMedia' cocoapod that
@@ -35,14 +35,16 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '8.0'
 
-  s.dependency "MarqueeLabel", "~> 2.7.9"
+  s.dependency "MarqueeLabel", "~> 2.7.10"
 
   s.subspec 'ObjC' do |sp|
-    sp.dependency "FeedMedia/ObjC", "~> 2.4.13"
+    sp.dependency "FeedMedia/ObjC", "~> 2.4.16"
   end
 
   s.subspec 'Swift' do |sp|
-    sp.dependency "FeedMedia/Swift", "~> 2.4.13"
+    sp.dependency "FeedMedia/Swift", "~> 2.4.16"
   end
+
+  s.default_subspec = 'ObjC'
 
 end
