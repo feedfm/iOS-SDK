@@ -1,11 +1,4 @@
-# FeedMediaUI
-
-<!--
-[![CI Status](http://img.shields.io/travis/Eric Lambrecht/FeedMediaUI.svg?style=flat)](https://travis-ci.org/Eric Lambrecht/FeedMediaUI)
-[![Version](https://img.shields.io/cocoapods/v/FeedMediaUI.svg?style=flat)](http://cocoapods.org/pods/FeedMediaUI)
-[![License](https://img.shields.io/cocoapods/l/FeedMediaUI.svg?style=flat)](http://cocoapods.org/pods/FeedMediaUI)
-[![Platform](https://img.shields.io/cocoapods/p/FeedMediaUI.svg?style=flat)](http://cocoapods.org/pods/FeedMediaUI)
--->
+# FeedMedia
 
 ## Introduction
 
@@ -16,24 +9,25 @@ app.
 
 ## Installation
 
-FeedMediaUI is available through [CocoaPods](http://cocoapods.org). To install
+FeedMedia is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "FeedMediaUI"
+pod "FeedMedia"
 ```
 
-If you want to try it out before installing, run
+If you want to try out a sample app before installing, run
 
 ```bash
-pod try FeedMediaUI
+pod try FeedMedia
 ```
 
 ## Installation without CocoaPods
 
 If you aren't using CocoaPods but want to integrate this library in your
-application, we suggest you just download the latest version of _FeedMediaUI-iOS-X.X.X.zip_
-from [our repository at http://feed.fm/sdk/](http://feed.fm/sdk/).
+application, we suggest you clone this repository into a subdirectory
+of your project, include all files in `Core/*`, `UI/*`, and (if
+desired) all the assets in `Assets/*`.
 
 ## Tell me more!
 
@@ -47,4 +41,4 @@ Eric Lambrecht, eric@feed.fm
 
 ## License
 
-FeedMediaUI is available under the MIT license. See the LICENSE.md file for more info.
+FeedMedia is available under the MIT license. See the LICENSE.md file for more info.
