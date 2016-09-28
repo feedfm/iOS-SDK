@@ -1,0 +1,25 @@
+PODS:
+  - FeedMedia (3.0.0):
+    - FeedMedia/Assets (= 3.0.0)
+    - FeedMedia/UI (= 3.0.0)
+  - FeedMedia/Assets (3.0.0)
+  - FeedMedia/UI (3.0.0):
+    - MarqueeLabel (~> 2.7.10)
+  - MarqueeLabel (2.7.10):
+    - MarqueeLabel/ObjC (= 2.7.10)
+  - MarqueeLabel/ObjC (2.7.10)
+
+DEPENDENCIES:
+  - FeedMedia (from `../`)
+
+EXTERNAL SOURCES:
+  FeedMedia:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FeedMedia: e4272f5ebdcc9dbfd71655ea03196588305dc50c
+  MarqueeLabel: 5d722a0bef353178feb301130621b9b8e8b3fcb5
+
+PODFILE CHECKSUM: acfa3f2ee06b0149f1abc041e83c7d1e5c5c842b
+
+COCOAPODS: 1.1.0.rc.2
