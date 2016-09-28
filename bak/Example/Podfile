@@ -1,0 +1,9 @@
+#use_frameworks!
+
+target 'FeedMediaUI_Example' do
+  pod 'FeedMediaUI', :path => '../'
+end
+
+target 'FeedMediaUI_Tests' do
+  pod 'FeedMediaUI', :path => '../'
+end
