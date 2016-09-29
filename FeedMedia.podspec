@@ -58,7 +58,7 @@ DESC
 
   s.subspec 'Assets' do |sp|
 		sp.resource_bundles = {
-			'FeedMedia' => [ 'Assets/*.png' ]
+			'FeedMedia' => [ 'Assets/**/*.png' ]
 		}
   end
 
