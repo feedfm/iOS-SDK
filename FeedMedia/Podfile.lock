@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FeedMedia: e4272f5ebdcc9dbfd71655ea03196588305dc50c
+  FeedMedia: dc6ff93eb6febc2ffbf8269bb62d080fda46bd92
   MarqueeLabel: 5d722a0bef353178feb301130621b9b8e8b3fcb5
 
 PODFILE CHECKSUM: acfa3f2ee06b0149f1abc041e83c7d1e5c5c842b

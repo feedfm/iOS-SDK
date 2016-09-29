@@ -35,8 +35,7 @@
         ]
       },
       "source_files": "UI/*.{m,h}",
-      "public_header_files": "UI/*.h",
-      "compiler_flags": "-DFEED_MEDIA_INCLUDE_UI"
+      "public_header_files": "UI/*.h"
     },
     {
       "name": "Assets",

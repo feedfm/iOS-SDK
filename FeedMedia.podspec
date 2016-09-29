@@ -49,7 +49,6 @@ DESC
     sp.dependency "MarqueeLabel", "~> 2.7.10"
 		sp.source_files = 'UI/*.{m,h}'
 		sp.public_header_files = 'UI/*.h'
-    sp.compiler_flags = '-DFEED_MEDIA_INCLUDE_UI'
   end
 
 
