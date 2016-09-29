@@ -91,7 +91,7 @@
                                         <state key="normal" image="FeedMedia.bundle/play">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <state key="selected" image="FeedMediaUI.bundle/pause"/>
+                                        <state key="selected" image="FeedMedia.bundle/pause"/>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HgW-Ua-BdR" customClass="FMProgressView">
                                         <constraints>
@@ -244,11 +244,11 @@
     </scenes>
     <resources>
         <image name="FeedMedia.bundle/feed_logo" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/pause" width="1280" height="720"/>
         <image name="FeedMedia.bundle/play" width="1280" height="720"/>
         <image name="FeedMedia.bundle/skip" width="1280" height="720"/>
         <image name="FeedMedia.bundle/thumbsdown_unselected" width="1280" height="720"/>
         <image name="FeedMedia.bundle/thumbsup_unselected" width="1280" height="720"/>
-        <image name="FeedMediaUI.bundle/pause" width="1280" height="720"/>
         <image name="FeedMediaUI.bundle/thumbsdown_selected" width="1280" height="720"/>
         <image name="FeedMediaUI.bundle/thumbsup_selected" width="1280" height="720"/>
     </resources>

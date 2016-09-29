@@ -41,7 +41,7 @@
       "name": "Assets",
       "resource_bundles": {
         "FeedMedia": [
-          "Assets/*.png"
+          "Assets/**/*.png"
         ]
       }
     }
