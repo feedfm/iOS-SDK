@@ -1,4 +1,7 @@
 
+= v3.0.0
+  - Merge FeedMediaUI and FeedMedia pods into single FeedMedia pod
+
 = v1.0.0
   - Split out ObjC and Swift subspecs. Use proper versioning. Technically
     the API hasn`t changed at all from v0.1.10
