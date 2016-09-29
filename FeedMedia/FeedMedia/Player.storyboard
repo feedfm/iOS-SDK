@@ -27,8 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-fX-seV" userLabel="powered by feed.fm">
-                                <frame key="frameInset" minX="250" minY="577" width="102" height="23"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-fX-seV" userLabel="powered by feed.fm">
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="POWERED BY FEED.FM">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,8 +38,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-LN-RpI" userLabel="track" customClass="FMMetadataLabel">
-                                <frame key="frameInset" minX="24" minY="440" width="560"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-LN-RpI" userLabel="track" customClass="FMMetadataLabel">
                                 <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,8 +49,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-MO-tH5" userLabel="artist" customClass="FMMetadataLabel">
-                                <frame key="frameInset" minX="24" minY="460" width="552"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-MO-tH5" userLabel="artist" customClass="FMMetadataLabel">
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,8 +60,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJs-Gu-tUQ" userLabel="album" customClass="FMMetadataLabel">
-                                <frame key="frameInset" minX="24" minY="480" width="552"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJs-Gu-tUQ" userLabel="album" customClass="FMMetadataLabel">
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -75,15 +71,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-Pn-Pxv" userLabel="Player Controls">
-                                <frame key="frameInset" minX="140" minY="493" width="320" height="68"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-Pn-Pxv" userLabel="Player Controls">
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-u3-7dr" userLabel="like" customClass="FMLikeButton">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="c9e-iu-LVD"/>
                                             <constraint firstAttribute="height" constant="44" id="vUo-5r-PbH"/>
                                         </constraints>
-                                        <state key="normal" image="FeedMediaUI.bundle/thumbsup_unselected">
+                                        <state key="normal" image="FeedMedia.bundle/thumbsup_unselected">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected" image="FeedMediaUI.bundle/thumbsup_selected"/>
@@ -93,7 +88,7 @@
                                             <constraint firstAttribute="height" constant="44" id="Kew-vF-KwV"/>
                                             <constraint firstAttribute="width" constant="44" id="ed7-zi-UYO"/>
                                         </constraints>
-                                        <state key="normal" image="FeedMediaUI.bundle/play">
+                                        <state key="normal" image="FeedMedia.bundle/play">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected" image="FeedMediaUI.bundle/pause"/>
@@ -128,7 +123,7 @@
                                             <constraint firstAttribute="height" constant="44" id="pkv-VR-JqQ"/>
                                             <constraint firstAttribute="width" constant="44" id="yIf-t7-Km2"/>
                                         </constraints>
-                                        <state key="normal" image="FeedMediaUI.bundle/skip">
+                                        <state key="normal" image="FeedMedia.bundle/skip">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
@@ -137,7 +132,7 @@
                                             <constraint firstAttribute="height" constant="44" id="3J0-ke-a1Y"/>
                                             <constraint firstAttribute="width" constant="44" id="FnZ-hE-FQs"/>
                                         </constraints>
-                                        <state key="normal" image="FeedMediaUI.bundle/thumbsdown_unselected">
+                                        <state key="normal" image="FeedMedia.bundle/thumbsdown_unselected">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected" image="FeedMediaUI.bundle/thumbsdown_selected"/>
@@ -206,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMediaUI.bundle/feed_logo" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-LY-eEd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMedia.bundle/feed_logo" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-LY-eEd">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1VE-Td-mlA"/>
                                 </constraints>
@@ -248,13 +243,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FeedMediaUI.bundle/feed_logo" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/feed_logo" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/play" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/skip" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/thumbsdown_unselected" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/thumbsup_unselected" width="1280" height="720"/>
         <image name="FeedMediaUI.bundle/pause" width="1280" height="720"/>
-        <image name="FeedMediaUI.bundle/play" width="1280" height="720"/>
-        <image name="FeedMediaUI.bundle/skip" width="1280" height="720"/>
         <image name="FeedMediaUI.bundle/thumbsdown_selected" width="1280" height="720"/>
-        <image name="FeedMediaUI.bundle/thumbsdown_unselected" width="1280" height="720"/>
         <image name="FeedMediaUI.bundle/thumbsup_selected" width="1280" height="720"/>
-        <image name="FeedMediaUI.bundle/thumbsup_unselected" width="1280" height="720"/>
     </resources>
 </document>
