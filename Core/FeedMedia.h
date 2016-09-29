@@ -9,7 +9,6 @@
 #ifndef FeedMedia_h
 #define FeedMedia_h
 
-#include "FeedMediaVersion.h"
 #include "FeedMediaCore.h"
 
 #endif /* FeedMedia_h */
