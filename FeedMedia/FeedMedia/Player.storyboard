@@ -81,7 +81,7 @@
                                         <state key="normal" image="FeedMedia.bundle/thumbsup_unselected">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <state key="selected" image="FeedMediaUI.bundle/thumbsup_selected"/>
+                                        <state key="selected" image="FeedMedia.bundle/thumbsup_selected"/>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-7W-3Zf" userLabel="play/pause" customClass="FMPlayPauseButton">
                                         <constraints>
@@ -123,9 +123,7 @@
                                             <constraint firstAttribute="height" constant="44" id="pkv-VR-JqQ"/>
                                             <constraint firstAttribute="width" constant="44" id="yIf-t7-Km2"/>
                                         </constraints>
-                                        <state key="normal" image="FeedMedia.bundle/skip">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" image="FeedMedia.bundle/skip"/>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a54-5g-3Rq" userLabel="dislike" customClass="FMDislikeButton">
                                         <constraints>
@@ -135,7 +133,7 @@
                                         <state key="normal" image="FeedMedia.bundle/thumbsdown_unselected">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <state key="selected" image="FeedMediaUI.bundle/thumbsdown_selected"/>
+                                        <state key="selected" image="FeedMedia.bundle/thumbsdown_selected"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -247,9 +245,9 @@
         <image name="FeedMedia.bundle/pause" width="1280" height="720"/>
         <image name="FeedMedia.bundle/play" width="1280" height="720"/>
         <image name="FeedMedia.bundle/skip" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/thumbsdown_selected" width="1280" height="720"/>
         <image name="FeedMedia.bundle/thumbsdown_unselected" width="1280" height="720"/>
+        <image name="FeedMedia.bundle/thumbsup_selected" width="1280" height="720"/>
         <image name="FeedMedia.bundle/thumbsup_unselected" width="1280" height="720"/>
-        <image name="FeedMediaUI.bundle/thumbsdown_selected" width="1280" height="720"/>
-        <image name="FeedMediaUI.bundle/thumbsup_selected" width="1280" height="720"/>
     </resources>
 </document>
