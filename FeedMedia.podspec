@@ -42,21 +42,13 @@ DESC
 
 
   #
-  # UI ViewControllers
+  # UI ViewControllers and Assets
   #
 
   s.subspec 'UI' do |sp|
     sp.dependency "MarqueeLabel", "~> 2.7.10"
 		sp.source_files = 'UI/*.{m,h}'
 		sp.public_header_files = 'UI/*.h'
-  end
-
-
-  #
-  # UI Assets
-  #
-
-  s.subspec 'Assets' do |sp|
 		sp.resource_bundles = {
 			'FeedMedia' => [ 'Assets/**/*.png' ]
 		}

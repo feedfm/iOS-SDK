@@ -16,7 +16,7 @@
   "documentation_url": "http://demo.feed.fm/sdk/docs/ios/",
   "requires_arc": true,
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "vendored_libraries": "Core/libFeedMediaCore.a",
   "source_files": "Core/*.h",
@@ -35,10 +35,7 @@
         ]
       },
       "source_files": "UI/*.{m,h}",
-      "public_header_files": "UI/*.h"
-    },
-    {
-      "name": "Assets",
+      "public_header_files": "UI/*.h",
       "resource_bundles": {
         "FeedMedia": [
           "Assets/**/*.png"

@@ -1,8 +1,6 @@
 PODS:
   - FeedMedia (3.0.0):
-    - FeedMedia/Assets (= 3.0.0)
     - FeedMedia/UI (= 3.0.0)
-  - FeedMedia/Assets (3.0.0)
   - FeedMedia/UI (3.0.0):
     - MarqueeLabel (~> 2.7.10)
   - MarqueeLabel (2.7.10):
@@ -17,7 +15,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FeedMedia: c6f7f4ab6c513f44df05ca87d55e437b4d312e36
+  FeedMedia: 647c8971e322b8db7db33015425c9c65e57de441
   MarqueeLabel: 5d722a0bef353178feb301130621b9b8e8b3fcb5
 
 PODFILE CHECKSUM: acfa3f2ee06b0149f1abc041e83c7d1e5c5c842b

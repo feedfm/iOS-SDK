@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "49DF8CA5B6A91A80A6FF4B06075BE872"
-               BuildableName = "libMarqueeLabel.a"
-               BlueprintName = "MarqueeLabel"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "A90694841D9DA8910032D987"
+               BuildableName = "publish pod"
+               BlueprintName = "publish pod"
+               ReferencedContainer = "container:FeedMedia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A90694841D9DA8910032D987"
+            BuildableName = "publish pod"
+            BlueprintName = "publish pod"
+            ReferencedContainer = "container:FeedMedia.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,10 +54,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "49DF8CA5B6A91A80A6FF4B06075BE872"
-            BuildableName = "libMarqueeLabel.a"
-            BlueprintName = "MarqueeLabel"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "A90694841D9DA8910032D987"
+            BuildableName = "publish pod"
+            BlueprintName = "publish pod"
+            ReferencedContainer = "container:FeedMedia.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -60,6 +69,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A90694841D9DA8910032D987"
+            BuildableName = "publish pod"
+            BlueprintName = "publish pod"
+            ReferencedContainer = "container:FeedMedia.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
