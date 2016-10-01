@@ -47,11 +47,13 @@ DESC
 
   s.subspec 'UI' do |sp|
     sp.dependency "MarqueeLabel", "~> 2.7.10"
-		sp.source_files = 'UI/*.{m,h}'
-		sp.public_header_files = 'UI/*.h'
+		sp.source_files = 'UI/*.{m,h}', 'Core/*.h'
+		sp.public_header_files = 'UI/*.h', 'Core/*.h'
+    sp.vendored_library = 'Core/libFeedMediaCore.a'
 		sp.resource_bundles = {
 			'FeedMedia' => [ 'Assets/**/*.png' ]
 		}
+    sp.frameworks = 'AVFoundation', 'MediaPlayer', 'CoreMedia'
   end
 
 end

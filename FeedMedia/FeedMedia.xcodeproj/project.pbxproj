@@ -397,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${PROJECT_DIR}/..\n\nexport LANG=en_US.UTF-8\n\npod lib lint\n";
+			shellScript = "cd ${PROJECT_DIR}/..\n\nexport LANG=en_US.UTF-8\n\npod lib lint --allow-warnings   \n";
 		};
 		A90694881D9DA89C0032D987 /* tag pod */ = {
 			isa = PBXShellScriptBuildPhase;

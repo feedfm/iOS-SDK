@@ -7,6 +7,7 @@
 //
 
 #import "FMActivityIndicator.h"
+#import "FMAudioPlayer.h"
 
 #if !TARGET_INTERFACE_BUILDER
 
