@@ -453,7 +453,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\ncd \"${PROJECT_DIR}/..\"\n\npod trunk push --no-ansi ${PROJECT_NAME}.podspec 2>/dev/null\n\n";
+			shellScript = "\ncd \"${PROJECT_DIR}/..\"\n\npod trunk push --allow-warnings --no-ansi ${PROJECT_NAME}.podspec 2>/dev/null\n\n";
 		};
 		B8F65AE479018C580E63EC46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
