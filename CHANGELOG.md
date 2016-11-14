@@ -1,4 +1,10 @@
 
+
+= v3.0.1
+  - Report music invalidation reason back to server
+  - New logic to deal with placement changes in the middle of a session
+  - Add bugfix for possible NSDateFormatter race condition
+
 = v3.0.0
   - Merge FeedMediaUI and FeedMedia pods into single FeedMedia pod
 
