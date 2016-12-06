@@ -1,4 +1,6 @@
 
+= v3.0.2
+  - private library now with bitcode!
 
 = v3.0.1
   - Report music invalidation reason back to server
