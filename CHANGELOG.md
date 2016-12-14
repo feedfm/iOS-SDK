@@ -1,4 +1,7 @@
 
+= v3.0.3
+  - Take 2 for the NSDateFormatter race condition
+
 = v3.0.2
   - private library now with bitcode!
 
