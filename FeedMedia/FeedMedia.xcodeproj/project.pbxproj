@@ -44,6 +44,17 @@
 			name = "generate appledoc";
 			productName = "generate appledoc";
 		};
+		A92314D81E240535001D7C5D /* create .zip distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A92314DB1E240535001D7C5D /* Build configuration list for PBXAggregateTarget "create .zip distribution" */;
+			buildPhases = (
+				A92314DC1E240870001D7C5D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "create .zip distribution";
+			productName = "create .zip distribution";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -317,6 +328,10 @@
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
+					A92314D81E240535001D7C5D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A90694281D9C86BA0032D987 /* Build configuration list for PBXProject "FeedMedia" */;
@@ -338,6 +353,7 @@
 				A906947E1D9D9FEF0032D987 /* validate pod */,
 				A90694891D9DA9410032D987 /* generate appledoc */,
 				A90694841D9DA8910032D987 /* publish pod */,
+				A92314D81E240535001D7C5D /* create .zip distribution */,
 			);
 		};
 /* End PBXProject section */
@@ -454,6 +470,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\ncd \"${PROJECT_DIR}/..\"\n\npod trunk push --allow-warnings --no-ansi ${PROJECT_NAME}.podspec 2>/dev/null\n\n";
+		};
+		A92314DC1E240870001D7C5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# ";
 		};
 		B8F65AE479018C580E63EC46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -745,6 +774,20 @@
 			};
 			name = Release;
 		};
+		A92314D91E240535001D7C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A92314DA1E240535001D7C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -810,6 +853,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A92314DB1E240535001D7C5D /* Build configuration list for PBXAggregateTarget "create .zip distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A92314D91E240535001D7C5D /* Debug */,
+				A92314DA1E240535001D7C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
