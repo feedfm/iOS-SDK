@@ -304,15 +304,18 @@
 				TargetAttributes = {
 					A906942C1D9C86BB0032D987 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 68FPN5EKX7;
 						ProvisioningStyle = Automatic;
 					};
 					A90694451D9C86BB0032D987 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 68FPN5EKX7;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A906942C1D9C86BB0032D987;
 					};
 					A90694501D9C86BB0032D987 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 68FPN5EKX7;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A906942C1D9C86BB0032D987;
 					};
@@ -667,6 +670,7 @@
 			baseConfigurationReference = 68033A86D7A121E0A3E9CFC6 /* Pods-FeedMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68FPN5EKX7;
 				INFOPLIST_FILE = FeedMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMedia;
@@ -679,6 +683,7 @@
 			baseConfigurationReference = 24F3B66533C1C985F5979EB4 /* Pods-FeedMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68FPN5EKX7;
 				INFOPLIST_FILE = FeedMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMedia;
@@ -690,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 68FPN5EKX7;
 				INFOPLIST_FILE = FeedMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMediaTests;
@@ -702,6 +708,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 68FPN5EKX7;
 				INFOPLIST_FILE = FeedMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMediaTests;
@@ -713,6 +720,7 @@
 		A90694611D9C86BB0032D987 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 68FPN5EKX7;
 				INFOPLIST_FILE = FeedMediaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMediaUITests;
@@ -724,6 +732,7 @@
 		A90694621D9C86BB0032D987 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 68FPN5EKX7;
 				INFOPLIST_FILE = FeedMediaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMediaUITests;
@@ -861,6 +870,7 @@
 				A92314DA1E240535001D7C5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
