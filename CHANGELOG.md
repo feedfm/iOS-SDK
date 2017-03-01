@@ -1,4 +1,8 @@
 
+= v3.0.4
+  - When resuming app that has 'stop()'ed music, don't begin playback
+    automatically.
+
 = v3.0.3
   - Take 2 for the NSDateFormatter race condition
 
