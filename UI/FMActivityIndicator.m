@@ -76,6 +76,8 @@
         case FMAudioPlayerPlaybackStatePaused:
         case FMAudioPlayerPlaybackStatePlaying:
         case FMAudioPlayerPlaybackStateComplete:
+        case FMAudioPlayerPlaybackStateUnavailable:
+        case FMAudioPlayerPlaybackStateUninitialized:
             [self stopAnimating];
             break;
 

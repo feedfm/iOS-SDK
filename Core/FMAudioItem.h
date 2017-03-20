@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreMedia/CoreMedia.h>
+
+
 /**
  * Represents an audio track. Instances of this become available via the `[FMAudioPlayer currentItem]`
  * property.
@@ -46,6 +49,19 @@
  *  Average track bitrate in Kbps
  */
 @property (readonly) double bitrate;
+
+/*
+ * When trimming audio, start playback at this
+ * point.
+ */
+@property (readonly) CMTime trimStart;
+
+/*
+ * When trimming audio, end playback at this
+ * point.
+ */
+@property (readonly) CMTime trimEnd;
+
 /**
  *  If track is liked
  */

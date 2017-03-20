@@ -86,42 +86,36 @@
     
     switch (newState) {
         case FMAudioPlayerPlaybackStateWaitingForItem:
+        case FMAudioPlayerPlaybackStateStalled:
+        case FMAudioPlayerPlaybackStateRequestingSkip:
             [self setSelected:YES];
+            [self setEnabled:YES];
             if (_hideWhenStalled) {
                 [self setHidden:YES];
             }
             break;
+        case FMAudioPlayerPlaybackStateComplete:
         case FMAudioPlayerPlaybackStateReadyToPlay:
         case FMAudioPlayerPlaybackStatePaused:
             [self setSelected:NO];
+            [self setEnabled:YES];
             if (_hideWhenStalled) {
                 [self setHidden:NO];
             }
             break;
         case FMAudioPlayerPlaybackStatePlaying:
             [self setSelected:YES];
+            [self setEnabled:YES];
             if (_hideWhenStalled) {
                 [self setHidden:NO];
             }
             break;
-        case FMAudioPlayerPlaybackStateStalled:
-            [self setSelected:YES];
-            if (_hideWhenStalled) {
-                [self setHidden:YES];
-            }
-            break;
-        case FMAudioPlayerPlaybackStateRequestingSkip:
-            [self setSelected:YES];
-            if (_hideWhenStalled) {
-                [self setHidden:YES];
-            }
-            break;
-        case FMAudioPlayerPlaybackStateComplete:
+        case FMAudioPlayerPlaybackStateUninitialized:
             [self setSelected:NO];
+            [self setEnabled:NO];
             if (_hideWhenStalled) {
                 [self setHidden:NO];
             }
-            break;
     }
     
     

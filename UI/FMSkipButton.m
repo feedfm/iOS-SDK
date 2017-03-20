@@ -57,7 +57,7 @@
     
     NSNotificationCenter *ns = [NSNotificationCenter defaultCenter];
     [ns addObserver:self selector:@selector(onPlaybackStateDidChange:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
-    [ns addObserver:self selector:@selector(onCurrentItemDidChange:) name:FMAudioPlayerCurrentItemDidChangeNotification object:_feedPlayer];
+    [ns addObserver:self selector:@selector(onCurrentItemDidChange:) name:FMAudioPlayerCurrentItemDidBeginPlaybackNotification object:_feedPlayer];
     [ns addObserver:self selector:@selector(onSkipDidFail:) name:FMAudioPlayerSkipFailedNotification object:_feedPlayer];
     [ns addObserver:self selector:@selector(onSkipStatusChanged:) name:FMAudioPlayerSkipStatusNotification object:_feedPlayer];
     

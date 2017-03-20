@@ -14,8 +14,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [FMAudioPlayer setClientToken:@"demo" secret:@"demo"];
+    FMLogSetLevel(FMLogLevelDebug);
     
+    [FMAudioPlayer setClientToken:@"0248084d48fedad705477a42f6dd5238001507db" secret:@"6a7c7b1f40026be479b920e6ec7079eeddf6ef1b"];
+    
+    [[FMAudioPlayer sharedPlayer] whenAvailable:^{
+        FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
+        
+        player.secondsOfCrossfade = 6;
+        [player prepareToPlay];
+
+    } notAvailable:^{
+        // nada
+    }];
+
     // Override point for customization after application launch.
     return YES;
 }

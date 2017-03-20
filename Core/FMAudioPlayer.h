@@ -17,31 +17,36 @@
  *  @const FMAudioPlayerPlaybackStateDidChangeNotification
  *  @discussion Sent when <FMAudioPlayer> state is changed.
  *  <FMAudioPlayer> instance is sent as [NSNotification object]
- *  Observe <playbackState> property for the exact state.
+ *  Observe <playbackState> property for the exact state. This will
+ *  be the first event issued by the library, and the state will
+ *  either be <FMAudioPlayerPlaybackStateUnavailable> or <FMAudioPlayerPlaybackStateReadyToPlay>.
  */
 extern NSString *const FMAudioPlayerPlaybackStateDidChangeNotification;
 
 /**
- *  @const FMAudioPlayerCurrentItemDidChangeNotification
- *  @discussion Sent when currently playing item is changed
+ *  @const FMAudioPlayerCurrentItemDidBeginPlaybackNotification
+ *  @discussion Sent when a new song has begun playback. Code that responds
+ *    to this event can expect [FMAudioPlayer currentItem] to be non-nil.
+ *    This event is only triggered once for any song (and not, for instance,
+ *    after resuming playbck from a pause)
  */
-extern NSString *const FMAudioPlayerCurrentItemDidChangeNotification;
+
+extern NSString *const FMAudioPlayerCurrentItemDidBeginPlaybackNotification;
+
+/*
+ * @const FMAudioPlayerMusicQueuedNotification
+ * @discussion Sent when the player has loaded music from the current
+ * station and is ready for immediate playback
+ */
+ 
+extern NSString *const FMAudioPlayerMusicQueuedNotification;
 
 /**
  *  @const FMAudioPlayerActiveStationDidChangeNotification
- *  Sent when active station is changed
+ *  Sent when active station is changed via one of the [FMAudioPlayer setActiveStation]
+ *  calls.
  */
 extern NSString *const FMAudioPlayerActiveStationDidChangeNotification;
-
-/**
- *  Currently not in use
- */
-extern NSString *const FMAudioPlayerAvailableNotification;
-
-/**
- *  Currently not in use
- */
-extern NSString *const FMAudioPlayerNotAvailableNotification;
 
 /**
  *  @const FMAudioPlayerSkipStatusNotification
@@ -70,9 +75,6 @@ extern NSString *const FMAudioPlayerSkipFailureErrorKey;
  *  Its object property points to the current FMAudioPlayer instance.
  */
 extern NSString *const FMAudioPlayerLikeStatusChangeNotification;
-
-/// Currently not in use
-extern NSString *const FMAudioPlayerStationListAvailableNotification;
 
 /**
  *  @const FMAudioPlayerTimeElapseNotification
@@ -103,6 +105,20 @@ extern NSString *const FMAudioFormatAAC;
  * be in, as identified by the `[FMAudioPlayer playbackState]`.
  */
 typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
+    
+    /**
+     * The server has not responded yet, so we don't know if music
+     * is available or not yet.
+     */
+     
+    FMAudioPlayerPlaybackStateUninitialized,
+    
+    /**
+     * The server has told us that we cannot stream music.
+     */
+    
+    FMAudioPlayerPlaybackStateUnavailable,
+    
     /**
      *  The player is waiting for the server to give it the next song for playback.
      */
@@ -375,11 +391,29 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  *
  *  @param name Station name. Should not be nil.
  *
- *  @return true if a station with the given name found
+ *  @return true if a station with the given name is found
  *  @see activeStation
  */
 
 - (BOOL) setActiveStationByName: (NSString *)name;
+
+
+/**
+ * Finds a station with the given name and assigns it to the `activeStation`. If
+ * `withCrossfade` is true, any currently playing music will crossfade into the first
+ * song in the new station.
+ *
+ *  @param name Station name. Should not be nil.
+ *  @param withCrossfade if true, if crossfading is enabled, and if music is currenty 
+ *    playing, the currently playing song will fade into the song in the new station
+ *    as soon as it is loaded.
+ *
+ *  @return true if a station with the given name is found
+ *  @see activeStation
+ */
+
+
+- (BOOL) setActiveStationByName: (NSString *)name withCrossfade: (BOOL) withCrossfade;
 
 /**
  *  A value between 0.0 and 1.0 relative to system volume
@@ -425,6 +459,22 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 @property (nonatomic, readonly) float currentPlaybackRate;
+
+/**
+ * The number of seconds to crossfade between songs. This defaults
+ * to 0.
+ */
+
+@property (nonatomic) NSInteger secondsOfCrossfade;
+
+/**
+ * When crossfading between songs, the song we are transitioning to can either
+ * begin playback at full volume or ramp up from silence to full volume during
+ * the transition. When this value is true (the default), the song will
+ * ramp up.
+ */
+
+@property (nonatomic) BOOL crossfadeInEnabled;
 
 /**
  * Indicates if the SDK has retrieved the next song for playback from the

@@ -51,7 +51,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerLikeStatusChangeNotification object:_feedPlayer];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerCurrentItemDidChangeNotification object:self.feedPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerCurrentItemDidBeginPlaybackNotification object:self.feedPlayer];
     
     [self addTarget:self action:@selector(onDislikeClick) forControlEvents:UIControlEventTouchUpInside];
     ;
@@ -99,6 +99,8 @@
         case FMAudioPlayerPlaybackStateReadyToPlay:
         case FMAudioPlayerPlaybackStateWaitingForItem:
         case FMAudioPlayerPlaybackStateComplete:
+        case FMAudioPlayerPlaybackStateUninitialized:
+        case FMAudioPlayerPlaybackStateUnavailable:
             self.enabled = NO;
             self.selected = NO;
     }
