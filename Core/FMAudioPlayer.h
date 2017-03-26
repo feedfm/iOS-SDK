@@ -416,6 +416,21 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (BOOL) setActiveStationByName: (NSString *)name withCrossfade: (BOOL) withCrossfade;
 
 /**
+ * Make the given station the `activeStation`. If
+ * `withCrossfade` is true, any currently playing music will crossfade into the first
+ * song in the new station.
+ *
+ *  @param station Station to tune to.
+ *  @param withCrossfade if true, if crossfading is enabled, and if music is currenty
+ *    playing, the currently playing song will fade into the song in the new station
+ *    as soon as it is loaded.
+ *
+ *  @see activeStation
+ */
+
+- (void) setActiveStation: (FMStation *)station withCrossfade: (BOOL) withCrossfade;
+
+/**
  *  A value between 0.0 and 1.0 relative to system volume
  */
 
@@ -465,7 +480,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * to 0.
  */
 
-@property (nonatomic) NSInteger secondsOfCrossfade;
+@property (nonatomic) float secondsOfCrossfade;
 
 /**
  * When crossfading between songs, the song we are transitioning to can either
