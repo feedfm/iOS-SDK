@@ -1,4 +1,8 @@
 
+= v3.0.5
+  - Delay registering with the remote command center until 'play' is
+    called.
+
 = v3.0.4
   - When resuming app that has 'stop()'ed music, don't begin playback
     automatically.
