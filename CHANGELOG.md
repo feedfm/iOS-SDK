@@ -1,4 +1,8 @@
 
+= v3.0.6
+  - add 'doesHandleRemoteCommands' option to allow disabling of
+    MPRemoteCommandCenter commands
+
 = v3.0.5
   - Delay registering with the remote command center until 'play' is
     called.

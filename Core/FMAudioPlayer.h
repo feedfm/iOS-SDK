@@ -389,6 +389,14 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
 
 /**
+ * If YES (the default), then the Feed.fm library will
+ * register with the MPRemoteCommandCenter to handle play/pause/skip/like/dislike
+ * commands upon start of playback.
+ */
+
+@property (nonatomic) BOOL doesHandleRemoteCommands;
+
+/**
  *  Assigns the image to be displayed on the lock screen when music is playing.
  *
  *  @param image The image to be added to the lock screen
