@@ -1,5 +1,5 @@
 
-= v3.0..7
+= v3.0.7
   - add 'FMLockScreenDelegate' protocol to allow clients to customize
     lock screen management.
 
