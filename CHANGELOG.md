@@ -1,4 +1,8 @@
 
+= v3.0..7
+  - add 'FMLockScreenDelegate' protocol to allow clients to customize
+    lock screen management.
+
 = v3.0.6
   - add 'doesHandleRemoteCommands' option to allow disabling of
     MPRemoteCommandCenter commands

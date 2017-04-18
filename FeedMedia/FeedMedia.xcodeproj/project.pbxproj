@@ -68,6 +68,7 @@
 		A906946B1D9C8F130032D987 /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90694681D9C8F130032D987 /* DisclaimerViewController.m */; };
 		A906946C1D9C8F130032D987 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A906946A1D9C8F130032D987 /* PlayerViewController.m */; };
 		A906946E1D9C8F480032D987 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A906946D1D9C8F480032D987 /* Player.storyboard */; };
+		A9A568821EA6B89D00412E57 /* LockScreenDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A568811EA6B89D00412E57 /* LockScreenDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		A90694691D9C8F130032D987 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		A906946A1D9C8F130032D987 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		A906946D1D9C8F480032D987 /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
+		A9A568801EA6B89D00412E57 /* LockScreenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockScreenDelegate.h; sourceTree = "<group>"; };
+		A9A568811EA6B89D00412E57 /* LockScreenDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockScreenDelegate.m; sourceTree = "<group>"; };
 		AFB68EC70C194B25BB922FF3 /* libPods-FeedMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedMedia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -191,6 +194,8 @@
 				A90694681D9C8F130032D987 /* DisclaimerViewController.m */,
 				A90694691D9C8F130032D987 /* PlayerViewController.h */,
 				A906946A1D9C8F130032D987 /* PlayerViewController.m */,
+				A9A568801EA6B89D00412E57 /* LockScreenDelegate.h */,
+				A9A568811EA6B89D00412E57 /* LockScreenDelegate.m */,
 				A906943C1D9C86BB0032D987 /* Assets.xcassets */,
 				A90694651D9C8F020032D987 /* Launch Screen.storyboard */,
 				A90694411D9C86BB0032D987 /* Info.plist */,
@@ -525,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A906946B1D9C8F130032D987 /* DisclaimerViewController.m in Sources */,
+				A9A568821EA6B89D00412E57 /* LockScreenDelegate.m in Sources */,
 				A90694321D9C86BB0032D987 /* main.m in Sources */,
 				A90694641D9C8E990032D987 /* AppDelegate.m in Sources */,
 				A906946C1D9C8F130032D987 /* PlayerViewController.m in Sources */,

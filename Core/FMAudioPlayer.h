@@ -12,6 +12,7 @@
 #import "FMAudioItem.h"
 #import "FMError.h"
 #import "FMLog.h"
+#import "FMLockScreenDelegate.h"
 
 /**
  *  @const FMAudioPlayerPlaybackStateDidChangeNotification
@@ -395,6 +396,16 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 @property (nonatomic) BOOL doesHandleRemoteCommands;
+
+
+/**
+ * When not null, this causes the FMAudioPlayer to not update
+ * the MPNowPlayingInfoCenter metadata nor enable or disable the like,
+ * dislike, and next track MPFeedbackCommands. See the documentation
+ * of FMLockScreenDelegate for more information.
+ */
+
+@property (nonatomic) id<FMLockScreenDelegate> lockScreenDelegate;
 
 /**
  *  Assigns the image to be displayed on the lock screen when music is playing.

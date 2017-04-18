@@ -9,6 +9,7 @@
 @import Foundation;
 
 #import "PlayerViewController.h"
+#import "LockScreenDelegate.h"
 #import <FeedMedia/FeedMediaUI.h>
 
 @interface PlayerViewController () <UIPopoverPresentationControllerDelegate>
@@ -18,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *track;
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *artist;
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *album;
+
+@property (strong) LockScreenDelegate *lockScreenDelegate;
 
 @end
 
@@ -40,6 +43,16 @@ static NSMutableDictionary *stations = nil;
     // appear and disappear and the animation stopped by iOS does not automatically
     // restart.
     [MarqueeLabel restartLabelsOfController:self];
+    
+    NSLog(@"lock screen delegate assigned!");
+    _lockScreenDelegate = [[LockScreenDelegate alloc] init];
+    [FMAudioPlayer sharedPlayer].lockScreenDelegate = _lockScreenDelegate;
+}
+- (void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    _lockScreenDelegate = NULL;
+    [FMAudioPlayer sharedPlayer].lockScreenDelegate = NULL;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
