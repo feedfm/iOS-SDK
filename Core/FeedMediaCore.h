@@ -13,6 +13,7 @@
 
 #import "FMAudioItem.h"
 #import "FMAudioPlayer.h"
+#import "FMLockScreenDelegate.h"
 #import "FMError.h"
 #import "FMLog.h"
 #import "FMStation.h"

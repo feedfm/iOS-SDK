@@ -12,6 +12,8 @@
 #import "FMAudioItem.h"
 #import "FMError.h"
 #import "FMLog.h"
+#import "FMAudioPlayer.h"
+#import "FMLockScreenDelegate.h"
 
 /**
  *  @const FMAudioPlayerPlaybackStateDidChangeNotification
@@ -435,6 +437,29 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 @property (nonatomic) float mixVolume;
+
+/**
+ * If YES (the default), then the Feed.fm library will
+ * register with the MPRemoteCommandCenter to handle play/pause/skip/like/dislike
+ * commands upon start of playback. Note that, unless a lockScreenDelegate
+ * is assigned, the FMAudioPlayer will still enable/disable the 
+ * play/pause/skip/like/dislike buttons in the MPRemoteCommandCenter (but not
+ * respond to them) when this is NO.
+ */
+
+@property (nonatomic) BOOL doesHandleRemoteCommands;
+
+/**
+ * When not NULL, this causes the FMAudioPlayer to not update
+ * the MPNowPlayingInfoCenter metadata nor enable or disable the like,
+ * dislike, and next track MPFeedbackCommands. See the documentation
+ * of FMLockScreenDelegate for more information. Note that the 
+ * FMAudioPlayer will still register to handle the MPRemoteCommandCenter
+ * commands (play/pause/skip/like/dislike) unless doesHandleRemoteCommands
+ * is also set to NO.
+ */
+
+@property (nonatomic) id<FMLockScreenDelegate> lockScreenDelegate;
 
 
 /**
