@@ -90,6 +90,8 @@
         FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
     
         switch (newState) {
+            case FMAudioPlayerPlaybackStateUninitialized:
+            case FMAudioPlayerPlaybackStateUnavailable:
             case FMAudioPlayerPlaybackStateRequestingSkip:
             case FMAudioPlayerPlaybackStateWaitingForItem:
             case FMAudioPlayerPlaybackStateComplete:
