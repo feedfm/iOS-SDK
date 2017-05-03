@@ -1,11 +1,11 @@
 PODS:
-  - FeedMedia (4.0.0beta):
-    - FeedMedia/UI (= 4.0.0beta)
-  - FeedMedia/UI (4.0.0beta):
-    - MarqueeLabel (~> 2.7.10)
-  - MarqueeLabel (2.7.10):
-    - MarqueeLabel/ObjC (= 2.7.10)
-  - MarqueeLabel/ObjC (2.7.10)
+  - FeedMedia (4.0.0-beta1):
+    - FeedMedia/UI (= 4.0.0-beta1)
+  - FeedMedia/UI (4.0.0-beta1):
+    - MarqueeLabel (~> 3.0.3)
+  - MarqueeLabel (3.0.4):
+    - MarqueeLabel/ObjC (= 3.0.4)
+  - MarqueeLabel/ObjC (3.0.4)
 
 DEPENDENCIES:
   - FeedMedia (from `../`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FeedMedia: 1c27a261b3c9e402bdb0915486e619fd50ff687d
-  MarqueeLabel: 5d722a0bef353178feb301130621b9b8e8b3fcb5
+  FeedMedia: 2989b2043978fc6423c753389a113a9f0821196a
+  MarqueeLabel: 9dbd9aeaa01dd73dbc4b986b2cc945007bb480d5
 
 PODFILE CHECKSUM: acfa3f2ee06b0149f1abc041e83c7d1e5c5c842b
 
