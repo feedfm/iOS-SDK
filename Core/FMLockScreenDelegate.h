@@ -12,13 +12,13 @@
 /**
  If you don't want the Feedfm SDK to fully manage lock screen metadata
  and the display of feedback command buttons, then pass the FMAudioPlayer an
- FMLockScreenDelegate. When the FMAudioPlayer
- wants to update the lock screen it will, instead, call this delegate,
- which is expected to update the MPNowPlayingInfoCenter
- data and enable or disable the like, dislike, and skip buttons.
+ FMLockScreenDelegate. When the FMAudioPlayer wants to update the lock screen 
+ it will, instead, call this delegate, which is expected to update the 
+ MPNowPlayingInfoCenter data and enable or disable the like, dislike, and skip 
+ buttons.
  
  Note that, unless you set the FMAudioPlayer's doesHandleRemoteCommands
- property to FALSE, the SDK will still register and handle skip, like, dislike,
+ property to FALSE, the SDK will still register to handle skip, like, dislike,
  play, and pause MPRemoteCommand events.
  
  */
@@ -53,17 +53,26 @@
     [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = info;
  
     MPRemoteCommandCenter *rcc = [MPRemoteCommandCenter sharedCommandCenter];
- 
+
     MPRemoteCommand *nextTrackCommand = [rcc nextTrackCommand];
-    [nextTrackCommand setEnabled: nextTrackEnabled];
- 
     MPFeedbackCommand *dislikeCommand = [rcc dislikeCommand];
-    [dislikeCommand setEnabled:YES];
-    [dislikeCommand setActive:dislikeActive];
- 
     MPFeedbackCommand *likeCommand = [rcc likeCommand];
-    [likeCommand setEnabled:YES];
-    [likeCommand setActive:likeActive];
+
+    if ([info objectForKey:MPMediaItemPropertyTitle] != NULL) {
+        [nextTrackCommand setEnabled: nextTrackEnabled];
+ 
+        [dislikeCommand setEnabled:YES];
+        [dislikeCommand setActive:dislikeActive];
+ 
+        [likeCommand setEnabled:YES];
+        [likeCommand setActive:likeActive];
+
+    } else {
+        [nextTrackCommand setEnabled: NO];
+        [dislikeCommand setEnabled:NO];
+        [likeCommand setEnabled:NO];
+ 
+    }
  
  @param info an NSDictionary suitable for assigning to the MPNowPlayingInfoCenter's nowPlayingInfo property
  @param dislikeActive when TRUE, the user dislikes the currently playing song
