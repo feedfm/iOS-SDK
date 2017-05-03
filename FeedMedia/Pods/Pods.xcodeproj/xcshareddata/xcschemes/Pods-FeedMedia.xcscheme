@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E36D6F60063F574F587DDF98B3D1C9A4"
+               BlueprintIdentifier = "4DCC0FDDC12587C002E8420A71DE062F"
                BuildableName = "libPods-FeedMedia.a"
                BlueprintName = "Pods-FeedMedia"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E36D6F60063F574F587DDF98B3D1C9A4"
+            BlueprintIdentifier = "4DCC0FDDC12587C002E8420A71DE062F"
             BuildableName = "libPods-FeedMedia.a"
             BlueprintName = "Pods-FeedMedia"
             ReferencedContainer = "container:Pods.xcodeproj">

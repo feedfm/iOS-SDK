@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A906946F1D9D800A0032D987"
-               BuildableName = "Copy FeedMediaCore to FeedMedia pod"
-               BlueprintName = "Copy FeedMediaCore to FeedMedia pod"
+               BuildableName = "Distribute FeedMediaCore to CocoaPod"
+               BlueprintName = "Distribute FeedMediaCore to CocoaPod"
                ReferencedContainer = "container:../../FeedMediaCore/FeedMediaCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
