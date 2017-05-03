@@ -111,6 +111,7 @@
             }
             break;
         case FMAudioPlayerPlaybackStateUninitialized:
+        case FMAudioPlayerPlaybackStateUnavailable:
             [self setSelected:NO];
             [self setEnabled:NO];
             if (_hideWhenStalled) {
