@@ -8,6 +8,9 @@
   - allow FMPlayPauseButton to first tune to specific station when
     transitioning from idle (ready to play or playback complete) to playing
     state.
+  - BREAKING CHANGE FROM 3.x: the player will now display a transient notification
+    in the notification area of the screen when a new song starts unless
+    disableSongStartNotifications has been set to YES in the FMAudioPlayer.
 
 = v4.0.0-beta1
   - new methods and properties in FMAudioPlayer to support

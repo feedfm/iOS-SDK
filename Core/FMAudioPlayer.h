@@ -547,6 +547,17 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic, copy) FMStation *activeStation;
 
 /**
+ * The player displays a notification at the top of the screen during song
+ * transitions by default. If you are currently showing the active song, which
+ * means the notification isn't needed, it can be disabled by setting this 
+ * property to YES.
+ *
+ * Don't forget to set this to NO when you stop showing the active song.
+ */
+
+@property (nonatomic) BOOL disableSongStartNotifications;
+
+/**
  * If false, then the user may not skip the currently playing
  * song. If true, the user may be able to skip the current song,
  * but the server will be queried and possibly reject the request.
