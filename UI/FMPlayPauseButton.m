@@ -66,6 +66,14 @@
     if ((_feedPlayer.playbackState == FMAudioPlayerPlaybackStatePaused) ||
         (_feedPlayer.playbackState == FMAudioPlayerPlaybackStateReadyToPlay) ||
         (_feedPlayer.playbackState == FMAudioPlayerPlaybackStateComplete)) {
+
+        if (_playThisStationWhenIdle
+            && ((_feedPlayer.playbackState == FMAudioPlayerPlaybackStateReadyToPlay) ||
+                (_feedPlayer.playbackState == FMAudioPlayerPlaybackStateComplete))
+            ) {
+            [_feedPlayer setActiveStation:_playThisStationWhenIdle];
+        }
+        
         [_feedPlayer play];
     } else {
         [_feedPlayer pause];
