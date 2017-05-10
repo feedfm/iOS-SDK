@@ -55,7 +55,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stationUpdated:) name:FMAudioPlayerActiveStationDidChangeNotification object:_feedPlayer];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateUpdated:) name:
-     FMAudioPlayerCurrentItemDidBeginPlaybackNotification object:_feedPlayer];
+     FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
     [self addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
     
@@ -67,7 +67,6 @@
 }
 
 - (void) stateUpdated: (NSNotification *)notification {
-    NSLog(@"state updated to %ld", (long) [[FMAudioPlayer sharedPlayer] playbackState]);
     [self updatePlayerState];
 }
 
