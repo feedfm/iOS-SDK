@@ -1,4 +1,14 @@
 
+
+= v4.0.0-beta2
+  - fix bug when setActiveStation repeatedly called with same station
+  - fix FMStationButton to watch for state change, not song start change
+  - add FMEqualizer for snazzy UI animation
+  - update to newer MarqueeLabel version
+  - allow FMPlayPauseButton to first tune to specific station when
+    transitioning from idle (ready to play or playback complete) to playing
+    state.
+
 = v4.0.0-beta1
   - new methods and properties in FMAudioPlayer to support
     crossfading between songs (secondsOfCrossfade, crossfadeInEnabled,
