@@ -573,8 +573,11 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic, readonly) FMAudioItem *currentItem;
 
 /**
- * This array holds all the FMAudioItems that the user has heard.
- * As new items start playback, they are appended to this array.
+ * This array holds all the FMAudioItems that the user has heard
+ * since playback started, including the currently playing
+ * song. As new items start playback, they are appended to this array.
+ *
+ * This history currently does not include songs from past sessions.
  */
 
 @property (nonatomic, readonly) NSArray *playHistory;

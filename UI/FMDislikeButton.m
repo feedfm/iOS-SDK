@@ -49,7 +49,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerLikeStatusChangeNotification object:_feedPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playLikeStatusUpdated:) name:FMAudioPlayerLikeStatusChangeNotification object:_feedPlayer];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerCurrentItemDidBeginPlaybackNotification object:self.feedPlayer];
     
@@ -76,8 +76,20 @@
     [self updateButtonState];
 }
 
+- (void) playLikeStatusUpdated: (NSNotification *)notification {
+    FMAudioItem *notificationAudioItem = notification.userInfo[FMAudioItemKey];
+    
+    FMAudioItem *ai = (_audioItem == nil) ? _feedPlayer.currentItem : _audioItem;
+    
+    if ([ai isEqual:notificationAudioItem]) {
+        [self updateButtonState];
+    }
+}
+
 - (void) playerUpdated: (NSNotification *)notification {
-    [self updateButtonState];
+    if (_audioItem == nil) {
+        [self updateButtonState];
+    }
 }
 
 - (void) updateButtonState {
