@@ -44,8 +44,6 @@
 }
 
 - (void) setup {
-    
-
     _feedPlayer = [FMAudioPlayer sharedPlayer];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdated:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
@@ -57,7 +55,7 @@
     [self addTarget:self action:@selector(onLikeClick) forControlEvents:UIControlEventTouchUpInside];
     ;
 
-    [self updatePlayerState];
+    [self updateButtonState];
     
 }
 
@@ -69,46 +67,53 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void) onLikeClick {
-    BOOL liked = _feedPlayer.currentItem.liked;
+- (void) setAudioItem:(FMAudioItem *)audioItem {
+    _audioItem = audioItem;
+    
+    [self updateButtonState];
+}
 
-    if (liked) {
-        [_feedPlayer unlike];
+- (void) onLikeClick {
+    FMAudioItem *ai = (_audioItem == nil) ? _feedPlayer.currentItem : _audioItem;
+
+    if (ai.liked) {
+        [_feedPlayer unlikeAudioItem:ai];
     } else {
-        [_feedPlayer like];
+        [_feedPlayer likeAudioItem:ai];
     }
     
-    [self updatePlayerState];
+    [self updateButtonState];
 }
 
 - (void) playerUpdated: (NSNotification *)notification {
-    [self updatePlayerState];
+    [self updateButtonState];
 }
 
-- (void) updatePlayerState {
-    FMAudioPlayerPlaybackState newState;
-    BOOL liked;
-    
-    newState = _feedPlayer.playbackState;
-    liked = _feedPlayer.currentItem.liked;
+- (void) updateButtonState {
+    if (_audioItem != nil) {
+        self.enabled = YES;
+        self.selected = _audioItem.liked;
 
-    
-    switch (newState) {
-        case FMAudioPlayerPlaybackStatePaused:
-        case FMAudioPlayerPlaybackStatePlaying:
-            self.enabled = YES;
-            self.selected = liked;
-            break;
-        case FMAudioPlayerPlaybackStateStalled:
-        case FMAudioPlayerPlaybackStateRequestingSkip:
-            break;
-        case FMAudioPlayerPlaybackStateReadyToPlay:
-        case FMAudioPlayerPlaybackStateWaitingForItem:
-        case FMAudioPlayerPlaybackStateComplete:
-        case FMAudioPlayerPlaybackStateUnavailable:
-        case FMAudioPlayerPlaybackStateUninitialized:
-            self.enabled = NO;
-            self.selected = NO;
+    } else {
+        FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
+        BOOL liked = _feedPlayer.currentItem.liked;
+        
+        switch (newState) {
+            case FMAudioPlayerPlaybackStatePaused:
+            case FMAudioPlayerPlaybackStatePlaying:
+            case FMAudioPlayerPlaybackStateStalled:
+            case FMAudioPlayerPlaybackStateRequestingSkip:
+                self.enabled = YES;
+                self.selected = liked;
+                break;
+            case FMAudioPlayerPlaybackStateReadyToPlay:
+            case FMAudioPlayerPlaybackStateWaitingForItem:
+            case FMAudioPlayerPlaybackStateComplete:
+            case FMAudioPlayerPlaybackStateUnavailable:
+            case FMAudioPlayerPlaybackStateUninitialized:
+                self.enabled = NO;
+                self.selected = NO;
+        }
     }
 }
 

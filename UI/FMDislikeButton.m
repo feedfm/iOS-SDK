@@ -56,7 +56,7 @@
     [self addTarget:self action:@selector(onDislikeClick) forControlEvents:UIControlEventTouchUpInside];
     ;
 
-    [self updatePlayerState];
+    [self updateButtonState];
 
 }
 
@@ -65,44 +65,46 @@
 }
 
 - (void) onDislikeClick {
-    BOOL disliked = _feedPlayer.currentItem.disliked;
+    FMAudioItem *ai = (_audioItem == nil) ? _feedPlayer.currentItem : _audioItem;
     
-    if (disliked) {
-        [_feedPlayer unlike];
+    if (ai.disliked) {
+        [_feedPlayer unlikeAudioItem:ai];
     } else {
-        [_feedPlayer dislike];
+        [_feedPlayer dislikeAudioItem:ai];
     }
     
-    [self updatePlayerState];
+    [self updateButtonState];
 }
 
 - (void) playerUpdated: (NSNotification *)notification {
-    [self updatePlayerState];
+    [self updateButtonState];
 }
 
-- (void) updatePlayerState {
-    FMAudioPlayerPlaybackState newState;
-    BOOL disliked;
-    
-    newState = _feedPlayer.playbackState;
-    disliked = _feedPlayer.currentItem.disliked;
-    
-    switch (newState) {
-        case FMAudioPlayerPlaybackStatePaused:
-        case FMAudioPlayerPlaybackStatePlaying:
-            self.enabled = YES;
-            self.selected = disliked;
-            break;
-        case FMAudioPlayerPlaybackStateStalled:
-        case FMAudioPlayerPlaybackStateRequestingSkip:
-            break;
-        case FMAudioPlayerPlaybackStateReadyToPlay:
-        case FMAudioPlayerPlaybackStateWaitingForItem:
-        case FMAudioPlayerPlaybackStateComplete:
-        case FMAudioPlayerPlaybackStateUninitialized:
-        case FMAudioPlayerPlaybackStateUnavailable:
-            self.enabled = NO;
-            self.selected = NO;
+- (void) updateButtonState {
+    if (_audioItem != nil) {
+        self.enabled = YES;
+        self.selected = _audioItem.disliked;
+        
+    } else {
+        FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
+        BOOL disliked = _feedPlayer.currentItem.disliked;
+        
+        switch (newState) {
+            case FMAudioPlayerPlaybackStatePaused:
+            case FMAudioPlayerPlaybackStatePlaying:
+            case FMAudioPlayerPlaybackStateStalled:
+            case FMAudioPlayerPlaybackStateRequestingSkip:
+                self.enabled = YES;
+                self.selected = disliked;
+                break;
+            case FMAudioPlayerPlaybackStateReadyToPlay:
+            case FMAudioPlayerPlaybackStateWaitingForItem:
+            case FMAudioPlayerPlaybackStateComplete:
+            case FMAudioPlayerPlaybackStateUninitialized:
+            case FMAudioPlayerPlaybackStateUnavailable:
+                self.enabled = NO;
+                self.selected = NO;
+        }
     }
 }
 

@@ -92,6 +92,13 @@ extern NSString *const FMAudioPlayerTimeElapseNotification;
 extern NSString *const FMAudioPlayerStationListKey;
 
 /**
+ * @const FMAudioItemKey
+ * userInfo key for FMAudioItem object sent with <FMAudioPlayerLikeStatusChangeNotification>
+ */
+
+extern NSString *const FMAudioItemKey;
+
+/**
  *  @const FMAudioFormatMP3
  *  Equals to @"mp3"
  */
@@ -361,8 +368,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void)skip;
 
 /**
- *  Marks the current song as 'liked' and triggers an `FMAudioPlayerLikeStatusChangeNotification`
- *  notification. Updates the `[FMAudioItem liked]` and `[FMAudioItem disliked]` properties.
+ * Calls `likeAudioItem:` with the currently playing song
  *
  * @see [FMAudioItem liked]
  * @see [FMAudioItem disliked]
@@ -370,8 +376,20 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void)like;
 
 /**
- *  Marks the current song as 'disliked' and triggers an `FMAudioPlayerLikeStatusChangeNotification`
- *  notification.  Updates the `[FMAudioItem liked]` and `[FMAudioItem disliked]` properties.
+ * Marks the specified song as 'liked'. Updates the `[FMAudioItem liked]`
+ * and `[FMAudioItem disliked]` properties.
+ *
+ * This triggers an `FMAudioPlayerLikeStatusChangeNotification` notification
+ * will be triggered with a userInfo dictionary that contains the audioItem
+ * object indexed by `FMAudioItemKey`.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+- (void)likeAudioItem: (FMAudioItem *)audioItem;
+
+/**
+ * Calls `dislikeAudioItem:` with the currently playing song
  *
  * @see [FMAudioItem liked]
  * @see [FMAudioItem disliked]
@@ -379,14 +397,39 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void)dislike;
 
 /**
- *  Mrks the current song as neither 'liked' nor 'disliked'. Does *not* trigger
- * an `FMAudioPlayerLikeStatusChangeNotification` notification. Updates the
- * `[FMAudioItem liked]` and `[FMAudioItem disliked]` properties.
+ * Marks the specified song as 'disliked'. Updates the `[FMAudioItem liked]`
+ * and `[FMAudioItem disliked]` properties. 
+ *
+ * This triggers an `FMAudioPlayerLikeStatusChangeNotification` notification
+ * will be triggered with a userInfo dictionary that contains the audioItem
+ * object indexed by `FMAudioItemKey`.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+- (void)dislikeAudioItem: (FMAudioItem *)audioItem;
+
+/**
+ * Calls `unlikeAudioItem:` with the currently playing song
  *
  * @see [FMAudioItem liked]
  * @see [FMAudioItem disliked]
  */
 - (void)unlike;
+
+/**
+ * Marks the specified song as neither 'liked' nor 'disliked'. Updates the `[FMAudioItem liked]`
+ * and `[FMAudioItem disliked]` properties.
+ *
+ * This triggers an `FMAudioPlayerLikeStatusChangeNotification` notification
+ * will be triggered with a userInfo dictionary that contains the audioItem
+ * object indexed by `FMAudioItemKey`.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+- (void)unlikeAudioItem: (FMAudioItem *)audioItem;
+
 
 /**
  *  Finds a station with the given name and assigns it to the `activeStation`.
@@ -528,6 +571,13 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * is not one.
  */
 @property (nonatomic, readonly) FMAudioItem *currentItem;
+
+/**
+ * This array holds all the FMAudioItems that the user has heard.
+ * As new items start playback, they are appended to this array.
+ */
+
+@property (nonatomic, readonly) NSArray *playHistory;
 
 /**
  * This is a list of music stations retrieved from the server.

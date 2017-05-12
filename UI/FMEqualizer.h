@@ -10,4 +10,7 @@
 
 @interface FMEqualizer : UIView
 
+- (void) startAnimation;
+- (void) stopAnimation;
+
 @end
