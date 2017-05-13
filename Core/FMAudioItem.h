@@ -33,6 +33,18 @@
  */
 @property (readonly) NSString *album;
 
+/*
+ * A name for this audio file that should be displayed in
+ * place of name/artist/album (used for non-song audio files,
+ * such as ads or introductions)
+ */
+@property (readonly) NSString *displayName;
+
+/**
+ * Arbitrary metadata attached to this song
+ */
+@property (readonly) NSDictionary *metadata;
+
 /**
  *  Track duration in seconds
  */

@@ -603,9 +603,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * The player displays a notification at the top of the screen during song
  * transitions by default. If you are currently showing the active song, which
  * means the notification isn't needed, it can be disabled by setting this 
- * property to YES.
- *
- * Don't forget to set this to NO when you stop showing the active song.
+ * property to YES. Don't forget to set this to NO when you stop showing the 
+ * active song.
  */
 
 @property (nonatomic) BOOL disableSongStartNotifications;

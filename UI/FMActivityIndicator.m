@@ -70,7 +70,6 @@
     
     newState = _feedPlayer.playbackState;
 
-    
     switch (newState) {
         case FMAudioPlayerPlaybackStateReadyToPlay:
         case FMAudioPlayerPlaybackStatePaused:

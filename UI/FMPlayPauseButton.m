@@ -61,6 +61,12 @@
     [self updatePlayerState];
 }
 
+- (void) setHideWhenStalled:(BOOL)hideWhenStalled {
+    _hideWhenStalled = hideWhenStalled;
+    
+    [self updatePlayerState];
+}
+
 
 - (void) onClick {
     if ((_feedPlayer.playbackState == FMAudioPlayerPlaybackStatePaused) ||

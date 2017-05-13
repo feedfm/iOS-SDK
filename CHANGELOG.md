@@ -1,4 +1,13 @@
 
+- v4.0.0
+  - notification bar now displays next song by default (was just a placeholder
+    in beta2). This makes use of https://github.com/cezarywojcik/CWStatusBarNotification
+    by Cezary Wojcik.
+  - FMLikeButton and FMDislikeButton can be attached to a specific FMAudioItem
+  - FMAudioPlayer now exports playHistory
+  - FMAudioItem now exports metadata NSDictionary
+  - FMPlayPauseButton can now switch to specific station when user hits play
+    from idle or completed state
 
 = v4.0.0-beta2
   - fix bug when setActiveStation repeatedly called with same station
