@@ -1,4 +1,7 @@
 
+- v4.0.1
+  - add new 'station' property to FMAudioFiles
+
 - v4.0.0
   - notification bar now displays next song by default (was just a placeholder
     in beta2). This makes use of https://github.com/cezarywojcik/CWStatusBarNotification
