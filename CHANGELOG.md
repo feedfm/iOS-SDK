@@ -1,4 +1,9 @@
 
+
+- v4.0.2
+  - fix FMDislikeButton to update state when new FMAudioFile is assigned.
+  - disable user interaction with equalizer
+
 - v4.0.1
   - add new 'station' property to FMAudioFiles
 
