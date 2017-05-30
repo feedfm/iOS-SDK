@@ -12,7 +12,7 @@
 /**
  
  Button that automatically updates its `selected` property to reflect 
- wether or not music is currently playing, and responds to touches by
+ whether or not music is currently playing, and responds to touches by
  calling `[FMAudioPlayer play]` or `[FMAudioPlayer pause]`.
  
  When the button has `selected = false`, it should render an image to 
