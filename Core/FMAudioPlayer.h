@@ -619,6 +619,15 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic) BOOL disableSongStartNotifications;
 
 /**
+ * This method is called if the user taps the notification at the top
+ * of the screen that is displayed during song transitions. This function
+ * should display player controls to the user. By default, this is null 
+ * and taps are ignored.
+ */
+
+@property (nonatomic, copy) void(^userDidTapNotification)();
+
+/**
  * If false, then the user may not skip the currently playing
  * song. If true, the user may be able to skip the current song,
  * but the server will be queried and possibly reject the request.
