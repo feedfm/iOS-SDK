@@ -1,4 +1,6 @@
 
+- v4.0.3
+  - iOS 9 support, and update to stop using deprecated functions in iOS 10
 
 - v4.0.2
   - fix FMDislikeButton to update state when new FMAudioFile is assigned.

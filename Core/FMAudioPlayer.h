@@ -380,7 +380,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * and `[FMAudioItem disliked]` properties.
  *
  * This triggers an `FMAudioPlayerLikeStatusChangeNotification` notification
- * will be triggered with a userInfo dictionary that contains the audioItem
+ * with a userInfo dictionary that contains the audioItem
  * object indexed by `FMAudioItemKey`.
  *
  * @param audioItem the audio item that is to be liked. If null, then the currently
@@ -404,7 +404,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * and `[FMAudioItem disliked]` properties. 
  *
  * This triggers an `FMAudioPlayerLikeStatusChangeNotification` notification
- * will be triggered with a userInfo dictionary that contains the audioItem
+ * with a userInfo dictionary that contains the audioItem
  * object indexed by `FMAudioItemKey`.
  *
  * @param audioItem the audio item that is to be disliked. If null, then the currently
@@ -428,7 +428,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * and `[FMAudioItem disliked]` properties.
  *
  * This triggers an `FMAudioPlayerLikeStatusChangeNotification` notification
- * will be triggered with a userInfo dictionary that contains the audioItem
+ * with a userInfo dictionary that contains the audioItem
  * object indexed by `FMAudioItemKey`.
  *
  * @param audioItem the audio item that is to be unliked. If null, then the currently
