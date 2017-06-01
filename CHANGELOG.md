@@ -1,6 +1,10 @@
 
 - v4.0.3
-  - iOS 9 support, and update to stop using deprecated functions in iOS 10
+  - iOS 9 support, and update to stop using deprecated functions in iOS 10.
+  - fix bug where media center 'rate' wasn't properly set.
+  - remove unused code that referenced MPMediaCenter and triggers app store
+    privacy flags.
+  - expose CWStatusBarNotification object for easier styling and management.
 
 - v4.0.2
   - fix FMDislikeButton to update state when new FMAudioFile is assigned.

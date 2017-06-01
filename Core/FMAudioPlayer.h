@@ -14,6 +14,7 @@
 #import "FMLog.h"
 #import "FMAudioPlayer.h"
 #import "FMLockScreenDelegate.h"
+#import "CWStatusBarNotification.h"
 
 /**
  *  @const FMAudioPlayerPlaybackStateDidChangeNotification
@@ -609,23 +610,28 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic, copy) FMStation *activeStation;
 
 /**
+ * This status bar notification is used to announce song changes to
+ * the user. Access the properties on this object to change
+ * how the notification is styled and to add handlers for when the
+ * notification is tapped.
+ *
+ * Details on this object can be found at https://github.com/cezarywojcik/CWStatusBarNotification
+ */
+
+@property (nonatomic, readonly) CWStatusBarNotification *statusBarNotification;
+
+/**
  * The player displays a notification at the top of the screen during song
  * transitions by default. If you are currently showing the active song, which
- * means the notification isn't needed, it can be disabled by setting this 
+ * means a notification isn't needed, it can be disabled by setting this
  * property to YES. Don't forget to set this to NO when you stop showing the 
  * active song.
+ *
+ * To alter how notifications are displayed, see the `statusBarNotification`
+ * property.
  */
 
 @property (nonatomic) BOOL disableSongStartNotifications;
-
-/**
- * This method is called if the user taps the notification at the top
- * of the screen that is displayed during song transitions. This function
- * should display player controls to the user. By default, this is null 
- * and taps are ignored.
- */
-
-@property (nonatomic, copy) void(^userDidTapNotification)();
 
 /**
  * If false, then the user may not skip the currently playing
