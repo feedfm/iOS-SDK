@@ -1,4 +1,7 @@
 
+- v4.0.5
+  - emergency fix for crash bug: AVPlayerItems are marked as 'ready' multiple times
+
 - v4.0.4
   - fix core library bugs where song metadata was not being parsed correctly,
     and song trimming wasn't enabled.
