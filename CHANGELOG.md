@@ -1,4 +1,9 @@
 
+- v4.0.4
+  - fix core library bugs where song metadata was not being parsed correctly,
+    and song trimming wasn't enabled.
+  - deprecate FMStationButton and push its functionality into FMPlayPauseButton
+
 - v4.0.3
   - iOS 9 support, and update to stop using deprecated functions in iOS 10.
   - fix bug where media center 'rate' wasn't properly set.

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIi-MN-zYx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIi-MN-zYx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-fX-seV" userLabel="powered by feed.fm">
+                                <rect key="frame" x="137" y="644" width="102" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="POWERED BY FEED.FM">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,6 +42,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-LN-RpI" userLabel="track" customClass="FMMetadataLabel">
+                                <rect key="frame" x="20" y="507" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -50,6 +54,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-MO-tH5" userLabel="artist" customClass="FMMetadataLabel">
+                                <rect key="frame" x="20" y="527" width="335" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,6 +66,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJs-Gu-tUQ" userLabel="album" customClass="FMMetadataLabel">
+                                <rect key="frame" x="20" y="547" width="335" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -72,8 +78,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-Pn-Pxv" userLabel="Player Controls">
+                                <rect key="frame" x="27.5" y="560" width="320" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-u3-7dr" userLabel="like" customClass="FMLikeButton">
+                                        <rect key="frame" x="22" y="24" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="c9e-iu-LVD"/>
                                             <constraint firstAttribute="height" constant="44" id="vUo-5r-PbH"/>
@@ -84,6 +92,7 @@
                                         <state key="selected" image="FeedMedia.bundle/thumbsup_selected"/>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-7W-3Zf" userLabel="play/pause" customClass="FMPlayPauseButton">
+                                        <rect key="frame" x="174" y="24" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Kew-vF-KwV"/>
                                             <constraint firstAttribute="width" constant="44" id="ed7-zi-UYO"/>
@@ -94,6 +103,7 @@
                                         <state key="selected" image="FeedMedia.bundle/pause"/>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HgW-Ua-BdR" customClass="FMProgressView">
+                                        <rect key="frame" x="44" y="10" width="232" height="2"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="232" id="SYH-b1-xAb"/>
                                         </constraints>
@@ -101,6 +111,7 @@
                                         <color key="trackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-gr-Zlg" userLabel="elapsed" customClass="FMElapsedTimeLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="4Oo-PJ-YIW"/>
                                             <constraint firstAttribute="height" constant="21" id="ZxW-a4-zZo"/>
@@ -110,6 +121,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-5M-wzw" userLabel="remaining" customClass="FMRemainingTimeLabel">
+                                        <rect key="frame" x="284" y="0.0" width="36" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="aHq-d0-LrB"/>
                                             <constraint firstAttribute="height" constant="21" id="tMZ-Xe-Odu"/>
@@ -119,6 +131,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe3-WI-6w2" userLabel="skip" customClass="FMSkipButton">
+                                        <rect key="frame" x="254" y="24" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="pkv-VR-JqQ"/>
                                             <constraint firstAttribute="width" constant="44" id="yIf-t7-Km2"/>
@@ -126,6 +139,7 @@
                                         <state key="normal" image="FeedMedia.bundle/skip"/>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a54-5g-3Rq" userLabel="dislike" customClass="FMDislikeButton">
+                                        <rect key="frame" x="102" y="24" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3J0-ke-a1Y"/>
                                             <constraint firstAttribute="width" constant="44" id="FnZ-hE-FQs"/>
@@ -185,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NyS-2G-L5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="736"/>
+            <point key="canvasLocation" x="1437.5999999999999" y="735.38230884557731"/>
         </scene>
         <!--Disclaimer View Controller-->
         <scene sceneID="G1I-c4-kxW">
@@ -200,11 +214,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMedia.bundle/feed_logo" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-LY-eEd">
+                                <rect key="frame" x="16" y="10" width="268" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1VE-Td-mlA"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-NT-T5D" userLabel="disclaimer">
+                                <rect key="frame" x="16" y="60" width="268" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="fIh-Gn-iiw"/>
                                 </constraints>
