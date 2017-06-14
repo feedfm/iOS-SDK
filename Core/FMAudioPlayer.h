@@ -232,7 +232,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
    of a voice saying the numbers 0 through 9
 
  To receive notice that music is available or not available, use the
- `whenAvailable:notAvailable:` method call:
+ `whenAvailable:notAvailable:` method call, which is guaranteed to call
+ only one of its arguments as soon as music is deemed available or not:
 
     FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
  
@@ -260,7 +261,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
  Once you can play music, use the `play`, `pause`, `skip` methods to
  control playback. The `stationList` property will contain a list of
- stations the user can switch to with the the `setActiveStationByName:` call.
+ stations the user can switch to with the the `setActiveStationByName:` 
+ or `setActiveStation:` calls.
  
  The `FMAudioPlayer` registers with iOS so that
  playback can be paused, skipped, liked, and disliked via the lock screen.
