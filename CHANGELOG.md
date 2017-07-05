@@ -1,4 +1,7 @@
 
+- v4.0.7
+  - we really support iOS 8.0+
+
 - v4.0.6
   - emergency fix for last emergency fix - crash due to 'prepared' state not being
     re-initialized

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FeedMedia"
-  s.version          = "4.0.6"
+  s.version          = "4.0.7"
   s.summary          = "FeedMedia SDK for Internet radio streaming"
   s.description      = <<-DESC
     Feed.fm allows you to legally add popular music to your mobile app with a Pandora-style
@@ -29,7 +29,7 @@ DESC
 
   s.requires_arc = true
 
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '8.0'
 
   #
   # core library is needed everywhere
