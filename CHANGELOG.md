@@ -1,4 +1,8 @@
 
+- v4.0.8-inprogress
+  - Add support for on-demand stations that provide list of FMAudioItems in FMStation
+  - Add support for like/dislike/unlike of FMAudioItems not associated with a play
+
 - v4.0.7
   - we really support iOS 8.0+
 

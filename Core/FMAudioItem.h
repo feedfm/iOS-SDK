@@ -19,9 +19,15 @@
 @interface FMAudioItem : NSObject
 
 /*
- *  Track identifier. Two FMAudioItem objects treated as equal if their playId properties are equal.
+ *  Track identifier.
  */
 @property (readonly) NSString *playId;
+
+/*
+ * Audio File identifier.
+ */
+@property (readonly) NSString *id;
+
 /**
  *  Track name
  */

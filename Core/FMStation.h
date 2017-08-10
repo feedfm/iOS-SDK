@@ -45,6 +45,20 @@
 
 @property (readonly) NSDictionary *options;
 
+/**
+ * When true, this station is on-demand, and `-audioFiles` contains
+ * an array of songs available for playback in this station.
+ */
+
+@property (readonly) BOOL isOnDemand;
+
+/**
+ * An array of FMAudioItem songs that are in this station, if it
+ * is on-demand, otherwise this is NULL.
+ */
+
+@property (readonly) NSArray *audioItems;
+
 /*
  *  Used internally to convert the JSON representation of this
  *  station to this object.
