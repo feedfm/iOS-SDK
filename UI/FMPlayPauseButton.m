@@ -57,6 +57,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stationUpdated:) name:FMAudioPlayerActiveStationDidChangeNotification object:_feedPlayer];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateUpdated:) name:
      FMAudioPlayerPlaybackStateDidChangeNotification object:_feedPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(songChanged:) name:FMAudioPlayerCurrentItemDidBeginPlaybackNotification object:_feedPlayer];
     
     [self addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
     
@@ -87,6 +88,7 @@
     for (FMStation *station in stations) {
         if ([station.name isEqualToString:stationName]) {
             _station = station;
+            _audioItem = nil;
             break;
         }
     }
@@ -100,6 +102,14 @@
 
 - (void) setStation:(FMStation *)station {
     _station = station;
+    _audioItem = nil;
+    
+    [self updatePlayerState];
+}
+
+- (void) setAudioItem:(FMAudioItem *)audioItem {
+    _audioItem = audioItem;
+    _station = nil;
     
     [self updatePlayerState];
 }
@@ -113,6 +123,7 @@
 
 - (void) onClick {
     if (_station) {
+        NSLog(@"play limited to station");
         FMStation *currentStation = _feedPlayer.activeStation;
         
         if (![_station isEqual:currentStation]) {
@@ -121,6 +132,19 @@
             
             return;
         }
+        
+    } else if (_audioItem) {
+        NSLog(@"play limited to audio item");
+        FMAudioItem *currentAudioItem = _feedPlayer.currentItem;
+        
+        if (![_audioItem.id isEqualToString:currentAudioItem.id]) {
+            [_feedPlayer playAudioItem:_audioItem];
+            
+            return;
+        }
+        
+    } else {
+        NSLog(@"play not limited");
     }
     
     if ((_feedPlayer.playbackState == FMAudioPlayerPlaybackStatePaused) ||
@@ -142,6 +166,10 @@
     [self updatePlayerState];
 }
 
+- (void) songChanged: (NSNotification *)notification {
+    [self updatePlayerState];
+}
+
 - (void) updatePlayerState {
     if (_station) {
         if (![_feedPlayer.activeStation isEqual:_station]
@@ -159,6 +187,24 @@
             
             return;
         }
+    } else if (_audioItem) {
+        if (![_feedPlayer.currentItem.id isEqualToString:_audioItem.id]
+            || (_feedPlayer.playbackState == FMAudioPlayerPlaybackStateComplete)
+            || (_feedPlayer.playbackState == FMAudioPlayerPlaybackStateReadyToPlay)) {
+            // song isn't active
+            self.selected = NO;
+            self.enabled = YES;
+            self.hidden = NO;
+            
+            return;
+            
+        } else if (_hideWhenActive) {
+            self.hidden = YES;
+            
+            return;
+        }
+        
+        
     }
     
     FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;

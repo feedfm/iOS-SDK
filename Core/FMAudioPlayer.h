@@ -352,6 +352,11 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void)play;
 
 /**
+ * Start playback of specific song
+ */
+- (void)playAudioItem: (FMAudioItem *) audioItem;
+
+/**
  * Pauses music playback.
  */
 - (void)pause;
