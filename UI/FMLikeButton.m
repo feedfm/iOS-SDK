@@ -90,7 +90,7 @@
     
     FMAudioItem *ai = (_audioItem == nil) ? _feedPlayer.currentItem : _audioItem;
     
-    if ([ai isEqual:notificationAudioItem]) {
+    if ([ai.id isEqualToString:notificationAudioItem.id]) {
         [self updateButtonState];
     }
 }
