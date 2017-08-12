@@ -1,6 +1,6 @@
 
 - v4.0.9-dev
-
+  - properly mark FMStationButton as deprecated
 
 - v4.0.8
   - Add support for on-demand stations that provide list of FMAudioItems in FMStation
