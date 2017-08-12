@@ -143,8 +143,6 @@
             return;
         }
         
-    } else {
-        NSLog(@"play not limited");
     }
     
     if ((_feedPlayer.playbackState == FMAudioPlayerPlaybackStatePaused) ||
