@@ -41,6 +41,7 @@
  */
 
 //NOT_IB_DESIGNABLE
+__attribute__ ((deprecated))
 @interface FMStationButton : UIButton
 
 /**
