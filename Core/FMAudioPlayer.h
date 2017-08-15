@@ -322,6 +322,12 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 + (FMAudioPlayer *)sharedPlayer;
 
 /**
+ * Utility function to map state to string.
+ */
+
++ (NSString *) nameForType:(FMAudioPlayerPlaybackState)type;
+
+/**
  * Call one of the two callbacks as soon as we know if we pass geographic playback
  * restrictions and the feed.fm servers are reachable. One of these two blocks is
  * guaranteed to be called, and only one call will ever be made.
@@ -577,11 +583,14 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic) BOOL crossfadeInEnabled;
 
 /**
+ * @deprecated Clients should look for the FMAudioPlayerMusicQueuedNotification
+ * notification to know when music is queued up in the player, rather than
+ * rely on this property, which will be removed in the next major version.
+ *
  * Indicates if the SDK has retrieved the next song for playback from the
  * server and is ready to start playing it.
  */
-
-@property (nonatomic, readonly) BOOL isPreparedToPlay;
+@property (nonatomic, readonly) BOOL isPreparedToPlay DEPRECATED_ATTRIBUTE;
 
 /**
  * The currently playing or paused song, or null if there

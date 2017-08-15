@@ -1,6 +1,10 @@
 
-- v4.0.9-dev
+- v4.0.9
   - properly mark FMStationButton as deprecated
+  - FMAudioPlayer wasn't properly proxying volume of player
+  - re-implemented 'isPreparedtoPlay', while also deprecating it
+  - update stop() method to property reset player state
+  - expose static method to map FMAudioPlayerPlaybackState to NSString
 
 - v4.0.8
   - Add support for on-demand stations that provide list of FMAudioItems in FMStation
