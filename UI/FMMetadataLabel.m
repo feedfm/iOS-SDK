@@ -51,6 +51,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(songUpdated:) name:FMAudioPlayerCurrentItemDidBeginPlaybackNotification object:self.feedPlayer];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateChanged:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.feedPlayer];
+    
     [self updateText];
 }
 
@@ -73,6 +75,17 @@
 
 - (void) songUpdated: (NSNotification *) notification {
     [self updateText];
+}
+
+- (void) stateChanged: (NSNotification *) notification {
+    // we only update the displayed text if the player transitions
+    // to idle or complete
+    FMAudioPlayerPlaybackState state = [_feedPlayer playbackState];
+    
+    if ((state == FMAudioPlayerPlaybackStateComplete) ||
+        (state == FMAudioPlayerPlaybackStateReadyToPlay)) {
+        [self updateText];
+    }
 }
 
 - (void) updateText {
