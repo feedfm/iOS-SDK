@@ -13,11 +13,11 @@
 
 @interface PlayerViewController () <UIPopoverPresentationControllerDelegate>
 
-@property (weak, nonatomic) FMAudioPlayer *player;
-
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *track;
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *artist;
 @property (weak, nonatomic) IBOutlet FMMetadataLabel *album;
+
+@property (weak, nonatomic) IBOutlet UILabel *state;
 
 @end
 
@@ -27,7 +27,9 @@ static NSMutableDictionary *stations = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateDidChange:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:[FMAudioPlayer sharedPlayer]];
+    
     // set the lock screen up to share the player background
     // (this only appears when phone is playing music and is locked)
     // [_player setLockScreenImage:self.backgroundImage.image];
@@ -40,6 +42,7 @@ static NSMutableDictionary *stations = nil;
     // appear and disappear and the animation stopped by iOS does not automatically
     // restart.
     [MarqueeLabel restartLabelsOfController:self];
+    [self updateStateDisplay];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -49,6 +52,18 @@ static NSMutableDictionary *stations = nil;
         dest.modalPresentationStyle = UIModalPresentationPopover;
         dest.popoverPresentationController.delegate = self;
     }
+}
+
+- (IBAction)userDidPressStop:(id)sender {
+    [[FMAudioPlayer sharedPlayer] stop];
+}
+
+- (void)stateDidChange:(NSNotification *) notification {
+    [self updateStateDisplay];
+}
+
+- (void) updateStateDisplay {
+    _state.text = [FMAudioPlayer nameForType:[FMAudioPlayer sharedPlayer].playbackState];
 }
 
 - (UIModalPresentationStyle) adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
