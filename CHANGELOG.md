@@ -1,4 +1,8 @@
 
+- v4.0.10-dev
+  - AVPlayerItem.playbackBufferEmpty is turning out to be unreliable, so
+    stop using it.
+
 - v4.0.9
   - properly mark FMStationButton as deprecated
   - FMAudioPlayer wasn't properly proxying volume of player
