@@ -1,5 +1,5 @@
 
-- v4.0.10-dev
+- v4.0.10
   - AVPlayerItem.playbackBufferEmpty is turning out to be unreliable, so
     stop using it.
 
