@@ -1,4 +1,8 @@
 
+- v4.0.11-dev
+  - remove support for pre-7.1 command center notifications
+  - remove excessive remote command center registrations
+
 - v4.0.10
   - AVPlayerItem.playbackBufferEmpty is turning out to be unreliable, so
     stop using it.
