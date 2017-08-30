@@ -88,6 +88,17 @@
     FMAudioItem *ai = (_audioItem == nil) ? _feedPlayer.currentItem : _audioItem;
     
     if ([ai.id isEqualToString:notificationAudioItem.id]) {
+        if ((ai.playId == nil) || ![ai.playId isEqualToString:notificationAudioItem.playId]) {
+            // copy like status to our item
+            if (notificationAudioItem.liked) {
+                [ai like];
+            } else if (notificationAudioItem.disliked) {
+                [ai dislike];
+            } else {
+                [ai unlike];
+            }
+        }
+        
         [self updateButtonState];
     }
 }
