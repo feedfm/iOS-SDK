@@ -3,6 +3,8 @@
   - remove support for pre-7.1 command center notifications
   - remove excessive remote command center registrations
   - update like/dislike status of different FMAudioItem instance with same audio item id
+  - core library assertions updated to add more descriptive content to assist
+    with crash debugging.
 
 - v4.0.10
   - AVPlayerItem.playbackBufferEmpty is turning out to be unreliable, so
