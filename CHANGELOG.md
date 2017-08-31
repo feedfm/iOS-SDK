@@ -1,5 +1,5 @@
 
-- v4.0.11-dev
+- v4.0.11
   - remove support for pre-7.1 command center notifications
   - remove excessive remote command center registrations
   - update like/dislike status of different FMAudioItem instance with same audio item id
