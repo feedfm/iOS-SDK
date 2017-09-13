@@ -38,7 +38,7 @@ VERSION=`cat ${PROJECT_DIR}/FeedMedia.podspec | perl -n -e '/s.version\s*=\s*"(.
 
 # confirm the release version matches the FeedMediaCore.h #define:
 
-CHANGE=`grep "FEED_MEDIA_CLIENT_VERSION @\"${VERSION}\""`
+CHANGE=`grep "FEED_MEDIA_CLIENT_VERSION @\"${VERSION}\"" ${PROJECT_DIR}/../FeedMediaCore/Sources/FeedMediaCore.h`
 if [[ $CHANGE = "" ]]; then
   echo "This release version (${VERSION}) does not match FeedMediaCore.h"
   exit 1
