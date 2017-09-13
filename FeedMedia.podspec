@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FeedMedia"
-  s.version          = "4.0.11"
+  s.version          = "4.0.12"
   s.summary          = "FeedMedia SDK for Internet radio streaming"
   s.description      = <<-DESC
     Feed.fm allows you to legally add popular music to your mobile app with a Pandora-style
@@ -40,19 +40,18 @@ DESC
   s.public_header_files = 'Core/*.h'
   s.frameworks = 'AVFoundation', 'MediaPlayer', 'CoreMedia'
 
-
   #
   # UI ViewControllers and Assets
   #
 
   s.subspec 'UI' do |sp|
     sp.dependency "MarqueeLabel", "~> 3.0.3"
-		sp.source_files = 'UI/*.{m,h}', 'Core/*.h'
-		sp.public_header_files = 'UI/*.h', 'Core/*.h'
+		sp.source_files = 'Sources/*.{m,h}', 'Core/*.h'
+		sp.public_header_files = 'Sources/*.h', 'Core/*.h'
     sp.vendored_library = 'Core/libFeedMediaCore.a'
-		sp.resource_bundles = {
-			'FeedMedia' => [ 'Assets/**/*.png' ]
-		}
+		#sp.resource_bundles = {
+		#  'FeedMedia' => [ 'Assets/**/*.png' ]
+		#}
     sp.frameworks = 'AVFoundation', 'MediaPlayer', 'CoreMedia'
   end
 

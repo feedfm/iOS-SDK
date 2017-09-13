@@ -1,4 +1,7 @@
 
+- v4.0.12
+  - refactor layout of repository to properly support Carthage
+
 - v4.0.11
   - remove support for pre-7.1 command center notifications
   - remove excessive remote command center registrations

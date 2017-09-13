@@ -1,0 +1,956 @@
+BCSymbolMap Version: 2.0
+-[FMAudioItem initWithJSON:]
+-[FMAudioItem initWithJSON:station:]
+-[FMAudioItem setupWithJSON:station:]
+-[FMAudioItem identifier]
+-[FMAudioItem like]
+-[FMAudioItem dislike]
+-[FMAudioItem unlike]
+-[FMAudioItem isEqual:]
+-[FMAudioItem hash]
+-[FMAudioItem description]
+-[FMAudioItem playId]
+-[FMAudioItem id]
+-[FMAudioItem name]
+-[FMAudioItem artist]
+-[FMAudioItem album]
+-[FMAudioItem station]
+-[FMAudioItem displayName]
+-[FMAudioItem metadata]
+-[FMAudioItem duration]
+-[FMAudioItem contentUrl]
+-[FMAudioItem codec]
+-[FMAudioItem bitrate]
+-[FMAudioItem trimStart]
+-[FMAudioItem trimEnd]
+-[FMAudioItem liked]
+-[FMAudioItem disliked]
+-[FMAudioItem .cxx_destruct]
+_OBJC_IVAR_$_FMAudioItem._playId
+_OBJC_IVAR_$_FMAudioItem._id
+_OBJC_IVAR_$_FMAudioItem._contentUrl
+_OBJC_IVAR_$_FMAudioItem._liked
+_OBJC_IVAR_$_FMAudioItem._disliked
+_OBJC_IVAR_$_FMAudioItem._name
+_OBJC_IVAR_$_FMAudioItem._artist
+_OBJC_IVAR_$_FMAudioItem._album
+_OBJC_IVAR_$_FMAudioItem._codec
+_OBJC_IVAR_$_FMAudioItem._duration
+_OBJC_IVAR_$_FMAudioItem._bitrate
+_OBJC_IVAR_$_FMAudioItem._station
+_OBJC_IVAR_$_FMAudioItem._metadata
+_OBJC_IVAR_$_FMAudioItem._trimStart
+_OBJC_IVAR_$_FMAudioItem._trimEnd
+_OBJC_IVAR_$_FMAudioItem._displayName
+Apple LLVM version 8.1.0 (clang-802.0.42)
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAudioItem.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/../FMAudioItem.h
+-[ScrollLabel initWithFrame:]
+-[ScrollLabel fullWidth]
+-[ScrollLabel scrollOffset]
+-[ScrollLabel scrollTime]
+-[ScrollLabel drawTextInRect:]
+___30-[ScrollLabel drawTextInRect:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+___30-[ScrollLabel drawTextInRect:]_block_invoke.40
+-[ScrollLabel .cxx_destruct]
+-[CWWindowContainer hitTest:withEvent:]
+-[CWWindowContainer notificationHeight]
+-[CWWindowContainer setNotificationHeight:]
+-[CWViewController preferredStatusBarStyle]
+-[CWViewController setSupportedInterfaceOrientations:]
+-[CWViewController supportedInterfaceOrientations]
+-[CWViewController prefersStatusBarHidden]
+-[CWViewController setPreferredStatusBarStyle:]
+-[CWViewController _cwViewControllerSupportedInterfaceOrientation]
+-[CWViewController set_cwViewControllerSupportedInterfaceOrientation:]
+-[CWStatusBarNotification init]
+___31-[CWStatusBarNotification init]_block_invoke
+___copy_helper_block_.168
+___destroy_helper_block_.169
+-[CWStatusBarNotification getStatusBarHeight]
+-[CWStatusBarNotification getStatusBarWidth]
+-[CWStatusBarNotification getStatusBarOffset]
+-[CWStatusBarNotification getNavigationBarHeight]
+-[CWStatusBarNotification getNotificationLabelHeight]
+-[CWStatusBarNotification getNotificationLabelTopFrame]
+-[CWStatusBarNotification getNotificationLabelLeftFrame]
+-[CWStatusBarNotification getNotificationLabelRightFrame]
+-[CWStatusBarNotification getNotificationLabelBottomFrame]
+-[CWStatusBarNotification getNotificationLabelFrame]
+-[CWStatusBarNotification updateStatusBarFrame]
+-[CWStatusBarNotification notificationTapped:]
+-[CWStatusBarNotification setupNotificationView:]
+-[CWStatusBarNotification createNotificationLabelWithMessage:]
+-[CWStatusBarNotification createNotificationCustomView:]
+-[CWStatusBarNotification createNotificationWindow]
+-[CWStatusBarNotification createStatusBarView]
+-[CWStatusBarNotification firstFrameChange]
+-[CWStatusBarNotification secondFrameChange]
+-[CWStatusBarNotification thirdFrameChange]
+-[CWStatusBarNotification displayNotificationWithMessage:completion:]
+___69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke
+___copy_helper_block_.316
+___destroy_helper_block_.317
+___69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke.319
+_perform_block_after_delay
+___69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke_2
+___copy_helper_block_.320
+___destroy_helper_block_.321
+___copy_helper_block_.323
+___destroy_helper_block_.324
+-[CWStatusBarNotification displayNotificationWithMessage:forDuration:]
+___70-[CWStatusBarNotification displayNotificationWithMessage:forDuration:]_block_invoke
+___70-[CWStatusBarNotification displayNotificationWithMessage:forDuration:]_block_invoke_2
+___copy_helper_block_.328
+___destroy_helper_block_.329
+___copy_helper_block_.333
+___destroy_helper_block_.334
+-[CWStatusBarNotification displayNotificationWithAttributedString:completion:]
+-[CWStatusBarNotification displayNotificationWithAttributedString:forDuration:]
+-[CWStatusBarNotification displayNotificationWithView:completion:]
+___66-[CWStatusBarNotification displayNotificationWithView:completion:]_block_invoke
+___copy_helper_block_.346
+___destroy_helper_block_.347
+___66-[CWStatusBarNotification displayNotificationWithView:completion:]_block_invoke.349
+___copy_helper_block_.350
+___destroy_helper_block_.351
+-[CWStatusBarNotification displayNotificationWithView:forDuration:]
+___67-[CWStatusBarNotification displayNotificationWithView:forDuration:]_block_invoke
+___67-[CWStatusBarNotification displayNotificationWithView:forDuration:]_block_invoke_2
+___copy_helper_block_.353
+___destroy_helper_block_.354
+___copy_helper_block_.356
+___destroy_helper_block_.357
+-[CWStatusBarNotification dismissNotificationWithCompletion:]
+___61-[CWStatusBarNotification dismissNotificationWithCompletion:]_block_invoke
+___copy_helper_block_.367
+___destroy_helper_block_.368
+___61-[CWStatusBarNotification dismissNotificationWithCompletion:]_block_invoke.370
+___copy_helper_block_.375
+___destroy_helper_block_.376
+-[CWStatusBarNotification dismissNotification]
+-[CWStatusBarNotification notificationLabel]
+-[CWStatusBarNotification setNotificationLabel:]
+-[CWStatusBarNotification notificationLabelBackgroundColor]
+-[CWStatusBarNotification setNotificationLabelBackgroundColor:]
+-[CWStatusBarNotification notificationLabelTextColor]
+-[CWStatusBarNotification setNotificationLabelTextColor:]
+-[CWStatusBarNotification notificationLabelFont]
+-[CWStatusBarNotification setNotificationLabelFont:]
+-[CWStatusBarNotification notificationWindow]
+-[CWStatusBarNotification setNotificationWindow:]
+-[CWStatusBarNotification customView]
+-[CWStatusBarNotification setCustomView:]
+-[CWStatusBarNotification statusBarView]
+-[CWStatusBarNotification setStatusBarView:]
+-[CWStatusBarNotification notificationStyle]
+-[CWStatusBarNotification setNotificationStyle:]
+-[CWStatusBarNotification notificationIsShowing]
+-[CWStatusBarNotification setNotificationIsShowing:]
+-[CWStatusBarNotification notificationTappedBlock]
+-[CWStatusBarNotification setNotificationTappedBlock:]
+-[CWStatusBarNotification notificationIsDismissing]
+-[CWStatusBarNotification setNotificationIsDismissing:]
+-[CWStatusBarNotification notificationLabelHeight]
+-[CWStatusBarNotification setNotificationLabelHeight:]
+-[CWStatusBarNotification multiline]
+-[CWStatusBarNotification setMultiline:]
+-[CWStatusBarNotification supportedInterfaceOrientations]
+-[CWStatusBarNotification setSupportedInterfaceOrientations:]
+-[CWStatusBarNotification notificationAnimationDuration]
+-[CWStatusBarNotification setNotificationAnimationDuration:]
+-[CWStatusBarNotification notificationAnimationInStyle]
+-[CWStatusBarNotification setNotificationAnimationInStyle:]
+-[CWStatusBarNotification notificationAnimationOutStyle]
+-[CWStatusBarNotification setNotificationAnimationOutStyle:]
+-[CWStatusBarNotification notificationAnimationType]
+-[CWStatusBarNotification setNotificationAnimationType:]
+-[CWStatusBarNotification preferredStatusBarStyle]
+-[CWStatusBarNotification setPreferredStatusBarStyle:]
+-[CWStatusBarNotification tapGestureRecognizer]
+-[CWStatusBarNotification setTapGestureRecognizer:]
+-[CWStatusBarNotification dismissHandle]
+-[CWStatusBarNotification setDismissHandle:]
+-[CWStatusBarNotification isCustomView]
+-[CWStatusBarNotification setIsCustomView:]
+-[CWStatusBarNotification .cxx_destruct]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___perform_block_after_delay_block_invoke
+___copy_helper_block_.459
+___destroy_helper_block_.460
+___perform_block_after_delay_block_invoke.462
+___copy_helper_block_.463
+___destroy_helper_block_.464
+_OBJC_IVAR_$_ScrollLabel.textImage
+___block_descriptor_tmp
+___block_descriptor_tmp.42
+___block_literal_global
+_OBJC_IVAR_$_CWWindowContainer._notificationHeight
+_OBJC_IVAR_$_CWViewController._preferredStatusBarStyle
+_OBJC_IVAR_$_CWViewController.__cwViewControllerSupportedInterfaceOrientation
+___block_descriptor_tmp.170
+___block_descriptor_tmp.318
+___block_descriptor_tmp.322
+___block_descriptor_tmp.325
+___block_descriptor_tmp.330
+___block_descriptor_tmp.335
+___block_descriptor_tmp.348
+___block_descriptor_tmp.352
+___block_descriptor_tmp.355
+___block_descriptor_tmp.358
+___block_descriptor_tmp.369
+___block_descriptor_tmp.377
+_OBJC_IVAR_$_CWStatusBarNotification.notificationLabel
+_OBJC_IVAR_$_CWStatusBarNotification.notificationLabelBackgroundColor
+_OBJC_IVAR_$_CWStatusBarNotification.notificationLabelTextColor
+_OBJC_IVAR_$_CWStatusBarNotification.notificationLabelFont
+_OBJC_IVAR_$_CWStatusBarNotification.notificationWindow
+_OBJC_IVAR_$_CWStatusBarNotification.customView
+_OBJC_IVAR_$_CWStatusBarNotification.statusBarView
+_OBJC_IVAR_$_CWStatusBarNotification.notificationStyle
+_OBJC_IVAR_$_CWStatusBarNotification.notificationIsShowing
+_OBJC_IVAR_$_CWStatusBarNotification._notificationTappedBlock
+_OBJC_IVAR_$_CWStatusBarNotification._notificationIsDismissing
+_OBJC_IVAR_$_CWStatusBarNotification._notificationLabelHeight
+_OBJC_IVAR_$_CWStatusBarNotification._multiline
+_OBJC_IVAR_$_CWStatusBarNotification._supportedInterfaceOrientations
+_OBJC_IVAR_$_CWStatusBarNotification._notificationAnimationDuration
+_OBJC_IVAR_$_CWStatusBarNotification._notificationAnimationInStyle
+_OBJC_IVAR_$_CWStatusBarNotification._notificationAnimationOutStyle
+_OBJC_IVAR_$_CWStatusBarNotification._notificationAnimationType
+_OBJC_IVAR_$_CWStatusBarNotification._preferredStatusBarStyle
+_OBJC_IVAR_$_CWStatusBarNotification._tapGestureRecognizer
+_OBJC_IVAR_$_CWStatusBarNotification._dismissHandle
+_OBJC_IVAR_$_CWStatusBarNotification._isCustomView
+___block_descriptor_tmp.461
+___block_descriptor_tmp.465
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/CWStatusBarNotification/CWStatusBarNotification.m
+__destroy_helper_block_
+__copy_helper_block_
+__perform_block_after_delay_block_invoke.462
+__perform_block_after_delay_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/CWStatusBarNotification/CWStatusBarNotification.h
+__61-[CWStatusBarNotification dismissNotificationWithCompletion:]_block_invoke.370
+__61-[CWStatusBarNotification dismissNotificationWithCompletion:]_block_invoke
+cancel_delayed_block
+__67-[CWStatusBarNotification displayNotificationWithView:forDuration:]_block_invoke_2
+__67-[CWStatusBarNotification displayNotificationWithView:forDuration:]_block_invoke
+__66-[CWStatusBarNotification displayNotificationWithView:completion:]_block_invoke.349
+__66-[CWStatusBarNotification displayNotificationWithView:completion:]_block_invoke
+__70-[CWStatusBarNotification displayNotificationWithMessage:forDuration:]_block_invoke_2
+__70-[CWStatusBarNotification displayNotificationWithMessage:forDuration:]_block_invoke
+__69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke_2
+perform_block_after_delay
+__69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke.319
+__69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke
+UI_USER_INTERFACE_IDIOM
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
+UIInterfaceOrientationIsPortrait
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h
+UIInterfaceOrientationIsLandscape
+__31-[CWStatusBarNotification init]_block_invoke
+__30-[ScrollLabel drawTextInRect:]_block_invoke.40
+__30-[ScrollLabel drawTextInRect:]_block_invoke
+-[FMAuth encodeWithCoder:]
+-[FMAuth initWithCoder:]
+-[FMAuth setCurrentServerTime:]
++[FMAuth isValidString:]
+-[FMAuth unauthenticatedURLRequest:]
+-[FMAuth authenticatedURLRequest:]
+-[FMAuth serverTime]
+-[FMAuth timestamp]
+-[FMAuth timeOffset]
+-[FMAuth setTimeOffset:]
+-[FMAuth clientToken]
+-[FMAuth setClientToken:]
+-[FMAuth clientSecret]
+-[FMAuth setClientSecret:]
+-[FMAuth cuuid]
+-[FMAuth setCuuid:]
+-[FMAuth .cxx_destruct]
+_OBJC_IVAR_$_FMAuth._timeOffset
+_OBJC_IVAR_$_FMAuth._clientToken
+_OBJC_IVAR_$_FMAuth._clientSecret
+_OBJC_IVAR_$_FMAuth._cuuid
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_FMAuthenticator
+l_OBJC_LABEL_PROTOCOL_$_FMAuthenticator
+l_OBJC_PROTOCOL_$_NSCoding
+l_OBJC_LABEL_PROTOCOL_$_NSCoding
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAuth.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAuth.h
+-[FMReachability startNotifier]
+_FMReachabilityCallback
+-[FMReachability stopNotifier]
+-[FMReachability dealloc]
++[FMReachability reachabilityWithHostName:]
++[FMReachability reachabilityWithAddress:]
++[FMReachability reachabilityForInternetConnection]
++[FMReachability reachabilityForLocalWiFi]
+-[FMReachability localWiFiStatusForFlags:]
+-[FMReachability networkStatusForFlags:]
+-[FMReachability connectionRequired]
+-[FMReachability currentReachabilityStatus]
+_OBJC_IVAR_$_FMReachability.reachabilityRef
+_OBJC_IVAR_$_FMReachability.localWiFiRef
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMReachability.m
+FMReachabilityCallback
++[FMAudioPlayer sharedPlayer]
+___29+[FMAudioPlayer sharedPlayer]_block_invoke
+-[FMAudioPlayer initWithSession:]
+-[FMAudioPlayer dealloc]
+-[FMAudioPlayer didEnterBackground:]
+-[FMAudioPlayer willEnterForeground:]
++[FMAudioPlayer setClientToken:secret:detectLocalMusic:]
++[FMAudioPlayer setClientToken:secret:]
+-[FMAudioPlayer skipStatus:]
+-[FMAudioPlayer activeStation]
+-[FMAudioPlayer currentItem]
+-[FMAudioPlayer setSupportedAudioFormats:]
+-[FMAudioPlayer supportedAudioFormats]
+-[FMAudioPlayer setMaxBitrate:]
+-[FMAudioPlayer maxBitrate]
+-[FMAudioPlayer canSkip]
+-[FMAudioPlayer mixingAudioPlayerItemIsReadyForPlayback:]
+-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:]
+-[FMAudioPlayer mixingAudioPlayerItemDidFinishPlayback:dueToReason:andError:]
+-[FMAudioPlayer mixingAudioPlayerItemDidFailToPrepare:withError:]
+-[FMAudioPlayer mixingAudioPlayerPlaybackDidElapse:]
+-[FMAudioPlayer mixingAudioPlayerStateDidChange:]
+-[FMAudioPlayer matchPlaybackStateToPlayerState]
+-[FMAudioPlayer currentPlaybackTime]
+-[FMAudioPlayer currentItemDuration]
+-[FMAudioPlayer currentPlaybackRate]
+-[FMAudioPlayer setMixVolume:]
+-[FMAudioPlayer mixVolume]
+-[FMAudioPlayer whenAvailable:notAvailable:]
+-[FMAudioPlayer notAvailable:]
+-[FMAudioPlayer available:]
+-[FMAudioPlayer sessionReceivedNextItem:]
+-[FMAudioPlayer sessionCurrentItemChanged:]
+-[FMAudioPlayer sessionNoMoreMusic:]
+-[FMAudioPlayer sessionStationChanged:]
+-[FMAudioPlayer sessionStationListAvailable:]
++[FMAudioPlayer names]
+___22+[FMAudioPlayer names]_block_invoke
++[FMAudioPlayer nameForType:]
+-[FMAudioPlayer setPlaybackState:]
+-[FMAudioPlayer initializeRemoteCommandCenter]
+-[FMAudioPlayer remoteCommandCenterPlayAction]
+-[FMAudioPlayer remoteCommandCenterPauseAction]
+-[FMAudioPlayer remoteCommandCenterLikeAction]
+-[FMAudioPlayer remoteCommandCenterDislikeAction]
+-[FMAudioPlayer remoteCommandCenterNextAction]
+-[FMAudioPlayer remoteCommandCenterPlayPauseAction]
+-[FMAudioPlayer setLockScreenImage:]
+___36-[FMAudioPlayer setLockScreenImage:]_block_invoke
+-[FMAudioPlayer updateNowPlaying]
+-[FMAudioPlayer initializeAVAudioSession]
+-[FMAudioPlayer destroyAVAudioSession]
+-[FMAudioPlayer resetAudio:]
+-[FMAudioPlayer audioHardwareRouteChanged:]
+-[FMAudioPlayer caughtInterruption:]
+-[FMAudioPlayer possiblyDisplaySongNotification]
+-[FMAudioPlayer notificationTextFromAudioItem:]
+-[FMAudioPlayer logEvent:]
+-[FMAudioPlayer logEvent:withParameters:]
+-[FMAudioPlayer setSecondsOfCrossfade:]
+-[FMAudioPlayer secondsOfCrossfade]
+-[FMAudioPlayer setCrossfadeInEnabled:]
+-[FMAudioPlayer crossfadeInEnabled]
+-[FMAudioPlayer setActiveStation:]
+-[FMAudioPlayer setActiveStation:withCrossfade:]
+-[FMAudioPlayer setActiveStationByName:]
+-[FMAudioPlayer setActiveStationByName:withCrossfade:]
+-[FMAudioPlayer prepareToPlay]
+-[FMAudioPlayer play]
+-[FMAudioPlayer playAudioItem:]
+-[FMAudioPlayer pause]
+-[FMAudioPlayer stop]
+-[FMAudioPlayer skip]
+___21-[FMAudioPlayer skip]_block_invoke
+___copy_helper_block_.461
+___destroy_helper_block_.462
+___21-[FMAudioPlayer skip]_block_invoke.464
+___copy_helper_block_.465
+___destroy_helper_block_.466
+-[FMAudioPlayer like]
+-[FMAudioPlayer likeAudioItem:]
+-[FMAudioPlayer dislike]
+-[FMAudioPlayer dislikeAudioItem:]
+-[FMAudioPlayer unlike]
+-[FMAudioPlayer unlikeAudioItem:]
+-[FMAudioPlayer doesHandleRemoteCommands]
+-[FMAudioPlayer setDoesHandleRemoteCommands:]
+-[FMAudioPlayer lockScreenDelegate]
+-[FMAudioPlayer setLockScreenDelegate:]
+-[FMAudioPlayer playbackState]
+-[FMAudioPlayer isPreparedToPlay]
+-[FMAudioPlayer playHistory]
+-[FMAudioPlayer stationList]
+-[FMAudioPlayer statusBarNotification]
+-[FMAudioPlayer disableSongStartNotifications]
+-[FMAudioPlayer setDisableSongStartNotifications:]
+-[FMAudioPlayer logger]
+-[FMAudioPlayer setLogger:]
+-[FMAudioPlayer .cxx_destruct]
+_sharedPlayer._sharedPlayer
+_sharedPlayer.singletonToken
+_OBJC_IVAR_$_FMAudioPlayer._session
+_OBJC_IVAR_$_FMAudioPlayer._player
+_OBJC_IVAR_$_FMAudioPlayer._playHistory
+_OBJC_IVAR_$_FMAudioPlayer._disableSongStartNotifications
+_OBJC_IVAR_$_FMAudioPlayer._doesHandleRemoteCommands
+_OBJC_IVAR_$_FMAudioPlayer._lockScreenDelegate
+_OBJC_IVAR_$_FMAudioPlayer._playbackState
+_OBJC_IVAR_$_FMAudioPlayer._isPreparedToPlay
+_OBJC_IVAR_$_FMAudioPlayer._avAudioSessionNotificationsInstalled
+_OBJC_IVAR_$_FMAudioPlayer._remoteCommandCenterInstalled
+_OBJC_IVAR_$_FMAudioPlayer._onAvailableCallbacks
+_OBJC_IVAR_$_FMAudioPlayer._onNotAvailableCallbacks
+_OBJC_IVAR_$_FMAudioPlayer._resumePlaybackAfterInterruption
+_OBJC_IVAR_$_FMAudioPlayer._statusBarNotification
+_OBJC_IVAR_$_FMAudioPlayer._advanceOnNextItemReady
+_OBJC_IVAR_$_FMAudioPlayer._stationList
+_names._names
+_names.onceToken
+___block_descriptor_tmp.230
+___block_literal_global.231
+___block_descriptor_tmp.305
+_OBJC_IVAR_$_FMAudioPlayer._lockScreenImage
+_OBJC_IVAR_$_FMAudioPlayer._avAudioSession
+_OBJC_IVAR_$_FMAudioPlayer._logger
+___block_descriptor_tmp.463
+___block_descriptor_tmp.468
+l_OBJC_PROTOCOL_$_FMMixingAudioPlayerDelegate
+l_OBJC_LABEL_PROTOCOL_$_FMMixingAudioPlayerDelegate
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAudioPlayer.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/FMAudioPlayer.h
+__21-[FMAudioPlayer skip]_block_invoke.464
+__21-[FMAudioPlayer skip]_block_invoke
+__36-[FMAudioPlayer setLockScreenImage:]_block_invoke
+__CGSizeEqualToSize
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+__22+[FMAudioPlayer names]_block_invoke
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/usr/include/dispatch/once.h
+__29+[FMAudioPlayer sharedPlayer]_block_invoke
++[FMAPIRequest requestServerTime]
++[FMAPIRequest requestSession:]
++[FMAPIRequest requestSessionEvent:withParameters:]
++[FMAPIRequest requestPlayWithPlacement:station:audioItem:formats:maxBitrate:]
++[FMAPIRequest requestStart:]
++[FMAPIRequest requestElapse:time:]
++[FMAPIRequest requestSkip:]
++[FMAPIRequest requestSkip:elapsed:]
++[FMAPIRequest requestInvalidate:forReason:]
++[FMAPIRequest requestComplete:]
++[FMAPIRequest requestLike:ofSubject:]
++[FMAPIRequest requestUnlike:ofSubject:]
++[FMAPIRequest requestDislike:ofSubject:]
++[FMAPIRequest userAgent]
++[FMAPIRequest URLEncodeString:]
++[FMAPIRequest stringFromParameters:]
+-[FMAPIRequest init]
+-[FMAPIRequest cancel]
+-[FMAPIRequest failWithError:]
+___30-[FMAPIRequest failWithError:]_block_invoke
+-[FMAPIRequest succeedWithResult:]
+___34-[FMAPIRequest succeedWithResult:]_block_invoke
+___copy_helper_block_.147
+___destroy_helper_block_.148
+-[FMAPIRequest queryString]
++[FMAPIRequest now]
+___19+[FMAPIRequest now]_block_invoke
+-[FMAPIRequest urlRequest]
+-[FMAPIRequest errorFromJSON:]
+-[FMAPIRequest shouldRetryAfterResponse:error:]
+-[FMAPIRequest description]
+-[FMAPIRequest send]
+___20-[FMAPIRequest send]_block_invoke
+___20-[FMAPIRequest send]_block_invoke_2
+___copy_helper_block_.292
+___destroy_helper_block_.293
+___copy_helper_block_.301
+___destroy_helper_block_.302
+-[FMAPIRequest auth]
+-[FMAPIRequest setAuth:]
+-[FMAPIRequest successBlock]
+-[FMAPIRequest setSuccessBlock:]
+-[FMAPIRequest failureBlock]
+-[FMAPIRequest setFailureBlock:]
+-[FMAPIRequest authRequired]
+-[FMAPIRequest setAuthRequired:]
+-[FMAPIRequest httpMethod]
+-[FMAPIRequest setHttpMethod:]
+-[FMAPIRequest postParameters]
+-[FMAPIRequest setPostParameters:]
+-[FMAPIRequest queryParameters]
+-[FMAPIRequest setQueryParameters:]
+-[FMAPIRequest httpEndpoint]
+-[FMAPIRequest setHttpEndpoint:]
+-[FMAPIRequest retryCount]
+-[FMAPIRequest setRetryCount:]
+-[FMAPIRequest result]
+-[FMAPIRequest setResult:]
+-[FMAPIRequest error]
+-[FMAPIRequest setError:]
+-[FMAPIRequest .cxx_destruct]
+___block_descriptor_tmp.149
+_now.sRFC3339DateFormatter
+_now.onceToken
+___block_descriptor_tmp.171
+___block_descriptor_tmp.294
+___block_descriptor_tmp.304
+_OBJC_IVAR_$_FMAPIRequest._auth
+_OBJC_IVAR_$_FMAPIRequest._successBlock
+_OBJC_IVAR_$_FMAPIRequest._failureBlock
+_OBJC_IVAR_$_FMAPIRequest._authRequired
+_OBJC_IVAR_$_FMAPIRequest._httpMethod
+_OBJC_IVAR_$_FMAPIRequest._postParameters
+_OBJC_IVAR_$_FMAPIRequest._queryParameters
+_OBJC_IVAR_$_FMAPIRequest._httpEndpoint
+_OBJC_IVAR_$_FMAPIRequest._retryCount
+_OBJC_IVAR_$_FMAPIRequest._result
+_OBJC_IVAR_$_FMAPIRequest._error
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAPIRequest.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAPIRequest.h
+__20-[FMAPIRequest send]_block_invoke_2
+__20-[FMAPIRequest send]_block_invoke
+__19+[FMAPIRequest now]_block_invoke
+__34-[FMAPIRequest succeedWithResult:]_block_invoke
+__30-[FMAPIRequest failWithError:]_block_invoke
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+-[FMAVPlayer description]
+-[FMAssetAndAVPlayer init]
+-[FMAssetAndAVPlayer dealloc]
+-[FMAssetAndAVPlayer setTrimEndTimeObserverForTime:usingBlock:]
+-[FMAssetAndAVPlayer resetTrimEndTimeObserver]
+-[FMAssetAndAVPlayer setFadeOutTimeObserverForTime:usingBlock:]
+-[FMAssetAndAVPlayer resetFadeOutTimeObserver]
+-[FMAssetAndAVPlayer setPeriodicTimeObserverForInterval:usingBlock:]
+-[FMAssetAndAVPlayer resetPeriodicTimeObserver]
+-[FMAssetAndAVPlayer description]
+-[FMAssetAndAVPlayer asset]
+-[FMAssetAndAVPlayer setAsset:]
+-[FMAssetAndAVPlayer player]
+-[FMAssetAndAVPlayer setPlayer:]
+-[FMAssetAndAVPlayer monitor]
+-[FMAssetAndAVPlayer setMonitor:]
+-[FMAssetAndAVPlayer trimEndTimeObserverToken]
+-[FMAssetAndAVPlayer setTrimEndTimeObserverToken:]
+-[FMAssetAndAVPlayer fadeOutTimeObserverToken]
+-[FMAssetAndAVPlayer setFadeOutTimeObserverToken:]
+-[FMAssetAndAVPlayer periodicTimeObserverToken]
+-[FMAssetAndAVPlayer setPeriodicTimeObserverToken:]
+-[FMAssetAndAVPlayer prepared]
+-[FMAssetAndAVPlayer setPrepared:]
+-[FMAssetAndAVPlayer .cxx_destruct]
+-[FMMixingAudioPlayer init]
+___27-[FMMixingAudioPlayer init]_block_invoke
+___27-[FMMixingAudioPlayer init]_block_invoke.107
+___copy_helper_block_.108
+___destroy_helper_block_.109
+-[FMMixingAudioPlayer dealloc]
+-[FMMixingAudioPlayer addItem:]
+-[FMMixingAudioPlayer possiblyPrepareAsset]
+___43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke
+___copy_helper_block_.143
+___destroy_helper_block_.144
+___43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.147
+___copy_helper_block_.150
+___destroy_helper_block_.151
+-[FMMixingAudioPlayer preparingAssetDidPrepare]
+-[FMMixingAudioPlayer preparingAssetDidFail]
+-[FMMixingAudioPlayer cancelPreparingAssetAndAdvance]
+-[FMMixingAudioPlayer movePreparedAssetToPlayerAndAnnounce]
+-[FMMixingAudioPlayer movePreparedAssetToPlayer]
+-[FMMixingAudioPlayer removePlayerItemFromPlayer:]
+-[FMMixingAudioPlayer applyAudioTrimToPlayer:]
+___46-[FMMixingAudioPlayer applyAudioTrimToPlayer:]_block_invoke
+___copy_helper_block_.223
+___destroy_helper_block_.224
+-[FMMixingAudioPlayer applyFadeInAndFadeOutToPlayer:andAttachCrossfadeEvent:]
+-[FMMixingAudioPlayer applyFadeInAndFadeOutToPlayer:andAttachCrossfadeEvent:andSkipFadeIn:]
+___91-[FMMixingAudioPlayer applyFadeInAndFadeOutToPlayer:andAttachCrossfadeEvent:andSkipFadeIn:]_block_invoke
+___copy_helper_block_.278
+___destroy_helper_block_.279
+-[FMMixingAudioPlayer immediatelyFadeOutPlayer]
+___47-[FMMixingAudioPlayer immediatelyFadeOutPlayer]_block_invoke
+___copy_helper_block_.288
+___destroy_helper_block_.289
+-[FMMixingAudioPlayer cancelCurrentAndEmitFail]
+-[FMMixingAudioPlayer observeValueForKeyPath:ofObject:change:context:]
+-[FMMixingAudioPlayer attachHandlersToPlayerItem:]
+-[FMMixingAudioPlayer removeHandlersFromPlayerItem:]
+-[FMMixingAudioPlayer playerItemFailedToPlayToFinish:]
+-[FMMixingAudioPlayer playerItemDidPlayToFinishFromNotification:]
+-[FMMixingAudioPlayer playerItemDidPlayToFinish:]
+-[FMMixingAudioPlayer playerItemDidPlayToCrossfade:]
+-[FMMixingAudioPlayer swapPlayersWithoutStartWithFinishReason:andError:]
+-[FMMixingAudioPlayer swapPlayersAndPrepareAssetsWithFinishReason:andError:]
+-[FMMixingAudioPlayer swapPlayersWithFinishReason:andError:]
+-[FMMixingAudioPlayer swapPlayersAndAnnounceStartWithFinishReason:andError:]
+-[FMMixingAudioPlayer swapPlayersRemoveAndAnnounceStartWithFinishReason:andError:]
+-[FMMixingAudioPlayer swapPlayersRemoveWithFinishReason:andError:]
+-[FMMixingAudioPlayer swapPlayersFadeOut]
+-[FMMixingAudioPlayer swapPlayersFadeOutAndAnnounceStart]
+-[FMMixingAudioPlayer swapPlayersFadeOutAndRemove]
+-[FMMixingAudioPlayer announceEndForReason:andError:]
+-[FMMixingAudioPlayer secondaryPlayerItemDidFinish]
+-[FMMixingAudioPlayer playerItem:didChangeStatus:]
+-[FMMixingAudioPlayer playerItem:didChangePlaybackBufferEmpty:]
+-[FMMixingAudioPlayer secondaryPlayerItemDidBecomeReady]
+-[FMMixingAudioPlayer secondaryPlayerItemDidFail]
+-[FMMixingAudioPlayer primaryPlayerItemDidBecomeReady]
+-[FMMixingAudioPlayer primaryPlayerItemDidFail]
+-[FMMixingAudioPlayer bandwidthMonitorDidUpdate:]
++[FMMixingAudioPlayer names]
+___28+[FMMixingAudioPlayer names]_block_invoke
++[FMMixingAudioPlayer nameForType:]
+-[FMMixingAudioPlayer setState:forReason:]
+-[FMMixingAudioPlayer setState:]
+-[FMMixingAudioPlayer assetAndPlayerForPlayerItem:]
+-[FMMixingAudioPlayer internalFlushAndIncludeCurrentItem:]
+-[FMMixingAudioPlayer resume]
+-[FMMixingAudioPlayer currentItem]
+-[FMMixingAudioPlayer currentTime]
+-[FMMixingAudioPlayer currentDuration]
+-[FMMixingAudioPlayer setVolume:]
+-[FMMixingAudioPlayer setSecondsOfCrossfade:]
+-[FMMixingAudioPlayer setCrossfadeInEnabled:]
+-[FMMixingAudioPlayer play]
+-[FMMixingAudioPlayer pause]
+-[FMMixingAudioPlayer skip]
+-[FMMixingAudioPlayer skipWithCrossfade:]
+-[FMMixingAudioPlayer flush]
+-[FMMixingAudioPlayer flushAndIncludeCurrentItem:]
+-[FMMixingAudioPlayer description]
+-[FMMixingAudioPlayer volume]
+-[FMMixingAudioPlayer trimmingEnabled]
+-[FMMixingAudioPlayer setTrimmingEnabled:]
+-[FMMixingAudioPlayer secondsOfCrossfade]
+-[FMMixingAudioPlayer crossfadeInEnabled]
+-[FMMixingAudioPlayer state]
+-[FMMixingAudioPlayer delegate]
+-[FMMixingAudioPlayer setDelegate:]
+-[FMMixingAudioPlayer .cxx_destruct]
+_OBJC_IVAR_$_FMAssetAndAVPlayer._player
+_OBJC_IVAR_$_FMAssetAndAVPlayer._trimEndTimeObserverToken
+_OBJC_IVAR_$_FMAssetAndAVPlayer._fadeOutTimeObserverToken
+_OBJC_IVAR_$_FMAssetAndAVPlayer._periodicTimeObserverToken
+_OBJC_IVAR_$_FMAssetAndAVPlayer._prepared
+_OBJC_IVAR_$_FMAssetAndAVPlayer._asset
+_OBJC_IVAR_$_FMAssetAndAVPlayer._monitor
+_OBJC_IVAR_$_FMMixingAudioPlayer._primary
+_OBJC_IVAR_$_FMMixingAudioPlayer._secondary
+___block_descriptor_tmp.110
+_OBJC_IVAR_$_FMMixingAudioPlayer._queuedAssets
+_OBJC_IVAR_$_FMMixingAudioPlayer._preparingFMAsset
+_OBJC_IVAR_$_FMMixingAudioPlayer._state
+_OBJC_IVAR_$_FMMixingAudioPlayer._trimmingEnabled
+_OBJC_IVAR_$_FMMixingAudioPlayer._crossfadeInEnabled
+_OBJC_IVAR_$_FMMixingAudioPlayer._secondsOfCrossfade
+_OBJC_IVAR_$_FMMixingAudioPlayer._volume
+___block_descriptor_tmp.146
+___block_descriptor_tmp.153
+_OBJC_IVAR_$_FMMixingAudioPlayer._delegate
+___block_descriptor_tmp.226
+___block_descriptor_tmp.280
+___block_descriptor_tmp.290
+_FMMixingAudioPlayerPlayerItemStatusObservationContext
+_FMMixingAudioPlayerItemPlaybackBufferEmptyObservationContext
+___block_descriptor_tmp.436
+_OBJC_IVAR_$_FMMixingAudioPlayer._oldSecondaryRate
+l_OBJC_PROTOCOL_$_FMBandwidthMonitorDelegate
+l_OBJC_LABEL_PROTOCOL_$_FMBandwidthMonitorDelegate
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMMixingAudioPlayer.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMMixingAudioPlayer.h
+__28+[FMMixingAudioPlayer names]_block_invoke
+__47-[FMMixingAudioPlayer immediatelyFadeOutPlayer]_block_invoke
+__91-[FMMixingAudioPlayer applyFadeInAndFadeOutToPlayer:andAttachCrossfadeEvent:andSkipFadeIn:]_block_invoke
+__46-[FMMixingAudioPlayer applyAudioTrimToPlayer:]_block_invoke
+__43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.147
+__43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke
+__27-[FMMixingAudioPlayer init]_block_invoke.107
+__27-[FMMixingAudioPlayer init]_block_invoke
++[FMBase64 dataFromBase64String:]
++[FMBase64 base64EncodedStringFromData:]
+_fm_base64DecodeLookup
+_fm_base64EncodeLookup
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMBase64.m
+FM_NewBase64Encode
+FM_NewBase64Decode
++[FMAsset assetWithAudioItem:]
+-[FMAsset dealloc]
+-[FMAsset init]
+-[FMAsset initWithAudioItem:]
+-[FMAsset setCompletionBlockWithSuccess:failure:]
+___49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke
+___49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke.14
+___copy_helper_block_.15
+___destroy_helper_block_.16
+-[FMAsset cancel]
+-[FMAsset completeWithItem:]
+___28-[FMAsset completeWithItem:]_block_invoke
+___copy_helper_block_.28
+___destroy_helper_block_.29
+-[FMAsset failWithError:]
+___25-[FMAsset failWithError:]_block_invoke
+___copy_helper_block_.33
+___destroy_helper_block_.34
+-[FMAsset loadPlayerItem]
+___25-[FMAsset loadPlayerItem]_block_invoke
+___25-[FMAsset loadPlayerItem]_block_invoke_2
+___copy_helper_block_.69
+___destroy_helper_block_.70
+___copy_helper_block_.72
+___destroy_helper_block_.73
+-[FMAsset prepareToPlayAsset:withKeys:]
+-[FMAsset description]
+-[FMAsset audioItem]
+-[FMAsset playerItem]
+-[FMAsset loadError]
+-[FMAsset successBlock]
+-[FMAsset setSuccessBlock:]
+-[FMAsset failureBlock]
+-[FMAsset setFailureBlock:]
+-[FMAsset .cxx_destruct]
+_OBJC_IVAR_$_FMAsset._audioItem
+_OBJC_IVAR_$_FMAsset._isCanceled
+___block_descriptor_tmp.17
+_OBJC_IVAR_$_FMAsset._asset
+_OBJC_IVAR_$_FMAsset._playerItem
+_OBJC_IVAR_$_FMAsset._loadingInProgress
+___block_descriptor_tmp.30
+_OBJC_IVAR_$_FMAsset._loadError
+___block_descriptor_tmp.35
+___block_descriptor_tmp.71
+___block_descriptor_tmp.74
+_OBJC_IVAR_$_FMAsset._successBlock
+_OBJC_IVAR_$_FMAsset._failureBlock
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAsset.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMAsset.h
+__25-[FMAsset loadPlayerItem]_block_invoke_2
+__25-[FMAsset loadPlayerItem]_block_invoke
+__25-[FMAsset failWithError:]_block_invoke
+__28-[FMAsset completeWithItem:]_block_invoke
+__49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke.14
+__49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke
+-[FMBandwidthMonitor init]
+-[FMBandwidthMonitor dealloc]
+-[FMBandwidthMonitor loadedDuration]
+-[FMBandwidthMonitor start]
+-[FMBandwidthMonitor stop]
+-[FMBandwidthMonitor notifyDelegate]
+-[FMBandwidthMonitor itemIsValid]
+-[FMBandwidthMonitor networkCheckTimerFired:]
+-[FMBandwidthMonitor currentDownloadRate]
+-[FMBandwidthMonitor playbackLikelyToKeepUp]
+-[FMBandwidthMonitor loadingComplete]
+-[FMBandwidthMonitor delegate]
+-[FMBandwidthMonitor setDelegate:]
+-[FMBandwidthMonitor monitoredItem]
+-[FMBandwidthMonitor setMonitoredItem:]
+-[FMBandwidthMonitor refreshRate]
+-[FMBandwidthMonitor setRefreshRate:]
+-[FMBandwidthMonitor .cxx_destruct]
+_OBJC_IVAR_$_FMBandwidthMonitor._estimatedDownloadRate
+_OBJC_IVAR_$_FMBandwidthMonitor._refreshRate
+_OBJC_IVAR_$_FMBandwidthMonitor._monitoredItem
+_OBJC_IVAR_$_FMBandwidthMonitor._lastPlayableDuration
+_OBJC_IVAR_$_FMBandwidthMonitor._networkCheckTimer
+_OBJC_IVAR_$_FMBandwidthMonitor._delegate
+_OBJC_IVAR_$_FMBandwidthMonitor._loadingComplete
+_OBJC_IVAR_$_FMBandwidthMonitor._playbackLikelyToKeepUp
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMBandwidthMonitor.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMBandwidthMonitor.h
++[FMSession setClientToken:secret:detectLocalMusic:]
++[FMSession setClientToken:secret:]
++[FMSession sharedSession]
+___26+[FMSession sharedSession]_block_invoke
+-[FMSession init]
+-[FMSession reset]
+-[FMSession setNextItem:]
+-[FMSession setCurrentItem:]
+-[FMSession setStation:]
++[FMSession saveDirectory]
+-[FMSession timeUpdate:]
+-[FMSession updateServerTime]
+___29-[FMSession updateServerTime]_block_invoke
+___29-[FMSession updateServerTime]_block_invoke.118
+___copy_helper_block_.123
+___destroy_helper_block_.124
+-[FMSession requestSession:]
+___28-[FMSession requestSession:]_block_invoke
+___copy_helper_block_.203
+___destroy_helper_block_.204
+___28-[FMSession requestSession:]_block_invoke.206
+___copy_helper_block_.209
+___destroy_helper_block_.210
+-[FMSession storeAuthToDisk]
+-[FMSession authFromDisk]
+-[FMSession logEvent:]
+-[FMSession logEvent:withParameters:]
+-[FMSession sendRequest:]
+___25-[FMSession sendRequest:]_block_invoke
+___copy_helper_block_.260
+___destroy_helper_block_.261
+___25-[FMSession sendRequest:]_block_invoke.263
+___copy_helper_block_.264
+___destroy_helper_block_.265
+-[FMSession sendQueuedRequests]
+-[FMSession cancelOutstandingRequests]
+-[FMSession stationsFromJSON:]
+-[FMSession placementIdFromJSON:]
+-[FMSession canRequestItems]
+-[FMSession requestNextItem]
+-[FMSession requestAudioItem:]
+___30-[FMSession requestAudioItem:]_block_invoke
+___copy_helper_block_.317
+___destroy_helper_block_.318
+___30-[FMSession requestAudioItem:]_block_invoke.320
+___copy_helper_block_.321
+___destroy_helper_block_.322
+-[FMSession nextItemSucceeded:]
+-[FMSession nextItemFailed:]
+-[FMSession playStarted]
+___24-[FMSession playStarted]_block_invoke
+___copy_helper_block_.338
+___destroy_helper_block_.339
+___24-[FMSession playStarted]_block_invoke.341
+___copy_helper_block_.348
+___destroy_helper_block_.349
+-[FMSession updatePlay:]
+-[FMSession playCompleted]
+___26-[FMSession playCompleted]_block_invoke
+___copy_helper_block_.357
+___destroy_helper_block_.358
+-[FMSession requestLike]
+-[FMSession requestLikeForItem:]
+___32-[FMSession requestLikeForItem:]_block_invoke
+___copy_helper_block_.366
+___destroy_helper_block_.367
+-[FMSession requestUnlike]
+-[FMSession requestUnlikeForItem:]
+___34-[FMSession requestUnlikeForItem:]_block_invoke
+-[FMSession requestDislike]
+-[FMSession requestDislikeForItem:]
+___35-[FMSession requestDislikeForItem:]_block_invoke
+___copy_helper_block_.384
+___destroy_helper_block_.385
+-[FMSession requestSkipWithSuccess:failure:]
+___44-[FMSession requestSkipWithSuccess:failure:]_block_invoke
+___copy_helper_block_.397
+___destroy_helper_block_.398
+___44-[FMSession requestSkipWithSuccess:failure:]_block_invoke.400
+___copy_helper_block_.403
+___destroy_helper_block_.404
+-[FMSession rejectItem:forReason:]
+___34-[FMSession rejectItem:forReason:]_block_invoke
+___copy_helper_block_.410
+___destroy_helper_block_.411
+___34-[FMSession rejectItem:forReason:]_block_invoke.413
+___copy_helper_block_.414
+___destroy_helper_block_.415
+-[FMSession handleUnexpectedError:]
+-[FMSession description]
+-[FMSession available]
+-[FMSession activeStation]
+-[FMSession placementId]
+-[FMSession setPlacementId:]
+-[FMSession supportedAudioFormats]
+-[FMSession setSupportedAudioFormats:]
+-[FMSession maxBitrate]
+-[FMSession setMaxBitrate:]
+-[FMSession currentItem]
+-[FMSession nextItem]
+-[FMSession canSkip]
+-[FMSession auth]
+-[FMSession setAuth:]
+-[FMSession .cxx_destruct]
+_sharedSession._sharedSession
+_sharedSession.singletonToken
+_OBJC_IVAR_$_FMSession._available
+_OBJC_IVAR_$_FMSession._queuedRequests
+_OBJC_IVAR_$_FMSession._requestsInProgress
+_OBJC_IVAR_$_FMSession._supportedAudioFormats
+_OBJC_IVAR_$_FMSession._maxBitrate
+_OBJC_IVAR_$_FMSession._auth
+_OBJC_IVAR_$_FMSession._canSkip
+_OBJC_IVAR_$_FMSession._currentItem
+_OBJC_IVAR_$_FMSession._nextItem
+_OBJC_IVAR_$_FMSession._activeStation
+___block_descriptor_tmp.115
+___block_descriptor_tmp.126
+_OBJC_IVAR_$_FMSession._placementId
+___block_descriptor_tmp.205
+___block_descriptor_tmp.211
+___block_descriptor_tmp.262
+___block_descriptor_tmp.266
+_OBJC_IVAR_$_FMSession._nextItemInProgress
+___block_descriptor_tmp.319
+___block_descriptor_tmp.323
+___block_descriptor_tmp.340
+___block_descriptor_tmp.350
+___block_descriptor_tmp.359
+___block_descriptor_tmp.368
+___block_descriptor_tmp.386
+___block_descriptor_tmp.399
+___block_descriptor_tmp.405
+___block_descriptor_tmp.412
+___block_descriptor_tmp.416
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMSession.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMSession.h
+__34-[FMSession rejectItem:forReason:]_block_invoke.413
+__34-[FMSession rejectItem:forReason:]_block_invoke
+__44-[FMSession requestSkipWithSuccess:failure:]_block_invoke.400
+__44-[FMSession requestSkipWithSuccess:failure:]_block_invoke
+__35-[FMSession requestDislikeForItem:]_block_invoke
+__34-[FMSession requestUnlikeForItem:]_block_invoke
+__32-[FMSession requestLikeForItem:]_block_invoke
+__26-[FMSession playCompleted]_block_invoke
+__24-[FMSession playStarted]_block_invoke.341
+__24-[FMSession playStarted]_block_invoke
+__30-[FMSession requestAudioItem:]_block_invoke.320
+__30-[FMSession requestAudioItem:]_block_invoke
+__25-[FMSession sendRequest:]_block_invoke.263
+__25-[FMSession sendRequest:]_block_invoke
+__28-[FMSession requestSession:]_block_invoke.206
+__28-[FMSession requestSession:]_block_invoke
+__29-[FMSession updateServerTime]_block_invoke.118
+__29-[FMSession updateServerTime]_block_invoke
+__26+[FMSession sharedSession]_block_invoke
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMError.m
+-[FMStation initWithJSON:]
+-[FMStation isEqual:]
+-[FMStation hash]
+-[FMStation copyWithZone:]
+-[FMStation name]
+-[FMStation identifier]
+-[FMStation options]
+-[FMStation isOnDemand]
+-[FMStation audioItems]
+-[FMStation .cxx_destruct]
+_OBJC_IVAR_$_FMStation._identifier
+_OBJC_IVAR_$_FMStation._name
+_OBJC_IVAR_$_FMStation._options
+_OBJC_IVAR_$_FMStation._isOnDemand
+_OBJC_IVAR_$_FMStation._audioItems
+l_OBJC_PROTOCOL_$_NSCopying
+l_OBJC_LABEL_PROTOCOL_$_NSCopying
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMStation.m
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/FMStation.h
+_fm_currentLogLevel
+/Users/eml/git/iOS-SDK-Core/FeedMediaCore/FeedMediaCore/Internal/FMLog.m
+_FMLog
+FMLogSetLevel
+/Users/eml/Library/Developer/Xcode/DerivedData/FeedMediaCore-fsvjdoloncjcoohdnmjylpjyqunr/Build/Intermediates/FeedMediaCore.build/Release-iphoneos/FeedMediaCore Framework.build/DerivedSources/FeedMediaCore_vers.c

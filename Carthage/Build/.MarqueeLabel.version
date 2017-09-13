@@ -1,0 +1,25 @@
+{
+  "iOS" : [
+    {
+      "hash" : "c5c5604d999baa077067796cac3595c9728e7c7071786dcf77833ff8d73fc9b4",
+      "name" : "MarqueeLabel"
+    },
+    {
+      "hash" : "e0d18d68044cd03055fcae2a3f57d9b9aaaef38d567f33b90ca84385c0e9f13e",
+      "name" : "MarqueeLabelSwift"
+    }
+  ],
+  "commitish" : "3.1.3",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "hash" : "98b34b4ec577ce604fb5bccaa7be1fa142051d47dda6d2b1d2ec3243a6c2e744",
+      "name" : "MarqueeLabel"
+    }
+  ],
+  "Mac" : [
+
+  ]
+}

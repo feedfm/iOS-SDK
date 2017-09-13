@@ -1,4 +1,0 @@
-
-target 'FeedMedia' do
-  pod 'FeedMedia', :path => '../'
-end
