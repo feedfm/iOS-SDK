@@ -6,20 +6,7 @@
 //  Copyright © 2017 Feed Media. All rights reserved.
 //
 
-/*
- // TODO: use this rather than the #define below
- 
- #import <UIKit/UIKit.h>
-
-//! Project version number for FeedMediaCore.
-FOUNDATION_EXPORT double FeedMediaCoreVersionNumber;
-
-//! Project version string for FeedMediaCore.
-FOUNDATION_EXPORT const unsigned char FeedMediaCoreVersionString[];
-
-*/
-
-#define FEED_MEDIA_CLIENT_VERSION @"4.0.11"
+#define FEED_MEDIA_CLIENT_VERSION @"4.0.12"
 
 // All public headers
 #import "FMAudioItem.h"
