@@ -3,27 +3,7 @@
 # quit on error
 set -e 
 
-#
-# confirm everything is checked in
-#
-
 cd "${PROJECT_DIR}"
-
-STATUS=$(git status --porcelain 2> /dev/null)
-if [[ "$STATUS" != "" ]]; then
-  echo 'Project not checked in - unable to deploy!'
-  exit 1
-fi
-
-cd ..
-
-STATUS=$(git status --porcelain 2> /dev/null)
-if [[ "$STATUS" != "" ]]; then
-  echo 'Workspace not checked in - unable to deploy!'
-  exit 1
-fi
-
-cd -
 
 #
 # make sure the pod lints
@@ -51,6 +31,26 @@ if [[ $CHANGE = "" ]]; then
   echo "This release version (${VERSION}) has no entry in the CHANGELOG"
   exit 1
 fi
+
+#
+# confirm everything is checked in
+#
+
+STATUS=$(git status --porcelain 2> /dev/null)
+if [[ "$STATUS" != "" ]]; then
+  echo 'Project not checked in - unable to deploy!'
+  exit 1
+fi
+
+cd ..
+
+STATUS=$(git status --porcelain 2> /dev/null)
+if [[ "$STATUS" != "" ]]; then
+  echo 'Workspace not checked in - unable to deploy!'
+  exit 1
+fi
+
+cd -
 
 # create release tag
 
