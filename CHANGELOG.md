@@ -1,4 +1,9 @@
 
+- v4.0.13
+  - add new FMPlayer getStationWithOptionKey:Value: to search for a station with
+    a given option key/value.
+  - fixed internal compilation warning
+
 - v4.0.12
   - refactor layout of repository to properly support Carthage
 

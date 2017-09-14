@@ -480,7 +480,6 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  *  @see activeStation
  */
 
-
 - (BOOL) setActiveStationByName: (NSString *)name withCrossfade: (BOOL) withCrossfade;
 
 /**
@@ -497,6 +496,16 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 - (void) setActiveStation: (FMStation *)station withCrossfade: (BOOL) withCrossfade;
+
+/**
+ * Search through the list of available stations, and return the one that has
+ * an option attribute named 'key' with a string value of 'value'.
+ *
+ * @param key name of attribute to inspect
+ * @param value attribute value that matching station should contain
+ */
+
+- (FMStation *) getStationWithOptionKey: (NSString *) key Value: (NSObject *) value;
 
 /**
  *  A value between 0.0 and 1.0 relative to system volume
