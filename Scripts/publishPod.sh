@@ -60,10 +60,25 @@ fi
 
 cd -
 
+#
+# Tag repo
+#
+
 git tag  -a -m "Release of version ${VERSION}" "v${VERSION}"
 
 git push
 git push --tags
+
+#
+# publish appledoc
+#
+
+ssh feed@static0.feed.fm "cd demo.feed.fm/sdk/docs/ios && rm -fr $VERSION && mkdir $VERSION && rm -f latest && ln -s $VERSION latest"
+scp -r Docs/* feed@static0.feed.fm:demo.feed.fm/sdk/docs/ios/$VERSION
+
+#
+# Publish to CocoaPod repo
+#
 
 pod trunk push FeedMedia.podspec
 
