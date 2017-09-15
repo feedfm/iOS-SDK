@@ -1,4 +1,7 @@
 
+- v4.0.14
+  - re-enable bitcode generation for static libFeedMediaCore.a library
+
 - v4.0.13
   - add new FMPlayer getStationWithOptionKey:Value: to search for a station with
     a given option key/value.
