@@ -188,10 +188,8 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Displays a notification with the indicated message and then performs the
  * completion block once the notification animates in.
- * @param message
- *        The content of the message to be displayed.
- * @param completion
- *        The block to be invoked once the notification is displayed.
+ * @param message The content of the message to be displayed.
+ * @param completion The block to be invoked once the notification is displayed.
  */
 - (void)displayNotificationWithMessage:(NSString *)message
                             completion:(void (^)(void))completion;
@@ -199,10 +197,8 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Displays a notification with the indicated message for the indicated
  * duration.
- * @param message
- *        The content of the message to be displayed.
- * @param duration
- *        The amount of seconds for which the notification should be displayed,
+ * @param message  The content of the message to be displayed.
+ * @param duration The amount of seconds for which the notification should be displayed,
  *        not including the animate in and out times.
  */
 - (void)displayNotificationWithMessage:(NSString *)message
@@ -211,10 +207,8 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Displays a notification with the indicated attributed string and then 
  * performs the completion block once the notification animates in.
- * @param attributedString
- *        The content of the message to be displayed.
- * @param completion
- *        The block to be invoked once the notification is displayed.
+ * @param attributedString The content of the message to be displayed.
+ * @param completion The block to be invoked once the notification is displayed.
  */
 - (void)displayNotificationWithAttributedString:(NSAttributedString *)
                                                 attributedString
@@ -223,10 +217,8 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Displays a notification with the indicated message for the indicated
  * duration.
- * @param attributedString
- *        The content of the message to be displayed.
- * @param duration
- *        The amount of seconds for which the notification should be displayed,
+ * @param attributedString The content of the message to be displayed.
+ * @param duration The amount of seconds for which the notification should be displayed,
  *        not including the animate in and out times.
  */
 - (void)displayNotificationWithAttributedString:(NSAttributedString *)
@@ -236,10 +228,8 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Displays a notification with the indicated custom view and then performs the
  * completion block once the notification animates in.
- * @param view
- *        The custom @c UIView that you wish to present.
- * @param completion
- *        The block to be invoked once the notification is displayed.
+ * @param view The custom @c UIView that you wish to present.
+ * @param completion The block to be invoked once the notification is displayed.
  */
 
 - (void)displayNotificationWithView:(UIView *)view
@@ -248,10 +238,8 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Displays a notification with the indicated custom view for the indicated
  * duration.
- * @param view
- *        The custom @c UIView that you wish to present.
- * @param duration
- *        The amount of seconds for which the notification should be displayed,
+ * @param view The custom @c UIView that you wish to present.
+ * @param duration The amount of seconds for which the notification should be displayed,
  *        not including the animate in and out times.
  */
 - (void)displayNotificationWithView:(UIView *)view
@@ -260,8 +248,7 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Dismisses the currently presented notification and then performs the
  * completion block.
- * @param completion
- *        The block to be invoked after the notification is dismissed.
+ * @param completion The block to be invoked after the notification is dismissed.
  */
 - (void)dismissNotificationWithCompletion:(void(^)(void))completion;
 
