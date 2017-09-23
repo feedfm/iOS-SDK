@@ -31,8 +31,6 @@
 
 @end
 
-
-
 @implementation FMStationCrossfader {
     
     NSMutableArray *_timesAndStations;
@@ -54,7 +52,7 @@
 + (FMStationCrossfader *) stationCrossfaderWithInitialStation:(NSDictionary *)initialStationOptionKeysAndValues {
     FMStationCrossfader *sc = [[FMStationCrossfader alloc] init];
     
-    [sc appendStation: initialStationOptionKeysAndValues startingAtTime: 0.0f];
+    [sc playStation: initialStationOptionKeysAndValues startingAtTime: 0.0f];
 
     return sc;
 }
@@ -73,13 +71,13 @@
         NSNumber *timeObject = (NSNumber *) timeStationPairs[i];
         NSDictionary *optionKeysAndValues = (NSDictionary *) timeStationPairs[i+1];
         
-        [sc appendStation: optionKeysAndValues startingAtTime: [timeObject floatValue]];
+        [sc playStation: optionKeysAndValues startingAtTime: [timeObject floatValue]];
     }
     
     return sc;
 }
 
-- (void) appendStation: (NSDictionary *) optionKeysAndValues startingAtTime: (float) time {
+- (void) playStation: (NSDictionary *) optionKeysAndValues startingAtTime: (float) time {
     if (_connected) {
         NSLog(@"**WARNING** cannot append switches to crossfader once begin has been called");
         return;
