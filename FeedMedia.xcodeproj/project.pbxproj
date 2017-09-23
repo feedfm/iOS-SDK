@@ -34,6 +34,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A9040DF21F747C710046364A /* FMStationCrossfader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9040DF01F747C710046364A /* FMStationCrossfader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9040DF31F747C710046364A /* FMStationCrossfader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9040DF11F747C710046364A /* FMStationCrossfader.m */; };
 		A9879F981F6259E200CCE75D /* FMDislikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7A1F6259E200CCE75D /* FMDislikeButton.m */; };
 		A9879F991F6259E200CCE75D /* FMLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7B1F6259E200CCE75D /* FMLikeButton.m */; };
 		A9879F9A1F6259E200CCE75D /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7C1F6259E200CCE75D /* FMMetadataLabel.m */; };
@@ -86,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9040DF01F747C710046364A /* FMStationCrossfader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStationCrossfader.h; sourceTree = "<group>"; };
+		A9040DF11F747C710046364A /* FMStationCrossfader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStationCrossfader.m; sourceTree = "<group>"; };
 		A9879F301F6253A300CCE75D /* FeedMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9879F341F6253A300CCE75D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9879F7A1F6259E200CCE75D /* FMDislikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDislikeButton.m; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				A9879F941F6259E200CCE75D /* FMSkipWarningView.h */,
 				A9879F951F6259E200CCE75D /* FMSkipWarningView.m */,
 				A9879F961F6259E200CCE75D /* FMTotalTimeLabel.h */,
+				A9040DF01F747C710046364A /* FMStationCrossfader.h */,
+				A9040DF11F747C710046364A /* FMStationCrossfader.m */,
 				A9879F971F6259E200CCE75D /* FeedMedia.h */,
 				A987A0AA1F6763A700CCE75D /* FeedMediaCoreProxy.h */,
 				A9879F341F6253A300CCE75D /* Info.plist */,
@@ -214,6 +220,7 @@
 				A9879F9B1F6259E200CCE75D /* FMStationButton.h in Headers */,
 				A9879FAB1F6259E200CCE75D /* FMElapsedTimeLabel.h in Headers */,
 				A9879FB51F6259E200CCE75D /* FeedMedia.h in Headers */,
+				A9040DF21F747C710046364A /* FMStationCrossfader.h in Headers */,
 				A9879FA51F6259E200CCE75D /* FMEqualizer.h in Headers */,
 				A9879FAE1F6259E200CCE75D /* FMProgressView.h in Headers */,
 				A9879FB01F6259E200CCE75D /* FMShareButton.h in Headers */,
@@ -340,6 +347,7 @@
 			files = (
 				A9879FAC1F6259E200CCE75D /* FMElapsedTimeLabel.m in Sources */,
 				A9879FA81F6259E200CCE75D /* FMProgressView.m in Sources */,
+				A9040DF31F747C710046364A /* FMStationCrossfader.m in Sources */,
 				A9879F981F6259E200CCE75D /* FMDislikeButton.m in Sources */,
 				A9879FA01F6259E200CCE75D /* FMEqualizer.m in Sources */,
 				A9879F9C1F6259E200CCE75D /* FMPlayPauseButton.m in Sources */,
@@ -581,6 +589,7 @@
 				A987A07A1F64F42400CCE75D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A987A07F1F64F6E600CCE75D /* Build configuration list for PBXAggregateTarget "Publish Pod" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +598,7 @@
 				A987A0811F64F6E600CCE75D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

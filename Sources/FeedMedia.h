@@ -24,4 +24,5 @@
 #include "FMStationButton.h"
 #include "FMTotalTimeLabel.h"
 #include "FMEqualizer.h"
+#include "FMStationCrossfader.h"
 

@@ -508,6 +508,32 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (FMStation *) getStationWithOptionKey: (NSString *) key Value: (NSObject *) value;
 
 /**
+ * Search throught the list of available stations, and return one that has
+ * options that match those passed in via optionKeysAndValues. This differs from
+ * getStationWithOptionKey:Value: in that you can specify multiple key/value
+ * pairs, like so:
+ *
+ * [player getStationWithOptions: @{ @"genre": @"80s", @"bpm" : @"slow" }
+ *
+ * This method returns the first station with the matching values, or nil.
+ 
+ * @param optionKeysAndValues key value pairs to search for
+ * @return a station whose options contain optionKeysAndValues
+ */
+
+- (FMStation *) getStationWithOptions: (NSDictionary *) optionKeysAndValues;
+
+/**
+ * Similar to getStationWithOptions:, but this method returns all the stations
+ * that match the passed in optionsKeysAndValues.
+ *
+ * @param optionKeysAndValues key value pairs to search for
+ * @return an array of stations whose options contain optionKeysAndValues. never nil.
+ */
+
+- (NSArray *) getAllStationsWithOptions: (NSDictionary *) optionKeysAndValues;
+
+/**
  *  A value between 0.0 and 1.0 relative to system volume
  */
 
