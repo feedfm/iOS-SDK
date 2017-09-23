@@ -1,4 +1,12 @@
 
+- v4.0.15
+  - new getStationWithOptions: and getAllStationsWithOptions: calls to search
+    for stations based on metadata
+  - bugfix to apply volume change when crossfading is not turned on
+  - handle race condition when av player item prep is cancelled
+  - first revision of FMStationCrossfader to assist with cue-based station
+    switching
+
 - v4.0.14
   - re-enable bitcode generation for static libFeedMediaCore.a library
 
