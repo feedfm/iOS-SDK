@@ -1,4 +1,7 @@
 
+- v4.0.16
+  - update to FMStationCrossfader to handle volume adjustments
+
 - v4.0.15
   - new getStationWithOptions: and getAllStationsWithOptions: calls to search
     for stations based on metadata
