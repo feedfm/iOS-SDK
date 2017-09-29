@@ -18,7 +18,7 @@
  * you want to happen at those times. The current implementation allows you to change the
  * current station or volume. You can create an instance like so:
  *
- * FMStationCrossfader *cf = [FMSTationCrossfade stationCrossfaderWithInitialStation:@{ @"bpm": @"slow" },
+ *    FMStationCrossfader *cf = [FMSTationCrossfade stationCrossfaderWithInitialStation:@{ @"bpm": @"slow" },
  *                                               andCuePoints: @[
  *                                                      // at 5 seconds in, change the volume to 0.5
  *                                                      5.0f, @0.5f,

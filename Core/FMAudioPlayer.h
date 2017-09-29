@@ -324,7 +324,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 /**
  * Utility function to map state to string.
  *
- * @param type the type to map to a NSString
+ * @param type the playback state to convert to string
  */
 
 + (NSString *) nameForType:(FMAudioPlayerPlaybackState)type;
@@ -360,9 +360,9 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void)play;
 
 /**
- * Start playback of specific song.
+ * Start playback of specific song
  *
- * @param audioItem song to play.
+ * @param audioItem an audioItem that holds an id that the user wishes to play
  */
 - (void)playAudioItem: (FMAudioItem *) audioItem;
 

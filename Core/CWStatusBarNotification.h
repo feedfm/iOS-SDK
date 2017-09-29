@@ -197,7 +197,7 @@ typedef NS_ENUM(NSInteger, CWNotificationAnimationType) {
 /**
  * Displays a notification with the indicated message for the indicated
  * duration.
- * @param message  The content of the message to be displayed.
+ * @param message The content of the message to be displayed.
  * @param duration The amount of seconds for which the notification should be displayed,
  *        not including the animate in and out times.
  */
