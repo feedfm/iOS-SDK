@@ -1,4 +1,8 @@
 
+- v4.0.17
+  - prevent crash when fading-out song crosses fade out boundary multiple times
+  - fix 'dislike' being recorded as a 'like'
+
 - v4.0.16
   - update to FMStationCrossfader to handle volume adjustments
 
