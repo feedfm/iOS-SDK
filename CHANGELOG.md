@@ -1,4 +1,9 @@
 
+- v4.0.18
+  - validate crossfade and fade in/out times before passing off to AVMixing params
+  - force song loading to be done serially to escape thread race conditions
+  - improve crash reporting
+
 - v4.0.17
   - prevent crash when fading-out song crosses fade out boundary multiple times
   - fix 'dislike' being recorded as a 'like'
