@@ -338,8 +338,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  *  @param onNotAvailable called when we determine music is not available
  */
 
-- (void)whenAvailable: (void (^)()) onAvailable
-         notAvailable: (void (^)()) onNotAvailable;
+- (void)whenAvailable: (void (^)(void)) onAvailable
+         notAvailable: (void (^)(void)) onNotAvailable;
 
 
 ///-----------------------------------------------------

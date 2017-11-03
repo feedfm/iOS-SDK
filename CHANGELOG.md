@@ -1,4 +1,9 @@
 
+- v4.0.19
+  - properly handle when a song notifies us that it is complete even though
+    we've already paused it
+  - more logging to narrow down avplayer death issue
+
 - v4.0.18
   - validate crossfade and fade in/out times before passing off to AVMixing params
   - force song loading to be done serially to escape thread race conditions
