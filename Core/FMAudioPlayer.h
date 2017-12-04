@@ -540,6 +540,13 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic) float mixVolume;
 
 /**
+ * When true (the default), adjust individual song volumes so they are perceived
+ * be the same loudness.
+ */
+
+@property (nonatomic) BOOL normalizeSongVolume;
+
+/**
  * If YES (the default), then the Feed.fm library will
  * register with the MPRemoteCommandCenter to handle play/pause/skip/like/dislike
  * commands upon start of playback. Note that, unless a lockScreenDelegate

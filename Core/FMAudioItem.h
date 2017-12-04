@@ -97,6 +97,18 @@
 @property (readonly) BOOL disliked;
 
 /**
+ * Used internally to keep perceived volume levels equal
+ */
+
+@property (readonly) double replayGain;
+
+/**
+ * Used internally to pre-boost the volume of this song
+ */
+
+@property double preGain;
+
+/**
  *  Creates FMAudioItem from the JSON provided. 
  *
  *  @param jsonDictionary JSON dictionary

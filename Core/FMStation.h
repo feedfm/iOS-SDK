@@ -53,6 +53,12 @@
 @property (readonly) BOOL isOnDemand;
 
 /**
+ * Used internally to adjust volume of songs from this station.
+ */
+
+@property (readonly) double preGain;
+
+/**
  * An array of FMAudioItem songs that are in this station, if it
  * is on-demand, otherwise this is NULL.
  */

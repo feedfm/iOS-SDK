@@ -1,4 +1,7 @@
 
+- v4.0.21
+  - Core library apparently wasn't properly copied to public repro.
+
 - v4.0.20
   - Volume normalization support for songs. You might notice max volume is a little
     lower than before - this allows us to raise the volume of quiet songs. If the
