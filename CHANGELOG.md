@@ -1,4 +1,12 @@
 
+- v4.0.20
+  - Volume normalization support for songs. You might notice max volume is a little
+    lower than before - this allows us to raise the volume of quiet songs. If the
+    volume won't get as high as you want, we can add a boost via server side options.
+  - Fix for crash that occurs when you are crossfading between two songs and hit
+    'skip'
+  - Extra logic to detect when ramp up/down overlap
+
 - v4.0.19
   - properly handle when a song notifies us that it is complete even though
     we've already paused it
