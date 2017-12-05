@@ -1,4 +1,7 @@
 
+- v4.0.22
+  - Fix for crash when user hits skip after pausing during station crossfade
+
 - v4.0.21
   - Core library apparently wasn't properly copied to public repro.
 
