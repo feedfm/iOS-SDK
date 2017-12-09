@@ -1,4 +1,7 @@
 
+- v4.0.23
+  - Station crossfade wasn't taking into account volume normalization
+
 - v4.0.22
   - Fix for crash when user hits skip after pausing during station crossfade
 
