@@ -1,4 +1,10 @@
 
+- v4.0.24
+  - Tweak AVPlayers so that AirPlay doesn't cause them to fight for
+    control.
+  - Better handle and log when a song doesn't play to completion, for
+    whatever reason.
+
 - v4.0.23
   - Station crossfade wasn't taking into account volume normalization
 
