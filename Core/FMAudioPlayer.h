@@ -14,7 +14,6 @@
 #import "FMLog.h"
 #import "FMAudioPlayer.h"
 #import "FMLockScreenDelegate.h"
-#import "CWStatusBarNotification.h"
 
 /**
  *  @const FMAudioPlayerPlaybackStateDidChangeNotification
@@ -666,17 +665,6 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 @property (nonatomic, copy) FMStation *activeStation;
-
-/**
- * This status bar notification is used to announce song changes to
- * the user. Access the properties on this object to change
- * how the notification is styled and to add handlers for when the
- * notification is tapped.
- *
- * Details on this object can be found at https://github.com/cezarywojcik/CWStatusBarNotification
- */
-
-@property (nonatomic, readonly) CWStatusBarNotification *statusBarNotification;
 
 /**
  * The player displays a notification at the top of the screen during song

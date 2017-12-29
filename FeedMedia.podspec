@@ -29,7 +29,8 @@ DESC
 
   s.requires_arc = true
 
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '11.0'
 
   #
   # core library is needed everywhere
@@ -45,7 +46,6 @@ DESC
   #
 
   s.subspec 'UI' do |sp|
-    sp.dependency "MarqueeLabel", "~> 3.0.3"
 		sp.source_files = 'Sources/*.{m,h}', 'Core/*.h'
 		sp.public_header_files = 'Sources/*.h', 'Core/*.h'
     sp.vendored_library = 'Core/libFeedMediaCore.a'
