@@ -83,8 +83,12 @@
     
     if ((state == FMAudioPlayerPlaybackStateComplete) ||
         (state == FMAudioPlayerPlaybackStateReadyToPlay)) {
-        [self updateText];
+        [self updateToBlankText];
     }
+}
+
+- (void) updateToBlankText {
+    super.text = @"";
 }
 
 - (void) updateText {
