@@ -59,6 +59,18 @@
 @property (readonly) double preGain;
 
 /**
+ * Used internally to detect if this is a simulcast stream or not
+ */
+
+@property (readonly) NSString *castURL;
+
+/**
+ * Return true if this station is a simulcast station
+ */
+
+@property (readonly) BOOL isSimulcast;
+
+/**
  * An array of FMAudioItem songs that are in this station, if it
  * is on-demand, otherwise this is NULL.
  */

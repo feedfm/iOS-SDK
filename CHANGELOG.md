@@ -1,4 +1,10 @@
 
+- v4.0.25
+  - Add support for simulcast stations
+  - follow-up calls to setClientToken:Secret: will reset the
+    FMAudioPlayer's availability so future whenAvailable:notAvailable 
+    calls will work again.
+
 - v4.0.24
   - Tweak AVPlayers so that AirPlay doesn't cause them to fight for
     control.
