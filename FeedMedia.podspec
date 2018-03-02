@@ -23,21 +23,28 @@ DESC
 
   s.homepage         = "https://feed.fm/"
   s.license          = 'MIT'
-  s.author           = { "Eric Lambrecht" => "eric@feed.fm", "Feed Media" => "support@feed.fm" }
+  s.author           = { "Eric Lambrecht" => "eric@feed.fm", "Arveen Kumar" => "arveen@feed.fm", "Feed Media" => "support@feed.fm" }
   s.source           = { :git => "https://github.com/feedfm/iOS-SDK.git", :tag => "v#{s.version}" }
   s.documentation_url = 'http://demo.feed.fm/sdk/docs/ios/'
 
   s.requires_arc = true
 
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '11.0'
 
   #
-  # core library is needed everywhere
+  # Core library is needed everywhere
   #
 
-  s.vendored_library = 'Core/libFeedMediaCore.a'
-  s.source_files = 'Core/*.h'
-  s.public_header_files = 'Core/*.h'
+  s.ios.vendored_library = 'Core/libFeedMediaCore.a'
+  s.tvos.vendored_library = 'Core/libFeedMediaCore-tv.a'
+
+  s.source_files = [ 'Core/Feed*.h', 'Core/FM*.h' ]
+  s.ios.source_files = 'Core/CWStatusBarNotification.h'
+
+  s.public_header_files = [ 'Core/Feed*.h', 'Core/FM*.h' ]
+  s.ios.public_header_files = 'Core/CWStatusBarNotification.h'
+
   s.frameworks = 'AVFoundation', 'MediaPlayer', 'CoreMedia'
 
   #
@@ -46,13 +53,15 @@ DESC
 
   s.subspec 'UI' do |sp|
     sp.dependency "MarqueeLabel", "~> 3.0.3"
-		sp.source_files = 'Sources/*.{m,h}', 'Core/*.h'
-		sp.public_header_files = 'Sources/*.h', 'Core/*.h'
-    sp.vendored_library = 'Core/libFeedMediaCore.a'
-		#sp.resource_bundles = {
-		#  'FeedMedia' => [ 'Assets/**/*.png' ]
-		#}
-    sp.frameworks = 'AVFoundation', 'MediaPlayer', 'CoreMedia'
+
+		sp.source_files = 'Sources/*.{m,h}'
+		sp.public_header_files = 'Sources/*.h'
+
+		sp.ios.source_files = 'Sources/ios/*.{m,h}'
+		sp.ios.public_header_files = 'Sources/ios/*.h'
+
+		sp.tvos.source_files = 'Sources/tvos/*.{m,h}'
+		sp.tvos.public_header_files = 'Sources/tvos/*.h'
   end
 
 end

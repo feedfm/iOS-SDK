@@ -18,7 +18,6 @@
 #include "FMPlayPauseButton.h"
 #include "FMProgressView.h"
 #include "FMRemainingTimeLabel.h"
-#include "FMShareButton.h"
 #include "FMSkipButton.h"
 #include "FMSkipWarningView.h"
 #include "FMStationButton.h"
@@ -26,3 +25,6 @@
 #include "FMEqualizer.h"
 #include "FMStationCrossfader.h"
 
+#ifndef TARGET_OS_TV
+#include "FMShareButton.h"
+#endif
