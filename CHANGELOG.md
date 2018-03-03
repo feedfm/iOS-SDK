@@ -1,4 +1,7 @@
 
+- v4.0.26
+  - Add support for tvOS!
+
 - v4.0.25
   - Add support for simulcast stations
   - follow-up calls to setClientToken:Secret: will reset the
