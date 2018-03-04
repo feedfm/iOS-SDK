@@ -32,43 +32,22 @@ DESC
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '11.0'
 
-  #
-  # Core library 
-  #
+  # common source files/dependencies
+  s.dependency "MarqueeLabel", "~> 3.0.3"
+	s.source_files = [ 'Sources/*.{m,h}', 'Core/Feed*.h', 'Core/FM*.h' ]
+	s.public_header_files = [ 'Sources/*.h', 'Core/Feed*.h', 'Core/FM*.h' ]
+
+  # ios-specific source files
+	s.ios.source_files = [ 'Sources/ios/*.{m,h}', 'Core/CWStatusBarNotification.h' ]
+	s.ios.public_header_files = [ 'Sources/ios/*.h', 'Core/CWStatusBarNotification.h' ]
+
+  # tvos-specific source fles
+	s.tvos.source_files = 'Sources/tvos/*.{m,h}'
+	s.tvos.public_header_files = 'Sources/tvos/*.h'
 
   s.ios.vendored_library =  'Core/libFeedMediaCore.a'
   s.tvos.vendored_library = 'Core/libFeedMediaCore-tv.a'
 
-  s.source_files = [ 'Core/Feed*.h', 'Core/FM*.h' ]
-  s.ios.source_files = 'Core/CWStatusBarNotification.h'
-
-  s.public_header_files = [ 'Core/Feed*.h', 'Core/FM*.h' ]
-  s.ios.public_header_files = 'Core/CWStatusBarNotification.h'
-
   s.frameworks = 'AVFoundation', 'MediaPlayer', 'CoreMedia'
-
-  #
-  # UI ViewControllers and Assets
-  #
-
-  s.subspec 'UI' do |sp|
-
-    # common source files/dependencies
-    sp.dependency "MarqueeLabel", "~> 3.0.3"
-		sp.source_files = [ 'Sources/*.{m,h}', 'Core/Feed*.h', 'Core/FM*.h' ]
-		sp.public_header_files = [ 'Sources/*.h', 'Core/Feed*.h', 'Core/FM*.h' ]
-
-    # ios-specific source files
-		sp.ios.source_files = 'Sources/ios/*.{m,h}'
-		sp.ios.public_header_files = 'Sources/ios/*.h'
-
-    # tvos-specific source fles
-		sp.tvos.source_files = 'Sources/tvos/*.{m,h}'
-		sp.tvos.public_header_files = 'Sources/tvos/*.h'
-
-    # CoacoaPods wants the following, despite being redundant:
-    sp.ios.vendored_library =  'Core/libFeedMediaCore.a'
-    sp.tvos.vendored_library = 'Core/libFeedMediaCore-tv.a'
-  end
 
 end
