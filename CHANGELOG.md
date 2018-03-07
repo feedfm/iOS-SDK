@@ -1,4 +1,7 @@
 
+- v4.0.27
+  - No, really add support for tvOS!
+
 - v4.0.26
   - Add support for tvOS!
 

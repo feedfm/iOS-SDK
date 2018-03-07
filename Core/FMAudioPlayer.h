@@ -15,7 +15,8 @@
 #import "FMAudioPlayer.h"
 #import "FMLockScreenDelegate.h"
 
-#ifndef TARGET_OS_TV
+#if TARGET_OS_TV
+#else
 #import "CWStatusBarNotification.h"
 #endif
 
@@ -670,7 +671,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
 @property (nonatomic, copy) FMStation *activeStation;
 
-#ifndef TARGET_OS_TV
+#if TARGET_OS_TV
+#else
 
 /**
  * This status bar notification is used to announce song changes to

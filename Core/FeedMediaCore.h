@@ -16,6 +16,7 @@
 #import "FMLog.h"
 #import "FMStation.h"
 
-#ifndef TARGET_OS_TV
+#if TARGET_OS_TV
+#else
 #import "CWStatusBarNotification.h"
 #endif

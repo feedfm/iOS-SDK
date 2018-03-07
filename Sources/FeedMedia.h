@@ -25,6 +25,6 @@
 #include "FMEqualizer.h"
 #include "FMStationCrossfader.h"
 
-#ifndef TARGET_OS_TV
+#if TARGET_OS_TV
 #include "FMShareButton.h"
 #endif

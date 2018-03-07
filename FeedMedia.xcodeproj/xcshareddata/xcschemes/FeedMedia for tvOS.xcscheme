@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9E71C7A204B595B006AAC56"
-               BuildableName = "FeedMedia_for_tvOS.framework"
+               BuildableName = "FeedMedia.framework"
                BlueprintName = "FeedMedia for tvOS"
                ReferencedContainer = "container:FeedMedia.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9E71C7A204B595B006AAC56"
-            BuildableName = "FeedMedia_for_tvOS.framework"
+            BuildableName = "FeedMedia.framework"
             BlueprintName = "FeedMedia for tvOS"
             ReferencedContainer = "container:FeedMedia.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9E71C7A204B595B006AAC56"
-            BuildableName = "FeedMedia_for_tvOS.framework"
+            BuildableName = "FeedMedia.framework"
             BlueprintName = "FeedMedia for tvOS"
             ReferencedContainer = "container:FeedMedia.xcodeproj">
          </BuildableReference>
