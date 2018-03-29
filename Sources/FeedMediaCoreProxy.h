@@ -13,15 +13,10 @@
 #ifndef FeedMediaCoreProxy_h
 #define FeedMediaCoreProxy_h
 
-
 #ifdef COCOAPODS
-
 #include "FeedMediaCore.h"
-
 #else
-
 #include <FeedMediaCore/FeedMediaCore.h>
-
 #endif
 
 #endif /* FeedMediaCoreProxy_h */
