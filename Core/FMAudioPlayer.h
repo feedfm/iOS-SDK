@@ -346,9 +346,22 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
          notAvailable: (void (^)(void)) onNotAvailable;
 
 
+/**
+ *  Methods for preparing cache
+ */
+
+-(void)prepareCache;
+
+/**
+ *  Methods for preparing cache
+ */
+- (void)prepareCacheForStations:(NSArray*) stationIds;
+
+
 ///-----------------------------------------------------
 /// @name Playback Controls
 ///-----------------------------------------------------
+
 
 /**
  * Starts asynchronous loading of the first song in the active station

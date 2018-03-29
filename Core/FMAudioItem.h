@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CoreMedia.h>
-
 #import "FMStation.h"
 
 
@@ -107,6 +106,8 @@
  */
 
 @property double preGain;
+
+
 
 /**
  *  Creates FMAudioItem from the JSON provided. 
