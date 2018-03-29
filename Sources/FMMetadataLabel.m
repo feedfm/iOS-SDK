@@ -110,7 +110,10 @@
     
     super.text = string;
 
+#if CARTHAGE
+#else
     self.marqueeType = MLContinuous;
+#endif
 
 }
 

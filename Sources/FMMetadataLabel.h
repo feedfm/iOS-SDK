@@ -21,7 +21,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FeedMediaCoreProxy.h"
+
+#if CARTHAGE
+#else
 #import <MarqueeLabel/MarqueeLabel.h>
+#endif
 
 /**
  
@@ -38,13 +42,19 @@
  - %ALBUM is replaced with the name of the album the current song appears on
  - %TRACK is replaced with the title of the current song
  
- This class subclasses `MarqueeLabel` so that the field is automatically
+ For iOS, this class subclasses `MarqueeLabel` so that the field is automatically
  animated if it is too big to fully render its contents.
  
  */
 
+#if CARTHAGE
 //NOT_IB_DESIGNABLE
+@interface FMMetadataLabel : UILabel
+
+#else
 @interface FMMetadataLabel : MarqueeLabel
+
+#endif
 
 /**
  

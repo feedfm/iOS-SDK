@@ -36,6 +36,37 @@
 /* Begin PBXBuildFile section */
 		A9040DF21F747C710046364A /* FMStationCrossfader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9040DF01F747C710046364A /* FMStationCrossfader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9040DF31F747C710046364A /* FMStationCrossfader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9040DF11F747C710046364A /* FMStationCrossfader.m */; };
+		A907BD45206CB11F003DEE11 /* FMDislikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7A1F6259E200CCE75D /* FMDislikeButton.m */; };
+		A907BD46206CB11F003DEE11 /* FMLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7B1F6259E200CCE75D /* FMLikeButton.m */; };
+		A907BD47206CB11F003DEE11 /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7C1F6259E200CCE75D /* FMMetadataLabel.m */; };
+		A907BD48206CB11F003DEE11 /* FMPlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7E1F6259E200CCE75D /* FMPlayPauseButton.m */; };
+		A907BD49206CB11F003DEE11 /* FMStationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F801F6259E200CCE75D /* FMStationButton.m */; };
+		A907BD4A206CB11F003DEE11 /* FMEqualizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F821F6259E200CCE75D /* FMEqualizer.m */; };
+		A907BD4B206CB11F003DEE11 /* FMActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F841F6259E200CCE75D /* FMActivityIndicator.m */; };
+		A907BD4C206CB11F003DEE11 /* FMSkipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F891F6259E200CCE75D /* FMSkipButton.m */; };
+		A907BD4D206CB11F003DEE11 /* FMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F8A1F6259E200CCE75D /* FMProgressView.m */; };
+		A907BD4E206CB11F003DEE11 /* FMTotalTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F8B1F6259E200CCE75D /* FMTotalTimeLabel.m */; };
+		A907BD4F206CB11F003DEE11 /* FMElapsedTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F8E1F6259E200CCE75D /* FMElapsedTimeLabel.m */; };
+		A907BD50206CB11F003DEE11 /* FMRemainingTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F911F6259E200CCE75D /* FMRemainingTimeLabel.m */; };
+		A907BD51206CB11F003DEE11 /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F951F6259E200CCE75D /* FMSkipWarningView.m */; };
+		A907BD52206CB11F003DEE11 /* FMStationCrossfader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9040DF11F747C710046364A /* FMStationCrossfader.m */; };
+		A907BD54206D5954003DEE11 /* FeedMediaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A907BD53206D5954003DEE11 /* FeedMediaCore.framework */; };
+		A907BD56206D625E003DEE11 /* FMMetadataLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F8F1F6259E200CCE75D /* FMMetadataLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD57206D625E003DEE11 /* FMStationButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F7D1F6259E200CCE75D /* FMStationButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD58206D625E003DEE11 /* FMPlayPauseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F7F1F6259E200CCE75D /* FMPlayPauseButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD59206D625E003DEE11 /* FMRemainingTimeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F811F6259E200CCE75D /* FMRemainingTimeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD5A206D625E003DEE11 /* FMSkipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F831F6259E200CCE75D /* FMSkipButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD5B206D625E003DEE11 /* FMDislikeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F851F6259E200CCE75D /* FMDislikeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD5C206D625E003DEE11 /* FMLikeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F861F6259E200CCE75D /* FMLikeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD5D206D625E003DEE11 /* FMEqualizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F871F6259E200CCE75D /* FMEqualizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD5E206D625E003DEE11 /* FMActivityIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F8C1F6259E200CCE75D /* FMActivityIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD5F206D625E003DEE11 /* FMElapsedTimeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F8D1F6259E200CCE75D /* FMElapsedTimeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD60206D625E003DEE11 /* FMProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F901F6259E200CCE75D /* FMProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD61206D625E003DEE11 /* FMSkipWarningView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F941F6259E200CCE75D /* FMSkipWarningView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD62206D625E003DEE11 /* FMTotalTimeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F961F6259E200CCE75D /* FMTotalTimeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD63206D625E003DEE11 /* FMStationCrossfader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9040DF01F747C710046364A /* FMStationCrossfader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD64206D625E003DEE11 /* FeedMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F971F6259E200CCE75D /* FeedMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A907BD65206D625E003DEE11 /* FeedMediaCoreProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A987A0AA1F6763A700CCE75D /* FeedMediaCoreProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9879F981F6259E200CCE75D /* FMDislikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7A1F6259E200CCE75D /* FMDislikeButton.m */; };
 		A9879F991F6259E200CCE75D /* FMLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7B1F6259E200CCE75D /* FMLikeButton.m */; };
 		A9879F9A1F6259E200CCE75D /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7C1F6259E200CCE75D /* FMMetadataLabel.m */; };
@@ -89,6 +120,8 @@
 /* Begin PBXFileReference section */
 		A9040DF01F747C710046364A /* FMStationCrossfader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStationCrossfader.h; sourceTree = "<group>"; };
 		A9040DF11F747C710046364A /* FMStationCrossfader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStationCrossfader.m; sourceTree = "<group>"; };
+		A907BD39206CB0B5003DEE11 /* FeedMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A907BD53206D5954003DEE11 /* FeedMediaCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FeedMediaCore.framework; path = Carthage/Build/tvOS/FeedMediaCore.framework; sourceTree = "<group>"; };
 		A9879F301F6253A300CCE75D /* FeedMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9879F341F6253A300CCE75D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9879F7A1F6259E200CCE75D /* FMDislikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDislikeButton.m; sourceTree = "<group>"; };
@@ -126,6 +159,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A907BD35206CB0B5003DEE11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A907BD54206D5954003DEE11 /* FeedMediaCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9879F2C1F6253A300CCE75D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				A9879F301F6253A300CCE75D /* FeedMedia.framework */,
+				A907BD39206CB0B5003DEE11 /* FeedMedia.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +218,7 @@
 			children = (
 				A9879F7A1F6259E200CCE75D /* FMDislikeButton.m */,
 				A9879F7B1F6259E200CCE75D /* FMLikeButton.m */,
+				A9879F8F1F6259E200CCE75D /* FMMetadataLabel.h */,
 				A9879F7C1F6259E200CCE75D /* FMMetadataLabel.m */,
 				A9879F7D1F6259E200CCE75D /* FMStationButton.h */,
 				A9879F7E1F6259E200CCE75D /* FMPlayPauseButton.m */,
@@ -194,7 +237,6 @@
 				A9879F8C1F6259E200CCE75D /* FMActivityIndicator.h */,
 				A9879F8D1F6259E200CCE75D /* FMElapsedTimeLabel.h */,
 				A9879F8E1F6259E200CCE75D /* FMElapsedTimeLabel.m */,
-				A9879F8F1F6259E200CCE75D /* FMMetadataLabel.h */,
 				A9879F901F6259E200CCE75D /* FMProgressView.h */,
 				A9879F911F6259E200CCE75D /* FMRemainingTimeLabel.m */,
 				A9879F941F6259E200CCE75D /* FMSkipWarningView.h */,
@@ -215,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				A9DC9BEC206C8C3300D66510 /* FeedMediaCore.framework */,
+				A907BD53206D5954003DEE11 /* FeedMediaCore.framework */,
 				A987A0071F63A48900CCE75D /* MarqueeLabel.framework */,
 			);
 			name = Frameworks;
@@ -223,6 +266,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A907BD36206CB0B5003DEE11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A907BD56206D625E003DEE11 /* FMMetadataLabel.h in Headers */,
+				A907BD57206D625E003DEE11 /* FMStationButton.h in Headers */,
+				A907BD58206D625E003DEE11 /* FMPlayPauseButton.h in Headers */,
+				A907BD59206D625E003DEE11 /* FMRemainingTimeLabel.h in Headers */,
+				A907BD5A206D625E003DEE11 /* FMSkipButton.h in Headers */,
+				A907BD5B206D625E003DEE11 /* FMDislikeButton.h in Headers */,
+				A907BD5C206D625E003DEE11 /* FMLikeButton.h in Headers */,
+				A907BD5D206D625E003DEE11 /* FMEqualizer.h in Headers */,
+				A907BD5E206D625E003DEE11 /* FMActivityIndicator.h in Headers */,
+				A907BD5F206D625E003DEE11 /* FMElapsedTimeLabel.h in Headers */,
+				A907BD60206D625E003DEE11 /* FMProgressView.h in Headers */,
+				A907BD61206D625E003DEE11 /* FMSkipWarningView.h in Headers */,
+				A907BD62206D625E003DEE11 /* FMTotalTimeLabel.h in Headers */,
+				A907BD63206D625E003DEE11 /* FMStationCrossfader.h in Headers */,
+				A907BD64206D625E003DEE11 /* FeedMedia.h in Headers */,
+				A907BD65206D625E003DEE11 /* FeedMediaCoreProxy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9879F2D1F6253A300CCE75D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +315,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A907BD38206CB0B5003DEE11 /* FeedMedia TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A907BD40206CB0B5003DEE11 /* Build configuration list for PBXNativeTarget "FeedMedia TV" */;
+			buildPhases = (
+				A907BD55206D5964003DEE11 /* ShellScript */,
+				A907BD34206CB0B5003DEE11 /* Sources */,
+				A907BD35206CB0B5003DEE11 /* Frameworks */,
+				A907BD36206CB0B5003DEE11 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FeedMedia TV";
+			productName = "FeedMedia TV";
+			productReference = A907BD39206CB0B5003DEE11 /* FeedMedia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A9879F2F1F6253A300CCE75D /* FeedMedia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9879F381F6253A300CCE75D /* Build configuration list for PBXNativeTarget "FeedMedia" */;
@@ -276,6 +360,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Feed Media";
 				TargetAttributes = {
+					A907BD38206CB0B5003DEE11 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = PAGEPFEF9A;
+						ProvisioningStyle = Automatic;
+					};
 					A9879F2F1F6253A300CCE75D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PAGEPFEF9A;
@@ -307,6 +396,7 @@
 			projectRoot = "";
 			targets = (
 				A9879F2F1F6253A300CCE75D /* FeedMedia */,
+				A907BD38206CB0B5003DEE11 /* FeedMedia TV */,
 				A987A0771F64F42400CCE75D /* Generate Appledoc */,
 				A987A07E1F64F6E600CCE75D /* Publish Pod */,
 			);
@@ -314,6 +404,21 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A907BD55206D5964003DEE11 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/FeedMediaCore.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FeedMediaCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		A987A07B1F64F42C00CCE75D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +465,27 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A907BD34206CB0B5003DEE11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A907BD4F206CB11F003DEE11 /* FMElapsedTimeLabel.m in Sources */,
+				A907BD4D206CB11F003DEE11 /* FMProgressView.m in Sources */,
+				A907BD45206CB11F003DEE11 /* FMDislikeButton.m in Sources */,
+				A907BD4A206CB11F003DEE11 /* FMEqualizer.m in Sources */,
+				A907BD48206CB11F003DEE11 /* FMPlayPauseButton.m in Sources */,
+				A907BD49206CB11F003DEE11 /* FMStationButton.m in Sources */,
+				A907BD4E206CB11F003DEE11 /* FMTotalTimeLabel.m in Sources */,
+				A907BD4B206CB11F003DEE11 /* FMActivityIndicator.m in Sources */,
+				A907BD46206CB11F003DEE11 /* FMLikeButton.m in Sources */,
+				A907BD50206CB11F003DEE11 /* FMRemainingTimeLabel.m in Sources */,
+				A907BD47206CB11F003DEE11 /* FMMetadataLabel.m in Sources */,
+				A907BD51206CB11F003DEE11 /* FMSkipWarningView.m in Sources */,
+				A907BD4C206CB11F003DEE11 /* FMSkipButton.m in Sources */,
+				A907BD52206CB11F003DEE11 /* FMStationCrossfader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9879F2B1F6253A300CCE75D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +524,70 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A907BD3E206CB0B5003DEE11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PAGEPFEF9A;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"DEBUG=1",
+					"CARTHAGE=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMedia;
+				PRODUCT_NAME = FeedMedia;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		A907BD3F206CB0B5003DEE11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PAGEPFEF9A;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "CARTHAGE=1";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedMedia;
+				PRODUCT_NAME = FeedMedia;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		A9879F361F6253A300CCE75D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -523,7 +713,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,7 +740,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -597,6 +787,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A907BD40206CB0B5003DEE11 /* Build configuration list for PBXNativeTarget "FeedMedia TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A907BD3E206CB0B5003DEE11 /* Debug */,
+				A907BD3F206CB0B5003DEE11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A9879F2A1F6253A300CCE75D /* Build configuration list for PBXProject "FeedMedia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
