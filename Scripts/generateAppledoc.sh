@@ -36,7 +36,8 @@ mkdir -p ${DOCS_DIR}
   --ignore "FeedMedia.h" \
   --exit-threshold 2 \
   --verbose 5 \
-  "${PROJECT_DIR}/Core" "${PROJECT_DIR}/Sources"
+  "${PROJECT_DIR}/Core" "${PROJECT_DIR}/Sources" \
+  2> >(grep -v CWStatusBar)
 
 if [ $? -eq 0 ]; then
   echo 'success!'
