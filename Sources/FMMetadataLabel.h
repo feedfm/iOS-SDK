@@ -22,7 +22,7 @@
 #import <UIKit/UIKit.h>
 #import "FeedMediaCoreProxy.h"
 
-#if CARTHAGE
+#if TARGET_OS_TV
 #else
 #import <MarqueeLabel/MarqueeLabel.h>
 #endif
@@ -47,7 +47,7 @@
  
  */
 
-#if CARTHAGE
+#if TARGET_OS_TV
 //NOT_IB_DESIGNABLE
 @interface FMMetadataLabel : UILabel
 

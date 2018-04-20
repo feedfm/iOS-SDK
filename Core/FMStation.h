@@ -75,7 +75,7 @@
  * is on-demand, otherwise this is NULL.
  */
 
-@property (readonly) NSArray *audioItems;
+@property NSArray *audioItems;
 
 /*
  *  Used internally to convert the JSON representation of this

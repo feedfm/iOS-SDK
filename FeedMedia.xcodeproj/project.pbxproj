@@ -19,18 +19,6 @@
 			name = "Generate Appledoc";
 			productName = "Generate Appledoc";
 		};
-		A987A07E1F64F6E600CCE75D /* Publish Pod */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A987A07F1F64F6E600CCE75D /* Build configuration list for PBXAggregateTarget "Publish Pod" */;
-			buildPhases = (
-				A987A0861F64F72600CCE75D /* ShellScript */,
-			);
-			dependencies = (
-				A987A0831F64F6EE00CCE75D /* PBXTargetDependency */,
-			);
-			name = "Publish Pod";
-			productName = "Publish Pod";
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -102,13 +90,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		A987A07C1F64F4C900CCE75D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9879F271F6253A300CCE75D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9879F2F1F6253A300CCE75D;
-			remoteInfo = FeedMedia;
-		};
-		A987A0821F64F6EE00CCE75D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9879F271F6253A300CCE75D /* Project object */;
 			proxyType = 1;
@@ -375,11 +356,6 @@
 						DevelopmentTeam = PAGEPFEF9A;
 						ProvisioningStyle = Automatic;
 					};
-					A987A07E1F64F6E600CCE75D = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = PAGEPFEF9A;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = A9879F2A1F6253A300CCE75D /* Build configuration list for PBXProject "FeedMedia" */;
@@ -398,7 +374,6 @@
 				A9879F2F1F6253A300CCE75D /* FeedMedia */,
 				A907BD38206CB0B5003DEE11 /* FeedMedia TV */,
 				A987A0771F64F42400CCE75D /* Generate Appledoc */,
-				A987A07E1F64F6E600CCE75D /* Publish Pod */,
 			);
 		};
 /* End PBXProject section */
@@ -431,19 +406,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${SRCROOT}/Scripts/generateAppledoc.sh";
-		};
-		A987A0861F64F72600CCE75D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/Scripts/publishPod.sh\n";
 		};
 		A9DC9BF9206C9A5000D66510 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -515,11 +477,6 @@
 			isa = PBXTargetDependency;
 			target = A9879F2F1F6253A300CCE75D /* FeedMedia */;
 			targetProxy = A987A07C1F64F4C900CCE75D /* PBXContainerItemProxy */;
-		};
-		A987A0831F64F6EE00CCE75D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9879F2F1F6253A300CCE75D /* FeedMedia */;
-			targetProxy = A987A0821F64F6EE00CCE75D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -768,22 +725,6 @@
 			};
 			name = Release;
 		};
-		A987A0801F64F6E600CCE75D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = PAGEPFEF9A;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A987A0811F64F6E600CCE75D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = PAGEPFEF9A;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -819,15 +760,6 @@
 			buildConfigurations = (
 				A987A0791F64F42400CCE75D /* Debug */,
 				A987A07A1F64F42400CCE75D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A987A07F1F64F6E600CCE75D /* Build configuration list for PBXAggregateTarget "Publish Pod" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A987A0801F64F6E600CCE75D /* Debug */,
-				A987A0811F64F6E600CCE75D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

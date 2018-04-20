@@ -20,12 +20,12 @@ mkdir -p ${DOCS_DIR}
   --project-name "${PROJECT_TITLE}" \
   --project-company "${company}" \
   --company-id "${companyID}" \
-  --docset-atom-filename "${PROJECT_NAME}.atom" \
-  --docset-bundle-filename "${PROJECT_NAME}.docset" \
-  --docset-feed-url "${companyURL}/${company}/%DOCSETATOMFILENAME" \
   --output "${DOCS_DIR}" \
+  --create-html \
   --no-install-docset \
-  --create-docset \
+  --no-create-docset \
+  --no-install-docset \
+  --no-publish-docset \
   --keep-intermediate-files \
   --docset-platform-family "${target}" \
   --logformat xcode \
@@ -39,8 +39,7 @@ mkdir -p ${DOCS_DIR}
   "${PROJECT_DIR}/Core" "${PROJECT_DIR}/Sources"
 
 if [ $? -eq 0 ]; then
-  rm -fr "${DOCS_DIR}/${PROJECT_NAME}.iOS.SDK.docset"
-  mv -f "${DOCS_DIR}/docset" "${DOCS_DIR}/${PROJECT_NAME}.iOS.SDK.docset"
+  echo 'success!'
 else
   exit 2;
 fi

@@ -43,7 +43,8 @@ extern NSString *const FMAudioPlayerCurrentItemDidBeginPlaybackNotification;
 /*
  * @const FMAudioPlayerMusicQueuedNotification
  * @discussion Sent when the player has loaded music from the current
- * station and is ready for immediate playback
+ * station and is ready for immediate playback. This is triggered by a
+ * call to `prepareToPlay`.
  */
  
 extern NSString *const FMAudioPlayerMusicQueuedNotification;
@@ -90,6 +91,22 @@ extern NSString *const FMAudioPlayerLikeStatusChangeNotification;
  */
 extern NSString *const FMAudioPlayerTimeElapseNotification;
 
+/**
+ *  @const FMAudioPlayerPreCachingCompleted
+ *  Sent when precaching for stations is completed. This notification
+ * is sent after a call to `prepareCache` or `prepareCacheForStations:`
+ * completes.
+ *  
+ */
+extern NSString *const FMAudioPlayerPreCachingCompleted;
+
+/**
+ *  @const FMAudioPlayerStationDownloadProgress
+ *  Sent to indicate progress for station download
+ *
+ */
+
+extern NSString *const FMAudioPlayerStationDownloadProgress;
 /**
  *  @const FMAudioPlayerStationListKey
  *  userInfo key for NSArray of FMStations from <FMAudioPlayerStationListAvailableNotification>
@@ -243,35 +260,58 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  
     [player whenAvailable:^{
       NSLog(@"music is available!");
-      // .. do something, like show music button or
+      // .. do something, now that you know music is available
 
-      // optionally start queueing up first song so playback starts as soon as
-      // the play button is pressed:
-      [player prepareToPlay]
+      // pre-cache audio snippets to speed up time to audio when 'play' is called
+      [player prepareCache];
  
-       // alternatively, start playback immediately
-       // [player play]
-
-
      } notAvailable: ^{
         NSLog(@"music is not available!");
         // .. do something, like leave music button hidden
 
      }];
 
- Since music playback is restricted to US clients, we recommend you leave
- music functionality hidden by default, and reveal it only when confirmation
- is returned.
+ Because music may not be available to this particular client (due
+ to lack of network connectivity or geographic restrictions), we
+ recommend you leave music functionality hidden by default, and
+ reveal it only when confirmation is returned.
 
- Once you can play music, use the `play`, `pause`, `skip` methods to
+ Once music is available, use the `play`, `pause`, `skip` methods to
  control playback. The `stationList` property will contain a list of
  stations the user can switch to with the the `setActiveStationByName:` 
  or `setActiveStation:` calls.
+
+     // pick the station to play music from
+     FMStation *station = [player getStationWithOptionKey: @"genre" Value: @"HipHop"];
+     [player setActiveStation:station withCrossfade:NO];
+
+     // when you have set the station that is about to begin playback, you
+     // can optionally call prepareToPlay first so playback is immediate upon
+     // calling 'play'
+     [player prepareToPlay];
+ 
+     // begin playback!
+     // (if you called 'prepareToPlay', then you should first wait for
+     // an FMAudioPlayerMusicQueuedNotification notification to be guaranteed
+     // that playback will start immediately on this call, with no intervening
+     // network requests)
+     [player play]
  
  The `FMAudioPlayer` registers with iOS so that
  playback can be paused, skipped, liked, and disliked via the lock screen.
  Additionally, iOS will display on the lock screen whatever image
  you've assigned via `[FMAudioPlayer setLockScreenImage:]`.
+ 
+ There are two methods to assist with speeding up time to audio playback
+ after calling 'play'. 'prepareToCache' will pre-load a portion of the
+ start of audio files so the user can hear music immediately while the
+ remainder of audio files are being downloaded. This call really only
+ needs to be called once, on app startup. 'prepareToPlay' can be called
+ when the client knows that the current station will immediately be
+ played next, but there is some time before the user requests playback
+ to begin. This call is primarily useful when you want music to begin
+ playback immediately upon a call to play, with no intervening network
+ requests.
  
  The `FMAudioPlayer` generates events that can be hooked into
  whatever analytics service your app uses. Just have an object in your app
@@ -327,6 +367,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
 /**
  * Utility function to map state to string.
+ *
+ * @param type the playback state to map to an NSString
  */
 
 + (NSString *) nameForType:(FMAudioPlayerPlaybackState)type;
@@ -347,15 +389,25 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
 
 /**
- *  Methods for preparing cache
+ * Ask the Feed.fm servers for audio snippets to cache to reduce
+ * time to audio playback on play. The servers make the determination
+ * of which stations to retrieve audio from, rather than the
+ * client. This action runs asynchronously and, when it completes, triggers
+ * an `FMAudioPlayerPreCachingCompleted` notification.
  */
 
 -(void)prepareCache;
 
 /**
- *  Methods for preparing cache
+ * Ask the Feed.fm servers for audio snippets to cache from
+ * the given stations to reduce time to audio playback on play. This
+ * action runs asynchronously and, when it completes, triggers
+ * an `FMAudioPlayerPreCachingCompleted` notification.
+ *
+ * @param stations specific list of stations the server should return
+ * audio snippets from.
  */
-- (void)prepareCacheForStations:(NSArray*) stationIds;
+- (void)prepareCacheForStations:(NSArray<FMStation *> *) stations;
 
 
 ///-----------------------------------------------------
@@ -366,6 +418,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 /**
  * Starts asynchronous loading of the first song in the active station
  * so that a future call to `play` will start music instantaneously.
+ * This action runs asynchronously and, when it completes, triggers
+ * an `FMAudioPlayerPreCachingCompleted` notification.
  */
 - (void)prepareToPlay;
 
@@ -375,7 +429,10 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void)play;
 
 /**
- * Start playback of specific song
+ * Start playback of specific song. This method only works with
+ * on-demand stations.
+ *
+ * @param audioItem the audio item to immediately play
  */
 - (void)playAudioItem: (FMAudioItem *) audioItem;
 
@@ -533,7 +590,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * [player getStationWithOptions: @{ @"genre": @"80s", @"bpm" : @"slow" }
  *
  * This method returns the first station with the matching values, or nil.
- 
+ *
  * @param optionKeysAndValues key value pairs to search for
  * @return a station whose options contain optionKeysAndValues
  */
@@ -548,7 +605,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * @return an array of stations whose options contain optionKeysAndValues. never nil.
  */
 
-- (NSArray *) getAllStationsWithOptions: (NSDictionary *) optionKeysAndValues;
+- (NSArray<FMStation *> *) getAllStationsWithOptions: (NSDictionary *) optionKeysAndValues;
 
 /**
  *  A value between 0.0 and 1.0 relative to system volume
@@ -665,14 +722,14 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * This history currently does not include songs from past sessions.
  */
 
-@property (nonatomic, readonly) NSArray *playHistory;
+@property (nonatomic, readonly) NSArray<FMAudioItem *> *playHistory;
 
 /**
  * This is a list of music stations retrieved from the server.
  * This array will not change once populated.
  **/
 
-@property (nonatomic, readonly) NSArray *stationList;
+@property (nonatomic, readonly) NSArray<FMStation *> *stationList;
 
 /**
  * The current station from which music is pulled. Any `FMStation` retrieved

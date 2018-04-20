@@ -1,2 +1,2 @@
-binary "https://demo.feed.fm/sdk/FeedMediaCore.framework.json" == 4.0.27
+binary "https://demo.feed.fm/sdk/FeedMediaCore.framework.json" == 4.1.0
 github "cbpowell/MarqueeLabel" == 3.1.4

@@ -134,20 +134,20 @@
      */
     
     [UIView animateWithDuration:0.2 delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-        _equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.3f];
-        _equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.9f];
-        _equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.5f];
+        self->_equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.3f];
+        self->_equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.9f];
+        self->_equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.5f];
     } completion:^(BOOL arg){
 
         // get the equalizers animating repeatedly
         [UIView animateKeyframesWithDuration:0.8f delay:0.0f options:UIViewKeyframeAnimationOptionRepeat
                                   animations:^{
                                       [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.5 animations:^{
-                                          _equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.7f];
+                                          self->_equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.7f];
                                       }];
                                       
                                       [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
-                                          _equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.2f];
+                                          self->_equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.2f];
                                       }];
                                       
                                   } completion:nil];
@@ -155,11 +155,11 @@
         [UIView animateKeyframesWithDuration:1.2f delay:0.0f options:UIViewKeyframeAnimationOptionRepeat
                                   animations:^{
                                       [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.5 animations:^{
-                                          _equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.3f];
+                                          self->_equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.3f];
                                       }];
                                       
                                       [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
-                                          _equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.5f];
+                                          self->_equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.5f];
                                       }];
                                       
                                   } completion:nil];
@@ -167,11 +167,11 @@
         [UIView animateKeyframesWithDuration:1.6f delay:0.0f options:UIViewKeyframeAnimationOptionRepeat
                                   animations:^{
                                       [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.5 animations:^{
-                                          _equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.9f];
+                                          self->_equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.9f];
                                       }];
                                       
                                       [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
-                                          _equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.4f];
+                                          self->_equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.4f];
                                       }];
                                       
                                   } completion:nil];
@@ -186,9 +186,9 @@
     // stop running animation by throwing in a new, non repeating animation that will
     // cancel any existing animation
     [UIView animateWithDuration:0.1 delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-        _equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.05f];
-        _equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.05f];
-        _equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.05f];
+        self->_equalizerOne.frame = [self makeFrameAtIndex:0 withHeight:0.05f];
+        self->_equalizerTwo.frame = [self makeFrameAtIndex:1 withHeight:0.05f];
+        self->_equalizerThree.frame = [self makeFrameAtIndex:2 withHeight:0.05f];
         
     } completion:nil];
     

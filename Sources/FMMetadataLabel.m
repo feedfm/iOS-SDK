@@ -110,7 +110,7 @@
     
     super.text = string;
 
-#if CARTHAGE
+#if TARGET_OS_TV
 #else
     self.marqueeType = MLContinuous;
 #endif

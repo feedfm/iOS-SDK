@@ -1,4 +1,7 @@
 
+- v4.1.0
+  - new prepareCache and prepareCacheForStations: methods to improve time to first audio
+
 - v4.0.27
   - No, really add support for tvOS!
 
