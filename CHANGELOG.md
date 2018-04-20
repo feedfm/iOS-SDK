@@ -1,4 +1,7 @@
 
+- v4.1.1
+  - NSString category was causing issues with static archive
+  
 - v4.1.0
   - new prepareCache and prepareCacheForStations: methods to improve time to first audio
 
