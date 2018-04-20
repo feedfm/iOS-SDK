@@ -404,7 +404,7 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
+			shellPath = /bin/bash;
 			shellScript = "${SRCROOT}/Scripts/generateAppledoc.sh";
 		};
 		A9DC9BF9206C9A5000D66510 /* ShellScript */ = {
