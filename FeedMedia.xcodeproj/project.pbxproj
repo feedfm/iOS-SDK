@@ -55,7 +55,7 @@
 		A907BD63206D625E003DEE11 /* FMStationCrossfader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9040DF01F747C710046364A /* FMStationCrossfader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A907BD64206D625E003DEE11 /* FeedMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F971F6259E200CCE75D /* FeedMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A907BD65206D625E003DEE11 /* FeedMediaCoreProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A987A0AA1F6763A700CCE75D /* FeedMediaCoreProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A95E59EB208AC3C100A98E70 /* FeedMediaCoreProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A987A0AA1F6763A700CCE75D /* FeedMediaCoreProxy.h */; };
+		A95E59EB208AC3C100A98E70 /* FeedMediaCoreProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A987A0AA1F6763A700CCE75D /* FeedMediaCoreProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9879F981F6259E200CCE75D /* FMDislikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7A1F6259E200CCE75D /* FMDislikeButton.m */; };
 		A9879F991F6259E200CCE75D /* FMLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7B1F6259E200CCE75D /* FMLikeButton.m */; };
 		A9879F9A1F6259E200CCE75D /* FMMetadataLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F7C1F6259E200CCE75D /* FMMetadataLabel.m */; };
@@ -283,7 +283,6 @@
 				A9879FB51F6259E200CCE75D /* FeedMedia.h in Headers */,
 				A9040DF21F747C710046364A /* FMStationCrossfader.h in Headers */,
 				A9879FA51F6259E200CCE75D /* FMEqualizer.h in Headers */,
-				A95E59EB208AC3C100A98E70 /* FeedMediaCoreProxy.h in Headers */,
 				A9879FAE1F6259E200CCE75D /* FMProgressView.h in Headers */,
 				A9879FB01F6259E200CCE75D /* FMShareButton.h in Headers */,
 				A9879FAA1F6259E200CCE75D /* FMActivityIndicator.h in Headers */,
@@ -291,6 +290,7 @@
 				A9879FA11F6259E200CCE75D /* FMSkipButton.h in Headers */,
 				A9879FA31F6259E200CCE75D /* FMDislikeButton.h in Headers */,
 				A9879FA41F6259E200CCE75D /* FMLikeButton.h in Headers */,
+				A95E59EB208AC3C100A98E70 /* FeedMediaCoreProxy.h in Headers */,
 				A9879F9F1F6259E200CCE75D /* FMRemainingTimeLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
