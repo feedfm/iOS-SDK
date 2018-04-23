@@ -94,7 +94,7 @@ extern NSString *const FMAudioPlayerTimeElapseNotification;
 /**
  *  @const FMAudioPlayerPreCachingCompleted
  *  Sent when precaching for stations is completed. This notification
- * is sent after a call to `prepareCache` or `prepareCacheForStations:`
+ * is sent after a call to `prepareStations` or `prepareStations:`
  * completes.
  *  
  */
@@ -262,8 +262,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
       NSLog(@"music is available!");
       // .. do something, now that you know music is available
 
-      // pre-cache audio snippets to speed up time to audio when 'play' is called
-      [player prepareCache];
+      // pre-cache data to speed up time to audio when 'play' is called
+      [player prepareStations];
  
      } notAvailable: ^{
         NSLog(@"music is not available!");
@@ -303,13 +303,12 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  you've assigned via `[FMAudioPlayer setLockScreenImage:]`.
  
  There are two methods to assist with speeding up time to audio playback
- after calling 'play'. 'prepareToCache' will pre-load a portion of the
+ after calling 'play'. 'prepareStations' will pre-load a portion of the
  start of audio files so the user can hear music immediately while the
  remainder of audio files are being downloaded. This call really only
  needs to be called once, on app startup. 'prepareToPlay' can be called
  when the client knows that the current station will immediately be
- played next, but there is some time before the user requests playback
- to begin. This call is primarily useful when you want music to begin
+ played next. This call is primarily useful when you want music to begin
  playback immediately upon a call to play, with no intervening network
  requests.
  
@@ -389,25 +388,25 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
 
 /**
- * Ask the Feed.fm servers for audio snippets to cache to reduce
+ * Ask the Feed.fm servers for data to cache to reduce
  * time to audio playback on play. The servers make the determination
- * of which stations to retrieve audio from, rather than the
+ * of which stations to retrieve data from, rather than the
  * client. This action runs asynchronously and, when it completes, triggers
  * an `FMAudioPlayerPreCachingCompleted` notification.
  */
 
--(void)prepareCache;
+-(void)prepareStations;
 
 /**
- * Ask the Feed.fm servers for audio snippets to cache from
+ * Ask the Feed.fm servers for data to cache from
  * the given stations to reduce time to audio playback on play. This
  * action runs asynchronously and, when it completes, triggers
  * an `FMAudioPlayerPreCachingCompleted` notification.
  *
  * @param stations specific list of stations the server should return
- * audio snippets from.
+ * data from.
  */
-- (void)prepareCacheForStations:(NSArray<FMStation *> *) stations;
+- (void)prepareStations:(NSArray<FMStation *> *) stations;
 
 
 ///-----------------------------------------------------
