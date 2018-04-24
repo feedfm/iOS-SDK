@@ -1,9 +1,12 @@
 
+- v4.1.2
+  - For for interaction between station crossfade and start trim
+  
 - v4.1.1
   - NSString category was causing issues with static archive
   
 - v4.1.0
-  - new prepareCache and prepareCacheForStations: methods to improve time to first audio
+  - new prepareStations and prepareStations: methods to improve time to first audio
 
 - v4.0.27
   - No, really add support for tvOS!
