@@ -39,9 +39,22 @@ binary "https://demo.feed.fm/sdk/FeedMediaCore.framework.json"
 
 ### No package manager? No problem!
 
-If you aren't using CocoaPods or Carthage but want to integrate this library in your
-application, we suggest you clone this repository into a subdirectory
-of your project and include all files in `Core/*` and `Sources/*`.
+If you aren't using CocoaPods or Carthage but want to integrate this
+library in your application, do the following:
+
+- Clone this repository import all files in `Core/*` and
+  `Sources/*` into your project. Use only `Core/libFeedMediaCore.a`
+  for iOS or `Core/libFeedMediaCore-tv.a` for AppleTV.
+
+- Install the (MarqueeLabel)[https://github.com/cbpowell/MarqueeLabel]
+  project (it's only 2 files!)
+
+- Update `FeedMediaCoreProxy.h` so that it includes
+  the core library via `#import "FeedMediaCore.h"` and not via
+  `#import <FeedMediaCore/FeedMediaCore.h>`. Also, replace
+  any references to `<MarqueeLabel/MarqueeLabel.h>` with 
+  `"MarqueeLabel.h"`.
+
 
 ## Tell me more!
 
