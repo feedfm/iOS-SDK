@@ -89,6 +89,7 @@
         FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
     
         switch (newState) {
+            case FMAudioPlayerPlaybackStateOfflineOnly:
             case FMAudioPlayerPlaybackStateUninitialized:
             case FMAudioPlayerPlaybackStateUnavailable:
             case FMAudioPlayerPlaybackStateRequestingSkip:

@@ -77,6 +77,18 @@
 
 @property NSArray *audioItems;
 
+/**
+ * Representation of the object in dictionary form
+ */
+
+//@property (readonly) NSDictionary* jsonDictionary;
+
+/**
+ * Returs true if this object ia a offline version of a station.
+ */
+
+@property BOOL isTypeOffline;
+
 /*
  *  Used internally to convert the JSON representation of this
  *  station to this object.

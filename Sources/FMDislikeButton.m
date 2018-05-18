@@ -118,6 +118,7 @@
         BOOL disliked = _feedPlayer.currentItem.disliked;
         
         switch (newState) {
+            case FMAudioPlayerPlaybackStateOfflineOnly:
             case FMAudioPlayerPlaybackStatePaused:
             case FMAudioPlayerPlaybackStatePlaying:
             case FMAudioPlayerPlaybackStateStalled:
