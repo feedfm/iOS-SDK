@@ -555,21 +555,34 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 - (void)unlikeAudioItem: (FMAudioItem *)audioItem;
 
-/**
+/*
+    Get expiry date for a given station
+    @return Unix timestamp in seconds
+ 
+
+-(NSUInteger)getExpiryDateForOfflineStation: (FMStation *) offlineStation;
+
+
+    Get current storage used by offline stations
+    @return size in bytes
+
+-(NSUInteger)getOfflineStorageUsed;
+
+
  * Downloads the offline version of a station if available
  *
  *
- */
+ 
 - (void)downloadStation: (FMStation *) station
           withDelegate : (id<FMStationDownloadDelegate>) delegate;
 
-/**
+
  *
  * Get a list of offline stations available offline.
  * List contains any stations that have been downloaded earlier.
- */
+ 
 - (NSArray*) getStationsAvailableOffline;
-
+ */
 
 /**
  *  Finds a station with the given name and assigns it to the `activeStation`.
