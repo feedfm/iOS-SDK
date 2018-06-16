@@ -193,7 +193,7 @@
                     [self setSelected:NO];
 
                     break;
-                    
+                case FMAudioPlayerPlaybackStateOfflineOnly:
                 case FMAudioPlayerPlaybackStateUninitialized:
                 case FMAudioPlayerPlaybackStateUnavailable:
                     // shouldn't happen

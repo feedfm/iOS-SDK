@@ -20,6 +20,8 @@
 #import "CWStatusBarNotification.h"
 #endif
 
+
+
 /**
  *  @const FMAudioPlayerPlaybackStateDidChangeNotification
  *  @discussion Sent when <FMAudioPlayer> state is changed.
@@ -138,6 +140,13 @@ extern NSString *const FMAudioFormatAAC;
 typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
     
     /**
+     * Offline music is available
+     *
+     */
+    
+    FMAudioPlayerPlaybackStateOfflineOnly,
+    
+    /**
      * The server has not responded yet, so we don't know if music
      * is available or not yet.
      */
@@ -193,6 +202,25 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
 #define kFMRemoteControlEvent @"FMRemoteControlEvent"
 
+/**
+ When a station download request is posted this delegate
+ is required to track the progress and the completion of the download.
+ */
+
+@protocol FMStationDownloadDelegate <NSObject>
+/**
+ Called when the station has completed downloading
+ */
+- (void) stationDownloadComplete:(FMStation *)station;
+
+/**
+ Called when a download in a station has finshed
+ */
+- (void) stationDownloadProgress:(FMStation *)station withParms:(NSDictionary*) parms;
+
+@end
+
+
 
 /**
  When events are reported to the feed.fm servers via
@@ -223,6 +251,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void)logEvent: (NSString *)event
   withParameters: (NSDictionary *)parameters;
 @end
+
 
 /**
  
@@ -526,6 +555,34 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 - (void)unlikeAudioItem: (FMAudioItem *)audioItem;
 
+/*
+    Get expiry date for a given station
+    @return Unix timestamp in seconds
+ 
+
+-(NSUInteger)getExpiryDateForOfflineStation: (FMStation *) offlineStation;
+
+
+    Get current storage used by offline stations
+    @return size in bytes
+
+-(NSUInteger)getOfflineStorageUsed;
+
+
+ * Downloads the offline version of a station if available
+ *
+ *
+ 
+- (void)downloadStation: (FMStation *) station
+          withDelegate : (id<FMStationDownloadDelegate>) delegate;
+
+
+ *
+ * Get a list of offline stations available offline.
+ * List contains any stations that have been downloaded earlier.
+ 
+- (NSArray*) getStationsAvailableOffline;
+ */
 
 /**
  *  Finds a station with the given name and assigns it to the `activeStation`.
@@ -605,6 +662,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 - (NSArray<FMStation *> *) getAllStationsWithOptions: (NSDictionary *) optionKeysAndValues;
+
+@property (nonatomic, weak) id<FMStationDownloadDelegate> downloadDelegate;
 
 /**
  *  A value between 0.0 and 1.0 relative to system volume

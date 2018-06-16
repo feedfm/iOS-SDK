@@ -214,7 +214,7 @@
             [self setEnabled:YES];
             [self setHidden:_hideWhenStalled];
             break;
-
+            
         case FMAudioPlayerPlaybackStateComplete:
         case FMAudioPlayerPlaybackStateReadyToPlay:
         case FMAudioPlayerPlaybackStatePaused:
@@ -228,7 +228,8 @@
             [self setEnabled:YES];
             [self setHidden:NO];
             break;
-            
+        
+        case FMAudioPlayerPlaybackStateOfflineOnly:
         case FMAudioPlayerPlaybackStateUninitialized:
         case FMAudioPlayerPlaybackStateUnavailable:
             [self setSelected:NO];

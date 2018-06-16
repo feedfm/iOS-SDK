@@ -122,6 +122,7 @@
         BOOL liked = _feedPlayer.currentItem.liked;
         
         switch (newState) {
+            case FMAudioPlayerPlaybackStateOfflineOnly:
             case FMAudioPlayerPlaybackStatePaused:
             case FMAudioPlayerPlaybackStatePlaying:
             case FMAudioPlayerPlaybackStateStalled:
