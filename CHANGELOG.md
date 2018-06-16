@@ -1,4 +1,10 @@
 
+
+- v4.1.5
+  - Fix for 10.2 interruption bug.
+  - Better handling of internal assertions
+  - Debugging added for internal WaitingForItem bug
+
 - v4.1.3
   - For for interaction between station crossfade and start trim
   
