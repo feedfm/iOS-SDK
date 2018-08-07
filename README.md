@@ -84,7 +84,7 @@ FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
   NSLog(@"music is available!");
   // .. do something, now that you know music is available
 
-  // pre-cache data to speed up time to audio when 'play' is called
+  // set player settings
   player.crossfadeInEnabled = true;
   player.secondsOfCrossfade = 4;
   [player play];
@@ -97,19 +97,24 @@ FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
  // Set Notifications for ex to listen for player events
  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateDidChange:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:[FMAudioPlayer sharedPlayer]];
 ```
+
+
+
 ## Tell me more!
-Find complete documentation at
+Find Appledocs for SDK at [demo.Feed.fm](http://demo.feed.fm/sdk/docs/ios/latest/html/index.html)
+
 Creating a custom music station requires you to create an account on
 [Feed.fm](https://feed.fm), but you can try out our sample app here
 with the included demo credentials. You can also check out our fully
 pre-built music players
-[here](https://github.com/feedfm/iOS-RadioPlayer) and
-[here](https://github.com/feedfm/iOS-RadioPlayer-2),
+[RadioPlayer](https://github.com/feedfm/iOS-RadioPlayer) and
+[Radioplayer 2](https://github.com/feedfm/iOS-RadioPlayer-2),
 located on GitHub, that use this library.
 
-## Author
+## Authors
 
-Eric Lambrecht, eric@feed.fm
+[Eric Lambrecht](eric@feed.fm), [Arveen Kumar](arveen@feed.fm)
+
 
 ## License
 
