@@ -84,11 +84,21 @@
 //@property (readonly) NSDictionary* jsonDictionary;
 
 /**
- * Returs true if this object ia a offline version of a station.
+ * Returs true if this object is a offline/downloadable station.
  */
 
-@property BOOL isTypeOffline;
+@property (readonly) BOOL isTypeOffline;
 
+/**
+ * Returns expiry date for offline stations, null for online stations.
+ */
+
+@property (readonly) NSUInteger expiry;
+
+/*
+ *  JSON representation of this object
+ */
+@property (readonly) NSMutableDictionary *dict;
 /*
  *  Used internally to convert the JSON representation of this
  *  station to this object.
@@ -96,6 +106,6 @@
  *  @param jsonDictionary JSON dictionary
  *  @return returns new FMStation instance
  */
-- (id)initWithJSON:(id)jsonDictionary;
+- (id)initWithJSON:(id)jsonDictionary isTypeOffline:(BOOL)isOffline;
 
 @end
