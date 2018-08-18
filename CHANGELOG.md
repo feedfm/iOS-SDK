@@ -1,9 +1,9 @@
 
 
 - v4.2.0-beta
- - support for offline station loading and playback
- - some documentation cleanup
- - FMAudioPlayer playHistory is now mutable!
+  - support for offline station loading and playback
+  - some documentation cleanup
+  - FMAudioPlayer playHistory is now mutable!
   - new FMStationArray class holds methods for searching for stations based on 'option' metadata
   - more internal tests to validate things working properly
   - prepareStation calls handled automatically
