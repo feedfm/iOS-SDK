@@ -1,4 +1,9 @@
 
+- v4.2.0-beta3
+ - fix to deal with overlapping content in offline stations
+ - FMAudioItems that have started playback should always have FMStation reference
+ - ensure offline play queue holds dulicate FMAudioItem references
+
 - v4.2.0-beta2
  - fix to activeStation not returning correct value
  - clarify how local and remote stations are related
