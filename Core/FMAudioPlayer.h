@@ -768,7 +768,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  removes the station from the `localOfflineStationList`.
  
  Does nothing if the station passed in does not
- appear in the `localOfflineStationList`.
+ appear in the `localOfflineStationList` or if the station being
+ deleted is the activeStation.
  
  @param localOfflineStation the station whose contents will be deleted.
  */
@@ -776,7 +777,10 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 - (void) deleteOfflineStation: (FMStation *) localOfflineStation;
 
 /**
- Deletes all locally stored stations
+ Deletes all locally stored stations.
+ 
+ This call does nothing if the current active station is a local
+ offline station.
  */
 
 - (void) deleteAllOfflineStations;

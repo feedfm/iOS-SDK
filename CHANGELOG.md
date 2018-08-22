@@ -1,4 +1,7 @@
 
+- v4.2.0-beta4
+ - damn FMStation reference bug wasn't fully solved
+
 - v4.2.0-beta3
  - fix to deal with overlapping content in offline stations
  - FMAudioItems that have started playback should always have FMStation reference
