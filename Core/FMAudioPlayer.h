@@ -227,6 +227,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  
  The final call to this method will have a pendingCount value of 0
  
+ 
  @param station The station that is being downloaded
  @param pendingCount the number of downloads remaining to be downloaded
  @param failedCount the number of download attempts that failed
@@ -412,69 +413,6 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
          notAvailable: (void (^)(void)) onNotAvailable;
 
 
-
-///-----------------------------------------------------
-/// @name Offline station management
-///-----------------------------------------------------
-
-/**
- Downloads an offline station.
-
- This method kicks off an asynchronous download to retrieve audio
- files for the given station. As the station downloads, events (1
- at a minimum) will be sent to the provided delegate.
- 
- The station passed in must come from either `remoteOfflineStationList`
- or `localOfflineStationList`.
- 
- The `minutes` attribute specifies the minimum number of minutes of
- music the client would like to be available offline. The server will make the
- decision as to whether the client already has enough music stored locally
- and, if so, whether that music should be replaced or appended to.
-
- @param station A station from remoteOfflineStationList or
-     localOfflineStationList.
- @param minutes describes target time for music. If you need music for half an hour pass 30.
- @param delegate for receiving updates about the download.
- @see FMStationDownloadDelegate
- 
- */
-
--(void) downloadAndSyncStation:(FMStation *)station
-              forTargetMinutes:(NSNumber*) minutes
-                  withDelegate: (id<FMStationDownloadDelegate>) delegate;
-
-
-/**
- Downloads an offline station.
- 
- This method is the same as `downloadAndSyncStation:forTargetMinutes:withDelegate`, but
- it lets the server determine the 'targetMinutes' value. This method is preferable
- unless the amount of music loaded for each station varies in different contexts.
- 
- @param station Pass a station from remoteOfflineStationList or
-     localOfflineStationList.
- @param delegate for receiving updates about the download.
- @see FMStationDownloadDelegate
- */
-
--(void) downloadAndSyncStation:(FMStation *)station
-                  withDelegate: (id<FMStationDownloadDelegate>) delegate;
-
-/**
- Deletes all locally stored files in a previously downloaded station and
- removes the station from the `localOfflineStationList`.
- 
- Does nothing if the station passed in does not
- appear in the `localOfflineStationList`.
- 
- @param localOfflineStation the station whose contents will be deleted.
- */
-
-- (void) deleteOfflineStation: (FMStation *) localOfflineStation;
-
-
-
 ///-----------------------------------------------------
 /// @name Playback Controls
 ///-----------------------------------------------------
@@ -623,7 +561,7 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic, readonly) NSTimeInterval currentItemDuration;
 
 /**
- *  The current rate of playback. Seeking is not supported, so this will always be 0.0 or 1.0
+ *  The current rate of playback. Slow/fast play is not supported, so this will always be 0.0 or 1.0
  */
 
 @property (nonatomic, readonly) float currentPlaybackRate;
@@ -712,6 +650,13 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  `FMAudioPlayer` is created (before any attempt is made to contact
  the feed.fm servers.
  
+ When there is internet connectivity, every station in this list will
+ have a paired station (with the same name, but not necessarily same ID)
+ in the remoteOfflineStationList. Use `remoteOfflineStationForLocalOfflineStation:`
+ to map to the remote FMStation. If they have different 'identifier' values,
+ then the local station should be updated by passing its pair to
+ `downloadAndSyncStation:withDelegate`.
+ 
  @return List of stations available on disk ready for playback. never returns nil.
  */
 
@@ -727,6 +672,9 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  
  This property is only populated when internet connectivity is available and
  the player is declared 'available'.
+
+ If one of these stations has been downloaded, the `localOfflineStationForRemoteOfflineStation:`
+ method can be used to find the local equivalent for playback.
  
  @return List of stations that can be downloaded for offline playback
  */
@@ -759,6 +707,113 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 - (void) setActiveStation: (FMStation *)station withCrossfade: (BOOL) withCrossfade;
+
+
+
+///-----------------------------------------------------
+/// @name Offline station management
+///-----------------------------------------------------
+
+/**
+ Downloads an offline station.
+ 
+ This method kicks off an asynchronous download to retrieve audio
+ files for the given station. As the station downloads, events (1
+ at a minimum) will be sent to the provided delegate.
+ 
+ The station passed in must come from the `remoteOfflineStationList`
+ 
+ The `minutes` attribute specifies the minimum number of minutes of
+ music the client would like to be available offline. The server will make the
+ decision as to whether the client already has enough music stored locally
+ and, if so, whether that music should be replaced or appended to.
+ 
+ Note that if the requested station has already been downloaded or partially
+ downloaded to local storage already, only missing music will be downloaded.
+ Some stations can additionally be configured (on the server) so that
+ only a subset of the full station contents are saved on client devices,
+ and each request to `downloadAndSyncStation:` will cause recently played
+ music to be deleted and new music to be downloaded.
+
+ @param remoteStation A station from remoteOfflineStationList
+ @param minutes describes target time for music. If you need music for half an hour pass 30.
+ @param delegate for receiving updates about the download.
+ @see FMStationDownloadDelegate
+ 
+ */
+
+-(void) downloadAndSyncStation:(FMStation *)remoteStation
+              forTargetMinutes:(NSNumber*) minutes
+                  withDelegate: (id<FMStationDownloadDelegate>) delegate;
+
+
+/**
+ Downloads an offline station.
+ 
+ This method is the same as `downloadAndSyncStation:forTargetMinutes:withDelegate`, but
+ it lets the server determine the 'targetMinutes' value. This method is preferable
+ unless the amount of music to be loaded for each station varies in different contexts
+ known only by the client.
+ 
+ @param remoteStation Pass a station from remoteOfflineStationList
+ @param delegate for receiving updates about the download.
+ @see FMStationDownloadDelegate
+ */
+
+-(void) downloadAndSyncStation:(FMStation *)remoteStation
+                  withDelegate: (id<FMStationDownloadDelegate>) delegate;
+
+/**
+ Deletes all locally stored files in a previously downloaded station and
+ removes the station from the `localOfflineStationList`.
+ 
+ Does nothing if the station passed in does not
+ appear in the `localOfflineStationList`.
+ 
+ @param localOfflineStation the station whose contents will be deleted.
+ */
+
+- (void) deleteOfflineStation: (FMStation *) localOfflineStation;
+
+/**
+ Deletes all locally stored stations
+ */
+
+- (void) deleteAllOfflineStations;
+
+/**
+ Map a remote offline station to a local offline station.
+ 
+ This method is useful in determining which of the available remote offline
+ stations have been downloaded and stored as local offline stations.
+ 
+ When a remote station is downloaded, a duplicate FMStation instance is added to the
+ local offline station array. If the remote station is updated (that is,
+ music is added or deleted), then the remote FMStation instance will have an
+ ID that differs from the FMStation instance in the local offline station array.
+ This station maps the remote FMStation instance to its local FMStation instance,
+ regardless of whether their contents match up exactly.
+ 
+ @param remoteOfflineStation a station from remoteOfflineStationList
+ @return nil or a station from remoteOfflineStationList
+ */
+
+- (FMStation *) localOfflineStationForRemoteOfflineStation: (FMStation *) remoteOfflineStation;
+
+/**
+ Map a locally stored offline station to its remote offline pair.
+ 
+ This method is useful to determine if a locally downloaded station can
+ be updated with new music. If the local FMStation `identifier` value
+ doesn't match the remote FMStation `identifier` value, then the remote
+ FMStation can be passed to `downloadAndSyncStation:withDelegate` to update
+ the local FMStation.
+ 
+ @param localOfflineStation a station from localOfflineStationList
+ @return a station from remoteOfflineStationList
+ */
+
+- (FMStation *) remoteOfflineStationForLocalOfflineStation: (FMStation *) localOfflineStation;
 
 ///-----------------------------------------------------
 /// @name Logging and reporting
