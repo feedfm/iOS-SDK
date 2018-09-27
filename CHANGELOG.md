@@ -1,4 +1,7 @@
 
+- v4.2.0-beta5
+ - remove 'download completed' callback and just use 'progress' callback
+
 - v4.2.0-beta4
  - damn FMStation reference bug wasn't fully solved
 

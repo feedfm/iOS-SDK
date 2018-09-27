@@ -208,13 +208,6 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 @protocol FMStationDownloadDelegate <NSObject>
-/**
- * Called when the station has fully completed downloading, whether
- * succesful or not.
- *
- * @param station the station that completed downloading
- */
-- (void) stationDownloadComplete:(FMStation *)station;
 
 /**
  This method is called once, at the start of a station download,
@@ -225,11 +218,11 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  failed counts and pending and total will be the number of
  files that will be downloaded for the station.
  
- The final call to this method will have a pendingCount value of 0
- 
+ The final call to this method will have a pendingCount value of 0 
  
  @param station The station that is being downloaded
- @param pendingCount the number of downloads remaining to be downloaded
+ @param pendingCount the number of downloads remaining to be downloaded. The last
+   call to this method will have pendingCount == 0
  @param failedCount the number of download attempts that failed
  @param totalCount the total number of files that will be downloaded
  */
