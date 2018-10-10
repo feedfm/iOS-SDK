@@ -1,4 +1,7 @@
 
+- v4.2.0
+  - whenAvailable:notAvailable: held on to callback reference
+
 - v4.2.0-beta5
  - remove 'download completed' callback and just use 'progress' callback
 
