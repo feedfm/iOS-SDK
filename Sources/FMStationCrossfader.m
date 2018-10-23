@@ -73,7 +73,7 @@
 
     } else {
         FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
-        FMStation *station = [player getStationWithOptions: initialStationOptionKeysAndValues];
+        FMStation *station = [player.stationList getStationWithOptions: initialStationOptionKeysAndValues];
         
         return [[FMStationCrossfader alloc] initWithStation:station];
     }
@@ -137,7 +137,7 @@
         return;
     }
     
-    FMStation *station = [_player getStationWithOptions: optionKeysAndValues];
+    FMStation *station = [_player.stationList getStationWithOptions: optionKeysAndValues];
     
     if (station != nil) {
         //FMLogDebug(@"adding station %@ at time %f", station.name, time);

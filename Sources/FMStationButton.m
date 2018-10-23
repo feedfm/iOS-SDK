@@ -8,6 +8,11 @@
 
 #import "FMStationButton.h"
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+
+
 @interface FMStationButton ()
 
 #if !TARGET_INTERFACE_BUILDER
@@ -213,3 +218,5 @@
 #endif
 
 @end
+
+#pragma clang diagnostic pop

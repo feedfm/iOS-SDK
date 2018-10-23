@@ -15,12 +15,12 @@
  * Represents an audio track. Instances of this become available via the `[FMAudioPlayer currentItem]`
  * property.
  */
-@interface FMAudioItem : NSObject
+@interface FMAudioItem : NSObject <NSCopying>
 
 /*
  *  Track identifier.
  */
-@property (readwrite) NSString *playId;
+@property NSString *playId;
 
 /*
  * Audio File identifier.
@@ -43,7 +43,7 @@
 /**
  * Station the play was created from
  */
-@property (readonly) FMStation *station;
+@property FMStation *station;
 
 /*
  * A name for this audio file that should be displayed in
@@ -64,7 +64,7 @@
 /*
  *  Track file URL
  */
-@property (readwrite) NSURL *contentUrl;
+@property NSURL *contentUrl;
 /*
  *  Codec used to encode track. For example: "he-aac"
  */
@@ -106,12 +106,6 @@
  */
 
 @property double preGain;
-
-/**
- * Representation of the object in dictionary form
- */
-
-//@property (readonly) NSDictionary* jsonDictionary;
 
 /**
  *  Creates FMAudioItem from the JSON provided. 
