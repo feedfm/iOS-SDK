@@ -6,22 +6,22 @@
 - whenAvailable:notAvailable: held on to callback reference
 
 - v4.2.0-beta5
- - remove 'download completed' callback and just use 'progress' callback
+  - remove 'download completed' callback and just use 'progress' callback
 
 - v4.2.0-beta4
- - damn FMStation reference bug wasn't fully solved
+  - damn FMStation reference bug wasn't fully solved
 
 - v4.2.0-beta3
- - fix to deal with overlapping content in offline stations
- - FMAudioItems that have started playback should always have FMStation reference
- - ensure offline play queue holds dulicate FMAudioItem references
+  - fix to deal with overlapping content in offline stations
+  - FMAudioItems that have started playback should always have FMStation reference
+  - ensure offline play queue holds dulicate FMAudioItem references
 
 - v4.2.0-beta2
- - fix to activeStation not returning correct value
- - clarify how local and remote stations are related
- - methods to map local -> remote stations and vice versa
- - only allow download & sync of remote offline stations
- - delete local stations no longer appearing in remote station list
+  - fix to activeStation not returning correct value
+  - clarify how local and remote stations are related
+  - methods to map local -> remote stations and vice versa
+  - only allow download & sync of remote offline stations
+  - delete local stations no longer appearing in remote station list
 
 - v4.2.0-beta
   - support for offline station loading and playback
