@@ -93,7 +93,7 @@
  * Returns expiry date for offline stations, null for online stations.
  */
 
-@property (readonly) NSUInteger expiry;
+@property (readonly, nullable) NSDate *expiry;
 
 /*
  *  JSON representation of this object

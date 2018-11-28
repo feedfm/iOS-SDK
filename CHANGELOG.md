@@ -1,6 +1,7 @@
 
 - v4.2.1
   - Fixed VICache crash bug 
+  - *bugfix* - client id was not being persisted between application runs, since 4.2.0
 
 - v4.2.0
   - whenAvailable:notAvailable: held on to callback reference

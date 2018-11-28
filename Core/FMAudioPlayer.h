@@ -23,6 +23,7 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  @const FMAudioPlayerPlaybackStateDidChangeNotification
  *  @discussion Sent when <FMAudioPlayer> state is changed.
@@ -104,11 +105,18 @@ extern NSString *const FMAudioPlayerTimeElapseNotification;
 extern NSString *const FMAudioPlayerPreCachingCompleted;
 
 /**
+ * @const FMAudioPlayerNewClientIdAvailable
+ *
+ * Sent to notify sucessful generation of a new client Id.
+ */
+
+extern NSString *const FMAudioPlayerNewClientIdAvailable;
+
+/**
  *  @const FMAudioPlayerStationDownloadProgress
  *  Sent to indicate progress for station download
  *
  */
-
 extern NSString *const FMAudioPlayerStationDownloadProgress;
 /**
  *  @const FMAudioPlayerStationListKey
@@ -533,6 +541,24 @@ NS_ASSUME_NONNULL_END
  * @see [FMAudioItem disliked]
  */
 - (void)unlikeAudioItem: (nonnull FMAudioItem *)audioItem;
+
+/**
+ * Sets a previously generated clientid to be the active id.
+ *
+ * @param cid previously generated client id
+ */
+
+- (void) setClientId: (nonnull NSString*) cid;
+
+/**
+ * Asynchronous generate a new client id for a new user.
+ * When this request is complete a NSNotification `FMAudioPlayerNewClientIdAvailable` is triggered
+ * with userInfo dictionary that contains the clientid
+ *
+ * @see setClientId:
+ */
+- (void) createNewClientId;
+
 
 ///-----------------------------------------------------
 /// @name Playback Status
