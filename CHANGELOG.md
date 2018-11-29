@@ -48,7 +48,7 @@
   - Debugging added for internal WaitingForItem bug
 
 - v4.1.3
-  - For for interaction between station crossfade and start trim
+  - Fix for interaction between station crossfade and start trim
   
 - v4.1.1
   - NSString category was causing issues with static archive
