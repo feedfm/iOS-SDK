@@ -4,7 +4,17 @@
   - *bugfix* - client id was not being persisted between application runs, since 4.2.0
 
 - v4.2.0
-  - whenAvailable:notAvailable: held on to callback reference
+  - This is the first non-beta release of our SDK with offline playback support. See
+    our [offline documentation](https://developer.feed.fm/docs/offline) for details
+    on how this works.
+  - We are deprecating the methods in `FMAudioPlayer` that let you search for stations
+    (`getStationWithOptions`, `getStationWithOptionKey:Value:`, e.t.c.), and instead
+    we've created a new subclass of NSArray 
+    ([FMStationAray](http://feed.fm/sdk/docs/ios/latest/html/Classes/FMStationArray.html))
+    that has methods to let you search for stations based on their metadata. The `FMAudioPlayer`
+    properties `stationList`, `localOfflineStationList`, and `remoteOfflineStationList`
+    implement that class.
+  - whenAvailable:notAvailable: was holding on to its callbacks too long.
 
 - v4.2.0-beta5
   - remove 'download completed' callback and just use 'progress' callback
