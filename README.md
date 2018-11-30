@@ -107,7 +107,7 @@ located on GitHub, that use this library.
 ## Bugs!
 
 If you find a bug, please send an email to support@feed.fm with a description
-and any information you give to help us reproduce it.
+and any information you have to help us reproduce it.
 
 ## Authors
 
