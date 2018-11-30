@@ -21,12 +21,6 @@ it, simply add the following line to your Podfile:
 pod "FeedMedia"
 ```
 
-If you want to try out a sample app before installing, run
-
-```bash
-pod try FeedMedia
-```
-
 ### Carthage
 
 You can add this library via Carthage by adding the following to your CartFile:
@@ -110,6 +104,11 @@ pre-built music players
 [RadioPlayer](https://github.com/feedfm/iOS-RadioPlayer) and
 [Radioplayer 2](https://github.com/feedfm/iOS-RadioPlayer-2),
 located on GitHub, that use this library.
+
+## Bugs!
+
+If you find a bug, please send an email to support@feed.fm with a description
+and any information you give to help us reproduce it.
 
 ## Authors
 
