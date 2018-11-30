@@ -58,8 +58,8 @@ Typical initialization and setup is as follows:
 As early as you can in your app’s lifecycle (preferably in your AppDelegate or initial ViewController) call
 ```Objective-C
 [FMAudioPlayer setclientToken:@"demo" secret:@"demo"]
-to asynchronously contact the feed.fm servers, validate that the client is in a location that can legally play music, and then retrieve a list of available music stations.
 ```
+to asynchronously contact the feed.fm servers, validate that the client is in a location that can legally play music, and then retrieve a list of available music stations.
 
 There are a number of sample credentials you can use to assist in testing your app out. Use one of the following strings for your token and secret to get the desired behavior:
 
@@ -91,7 +91,6 @@ FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
  // Set Notifications for ex to listen for player events
  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateDidChange:) name:FMAudioPlayerPlaybackStateDidChangeNotification object:[FMAudioPlayer sharedPlayer]];
 ```
-
 
 
 ## Tell me more!
