@@ -32,7 +32,7 @@ DerivedData
 # Pods/
 
 dist/
-docs/
+docs/html
 
 Carthage/Checkouts
 Carthage/Build

@@ -21,6 +21,8 @@ mkdir -p ${DOCS_DIR}
   --project-company "${company}" \
   --company-id "${companyID}" \
   --output "${DOCS_DIR}" \
+  --index-desc ${PROJECT_DIR}/Docs/markdown/index.md \
+  --include ${PROJECT_DIR}/Docs/markdown \
   --create-html \
   --no-install-docset \
   --no-create-docset \
