@@ -36,6 +36,7 @@ mkdir -p ${DOCS_DIR}
   --search-undocumented-doc \
   --ignore "*.m" \
   --ignore "FeedMedia.h" \
+  --ignore "CWStatusBarNotification.h" \
   --exit-threshold 2 \
   --verbose 5 \
   "${PROJECT_DIR}/Core" "${PROJECT_DIR}/Sources" \
