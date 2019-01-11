@@ -1,4 +1,10 @@
 
+- v4.2.2 
+
+- Fixed a crash in crossfader.
+- Fixed a bug which would cause a few songs to not crossfade properly. 
+
+
 - v4.2.1
   - Fixed VICache crash bug 
   - *bugfix* - client id was not being persisted between application runs, since 4.2.0

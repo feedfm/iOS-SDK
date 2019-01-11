@@ -200,6 +200,7 @@
     }
 
     // start playback if we've tuned to a station by now
+    //
     for (int x = _nextCuePointIndex; x >= 0; x--) {
         FMCuePoint *cp = (FMCuePoint *) _cuePoints[x];
         
@@ -253,8 +254,14 @@
         if (cp.volume != nil) {
             volume = cp.volume;
         }
-        
-        _nextCuePointIndex++;
+        if(_cuePoints.count > _nextCuePointIndex)
+        {
+            _nextCuePointIndex++;
+            cp =_cuePoints[_nextCuePointIndex];
+        }
+        else {
+            cp = nil;
+        }
         cp = (_cuePoints.count > _nextCuePointIndex) ? _cuePoints[_nextCuePointIndex] : nil;
     }
     
