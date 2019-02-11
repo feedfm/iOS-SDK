@@ -176,17 +176,17 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
     /**
      *  Initial state of the audio player.
      */
-    FMAudioPlayerPlaybackStateReadyToPlay,
+    /* 4 */  FMAudioPlayerPlaybackStateReadyToPlay,
     
     /**
      *  Playback of audio is in progress
      */
-    FMAudioPlayerPlaybackStatePlaying,
+    /* 5 */ FMAudioPlayerPlaybackStatePlaying,
     
     /**
      *  Playback is paused
      */
-    FMAudioPlayerPlaybackStatePaused,
+    /* 6 */ FMAudioPlayerPlaybackStatePaused,
     
     /**
      *  Some media did not arrive in time to continue playback, and the 
@@ -1091,5 +1091,5 @@ NS_ASSUME_NONNULL_END
 
 
 
-
+- (void)destroy; 
 @end
