@@ -969,6 +969,14 @@ NS_ASSUME_NONNULL_END
 + (nonnull NSString *) nameForType:(FMAudioPlayerPlaybackState)type;
 
 
+/**
+ * Destroys the instance of the player, use this call if you wish to set new tokens.
+ *
+ */
+
+- (void)destroy;
+
+
 ///-----------------------------------------------------
 /// @name Deprecated
 ///-----------------------------------------------------
@@ -1088,8 +1096,4 @@ NS_ASSUME_NONNULL_END
 
 + (void)setClientToken:(nonnull NSString *)token secret:(nonnull NSString *)secret detectLocalMusic:(BOOL) detectLocalMusic DEPRECATED_ATTRIBUTE;
 
-
-
-
-- (void)destroy; 
 @end

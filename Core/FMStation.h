@@ -71,6 +71,12 @@
 @property (readonly) BOOL isSimulcast;
 
 /**
+ * Returns true if this station has new content that has never been listened by this user.
+ */
+
+@property (readonly) BOOL hasNewMusic;
+
+/**
  * An array of FMAudioItem songs that are in this station, if it
  * is on-demand, otherwise this is NULL.
  */
@@ -94,6 +100,18 @@
  */
 
 @property (readonly, nullable) NSDate *expiry;
+
+/**
+ * Returns the date this station was last updated.
+ */
+
+@property (readonly, nonnull) NSDate *lastUpdated;
+
+/**
+ * Returns last play start time, nil if this station has never been played.
+ */
+
+@property (readwrite, nullable) NSDate *lastPlayStart;
 
 /*
  *  JSON representation of this object
