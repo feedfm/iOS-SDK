@@ -1,3 +1,6 @@
+- v4.2.3
+
+- Added new parameters lastPlayStart and lastUpdated to FMStation
 
 - v4.2.2 
 
