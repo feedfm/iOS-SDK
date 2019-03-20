@@ -38,7 +38,6 @@
 		A907BD50206CB11F003DEE11 /* FMRemainingTimeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F911F6259E200CCE75D /* FMRemainingTimeLabel.m */; };
 		A907BD51206CB11F003DEE11 /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F951F6259E200CCE75D /* FMSkipWarningView.m */; };
 		A907BD52206CB11F003DEE11 /* FMStationCrossfader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9040DF11F747C710046364A /* FMStationCrossfader.m */; };
-		A907BD54206D5954003DEE11 /* FeedMediaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A907BD53206D5954003DEE11 /* FeedMediaCore.framework */; };
 		A907BD56206D625E003DEE11 /* FMMetadataLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F8F1F6259E200CCE75D /* FMMetadataLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A907BD57206D625E003DEE11 /* FMStationButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F7D1F6259E200CCE75D /* FMStationButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A907BD58206D625E003DEE11 /* FMPlayPauseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F7F1F6259E200CCE75D /* FMPlayPauseButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -85,8 +84,6 @@
 		A9879FB31F6259E200CCE75D /* FMSkipWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9879F951F6259E200CCE75D /* FMSkipWarningView.m */; };
 		A9879FB41F6259E200CCE75D /* FMTotalTimeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F961F6259E200CCE75D /* FMTotalTimeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9879FB51F6259E200CCE75D /* FeedMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = A9879F971F6259E200CCE75D /* FeedMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A987A0091F63A48900CCE75D /* MarqueeLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A987A0071F63A48900CCE75D /* MarqueeLabel.framework */; };
-		A9DC9BED206C8C3300D66510 /* FeedMediaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DC9BEC206C8C3300D66510 /* FeedMediaCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A907BD54206D5954003DEE11 /* FeedMediaCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DC9BED206C8C3300D66510 /* FeedMediaCore.framework in Frameworks */,
-				A987A0091F63A48900CCE75D /* MarqueeLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +296,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A907BD40206CB0B5003DEE11 /* Build configuration list for PBXNativeTarget "FeedMedia TV" */;
 			buildPhases = (
-				A907BD55206D5964003DEE11 /* ShellScript */,
 				A907BD34206CB0B5003DEE11 /* Sources */,
 				A907BD35206CB0B5003DEE11 /* Frameworks */,
 				A907BD36206CB0B5003DEE11 /* Headers */,
@@ -320,7 +313,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9879F381F6253A300CCE75D /* Build configuration list for PBXNativeTarget "FeedMedia" */;
 			buildPhases = (
-				A9DC9BF9206C9A5000D66510 /* ShellScript */,
 				A9879F2B1F6253A300CCE75D /* Sources */,
 				A9879F2C1F6253A300CCE75D /* Frameworks */,
 				A9879F2D1F6253A300CCE75D /* Headers */,
@@ -381,21 +373,6 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A907BD55206D5964003DEE11 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/FeedMediaCore.framework",
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FeedMediaCore.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		A987A07B1F64F42C00CCE75D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,23 +385,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "${SRCROOT}/Scripts/generateAppledoc.sh";
-		};
-		A9DC9BF9206C9A5000D66510 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/FeedMediaCore.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MarqueeLabel.framework",
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FeedMediaCore.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MarqueeLabel.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -597,7 +557,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -649,6 +609,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
