@@ -6,7 +6,7 @@
 //  Copyright © 2017 Feed Media. All rights reserved.
 //
 
-#define FEED_MEDIA_CLIENT_VERSION @"4.2.4-beta"
+#define FEED_MEDIA_CLIENT_VERSION @"4.2.4"
 
 // All public headers
 #import "FMAudioItem.h"
