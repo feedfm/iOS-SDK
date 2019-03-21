@@ -1,12 +1,14 @@
-- v4.2.3
 
-- Added new parameters lastPlayStart and lastUpdated to FMStation
+- v4.2.4 and v4.2.5
+  - updates to internal build/deploy scripts
+  - Carthage project fix
+  
+- v4.2.3
+  - Added new parameters lastPlayStart and lastUpdated to FMStation
 
 - v4.2.2 
-
-- Fixed a crash in crossfader.
-- Fixed a bug which would cause a few songs to not crossfade properly. 
-
+  - Fixed a crash in crossfader.
+  - Fixed a bug which would cause a few songs to not crossfade properly. 
 
 - v4.2.1
   - Fixed VICache crash bug 

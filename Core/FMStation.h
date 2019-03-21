@@ -71,7 +71,9 @@
 @property (readonly) BOOL isSimulcast;
 
 /**
- * Returns true if this station has new content that has never been listened by this user.
+ * Returns true if the user has never heard this station or
+ * if new music has been published since the user last heard
+ * the station.
  */
 
 @property (readonly) BOOL hasNewMusic;
