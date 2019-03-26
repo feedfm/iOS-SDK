@@ -1,5 +1,5 @@
 
-- v4.2.4 and v4.2.5
+- v4.2.4 - v4.2.6
   - updates to internal build/deploy scripts
   - Carthage project fix
   
