@@ -543,6 +543,12 @@ NS_ASSUME_NONNULL_END
 - (void)unlikeAudioItem: (nonnull FMAudioItem *)audioItem;
 
 /**
+ * Get currently Active ClientID
+ */
+
+- (nullable NSString*) getClientId;
+
+/**
  * Sets a previously generated clientid to be the active id.
  *
  * @param cid previously generated client id
@@ -551,7 +557,7 @@ NS_ASSUME_NONNULL_END
 - (void) setClientId: (nonnull NSString*) cid;
 
 /**
- * Asynchronous generate a new client id for a new user.
+ * Asynchronously generate a new client id for a new user.
  * When this request is complete a NSNotification `FMAudioPlayerNewClientIdAvailable` is triggered
  * with userInfo dictionary that contains the clientid
  *

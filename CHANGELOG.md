@@ -1,4 +1,8 @@
 
+- v4.2.7
+  - Fix bad reference when reporting offline playback problem
+  - Expose methods to retrieve client id for external storage
+
 - v4.2.4 - v4.2.6
   - updates to internal build/deploy scripts
   - Carthage project fix
