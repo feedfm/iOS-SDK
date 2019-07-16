@@ -1,3 +1,6 @@
+- v4.2.8
+ - Added support for seeking
+ - fixed bug caused due to calling play pause multiple times
 
 - v4.2.7
   - Fix bad reference when reporting offline playback problem
