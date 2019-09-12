@@ -122,7 +122,7 @@
 
 - (void) onClick {
     if (_station) {
-        NSLog(@"play limited to station");
+        FMLogDebug(@"play limited to station");
         FMStation *currentStation = _feedPlayer.activeStation;
         
         if (![_station isEqual:currentStation]) {
@@ -133,7 +133,7 @@
         }
         
     } else if (_audioItem) {
-        NSLog(@"play limited to audio item");
+        FMLogDebug(@"play limited to audio item");
         FMAudioItem *currentAudioItem = _feedPlayer.currentItem;
         
         if (![_audioItem.id isEqualToString:currentAudioItem.id]) {

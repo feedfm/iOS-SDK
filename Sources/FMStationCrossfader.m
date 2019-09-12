@@ -84,7 +84,7 @@
     FMStationCrossfader *sc = [FMStationCrossfader stationCrossfaderWithInitialStation:initialStationOptionKeysAndValues];
 
     if ((cuePoints.count % 2) != 0) {
-        NSLog(@"**WARNING** cuepoints provided to FMStationCrossfader should come in pairs, but we found %lu items", (unsigned long)cuePoints.count);
+        FMLogDebug(@"**WARNING** cuepoints provided to FMStationCrossfader should come in pairs, but we found %lu items", (unsigned long)cuePoints.count);
     }
 
     // convert the input values into an array of FMCuePoint objects
@@ -100,7 +100,7 @@
             [sc playStation: optionKeysAndValues startingAtTime: [timeObject floatValue]];
 
         } else {
-            NSLog(@"Unknown cue point type at time %@ is %@. Not a NSNumber or NSDictionary", timeObject, cuePoints[i+1]);
+            FMLogDebug(@"Unknown cue point type at time %@ is %@. Not a NSNumber or NSDictionary", timeObject, cuePoints[i+1]);
 
         }
     }
@@ -110,7 +110,7 @@
 
 - (void) setVolume:(NSNumber *)volume startingAtTime:(float)time {
     if (_connected) {
-        NSLog(@"**WARNING** cannot append cues to crossfader once begin has been called");
+        FMLogDebug(@"**WARNING** cannot append cues to crossfader once begin has been called");
         return;
     }
 
@@ -124,7 +124,7 @@
 
 - (void) playStation: (NSDictionary *) optionKeysAndValues startingAtTime: (float) time {
     if (_connected) {
-        NSLog(@"**WARNING** cannot append cues to crossfader once begin has been called");
+        FMLogDebug(@"**WARNING** cannot append cues to crossfader once begin has been called");
         return;
     }
     
@@ -133,7 +133,7 @@
     }
     
     if (optionKeysAndValues == nil) {
-        NSLog(@"**WARNING** only the initial station may be nil. Unable to add to station crossfader at time index %f.", time);
+        FMLogDebug(@"**WARNING** only the initial station may be nil. Unable to add to station crossfader at time index %f.", time);
         return;
     }
     
@@ -144,7 +144,7 @@
         [_cuePoints addObject:[FMCuePoint station:station time: time]];
         
     } else {
-        NSLog(@"**WARNING** unable to find station with attributes %@ for time index %f", optionKeysAndValues, time);
+        FMLogDebug(@"**WARNING** unable to find station with attributes %@ for time index %f", optionKeysAndValues, time);
     }
 }
 
@@ -161,7 +161,7 @@
     NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"time" ascending:YES];
     [_cuePoints sortUsingDescriptors:@[ sd ]];
     
-    NSLog(@"there are %ld cue points", (long) _cuePoints.count);
+    FMLogDebug(@"there are %ld cue points", (long) _cuePoints.count);
     
     _nextCuePointIndex = 0;
     _lastElapsedTime = -1.0f;

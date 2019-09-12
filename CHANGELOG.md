@@ -1,6 +1,9 @@
+- v4.2.9
+ - Support for iOS13, upgrade the SDK version ASAP to 4.2.9 to avoid app crashes on iOS13
+
 - v4.2.8
-  - Added support for seeking
-  - fixed bug caused due to calling play pause multiple times
+ - Added support for seeking
+ - fixed bug caused due to calling play pause multiple times
 
 - v4.2.7
   - Fix bad reference when reporting offline playback problem
