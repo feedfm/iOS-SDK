@@ -1,3 +1,11 @@
+
+- v4.3.0
+ - Stop call ends the active AVAudioSession and disables lockscreen controls. 
+ - Setting doesHandleRemoteCommands to NO in FMAudioplayer will now prevent 
+   all initialization and interaction with remote controls even if no lock
+   screen delegate is set. Make sure to _not_ enable background audio
+   capabilities if you set doesHandleRemoteCommands to NO.
+ 
 - v4.2.9
  - Support for iOS13, upgrade the SDK version ASAP to 4.2.9 to avoid app crashes on iOS13
 
