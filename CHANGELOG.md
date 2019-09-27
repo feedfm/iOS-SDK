@@ -1,3 +1,7 @@
+
+- v4.3.2
+ - Assertion typo
+
 - v4.3.1
  - Bug fix to reduce the no of songs skipped due to networking error. 
 
