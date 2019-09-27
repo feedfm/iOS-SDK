@@ -1,3 +1,5 @@
+- v4.3.1
+ - Bug fix to reduce the no of songs skipped due to networking error. 
 
 - v4.3.0
  - Stop call ends the active AVAudioSession and disables lockscreen controls. 
