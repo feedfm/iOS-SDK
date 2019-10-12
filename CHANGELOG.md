@@ -1,4 +1,6 @@
-
+- v4.3.3
+ - Update to fix small no of crashes caused by deprication of NSFileHandle methods's on iOS13
+ 
 - v4.3.2
  - Assertion typo
 
