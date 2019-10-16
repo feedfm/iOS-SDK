@@ -19,6 +19,10 @@ typedef enum FMLogLevel : NSInteger {
 void FMLogSetLevel(FMLogLevel level);
 void _FMLog(NSInteger level, NSString *format, ...);
 
+
+NSString* _FMLogGetLogContent(void);
+void _FMLogResetLog(void);
+
 #ifndef FMLog
 #define FMLog(level,fmt,...) _FMLog(level, (@"%s (%d): " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #endif
