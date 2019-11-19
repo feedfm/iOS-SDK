@@ -1,3 +1,8 @@
+
+- v4.3.5
+ - Support for remote crossfade values.
+ - Prevent throwing a nil value in NSDictionary (fix thanks to https://github.com/lucasnewman)
+
 - v4.3.3
  - Update to fix small no of crashes caused by deprication of NSFileHandle methods's on iOS13
  
