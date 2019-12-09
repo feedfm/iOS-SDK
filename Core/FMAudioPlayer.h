@@ -633,20 +633,12 @@ NS_ASSUME_NONNULL_END
 ///-----------------------------------------------------
 
 /**
- * The number of seconds to crossfade between songs. This defaults
- * to 0.
+ * The number of seconds to crossfade between songs. This defaults to 0.
+ * If crossfading values is set in server side, setting this value will have no effect as server side values have higher priority.
  */
 
 @property (nonatomic) float secondsOfCrossfade;
 
-/**
- * When crossfading between songs, the song we are transitioning to can either
- * begin playback at full volume or ramp up from silence to full volume during
- * the transition. When this value is true (the default), the song will
- * ramp up.
- */
-
-@property (nonatomic) BOOL crossfadeInEnabled;
 
 /**
  * When true (the default), adjust individual song volumes so they are perceived

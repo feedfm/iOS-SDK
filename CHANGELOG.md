@@ -1,3 +1,5 @@
+- v4.3.6
+- Changes in how crossfading works and priority of remote crossfading.
 
 - v4.3.5
  - Support for remote crossfade values.
