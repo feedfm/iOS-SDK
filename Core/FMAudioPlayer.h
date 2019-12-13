@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "FMStation.h"
 #import "FMAudioItem.h"
 #import "FMError.h"
@@ -1104,5 +1105,29 @@ NS_ASSUME_NONNULL_END
  * @return Time in seconds 
  */
 - (NSTimeInterval) maxSeekableLength ;
+
+
+/**
+ * This method sets the default configuration values when the FMAudioPlayer
+ * initializes an AVAudioSession.
+ *
+ * When playback starts, the FMAudioPlayer needs to ensure there is an
+ * active AVAudioSession. By default, the player sets the AVAudioSessionCategory to
+ * AVAudioSessionCategoryPlayback, the mode to AVAudioSessionModeDefault,
+ * and the options to AVAudioSessionCategoryOptionMixWithOthers. If you would
+ * like the player to use alternate settings, assign them here before playback begins.
+ *
+ * (note: this method does not immediately call
+ * AVAudioSession setCategory:mode:options:error - it only assigns the default values
+ * that the player will use when it needs to get an AVAudioSession)
+ *
+ * @param category category to request when player gets AVAudioSession
+ * @param mode  mode to request when player gets AVAudioSession
+ * @param options category options to set when player gets AVAudioSession
+ *
+ */
+- (void) setAVAudioSessionCategory: (nonnull AVAudioSessionCategory) category
+                              mode: (nonnull AVAudioSessionMode) mode
+                           options: (AVAudioSessionCategoryOptions) options;
 
 @end

@@ -1,5 +1,10 @@
+- v4.3.7-beta1
+ - Ensure call to UIApplicationState occurs in main thread
+ - New setAVAudioSessionCategory:mode:options method to let clients
+   assign AVAudioSession values different from our defaults.
+
 - v4.3.6
-- Changes in how crossfading works and priority of remote crossfading.
+ - Changes in how crossfading works and priority of remote crossfading.
 
 - v4.3.5
  - Support for remote crossfade values.
