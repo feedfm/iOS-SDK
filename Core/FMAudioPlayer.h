@@ -1130,4 +1130,15 @@ NS_ASSUME_NONNULL_END
                               mode: (nonnull AVAudioSessionMode) mode
                            options: (AVAudioSessionCategoryOptions) options;
 
+/**
+ * This method sends all Feed SDK generated logs since the start of the application
+ * to feed.fm for manual debugging. If you are experiencing unexpected behavior with the
+ * SDK, call this method after the bad behavior occurs and let your customer support
+ * person at feed know what value you passed for 'label'.
+ *
+ * @param label a unique label to assist feed.fm engineers in finding this specific log
+ */
+
+- (void) submitLogsForRemoteDebuggingWithLabel: (nonnull NSString *) label;
+
 @end

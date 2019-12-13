@@ -1,3 +1,7 @@
+
+- v4.3.7-beta2
+ - Expose submitLogsForRemoteDebuggingWithLabel: method on FMAudioPlayer
+
 - v4.3.7-beta1
  - Ensure call to UIApplicationState occurs in main thread
  - New setAVAudioSessionCategory:mode:options method to let clients
