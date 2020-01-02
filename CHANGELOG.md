@@ -1,3 +1,9 @@
+- v4.3.7
+ - Default crossfade is not 5 seconds
+ - Ensure call to UIApplicationState occurs in main thread
+ - New setAVAudioSessionCategory:mode:options method to let clients
+   assign AVAudioSession values different from our defaults.
+ - Expose submitLogsForRemoteDebuggingWithLabel: method on FMAudioPlayer
 
 - v4.3.7-beta2
  - Expose submitLogsForRemoteDebuggingWithLabel: method on FMAudioPlayer
