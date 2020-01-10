@@ -1,5 +1,8 @@
+- v4.3.8
+ - Fix bug that caused crash in getClientId()
+ 
 - v4.3.7
- - Default crossfade is not 5 seconds
+ - Default crossfade is now 5 seconds
  - Ensure call to UIApplicationState occurs in main thread
  - New setAVAudioSessionCategory:mode:options method to let clients
    assign AVAudioSession values different from our defaults.
