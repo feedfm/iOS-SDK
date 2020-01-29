@@ -402,6 +402,13 @@ NS_ASSUME_NONNULL_END
 + (nonnull FMAudioPlayer *)sharedPlayer;
 
 /**
+ * Change the base url of Feed Api
+ * For Internal testing only
+ */
+
++ (void) setBaseUrl: (NSString*_Nonnull) url;
+
+/**
  * Call one of the two callbacks as soon as we know music is available for
  * playback. One of these two blocks is
  * guaranteed to be called, and only one call will ever be made.

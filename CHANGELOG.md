@@ -1,3 +1,8 @@
+- v4.3.9
+ - Added setBaseUrl api and more remote debugging capabilities. 
+ - the default AVAudioSession options set in 4.3.7 disabled the 'now playing'
+   controls. This release reverts back to the pre-4.3.7 settings.
+
 - v4.3.8
  - Fix bug that caused crash in getClientId()
  
