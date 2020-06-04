@@ -1,3 +1,6 @@
+- v4.3.11
+-  bitcode enable on tvOS static lib
+
 - v4.3.10
  - Fix for song start notifications on iOS 13 and notch
  

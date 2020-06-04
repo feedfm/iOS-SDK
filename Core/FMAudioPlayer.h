@@ -432,6 +432,15 @@ NS_ASSUME_NONNULL_END
 - (void)whenAvailable: (nonnull void (^)(void)) onAvailable
          notAvailable: (nonnull void (^)(void)) onNotAvailable;
 
+/**
+ * Called when there is need to update the stationlist from server.
+ * This method can  be called periodically for long running apps that do not quit for multiple days
+ * If a new nession is not available then no callback will be recived
+ *
+ *  @param onUpdatedSessionAvailable called when session is refreshed
+ */
+- (void)updateSession: (nonnull void (^)(void)) onUpdatedSessionAvailable;
+
 
 ///-----------------------------------------------------
 /// @name Playback Controls
