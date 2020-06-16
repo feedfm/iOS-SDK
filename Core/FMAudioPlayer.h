@@ -212,6 +212,242 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 NS_ASSUME_NONNULL_END
 #define kFMRemoteControlEvent @"FMRemoteControlEvent"
 
+
+
+
+typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
+    
+    FMMixingAudioPlayerCompletionReasonReachedEnd,
+    
+    FMMixingAudioPlayerCompletionReasonSkipped,
+    
+    FMMixingAudioPlayerCompletionReasonFlushed,
+    
+    FMMixingAudioPlayerCompletionReasonError
+    
+};
+
+/**
+ * Internal Delegate
+ */
+
+@protocol FMMixingAudioPlayerDelegate<NSObject>
+
+
+/**
+ * This is triggered when the player is READY_TO_PLAY and we have buffered
+ * audio so that playback may begin immediately. This is also triggered for
+ * songs that are queued up in the background so that we can switch to them
+ * as soon as they are queued up, if desired.
+ *
+ * Note that if the player is STALLED or WAITING_FOR_ITEM then this event
+ * won't be triggered - the audio will just begin playback.
+ *
+ * @param item the audio item ready for playback
+ */
+- (void) mixingAudioPlayerItemIsReadyForPlayback: (nonnull FMAudioItem *) item;
+
+/**
+ * The player started playback of the given audio item.
+ *
+ * @param item the audio item that started playback
+ * @parm waiting time before playback started
+ * @parm buffering time for the item
+ */
+
+- (void) mixingAudioPlayerItemDidBeginPlayback: (nonnull FMAudioItem *) item
+                        waitingTimeForPlayBack: (NSTimeInterval) waitingTime
+                        bufferingTimeforItem: (NSTimeInterval) bufferingTime;
+
+/**
+ * The player finished playback of the given audio item.
+ *
+ * @param item item the audio item that finished playback
+ * @param reason reason the playback completed for this item
+ * @param error the error (if any) that stopped playback
+ */
+
+- (void) mixingAudioPlayerItemDidFinishPlayback: (nonnull FMAudioItem *) item
+                                    dueToReason: (FMMixingAudioPlayerCompletionReason) reason
+                                       andError: ( NSError *_Nullable) error;
+
+/**
+ * The player was unable to prepare or retrieve the given audio item for playback.
+ *
+ * @param item the item that was not preparable or retrievable
+ * @param error the error that caused the prepare to fail
+ */
+
+- (void) mixingAudioPlayerItemDidFailToPrepare: (nonnull FMAudioItem *) item
+                                     withError: (NSError * _Nullable) error;
+
+/**
+ * The player changed state.
+ *
+ * @param state the new state of the player
+ */
+
+- (void) mixingAudioPlayerStateDidChange: (FMAudioPlayerPlaybackState) state;
+
+/**
+ * This is called every .5 seconds to indicate playback time has elapsed
+ */
+
+- (void) mixingAudioPlayerPlaybackDidElapse: (CMTime) elapsedTime;
+
+/**
+ * Report errors back to Feed.fm
+ */
+
+- (void) mixingAudioPlayerError: (NSString * _Nullable) description;
+
+
+
+@end
+
+
+
+/**
+ * Internal protocol method
+ */
+
+
+@protocol MixingAudioPlayer <NSObject>
+
+
+
+/**
+ * Delegate that receives events.
+ */
+
+@property (nonatomic, strong) id<FMMixingAudioPlayerDelegate> _Nullable eventDelegate;
+
+
+/**
+ * Set or retrieve the audio volume.
+ */
+
+@property (nonatomic) float volume;
+
+/**
+ * When true (the default), the player will try to normalize song volumes
+ */
+
+@property (nonatomic) BOOL normalizeVolume;
+
+/**
+ * When true, the player will honor start and end trim hinting.
+ */
+
+@property (nonatomic) BOOL trimmingEnabled;
+
+/**
+ * This is the number of seconds that songs will overlap when transitioning
+ * between two songs. This defaults to 0.
+ */
+
+@property (nonatomic) float secondsOfCrossfade;
+
+/**
+ * When this is true and secondsOfCrossfade > 0, then the song we are
+ * transitioning to will fade in during the crossfade. When this is
+ * false, then the song we are transitioning to will start at full volume
+ * while the first song starts fading out. This defaults to NO.
+ */
+
+@property (nonatomic) BOOL crossfadeInEnabled;
+
+/**
+ * Current state of the player. When this is changed, any registered delegate
+ * receives notice via 'mixingAudioPlayerStateDidChange' call
+ */
+
+@property (nonatomic, readonly) FMAudioPlayerPlaybackState state;
+
+/**
+ * Current item that we're trying to play
+ */
+
+@property (nonatomic, readonly)  FMAudioItem * _Nullable currentItem;
+
+/**
+ * Current time into the current item we're playing, or kCMTimeZero
+ **/
+ 
+@property (nonatomic, readonly) CMTime currentTime;
+
+/**
+ * Duration of the current item we're playing, or kCMTimeZero
+ */
+
+@property (nonatomic, readonly) CMTime currentDuration;
+
+/**
+ * Queue the given audio item into the player.
+ *
+ * @param audioItem audio item to queue up
+ */
+
+
+- (void) addItem: (nonnull FMAudioItem *) audioItem;
+
+/**
+ * Begin or resume audio playback
+ */
+
+- (void) play;
+
+/**
+ * Pause audio playback
+ */
+
+- (void) pause;
+
+/**
+ * Skip to the next song. If playback was paused, this will
+ * resume playback.
+ */
+
+- (void) skip;
+
+/**
+ * Skip to the next song. If playback was paused, this will
+ * resume playback.
+ *
+ * @param applyCrossfade if true, the current song will fade out, rather than immediately stop
+ */
+
+- (void) skipWithCrossfade: (BOOL) applyCrossfade;
+
+/**
+ * Stop playback and remove all items and queued up items from the player.
+ */
+
+- (void) flush;
+
+/**
+ * Remove all queued up items in the player and, optionally stop and
+ * unload the currently playing song.
+ *
+ * @param includeCurrentItem if true, stop playback of current song and remove from player
+ */
+
+- (void) flushAndIncludeCurrentItem: (BOOL) includeCurrentItem;
+
+
+- (void) seekStationTo: (CMTime) setTime;
+
+- (CMTime) maxSeekableLength;
+
+// For cancelling out an item that has a network error
+- (void) cancelSecondaryItem;
+
+
+@end
+
+
+
+
 /**
  When a station download request is posted this delegate
  is required to track the progress and the completion of the download.
@@ -408,6 +644,7 @@ NS_ASSUME_NONNULL_END
 
 + (void) setBaseUrl: (NSString*_Nonnull) url;
 
+
 /**
  * Call one of the two callbacks as soon as we know music is available for
  * playback. One of these two blocks is
@@ -440,6 +677,8 @@ NS_ASSUME_NONNULL_END
  *  @param onUpdatedSessionAvailable called when session is refreshed
  */
 - (void)updateSession: (nonnull void (^)(void)) onUpdatedSessionAvailable;
+
+
 
 
 ///-----------------------------------------------------
@@ -581,6 +820,27 @@ NS_ASSUME_NONNULL_END
  * @see setClientId:
  */
 - (void) createNewClientId;
+
+
+/**
+ * Internal Method
+ */
+- (void)setDefaultControlDelegate;
+
+/**
+* Internal Method
+*/
+-(void)setPlayerControlDelegate:(id<MixingAudioPlayer>_Nonnull) newPlayerControlDelegate;
+
+
+/**
+ * Enable/Disable auto retrying of network failures. If network disappears and this option in enabled, player will wait until network is restored and resume music playback, insted of shutting down.
+ * This option must be set before setClientToken is called. By default this option is set to true.
+ * If this opiton is set and setClientToken call fails due to network failure the SDK will call onUnAvailable but as network is restored OnAvailable will be automatically called again.
+ */
+@property (class, nonatomic) BOOL autoNetworkRetryEnabled;
+
+
 
 
 ///-----------------------------------------------------
