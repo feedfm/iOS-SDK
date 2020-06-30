@@ -109,32 +109,35 @@
 }
 
 - (void) updateButtonState {
-    if (_audioItem != nil) {
-        self.enabled = YES;
-        self.selected = _audioItem.disliked;
-        
-    } else {
-        FMAudioPlayerPlaybackState newState = _feedPlayer.playbackState;
-        BOOL disliked = _feedPlayer.currentItem.disliked;
-        
-        switch (newState) {
-            case FMAudioPlayerPlaybackStateOfflineOnly:
-            case FMAudioPlayerPlaybackStatePaused:
-            case FMAudioPlayerPlaybackStatePlaying:
-            case FMAudioPlayerPlaybackStateStalled:
-            case FMAudioPlayerPlaybackStateRequestingSkip:
-                self.enabled = YES;
-                self.selected = disliked;
-                break;
-            case FMAudioPlayerPlaybackStateReadyToPlay:
-            case FMAudioPlayerPlaybackStateWaitingForItem:
-            case FMAudioPlayerPlaybackStateComplete:
-            case FMAudioPlayerPlaybackStateUninitialized:
-            case FMAudioPlayerPlaybackStateUnavailable:
-                self.enabled = NO;
-                self.selected = NO;
-        }
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self->_audioItem != nil) {
+           self.enabled = YES;
+            self.selected = self->_audioItem.disliked;
+           
+       } else {
+           FMAudioPlayerPlaybackState newState = self->_feedPlayer.playbackState;
+           BOOL disliked = self->_feedPlayer.currentItem.disliked;
+           
+           switch (newState) {
+               case FMAudioPlayerPlaybackStateOfflineOnly:
+               case FMAudioPlayerPlaybackStatePaused:
+               case FMAudioPlayerPlaybackStatePlaying:
+               case FMAudioPlayerPlaybackStateStalled:
+               case FMAudioPlayerPlaybackStateRequestingSkip:
+                   self.enabled = YES;
+                   self.selected = disliked;
+                   break;
+               case FMAudioPlayerPlaybackStateReadyToPlay:
+               case FMAudioPlayerPlaybackStateWaitingForItem:
+               case FMAudioPlayerPlaybackStateComplete:
+               case FMAudioPlayerPlaybackStateUninitialized:
+               case FMAudioPlayerPlaybackStateUnavailable:
+                   self.enabled = NO;
+                   self.selected = NO;
+           }
+       }
+    });
+    
 }
 
 #endif

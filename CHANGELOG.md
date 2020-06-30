@@ -1,5 +1,12 @@
+- v4.4.1
+ - Fix a bug with Airplay
+ 
+- v4.4.0
+ - Added autoNetworkRetryEnabled option to FMAudioPlayer. FMAudioPlayer will now by default keep retrying to play music in events of network failure. 
+ - A callback to onUnavailable is no longer final. The player may call onAvailable at a later stage if the first failure was due to network issues. 
+
 - v4.3.11
--  bitcode enable on tvOS static lib
+ -  bitcode enable on tvOS static lib
 
 - v4.3.10
  - Fix for song start notifications on iOS 13 and notch
