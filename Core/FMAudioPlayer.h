@@ -828,8 +828,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 - (void)setDefaultControlDelegate;
 
 /**
-* Internal Method
-*/
+ * Internal Method
+ */
 -(void)setPlayerControlDelegate:(id<MixingAudioPlayer>_Nonnull) newPlayerControlDelegate;
 
 
@@ -1159,6 +1159,12 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 /// @name Misc..
 ///-----------------------------------------------------
 
+/**
+ * Disable the creation and management of  AVAudioSession by Feed SDK completely
+ */
+
+
+@property (nonatomic) BOOL disableAVAudioSession;
 /**
  * Order specifies priority (earlier elements are preferred).
  * Nil-ing this property will allow any format to be served, but is not recommended.

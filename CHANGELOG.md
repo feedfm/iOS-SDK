@@ -1,3 +1,6 @@
+- v4.4.2
+ - Add disableAVAudioSession option to player.
+ 
 - v4.4.1
  - Fix a bug with Airplay
  
