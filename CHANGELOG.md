@@ -1,3 +1,8 @@
+- v4.4.3-beta5
+ - Move to XCFrameworks
+ - Add support for Mac Catalyst.
+ - Add in Studio simulcast support.
+
 - v4.4.2
  - Add disableAVAudioSession option to player.
  
