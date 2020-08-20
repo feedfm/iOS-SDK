@@ -1,6 +1,0 @@
-framework module FeedMedia {
-  umbrella header "FeedMedia.h"
-
-  export *
-  module * { export * }
-}
