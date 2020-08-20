@@ -22,9 +22,9 @@
 #import <UIKit/UIKit.h>
 #import "FeedMediaCoreProxy.h"
 
-#if TARGET_OS_TV
+#if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else
-#import <MarqueeLabel/MarqueeLabel.h>
+#import "FMMarqueeLabel.h"
 #endif
 
 /**
@@ -47,12 +47,12 @@
  
  */
 
-#if TARGET_OS_TV
+#if (TARGET_OS_TV || TARGET_OS_MACCATALYST)
 //NOT_IB_DESIGNABLE
 @interface FMMetadataLabel : UILabel
 
 #else
-@interface FMMetadataLabel : MarqueeLabel
+@interface FMMetadataLabel : FMMarqueeLabel
 
 #endif
 

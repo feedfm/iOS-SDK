@@ -110,7 +110,7 @@
     
     super.text = string;
 
-#if TARGET_OS_TV
+#if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else
     self.marqueeType = MLContinuous;
 #endif
