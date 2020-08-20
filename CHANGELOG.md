@@ -1,4 +1,4 @@
-- v4.4.3-beta5
+- v4.4.3-beta6
  - Move to XCFrameworks
  - Add support for Mac Catalyst.
  - Add in Studio simulcast support.
