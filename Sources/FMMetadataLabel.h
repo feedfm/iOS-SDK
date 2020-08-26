@@ -20,7 +20,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FeedMediaCoreProxy.h"
+#import "FeedMediaCore.h"
 
 #if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#include "FeedMediaCoreProxy.h"
+#include "FeedMediaCore.h"
 
 #include "FMActivityIndicator.h"
 #include "FMDislikeButton.h"

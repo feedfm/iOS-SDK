@@ -14,7 +14,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FeedMediaCoreProxy.h"
+#import "FeedMediaCore.h"
 
 
 /**
