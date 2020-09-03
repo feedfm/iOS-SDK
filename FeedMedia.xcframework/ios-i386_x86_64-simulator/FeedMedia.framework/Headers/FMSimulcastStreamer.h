@@ -15,20 +15,32 @@
 #import <Foundation/Foundation.h>
 #import "FMAudioItem.h"
 
-
+/**
+ * Playback state of Simulcast player
+ */
 typedef NS_ENUM(NSInteger, FMSimulcastPlaybackState) {
 
-SIMULCAST_STATE_IDLE,
+    /**
+     * Idle state.
+     */
+    SIMULCAST_STATE_IDLE,
 
-SIMULCAST_STATE_PLAYING,
-
-SIMULCAST_STATE_STOPPED,
-
-SIMULCAST_STATE_STALLED,
-
-SIMULCAST_STATE_WAITING_FOR_ITEM,
-
-SIMULCAST_STATE_MUSIC_UNAVAILABLE
+    /**
+     * Playing
+     */
+    SIMULCAST_STATE_PLAYING,
+    /**
+     * Playback has been stopped
+     */
+    SIMULCAST_STATE_STOPPED,
+    /**
+     * Player is stalled and waiting for data from the stream
+     */
+    SIMULCAST_STATE_STALLED,
+    /**
+     * Music unavailable and should not be played for this user.
+     */
+    SIMULCAST_STATE_MUSIC_UNAVAILABLE
     
 };
 
@@ -45,6 +57,7 @@ SIMULCAST_STATE_MUSIC_UNAVAILABLE
 
 /**
  * Current playing item has changed
+ *  @Paramater item The next item
 */
 
 -(void) nextItemBegan : (FMAudioItem *_Nonnull) item;
@@ -53,6 +66,12 @@ SIMULCAST_STATE_MUSIC_UNAVAILABLE
  * Elapse event for updating the playback time
 */
 -(void) elapse : (CMTime) elapseTime;
+
+/**
+ * Elapse event for updating the playback time
+*/
+-(void) onError : (NSString* _Nullable) error;
+
 
 
 @end
@@ -82,15 +101,15 @@ SIMULCAST_STATE_MUSIC_UNAVAILABLE
 @property (nonatomic) float volume;
 
 /**
- * Listens to the state of an in-Studio stream and fetch metadata etc. No local playback.
+ * Initalize  the Simulcast streamer
+ * @parameter token : simulcast token
+ * @parameter delegate : The delegate for listening to events from simulcast player
+ * @parameter isPlayer : if YES then streamer use a  player and plays the stream locally. if NO is passed the Streamer listens to the state of an in-Studiostream and fetchs metadata etc. No local playback.
+ *
  */
--(id _Nonnull ) initSimulcastListenerWithToken : (NSString *_Nonnull) token
-                          withDelegate : (id<FMSimulcastDelegate> _Nonnull) delegate;
-
-/**
- * Generates a player using the token and plays the stream locally.
- */
--(id _Nonnull) initSimulcastPlayerWithToken: (NSString* _Nonnull) simulcastToken withDelegate:(id<FMSimulcastDelegate> _Nonnull)delegate ;
+-(id _Nonnull) initSimulcastListenerWithToken : (NSString *_Nonnull) token
+                          withDelegate : (id<FMSimulcastDelegate> _Nonnull) delegate
+                          playLocalStream : (BOOL) isLocal;
 
 /**
  * Regester another delegate to listen to stream events
