@@ -1,3 +1,7 @@
+- v4.4.4
+ - Add support for overlay simulcast.
+ - Add in Studio simulcast support.
+
 - v4.4.3-beta1
  - Move to XCFrameworks
  - Add support for Mac Catalyst.
