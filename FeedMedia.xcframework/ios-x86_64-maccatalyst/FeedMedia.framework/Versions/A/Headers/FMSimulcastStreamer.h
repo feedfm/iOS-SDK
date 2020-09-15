@@ -109,7 +109,7 @@ typedef NS_ENUM(NSInteger, FMSimulcastPlaybackState) {
  */
 -(id _Nonnull) initSimulcastListenerWithToken : (NSString *_Nonnull) token
                           withDelegate : (id<FMSimulcastDelegate> _Nonnull) delegate
-                          playLocalStream : (BOOL) isLocal;
+                          isPlayer : (BOOL) isLocal;
 
 /**
  * Regester another delegate to listen to stream events
@@ -123,15 +123,15 @@ typedef NS_ENUM(NSInteger, FMSimulcastPlaybackState) {
 -(void) unregisterDelegate: (id<FMSimulcastDelegate> _Nonnull) delegate;
 
 /**
- * Begin playback
+ * Connect to and begin playback of the remote stream
  */
 
-- (void) play;
+- (void) connect;
 
 /**
- * Stop playback
+ *  Disconnect from the stream
  */
 
-- (void) stop;
+- (void) disconnect;
 
 @end
