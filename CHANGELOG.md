@@ -1,3 +1,6 @@
+- v4.4.5
+ - Changes to simulcast and bug fixes.
+
 - v4.4.4
  - Add support for overlay simulcast.
  - Add in Studio simulcast support.
