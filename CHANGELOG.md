@@ -1,3 +1,6 @@
+- v4.4.6
+ - Fix voume bug in Simulcast.
+
 - v4.4.5
  - Changes to simulcast and bug fixes.
 
