@@ -40,7 +40,15 @@ typedef NS_ENUM(NSInteger, FMSimulcastPlaybackState) {
     /**
      * Music unavailable and should not be played for this user.
      */
-    SIMULCAST_STATE_MUSIC_UNAVAILABLE
+    SIMULCAST_STATE_MUSIC_UNAVAILABLE,
+    /**
+            SDK is not yet initalized
+     */
+    SIMULCAST_STATE_UNINITIALIZED,
+    /**
+     * Music is Available for this user
+     */
+    SIMULCAST_STATE_AVAILABLE
     
 };
 
@@ -107,9 +115,9 @@ typedef NS_ENUM(NSInteger, FMSimulcastPlaybackState) {
  * @parameter isPlayer : if YES then streamer use a  player and plays the stream locally. if NO is passed the Streamer listens to the state of an in-Studiostream and fetchs metadata etc. No local playback.
  *
  */
--(id _Nonnull) initSimulcastListenerWithToken : (NSString *_Nonnull) token
-                          withDelegate : (id<FMSimulcastDelegate> _Nonnull) delegate
-                          isPlayer : (BOOL) isLocal;
+-(id _Nonnull) initSimulcastWithToken : (NSString *_Nonnull) token
+                         withDelegate : (id<FMSimulcastDelegate> _Nonnull) delegate;
+                          
 
 /**
  * Regester another delegate to listen to stream events
