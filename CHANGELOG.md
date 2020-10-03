@@ -1,3 +1,6 @@
+- v4.4.8 
+ -Fix issues with xcode 12
+ 
 - v4.4.7
  - Changes in Simulcast behaviour.
 
