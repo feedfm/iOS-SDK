@@ -1,3 +1,9 @@
+- v4.4.10
+  -Add AVsession to Simulcast.
+  
+- v4.4.9
+ -Fix issues with xcode 12
+ 
 - v4.4.8 
  -Fix issues with xcode 12
  

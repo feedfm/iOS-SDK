@@ -6,7 +6,7 @@
 //  Copyright © 2017 Feed Media. All rights reserved.
 //
 
-#define FEED_MEDIA_CLIENT_VERSION @"4.4.8"
+#define FEED_MEDIA_CLIENT_VERSION @"4.4.10"
 
 // All public headers
 
