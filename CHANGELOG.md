@@ -1,3 +1,6 @@
+- v4.4.11
+ -Bug fixes in Simulcast streamer.
+
 - v4.4.10
   -Add AVsession to Simulcast.
   
