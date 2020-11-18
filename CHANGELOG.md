@@ -1,3 +1,12 @@
+- v4.4.12
+ -More bug fixes
+
+- v4.4.11
+ -Bug fixes in Simulcast streamer.
+
+- v4.4.10
+  -Add AVsession to Simulcast.
+  
 - v4.4.9
  -Fix issues with xcode 12
  
