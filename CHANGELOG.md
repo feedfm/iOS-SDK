@@ -1,3 +1,11 @@
+- v4.4.14
+- Fix bug related to active station and autoplay of music.
+- Add initial support for SPM
+
+- v4.4.13
+- Fix bugs in caching system. 
+- Add initial support for SPM
+
 - v4.4.12
  -More bug fixes
 
