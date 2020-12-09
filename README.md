@@ -35,7 +35,7 @@ github "feedfm/iOS-SDK"
 From Xcode 12, you can use [Swift Package Manager](https://swift.org/package-manager/) to add Feed Media to your project.
 
 0. Select File > Swift Packages > Add Package Dependency. Enter `https://github.com/feedfm/iOS-SDK` in the "Choose Package Repository" dialog.
-0. In the next page, specify the version resolving rule as "Up to Next Major" with "4.4.13" as its earliest version.
+0. In the next page, specify the version resolving rule as "Up to Next Major" with "4.4.14" as its earliest version.
 0. After Xcode checking out the source and resolving the version, you can choose the "FeedMedia" library and add it to your app target.
 
 ### No package manager? No problem!
