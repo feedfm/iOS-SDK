@@ -1,3 +1,6 @@
+- v4.4.15
+- Fix bug in set client id.
+
 - v4.4.14
 - Fix bug related to active station and autoplay of music.
 - Add initial support for SPM
