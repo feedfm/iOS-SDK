@@ -213,6 +213,11 @@ NS_ASSUME_NONNULL_END
 #define kFMRemoteControlEvent @"FMRemoteControlEvent"
 
 
+typedef NS_ENUM(NSInteger, MockLocation) {
+    MockLocation_US,
+    MockLocation_EU
+};
+
 
 
 typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
@@ -1423,5 +1428,13 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  */
 
 - (void) submitLogsForRemoteDebuggingWithLabel: (nonnull NSString *) label;
+
+/**
+ * Set a location to mock for testing location. Development purpose only.
+ * May stop working at any time, if too many requests are received with Mocked location.
+ * @param mockLocation US or EU(Outside US)
+ */
+
++(void) setMockLocation:(MockLocation)mockLocation;
 
 @end

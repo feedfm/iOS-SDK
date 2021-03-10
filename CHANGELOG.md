@@ -1,3 +1,6 @@
+- v4.4.16
+- Add location mocking to sdk.
+
 - v4.4.15
 - Fix bug in set client id.
 
