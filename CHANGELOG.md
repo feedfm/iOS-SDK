@@ -1,3 +1,13 @@
+- v5.0.0
+ - Drop support for Cocoapods, move to SPM only.
+ - Fix bug with onUnavailable callbacks not being called.
+ 
+- v4.4.16
+- Add location mocking to sdk.
+
+- v4.4.15
+- Fix bug in set client id.
+
 - v4.4.14
 - Fix bug related to active station and autoplay of music.
 - Add initial support for SPM
