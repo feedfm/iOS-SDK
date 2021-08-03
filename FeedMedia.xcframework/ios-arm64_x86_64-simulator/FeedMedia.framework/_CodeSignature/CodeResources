@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/FMStation.h</key>
 		<data>
-		pt/qWbCW7jMl6lbT2BbVmMFHJ0w=
+		MaX3aEzF4p8aULC15EsHHwVRye4=
 		</data>
 		<key>Headers/FMStationArray.h</key>
 		<data>
@@ -110,11 +110,11 @@
 		</data>
 		<key>Headers/FeedMediaCore.h</key>
 		<data>
-		wnEPTQXQIww5mXvgmAdc8NoncAM=
+		tSU2js8lvLb45HY4CcQiU+9Mnkk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MbqnR7JMAW1e9lZIxxXfC5qwgEE=
+		vF4v17TNW68bjdgEML6BOSwG/nA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -347,11 +347,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pt/qWbCW7jMl6lbT2BbVmMFHJ0w=
+			MaX3aEzF4p8aULC15EsHHwVRye4=
 			</data>
 			<key>hash2</key>
 			<data>
-			tsPZKkWsQD9EkjIceH98Z1kYs2wgt1j0si64dfQ+OlY=
+			0t92vVy8rAtfRKSkXSPQy4tObSF/x/+E8Lf9giKStvY=
 			</data>
 		</dict>
 		<key>Headers/FMStationArray.h</key>
@@ -413,11 +413,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wnEPTQXQIww5mXvgmAdc8NoncAM=
+			tSU2js8lvLb45HY4CcQiU+9Mnkk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ElBBB146M6GHif1xgir2ZQDTWoKfGt/Y0mLPyhNhF4Y=
+			1Sz/5B0EVSkOGHDXjczp1pG84z7MzRTlJ7DPpinOvsM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

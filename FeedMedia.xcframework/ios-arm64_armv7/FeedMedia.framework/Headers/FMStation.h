@@ -53,6 +53,11 @@
 @property (readonly) BOOL isOnDemand;
 
 /**
+ * When true the station is of type single play
+ */
+@property (readonly) BOOL isSinglePlay;
+
+/**
  * Used internally to adjust volume of songs from this station.
  */
 
