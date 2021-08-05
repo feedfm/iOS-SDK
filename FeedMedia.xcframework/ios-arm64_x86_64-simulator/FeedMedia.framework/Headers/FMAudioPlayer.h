@@ -1019,6 +1019,21 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 - (void) setActiveStation: (nonnull FMStation *)station withCrossfade: (BOOL) withCrossfade;
 
 
+/**
+ * Make the given station the `activeStation`. If
+ * `withCrossfade` is true, any currently playing music will crossfade into the first
+ * song in the new station.
+ *
+ *  @param station Station to tune to.
+ *  @param seconds No of seconds to advance into the station.
+ *
+ *  @see activeStation
+ */
+
+- (void) setActiveStation: (nonnull FMStation *)station withAdvance: (NSTimeInterval) seconds;
+
+
+
 
 ///-----------------------------------------------------
 /// @name Offline station management
