@@ -1,3 +1,7 @@
+- v5.1.0
+ - Add support for crossfade value in advanceStation api
+ - _doesHandleRemoteCommands is now set to true.
+
 - v5.0.0
  - Drop support for Cocoapods, move to SPM only.
  - Fix bug with onUnavailable callbacks not being called.
