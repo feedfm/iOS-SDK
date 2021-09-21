@@ -1,3 +1,6 @@
+- v5.1.1
+ - Add BCSymbolmaps to the xcframework for debugging reports
+
 - v5.1.0
  - Add support for crossfade value in advanceStation api
  - _doesHandleRemoteCommands is now set to true.
