@@ -1,3 +1,6 @@
+- v5.1.2
+ - Bug Fix for NSJSONSerialization
+
 - v5.1.1
  - Add BCSymbolmaps to the xcframework for debugging reports
 
