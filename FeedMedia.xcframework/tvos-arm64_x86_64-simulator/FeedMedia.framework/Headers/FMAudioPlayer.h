@@ -274,6 +274,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 
 - (void) mixingAudioPlayerItemDidFinishPlayback: (nonnull FMAudioItem *) item
                                     dueToReason: (FMMixingAudioPlayerCompletionReason) reason
+                                  withTotalTime: (CMTime) playedTime
                                        andError: ( NSError *_Nullable) error;
 
 /**

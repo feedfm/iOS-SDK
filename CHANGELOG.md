@@ -1,3 +1,6 @@
+- v5.1.3
+ - Update song played tracking to ignore trims.
+ 
 - v5.1.2
  - Bug Fix for NSJSONSerialization
 
