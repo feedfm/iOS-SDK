@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CoreMedia.h>
-#import "FMStation.h"
+#import <FeedMedia/FMStation.h>
 
 
 /**

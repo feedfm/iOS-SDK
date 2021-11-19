@@ -1,3 +1,9 @@
+- v5.1.4
+ - Fix for tvOS 15 not storing client_id 
+ 
+ - v5.1.3
+ - Update song played tracking to ignore trims.
+ 
 - v5.1.2
  - Bug Fix for NSJSONSerialization
 

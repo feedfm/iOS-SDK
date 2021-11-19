@@ -11,7 +11,7 @@
 #define FMSTATIONARRAY_H
 
 #import <Foundation/Foundation.h>
-#import "FMStation.h"
+#import <FeedMedia/FMStation.h>
 
 /**
  This is a simple subclass of NSArray that has methods to

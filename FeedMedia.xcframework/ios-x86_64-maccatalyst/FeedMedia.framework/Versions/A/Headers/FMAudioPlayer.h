@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import "FMStation.h"
-#import "FMAudioItem.h"
-#import "FMError.h"
-#import "FMLog.h"
-#import "FMAudioPlayer.h"
-#import "FMLockScreenDelegate.h"
-#import "FMStationArray.h"
+#import <FeedMedia/FMStation.h>
+#import <FeedMedia/FMAudioItem.h>
+#import <FeedMedia/FMError.h>
+#import <FeedMedia/FMLog.h>
+#import <FeedMedia/FMAudioPlayer.h>
+#import <FeedMedia/FMLockScreenDelegate.h>
+#import <FeedMedia/FMStationArray.h>
 
 #if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else
@@ -274,6 +274,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 
 - (void) mixingAudioPlayerItemDidFinishPlayback: (nonnull FMAudioItem *) item
                                     dueToReason: (FMMixingAudioPlayerCompletionReason) reason
+                                  withTotalTime: (CMTime) playedTime
                                        andError: ( NSError *_Nullable) error;
 
 /**

@@ -19,7 +19,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "FeedMediaCore.h"
+#import <FeedMedia/FeedMediaCore.h>
 
 
 //NOT_IB_DESIGNABLE

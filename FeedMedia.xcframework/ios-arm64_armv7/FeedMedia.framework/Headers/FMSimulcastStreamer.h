@@ -13,7 +13,7 @@
 #endif /* FMSimulcastPlayer_h */
 
 #import <Foundation/Foundation.h>
-#import "FMAudioItem.h"
+#import <FeedMedia/FMAudioItem.h>
 
 /**
  * Playback state of Simulcast player

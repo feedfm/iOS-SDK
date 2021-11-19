@@ -14,7 +14,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FeedMediaCore.h"
+#import <FeedMedia/FeedMediaCore.h>
 
 
 /**
