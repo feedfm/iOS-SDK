@@ -1,3 +1,6 @@
+- v5.1.5
+ - Fix CWNotification import bug introduced in last release. 
+ 
 - v5.1.4
  - Fix for tvOS 15 not storing client_id 
  
