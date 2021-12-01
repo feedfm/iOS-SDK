@@ -19,7 +19,7 @@
 
 #if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else
-#import "CWStatusBarNotification.h"
+#import <FeedMedia/CWStatusBarNotification.h>
 #endif
 
 

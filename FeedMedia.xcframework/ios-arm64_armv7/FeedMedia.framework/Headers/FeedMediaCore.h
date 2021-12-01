@@ -6,7 +6,7 @@
 //  Copyright © 2017 Feed Media. All rights reserved.
 //
 
-#define FEED_MEDIA_CLIENT_VERSION @"5.1.4"
+#define FEED_MEDIA_CLIENT_VERSION @"5.1.5"
 
 // All public headers
 
@@ -21,5 +21,5 @@
 
 #if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else
-#import "CWStatusBarNotification.h"
+#import <FeedMedia/CWStatusBarNotification.h>
 #endif

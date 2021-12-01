@@ -24,7 +24,7 @@
 
 #if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else
-#import "FMMarqueeLabel.h"
+#import <FeedMedia/FMMarqueeLabel.h>
 #endif
 
 /**
