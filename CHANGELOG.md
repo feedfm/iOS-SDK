@@ -1,3 +1,6 @@
+- v5.1.6
+ - Add canLike(), canSkip() support for candian stations.  
+ 
 - v5.1.5
  - Fix CWNotification import bug introduced in last release. 
  

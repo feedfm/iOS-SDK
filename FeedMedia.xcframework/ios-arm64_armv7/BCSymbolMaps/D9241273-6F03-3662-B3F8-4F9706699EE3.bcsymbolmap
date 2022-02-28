@@ -1,7 +1,7 @@
 BCSymbolMap Version: 2.0
-Apple clang version 13.0.0 (clang-1300.0.29.3)
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk
-iPhoneOS15.0.sdk
+Apple clang version 13.0.0 (clang-1300.0.29.30)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk
+iPhoneOS15.2.sdk
 /Users/arveenkumar/Library/Developer/Xcode/DerivedData/iOS-SDK-Core-fgrpaouhsmqrabgpbmhknvakahqp/Build/Intermediates.noindex/ArchiveIntermediates/FeedMedia/IntermediateBuildFilesPath/FeedMediaCore.build/Release-iphoneos/FeedMedia.build/DerivedSources/FeedMedia_vers.c
 /Users/arveenkumar/Documents/GitHub/iOS-SDK-Core/FeedMediaCore
 -[FMShareButton initWithFrame:]
@@ -397,7 +397,7 @@ __29-[FMEqualizer startAnimation]_block_invoke_2
 __29-[FMEqualizer startAnimation]_block_invoke.43
 __29-[FMEqualizer startAnimation]_block_invoke
 CGRectMake
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
 -[FMLikeButton initWithFrame:]
 -[FMLikeButton initWithCoder:]
 -[FMLikeButton init]
@@ -892,7 +892,7 @@ __20-[FMAPIRequest send]_block_invoke_3
 __20-[FMAPIRequest send]_block_invoke_2
 __20-[FMAPIRequest send]_block_invoke
 __19+[FMAPIRequest now]_block_invoke
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/dispatch/once.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/dispatch/once.h
 __34-[FMAPIRequest succeedWithResult:]_block_invoke
 __30-[FMAPIRequest failWithError:]_block_invoke
 +[VICacheConfiguration configurationWithFilePath:]
@@ -1067,7 +1067,7 @@ __38-[FMReachability reachabilityChanged:]_block_invoke
 reachabilityFlags
 TMReachabilityCallback
 _OSSwapInt16
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/libkern/arm/OSByteOrder.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/libkern/arm/OSByteOrder.h
 ___Block_byref_object_copy_
 ___Block_byref_object_dispose_
 ____FMLog_block_invoke
@@ -1647,9 +1647,9 @@ perform_block_after_delay
 __69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke_2
 __69-[CWStatusBarNotification displayNotificationWithMessage:completion:]_block_invoke
 UI_USER_INTERFACE_IDIOM
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
 UIInterfaceOrientationIsPortrait
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h
 UIInterfaceOrientationIsLandscape
 __destroy_helper_block_e4_20w
 __copy_helper_block_e4_20w
@@ -2070,7 +2070,7 @@ __OBJC_CLASS_RO_$_VICacheAction
 Sources/Core/Private/MediaCache/Cache/VICacheAction.h
 Sources/Core/Private/MediaCache/Cache/VICacheAction.m
 NSEqualRanges
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
 -[VIURLSessionDelegateObject initWithDelegate:]
 -[VIURLSessionDelegateObject URLSession:didReceiveChallenge:completionHandler:]
 -[VIURLSessionDelegateObject URLSession:dataTask:didReceiveResponse:completionHandler:]
@@ -2266,16 +2266,23 @@ __33+[VIMediaDownloaderStatus shared]_block_invoke
 -[FMStation lastUpdated]
 -[FMStation lastPlayStart]
 -[FMStation setLastPlayStart:]
+-[FMStation canLike]
+-[FMStation canSkip]
 -[FMStation dict]
 -[FMStation .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.69
+_OBJC_CLASSLIST_REFERENCES_$_.71
+_OBJC_CLASSLIST_REFERENCES_$_.72
 _OBJC_SELECTOR_REFERENCES_.76
+_OBJC_CLASSLIST_REFERENCES_$_.79
+_OBJC_SELECTOR_REFERENCES_.91
 __OBJC_CLASS_PROTOCOLS_$_FMStation
 __OBJC_METACLASS_RO_$_FMStation
 __OBJC_$_INSTANCE_METHODS_FMStation
 _OBJC_IVAR_$_FMStation._isOnDemand
 _OBJC_IVAR_$_FMStation._isSinglePlay
 _OBJC_IVAR_$_FMStation._isTypeOffline
+_OBJC_IVAR_$_FMStation._canLike
+_OBJC_IVAR_$_FMStation._canSkip
 _OBJC_IVAR_$_FMStation._name
 _OBJC_IVAR_$_FMStation._identifier
 _OBJC_IVAR_$_FMStation._options
@@ -2442,8 +2449,8 @@ ___27-[FMMixingAudioPlayer init]_block_invoke.148
 -[FMMixingAudioPlayer addItem:]
 -[FMMixingAudioPlayer possiblyPrepareAsset]
 ___43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke
-___43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.214
-___43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.220
+___43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.215
+___43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.221
 -[FMMixingAudioPlayer preparingAssetDidPrepare]
 -[FMMixingAudioPlayer preparingAssetDidFail]
 -[FMMixingAudioPlayer cancelPreparingAssetAndAdvance]
@@ -2562,12 +2569,10 @@ _FMMixingAudioPlayerPlayerCurrentItemContext
 _OBJC_CLASSLIST_REFERENCES_$_.149
 _OBJC_CLASSLIST_REFERENCES_$_.156
 _OBJC_CLASSLIST_REFERENCES_$_.175
-_OBJC_CLASSLIST_REFERENCES_$_.210
+_OBJC_CLASSLIST_REFERENCES_$_.205
 ___block_descriptor_24_e4_20r_e33_v12?0"FMAsset"4"AVPlayerItem"8l
 ___block_descriptor_24_e4_20r_e28_v12?0"FMAsset"4"NSError"8l
-_OBJC_SELECTOR_REFERENCES_.225
-_OBJC_SELECTOR_REFERENCES_.227
-_OBJC_SELECTOR_REFERENCES_.251
+_OBJC_CLASSLIST_REFERENCES_$_.274
 ___block_descriptor_36_e4_20s24s28r32w_e5_v4?0l
 _OBJC_CLASSLIST_REFERENCES_$_.345
 _OBJC_CLASSLIST_REFERENCES_$_.376
@@ -2687,8 +2692,8 @@ __91-[FMMixingAudioPlayer applyFadeInAndFadeOutToPlayer:andAttachCrossfadeEvent:
 __destroy_helper_block_e4_20s24s28r32w
 __copy_helper_block_e4_20s24s28r32w
 __46-[FMMixingAudioPlayer applyAudioTrimToPlayer:]_block_invoke
-__43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.220
-__43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.214
+__43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.221
+__43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke.215
 __43-[FMMixingAudioPlayer possiblyPrepareAsset]_block_invoke
 __27-[FMMixingAudioPlayer init]_block_invoke.148
 __27-[FMMixingAudioPlayer init]_block_invoke
@@ -2799,7 +2804,6 @@ ___48-[VIMediaCacheWorker cachedDataActionsForRange:]_block_invoke.107
 -[VIMediaCacheWorker .cxx_destruct]
 _OBJC_CLASSLIST_REFERENCES_$_.32
 _OBJC_CLASSLIST_REFERENCES_$_.64
-_OBJC_CLASSLIST_REFERENCES_$_.71
 _OBJC_CLASSLIST_REFERENCES_$_.86
 _OBJC_CLASSLIST_REFERENCES_$_.93
 ___block_descriptor_40_e4_20s24s_e29_v16?0"VICacheAction"4I8^c12l
@@ -2874,7 +2878,6 @@ __48-[VIMediaCacheWorker cachedDataActionsForRange:]_block_invoke
 -[FMAudioItem .cxx_destruct]
 _OBJC_CLASSLIST_REFERENCES_$_.39
 _OBJC_CLASSLIST_REFERENCES_$_.50
-_OBJC_SELECTOR_REFERENCES_.91
 __OBJC_CLASS_PROTOCOLS_$_FMAudioItem
 __OBJC_METACLASS_RO_$_FMAudioItem
 __OBJC_$_INSTANCE_METHODS_FMAudioItem
@@ -2959,6 +2962,7 @@ ___40-[FMOfflineStationManager downloadFile:]_block_invoke
 -[FMOfflineStationManager setPlayQueue:]
 -[FMOfflineStationManager .cxx_destruct]
 _OBJC_CLASSLIST_REFERENCES_$_.66
+_OBJC_CLASSLIST_REFERENCES_$_.69
 _OBJC_CLASSLIST_REFERENCES_$_.99
 ___block_descriptor_28_e4_20s24s_e44_v16?0"NSURL"4"NSURLResponse"8"NSError"12l
 _OBJC_CLASSLIST_REFERENCES_$_.176
@@ -3010,6 +3014,7 @@ __40-[FMOfflineStationManager downloadFile:]_block_invoke
 -[FMAudioPlayer maxBitrate]
 -[FMAudioPlayer setDisableAVAudioSession:]
 -[FMAudioPlayer disableAVAudioSession]
+-[FMAudioPlayer canLike]
 -[FMAudioPlayer canSkip]
 +[FMAudioPlayer setMockLocation:]
 -[FMAudioPlayer mixingAudioPlayerItemIsReadyForPlayback:]
@@ -3159,37 +3164,33 @@ _OBJC_SELECTOR_REFERENCES_.102
 _OBJC_CLASSLIST_REFERENCES_$_.117
 _OBJC_CLASSLIST_REFERENCES_$_.137
 _OBJC_CLASSLIST_REFERENCES_$_.140
-_OBJC_CLASSLIST_REFERENCES_$_.205
-_OBJC_CLASSLIST_REFERENCES_$_.240
-_OBJC_CLASSLIST_REFERENCES_$_.304
-_OBJC_SELECTOR_REFERENCES_.352
+_OBJC_CLASSLIST_REFERENCES_$_.207
+_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_CLASSLIST_REFERENCES_$_.242
+_OBJC_CLASSLIST_REFERENCES_$_.277
 _OBJC_SELECTOR_REFERENCES_.354
 _OBJC_SELECTOR_REFERENCES_.356
 _OBJC_SELECTOR_REFERENCES_.358
-_OBJC_SELECTOR_REFERENCES_.415
-_OBJC_SELECTOR_REFERENCES_.441
-_OBJC_CLASSLIST_REFERENCES_$_.446
-_OBJC_SELECTOR_REFERENCES_.448
-_OBJC_SELECTOR_REFERENCES_.454
-_OBJC_SELECTOR_REFERENCES_.462
+_OBJC_SELECTOR_REFERENCES_.417
+_OBJC_SELECTOR_REFERENCES_.447
+_OBJC_CLASSLIST_REFERENCES_$_.448
+_OBJC_SELECTOR_REFERENCES_.460
 _OBJC_SELECTOR_REFERENCES_.466
-_OBJC_CLASSLIST_REFERENCES_$_.469
-_OBJC_SELECTOR_REFERENCES_.471
-___block_descriptor_28_e4_20s24w_e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.471
 _OBJC_SELECTOR_REFERENCES_.473
+___block_descriptor_28_e4_20s24w_e5_v4?0l
 _OBJC_SELECTOR_REFERENCES_.475
-_OBJC_SELECTOR_REFERENCES_.487
-_OBJC_SELECTOR_REFERENCES_.491
-_OBJC_SELECTOR_REFERENCES_.497
-_OBJC_SELECTOR_REFERENCES_.521
-_OBJC_CLASSLIST_REFERENCES_$_.522
-_OBJC_CLASSLIST_REFERENCES_$_.523
+_OBJC_SELECTOR_REFERENCES_.477
+_OBJC_SELECTOR_REFERENCES_.489
+_OBJC_SELECTOR_REFERENCES_.495
+_OBJC_SELECTOR_REFERENCES_.499
+_OBJC_SELECTOR_REFERENCES_.519
+_OBJC_CLASSLIST_REFERENCES_$_.524
+_OBJC_CLASSLIST_REFERENCES_$_.525
 _OBJC_SELECTOR_REFERENCES_.527
 _OBJC_SELECTOR_REFERENCES_.529
 _OBJC_SELECTOR_REFERENCES_.531
 _OBJC_SELECTOR_REFERENCES_.533
-_OBJC_CLASSLIST_REFERENCES_$_.540
-_OBJC_SELECTOR_REFERENCES_.542
 _OBJC_SELECTOR_REFERENCES_.548
 _OBJC_SELECTOR_REFERENCES_.550
 _OBJC_SELECTOR_REFERENCES_.554
@@ -3199,8 +3200,8 @@ _OBJC_SELECTOR_REFERENCES_.560
 _OBJC_SELECTOR_REFERENCES_.562
 _OBJC_SELECTOR_REFERENCES_.566
 _OBJC_SELECTOR_REFERENCES_.570
-_OBJC_CLASSLIST_REFERENCES_$_.573
-_OBJC_SELECTOR_REFERENCES_.575
+_OBJC_SELECTOR_REFERENCES_.574
+_OBJC_CLASSLIST_REFERENCES_$_.575
 _OBJC_SELECTOR_REFERENCES_.577
 _OBJC_SELECTOR_REFERENCES_.579
 _OBJC_SELECTOR_REFERENCES_.581
@@ -3209,42 +3210,42 @@ _OBJC_SELECTOR_REFERENCES_.585
 _OBJC_SELECTOR_REFERENCES_.587
 _OBJC_SELECTOR_REFERENCES_.589
 _OBJC_SELECTOR_REFERENCES_.591
-_OBJC_CLASSLIST_REFERENCES_$_.592
+_OBJC_SELECTOR_REFERENCES_.593
+_OBJC_CLASSLIST_REFERENCES_$_.594
 _OBJC_SELECTOR_REFERENCES_.596
 _OBJC_SELECTOR_REFERENCES_.598
 _OBJC_SELECTOR_REFERENCES_.600
+_OBJC_SELECTOR_REFERENCES_.602
 ___block_descriptor_24_e4_20s_e27_"UIImage"12?0{CGSize=ff}4l
-_OBJC_SELECTOR_REFERENCES_.603
-_OBJC_SELECTOR_REFERENCES_.607
+_OBJC_SELECTOR_REFERENCES_.605
 _OBJC_SELECTOR_REFERENCES_.609
 _OBJC_SELECTOR_REFERENCES_.611
 _OBJC_SELECTOR_REFERENCES_.613
 _OBJC_SELECTOR_REFERENCES_.615
 _OBJC_SELECTOR_REFERENCES_.617
-_OBJC_SELECTOR_REFERENCES_.626
+_OBJC_SELECTOR_REFERENCES_.619
 _OBJC_SELECTOR_REFERENCES_.628
-_OBJC_SELECTOR_REFERENCES_.632
+_OBJC_SELECTOR_REFERENCES_.630
 _OBJC_SELECTOR_REFERENCES_.634
 _OBJC_SELECTOR_REFERENCES_.636
-_OBJC_CLASSLIST_REFERENCES_$_.639
-_OBJC_SELECTOR_REFERENCES_.641
-_OBJC_SELECTOR_REFERENCES_.647
-_OBJC_SELECTOR_REFERENCES_.651
+_OBJC_SELECTOR_REFERENCES_.638
+_OBJC_CLASSLIST_REFERENCES_$_.641
+_OBJC_SELECTOR_REFERENCES_.649
 _OBJC_SELECTOR_REFERENCES_.653
 _OBJC_SELECTOR_REFERENCES_.655
 _OBJC_SELECTOR_REFERENCES_.657
-_OBJC_SELECTOR_REFERENCES_.663
+_OBJC_SELECTOR_REFERENCES_.659
 _OBJC_SELECTOR_REFERENCES_.665
 _OBJC_SELECTOR_REFERENCES_.667
-_OBJC_SELECTOR_REFERENCES_.671
-_OBJC_SELECTOR_REFERENCES_.679
+_OBJC_SELECTOR_REFERENCES_.669
+_OBJC_SELECTOR_REFERENCES_.673
 _OBJC_SELECTOR_REFERENCES_.681
 _OBJC_SELECTOR_REFERENCES_.683
-_OBJC_SELECTOR_REFERENCES_.691
+_OBJC_SELECTOR_REFERENCES_.685
 _OBJC_SELECTOR_REFERENCES_.693
-_OBJC_SELECTOR_REFERENCES_.699
-_OBJC_SELECTOR_REFERENCES_.705
-_OBJC_SELECTOR_REFERENCES_.713
+_OBJC_SELECTOR_REFERENCES_.695
+_OBJC_SELECTOR_REFERENCES_.701
+_OBJC_SELECTOR_REFERENCES_.707
 _OBJC_SELECTOR_REFERENCES_.715
 _OBJC_SELECTOR_REFERENCES_.717
 _OBJC_SELECTOR_REFERENCES_.719
@@ -3261,25 +3262,26 @@ _OBJC_SELECTOR_REFERENCES_.739
 _OBJC_SELECTOR_REFERENCES_.741
 _OBJC_SELECTOR_REFERENCES_.743
 _OBJC_SELECTOR_REFERENCES_.745
-_OBJC_SELECTOR_REFERENCES_.753
+_OBJC_SELECTOR_REFERENCES_.747
 _OBJC_SELECTOR_REFERENCES_.755
 _OBJC_SELECTOR_REFERENCES_.757
 _OBJC_SELECTOR_REFERENCES_.759
-_OBJC_SELECTOR_REFERENCES_.763
+_OBJC_SELECTOR_REFERENCES_.761
 _OBJC_SELECTOR_REFERENCES_.765
 _OBJC_SELECTOR_REFERENCES_.767
 _OBJC_SELECTOR_REFERENCES_.769
-_OBJC_SELECTOR_REFERENCES_.783
-_OBJC_SELECTOR_REFERENCES_.799
-_OBJC_SELECTOR_REFERENCES_.805
+_OBJC_SELECTOR_REFERENCES_.771
+_OBJC_SELECTOR_REFERENCES_.785
+_OBJC_SELECTOR_REFERENCES_.801
+_OBJC_SELECTOR_REFERENCES_.807
 ___block_descriptor_28_e4_20s24s_e16_v8?0"NSError"4l
-_OBJC_SELECTOR_REFERENCES_.814
 _OBJC_SELECTOR_REFERENCES_.816
-_OBJC_SELECTOR_REFERENCES_.820
+_OBJC_SELECTOR_REFERENCES_.818
 _OBJC_SELECTOR_REFERENCES_.822
-_OBJC_SELECTOR_REFERENCES_.826
+_OBJC_SELECTOR_REFERENCES_.824
 _OBJC_SELECTOR_REFERENCES_.828
-_OBJC_SELECTOR_REFERENCES_.832
+_OBJC_SELECTOR_REFERENCES_.830
+_OBJC_SELECTOR_REFERENCES_.834
 __OBJC_$_CLASS_METHODS_FMAudioPlayer
 __OBJC_$_PROTOCOL_REFS_FMMixingAudioPlayerDelegate
 __OBJC_$_PROTOCOL_INSTANCE_METHODS_FMMixingAudioPlayerDelegate

@@ -120,6 +120,21 @@
 
 @property (readwrite, nullable) NSDate *lastPlayStart;
 
+
+/**
+ * Returs true if tracks in this station can be liked.
+ */
+
+@property (readonly) BOOL canLike;
+
+
+/**
+ * Returs true if tracks in this station can be skipped.
+ */
+@property (readonly) BOOL canSkip;
+
+
+
 /*
  *  JSON representation of this object
  */

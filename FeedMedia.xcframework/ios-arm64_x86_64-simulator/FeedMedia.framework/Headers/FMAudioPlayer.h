@@ -900,6 +900,15 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 @property (readonly) BOOL canSkip;
 
 /**
+ *  False if the songs from current station can't be liked,
+ *  only likely to be false for canadian staions.
+ *  Any likes will be ignored if canLike is false.
+ */
+
+@property (readonly) BOOL canLike;
+
+
+/**
  * This array holds all the FMAudioItems that the user has heard
  * since playback started, including the currently playing
  * song. As new items start playback, they are appended to this array.
