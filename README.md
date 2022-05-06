@@ -7,6 +7,8 @@ music to your mobile app. The SDK hosted in this repository provides
 you with simple UI components that you can adapt or use directly in your
 app.
 
+To report a bug or ask a question, please send an email to support@feed.fm.
+
 ## Installation
 
 You don't need to download this repository - you can use SPM to add this to your app.
