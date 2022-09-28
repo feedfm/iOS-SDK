@@ -1286,125 +1286,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 - (void)destroy;
 
 
-///-----------------------------------------------------
-/// @name Deprecated
-///-----------------------------------------------------
-
-
-/**
- @deprecated Clients should use the `FMStationArray` interface to
- search for stations based on option values.
- 
- Search throught the list of available stations, and return one that has
- options that match those passed in via optionKeysAndValues. This differs from
- getStationWithOptionKey:Value: in that you can specify multiple key/value
- pairs, like so:
- 
-   [player getStationWithOptions: @{ @"genre": @"80s", @"bpm" : @"slow" }
- 
- This method returns the first station with the matching values, or nil.
- 
- @param optionKeysAndValues key value pairs to search for
- @return a station whose options contain optionKeysAndValues
- 
- */
-
-- (nullable FMStation *) getStationWithOptions: (nonnull NSDictionary *) optionKeysAndValues DEPRECATED_ATTRIBUTE;
-
-/**
- @deprecated Clients should use the `FMStationArray` interface to
- search for stations based on option values.
- 
- Similar to getStationWithOptions:, but this method returns all the stations
- that match the passed in optionsKeysAndValues.
- 
- @param optionKeysAndValues key value pairs to search for
- @return an array of stations whose options contain optionKeysAndValues. never nil.
- 
- */
-
-- (nullable NSArray<FMStation *> *) getAllStationsWithOptions: (nonnull NSDictionary *) optionKeysAndValues DEPRECATED_ATTRIBUTE;
-
-
-/**
- * @deprecated Clients should find FMStation references by pulling them from
- * stationList or localOfflineStationList and then assigning the reference
- * to the activeStation property or calling setActiveStation:withCrossfade:
- *
- *  Finds a station with the given name and assigns it to the `activeStation`.
- *
- *  @param name Station name. Should not be nil.
- *
- *  @return true if a station with the given name is found
- *  @see activeStation
- */
-
-- (BOOL) setActiveStationByName: (nonnull NSString *)name DEPRECATED_ATTRIBUTE;
-
-/**
- * @deprecated Clients should find FMStation references by pulling them from
- * stationList or localOfflineStationList and then assigning the reference
- * to the activeStation property or calling setActiveStation:withCrossfade:
- *
- * Finds a station with the given name and assigns it to the `activeStation`. If
- * `withCrossfade` is true, any currently playing music will crossfade into the first
- * song in the new station.
- *
- *  @param name Station name. Should not be nil.
- *  @param withCrossfade if true, if crossfading is enabled, and if music is currenty
- *    playing, the currently playing song will fade into the song in the new station
- *    as soon as it is loaded.
- *
- *  @return true if a station with the given name is found
- *  @see activeStation
- */
-
-- (BOOL) setActiveStationByName: (nonnull NSString *)name withCrossfade: (BOOL) withCrossfade DEPRECATED_ATTRIBUTE;
-
-/**
- * @deprecated Clients should find FMStation references by pulling them from
- * stationList, localOfflineStationList, or remoteOfflineStationList.
- *
- * Search through the list of available stations, and return the one that has
- * an option attribute named 'key' with a string value of 'value'.
- *
- * @param key name of attribute to inspect
- * @param value attribute value that matching station should contain
- */
-
-- (nullable FMStation *) getStationWithOptionKey:  (nonnull NSString *) key Value: (nonnull NSObject *) value DEPRECATED_ATTRIBUTE;
-
-/**
- * @deprected This method is called internally now and clients need not call it.
- *
- * @param stations list of stations to prepare
- */
-- (void)prepareStations:(nullable NSArray<FMStation *> *) stations DEPRECATED_ATTRIBUTE;
-
-/**
- * @deprecated Clients should look for the FMAudioPlayerMusicQueuedNotification
- * notification to know when music is queued up in the player, rather than
- * rely on this property, which will be removed in the next major version.
- *
- * Indicates if the SDK has retrieved the next song for playback from the
- * server and is ready to start playing it.
- */
-@property (nonatomic, readonly) BOOL isPreparedToPlay DEPRECATED_ATTRIBUTE;
-
-/**
- @deprecated local detection is no longer performed by this library
- 
- This call to initialize the library and then detect whether the user had any local
- music available for playback.
- 
- @param token public authentication token. Use `@"demo"` during testing/development.
- @param secret private authentication token. Use `@"demo"` during testing/development.
- @param detectLocalMusic when true, the user's local media collection will be queried to
- sample what type of music they listen to
- */
-
-+ (void)setClientToken:(nonnull NSString *)token secret:(nonnull NSString *)secret detectLocalMusic:(BOOL) detectLocalMusic DEPRECATED_ATTRIBUTE;
-
 /**
  * Seek station by give no of seconds.
  * Max allowed value can be obtained by maxSeekableLength
@@ -1461,5 +1342,32 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  */
 
 +(void) setMockLocation:(MockLocation)mockLocation;
+
+
+/**
+*  Search for stations
+*  @param searchQuery A string search query
+*  @param pageNo result page no
+*  @param perPage No of results per page
+*  @param onSearchCompleted callback block
+*/
+
+- (void)searchForStationwithQuery:(nonnull NSString *)searchQuery
+                        pageNo:(nonnull NSNumber *)pageNo
+                       perPage:(nonnull NSNumber *)perPage
+                  withCallback:(nonnull void (^)(NSDictionary* _Nonnull)) onSearchCompleted;
+    
+/**
+ *  Search for stations
+ *  @param metaData metadata search in station metadata for key pair values. All key pairs much match for a positive hit.
+ *  @param pageNo result page no
+ *  @param perPage No of results per page
+ *  @param onSearchCompleted callback block
+ */
+- (void)searchForStationByMetadata:(nonnull NSDictionary *)metaData
+                        pageNo:(nonnull NSNumber *)pageNo
+                       perPage:(nonnull NSNumber *)perPage
+                      withCallback:(nonnull void (^)( NSDictionary* _Nonnull )) onSearchCompleted;
+    
 
 @end

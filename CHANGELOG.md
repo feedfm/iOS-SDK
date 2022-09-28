@@ -1,3 +1,6 @@
+- v5.1.7
+ - Add Bug fix in caching.  
+ 
 - v5.1.6
  - Add canLike(), canSkip() support for candian stations.  
  

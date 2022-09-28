@@ -107,6 +107,9 @@
 
 @property double preGain;
 
+
+- (id)initWithId:(id)stationId :(NSURL*) url;
+
 /**
  *  Creates FMAudioItem from the JSON provided. 
  *
