@@ -219,6 +219,22 @@ typedef NS_ENUM(NSInteger, MockLocation) {
 };
 
 
+typedef NS_ENUM(NSInteger, LoopOptions) {
+    /**
+     * Loop the current song
+     */
+    LoopCurrent,
+    /**
+     * Loop all songs in the playlist
+     */
+    LoopAll,
+    /**
+     * Do no loop anything
+     */
+    LoopNone
+};
+
+
 
 typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
     
@@ -1044,6 +1060,75 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 
 
 
+/**
+*  Search for stations
+*  @param searchQuery A string search query
+*  @param pageNo result page no
+*  @param perPage No of results per page
+*  @param onSearchCompleted callback block
+*/
+
+- (void)searchForStationwithQuery:(nonnull NSString *)searchQuery
+                        pageNo:(nonnull NSNumber *)pageNo
+                       perPage:(nonnull NSNumber *)perPage
+                  withCallback:(nonnull void (^)(NSDictionary* _Nonnull)) onSearchCompleted;
+    
+/**
+ *  Search for stations
+ *  @param metaData metadata search in station metadata for key pair values. All key pairs much match for a positive hit.
+ *  @param pageNo result page no
+ *  @param perPage No of results per page
+ *  @param onSearchCompleted callback block
+ */
+- (void)searchForStationByMetadata:(nonnull NSDictionary *)metaData
+                        pageNo:(nonnull NSNumber *)pageNo
+                       perPage:(nonnull NSNumber *)perPage
+                      withCallback:(nonnull void (^)( NSDictionary* _Nonnull )) onSearchCompleted;
+    
+/**
+ * Fetch tracks for an on demand station
+ * @param stationId   station id of the station
+ * @param page result page no
+ * @param resultsPerPage No of results per page
+ * @param onResult callback block
+ */
+-(void) requestTracksForStation:(NSString *_Nonnull)stationId
+                         pageNo:(NSNumber *_Nonnull)page
+                 resultsPerPage:(NSNumber *_Nonnull)resultsPerPage
+                   withCallback:(void (^_Nonnull)(NSArray<FMAudioItem*>*_Nonnull)) onResult;
+
+/**
+ * Load a list of Audioitems in the player.
+ *  @param audioItems Audiofile items that are obtained from either requestTracksForStation or search or a PlayList etc.
+ *  @param withCrossfade if crossfade should be used on currently playing item
+ *  @param options Loop options for the items.
+ */
+- (void)loadAudioItems:(NSArray<FMAudioItem *> *_Nonnull)audioItems withCrossfade:(BOOL)withCrossfade loopOptions:(LoopOptions) options;
+
+
+/**
+ * Load a list of Audioitems in the player.
+ *  @param audioItems Audiofile items that are obtained from either requestTracksForStation or search or a PlayList etc.
+ *  @param index index to start playing the songs at.
+ *  @param withCrossfade if crossfade should be used on currently playing item
+ *  @param options Loop options for the items.
+ */
+
+- (void)loadAudioItems:(NSArray<FMAudioItem *>*_Nonnull)audioItems startIndexAt:(NSUInteger)index withCrossfade:(BOOL)withCrossfade loopOptions:(LoopOptions) options;
+
+/**
+ * Change the looping behaviour of the current playlist.
+ */
+
+- (void) setLooping:(LoopOptions) options;
+
+/**
+ * Start playback a specific index of an on demand playlist
+ */
+
+- (void)playFromIndex:(NSUInteger) index;
+
+
 
 ///-----------------------------------------------------
 /// @name Offline station management
@@ -1344,30 +1429,5 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 +(void) setMockLocation:(MockLocation)mockLocation;
 
 
-/**
-*  Search for stations
-*  @param searchQuery A string search query
-*  @param pageNo result page no
-*  @param perPage No of results per page
-*  @param onSearchCompleted callback block
-*/
-
-- (void)searchForStationwithQuery:(nonnull NSString *)searchQuery
-                        pageNo:(nonnull NSNumber *)pageNo
-                       perPage:(nonnull NSNumber *)perPage
-                  withCallback:(nonnull void (^)(NSDictionary* _Nonnull)) onSearchCompleted;
-    
-/**
- *  Search for stations
- *  @param metaData metadata search in station metadata for key pair values. All key pairs much match for a positive hit.
- *  @param pageNo result page no
- *  @param perPage No of results per page
- *  @param onSearchCompleted callback block
- */
-- (void)searchForStationByMetadata:(nonnull NSDictionary *)metaData
-                        pageNo:(nonnull NSNumber *)pageNo
-                       perPage:(nonnull NSNumber *)perPage
-                      withCallback:(nonnull void (^)( NSDictionary* _Nonnull )) onSearchCompleted;
-    
 
 @end

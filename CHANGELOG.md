@@ -1,3 +1,6 @@
+- v5.2.0
+ - Add support for on-demand playback of feed originals.  
+ 
 - v5.1.7
  - Add Bug fix in caching.  
  

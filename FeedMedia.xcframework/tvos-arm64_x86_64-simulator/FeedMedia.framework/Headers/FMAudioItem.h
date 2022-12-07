@@ -78,13 +78,13 @@
  * When trimming audio, start playback at this
  * point.
  */
-@property (readonly) CMTime trimStart;
+@property (readwrite) CMTime trimStart;
 
 /*
  * When trimming audio, end playback at this
  * point.
  */
-@property (readonly) CMTime trimEnd;
+@property (readwrite) CMTime trimEnd;
 
 /**
  *  If track is liked
