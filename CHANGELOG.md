@@ -1,3 +1,7 @@
+- v5.2.1
+ - Fix issues with stations not setting properly. 
+ - Allow replay stations.  
+ 
 - v5.2.0
  - Add support for on-demand playback of feed originals.  
  
