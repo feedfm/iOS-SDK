@@ -1,3 +1,6 @@
+- v5.3.0-beta1
+ - Seemless mixing player delegate switching  
+ 
 - v5.2.1
  - Fix issues with stations not setting properly. 
  - Allow replay stations.  
