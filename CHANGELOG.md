@@ -1,4 +1,4 @@
-- v5.3.0-beta1
+- v5.2.2
  - Seemless mixing player delegate switching  
  
 - v5.2.1
