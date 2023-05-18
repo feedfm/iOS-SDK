@@ -1,3 +1,7 @@
+- v5.3.0
+ - Fix crashes in logging.
+ - Drop Mac Catalyst support.
+
 - v5.2.2
  - Seemless mixing player delegate switching  
  
