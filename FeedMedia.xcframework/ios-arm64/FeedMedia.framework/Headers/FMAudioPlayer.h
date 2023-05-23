@@ -17,11 +17,6 @@
 #import <FeedMedia/FMLockScreenDelegate.h>
 #import <FeedMedia/FMStationArray.h>
 
-#if TARGET_OS_TV || TARGET_OS_MACCATALYST
-#else
-#import <FeedMedia/CWStatusBarNotification.h>
-#endif
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -1296,35 +1291,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  */
 @property (nonatomic) NSInteger maxBitrate;
 
-#if TARGET_OS_TV || TARGET_OS_MACCATALYST
-#else
-
-/**
- * This status bar notification is used to announce song changes to
- * the user. Access the properties on this object to change
- * how the notification is styled and to add handlers for when the
- * notification is tapped.
- *
- * Details on this object can be found at https://github.com/cezarywojcik/CWStatusBarNotification
- */
-
-
-@property (nonatomic, readonly, nullable) CWStatusBarNotification *statusBarNotification;
-
-#endif
-
-/**
- * The player displays a notification at the top of the screen during song
- * transitions by default. If you are currently showing the active song, which
- * means a notification isn't needed, it can be disabled by setting this
- * property to YES. Don't forget to set this to NO when you stop showing the
- * active song.
- *
- * To alter how notifications are displayed, see the `statusBarNotification`
- * property.
- */
-
-@property (nonatomic) BOOL disableSongStartNotifications;
 
 /**
  * If YES (the default), then the Feed.fm library will

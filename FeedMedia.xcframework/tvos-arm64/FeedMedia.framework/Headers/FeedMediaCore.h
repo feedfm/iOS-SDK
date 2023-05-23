@@ -6,7 +6,7 @@
 //  Copyright © 2017 Feed Media. All rights reserved.
 //
 
-#define FEED_MEDIA_CLIENT_VERSION @"5.3.0"
+#define FEED_MEDIA_CLIENT_VERSION @"5.4.0"
 
 // All public headers
 
@@ -19,7 +19,3 @@
 #import <FeedMedia/FMStation.h>
 #import <FeedMedia/FMStationArray.h>
 
-#if TARGET_OS_TV || TARGET_OS_MACCATALYST
-#else
-#import <FeedMedia/CWStatusBarNotification.h>
-#endif

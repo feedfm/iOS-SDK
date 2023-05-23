@@ -1,3 +1,6 @@
+- v5.4.0
+ - Sepreciate and remove songStartNotificaton and CWStatusBarnotification to fix rare app hang issues.
+ 
 - v5.3.0
  - Fix crashes in logging.
  - Drop Mac Catalyst support.

@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/CWStatusBarNotification.h</key>
-		<data>
-		OTdPuB2riGNRrY+UZwUuzdjYQcY=
-		</data>
 		<key>Headers/FMActivityIndicator.h</key>
 		<data>
 		jQ2zWrExWP4WpTqXJXSMKYViwgM=
@@ -18,7 +14,7 @@
 		</data>
 		<key>Headers/FMAudioPlayer.h</key>
 		<data>
-		52Q04Y4Ir54VQ9+A7mJq+3n1edE=
+		t9WKYvnmVGdV5cprihVJDiD7fsY=
 		</data>
 		<key>Headers/FMDislikeButton.h</key>
 		<data>
@@ -110,7 +106,7 @@
 		</data>
 		<key>Headers/FeedMediaCore.h</key>
 		<data>
-		UqOHQUgfxZW2s5bgpeA0AEJjFfw=
+		pn8jnDNdZ0zqKZVxxIDGxZJeNJs=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -123,17 +119,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/CWStatusBarNotification.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OTdPuB2riGNRrY+UZwUuzdjYQcY=
-			</data>
-			<key>hash2</key>
-			<data>
-			vb+gmtt+0Vd7laidBbRnltl2ne013eor2KVDyy1vsxU=
-			</data>
-		</dict>
 		<key>Headers/FMActivityIndicator.h</key>
 		<dict>
 			<key>hash</key>
@@ -160,11 +145,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			52Q04Y4Ir54VQ9+A7mJq+3n1edE=
+			t9WKYvnmVGdV5cprihVJDiD7fsY=
 			</data>
 			<key>hash2</key>
 			<data>
-			GQoQtTyxUOEp2y+fhmY3N5umapQYtu9LUtkDo0IWs5g=
+			RKT08BctVQO4OZCFFUGIlM2GjFq69UkW4vAhgE/1mPQ=
 			</data>
 		</dict>
 		<key>Headers/FMDislikeButton.h</key>
@@ -413,11 +398,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UqOHQUgfxZW2s5bgpeA0AEJjFfw=
+			pn8jnDNdZ0zqKZVxxIDGxZJeNJs=
 			</data>
 			<key>hash2</key>
 			<data>
-			fmURjy4CScfJEXvDQ9jvIVWfHMglNfRFTEKDXog//AI=
+			LC+d6vh3LkNiwzJ28hGAUxGw6yyZ09ETnWW3zhRy55s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
