@@ -1,5 +1,10 @@
+- v5.5.0
+ - Improve timing accuracy of play starts.
+ - Added Feed class that allows for a smoother Xpress SDK integration. Please consult your portal docs for more information.
+ - FMStationCrossfader has been moved main SDK package from UI packpage. 
+ 
 - v5.4.0
- - Sepreciate and remove songStartNotificaton and CWStatusBarnotification to fix rare app hang issues.
+ - Depreciate and remove songStartNotificaton and CWStatusBarnotification to fix rare app hang issues.
  
 - v5.3.0
  - Fix crashes in logging.

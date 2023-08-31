@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <FeedMedia/FeedMediaCore.h>
+
 /**
  * The FMStationCrossfader allows you to tie music player actions (such as station changes
  * and volume changes) to cue points. The basic use case is to change stations and volume
@@ -178,6 +180,19 @@
  */
 
 - (void) elapseToTime: (float) time;
+
+@end
+
+
+@interface FMCuePoint : NSObject
+
+@property (nonatomic) float time;
+
+@property (nonatomic, strong) FMStation *station;
+@property (nonatomic, strong) NSNumber *volume;
+
++ (FMCuePoint *) station: (FMStation *) station time: (float) time;
++ (FMCuePoint *) volume: (NSNumber *) volume time: (float) time;
 
 @end
 

@@ -10,13 +10,14 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <FeedMedia/FMStation.h>
+#import <FeedMedia/FMProgram.h>
 #import <FeedMedia/FMAudioItem.h>
 #import <FeedMedia/FMError.h>
 #import <FeedMedia/FMLog.h>
 #import <FeedMedia/FMAudioPlayer.h>
 #import <FeedMedia/FMLockScreenDelegate.h>
 #import <FeedMedia/FMStationArray.h>
-
+#import <FeedMedia/FMProgram.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -1123,7 +1124,13 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 
 - (void)playFromIndex:(NSUInteger) index;
 
+/**
+ *  Fetch program for URI
+ *   @param uri The uri or the resource id
+ *   @param onResult The callback block for the result.
+ */
 
+-(void) fetchProgramForURI:(NSString * _Nonnull)uri withCallback:(void (^_Nonnull)(NSArray* _Nonnull)) onResult;
 
 ///-----------------------------------------------------
 /// @name Offline station management

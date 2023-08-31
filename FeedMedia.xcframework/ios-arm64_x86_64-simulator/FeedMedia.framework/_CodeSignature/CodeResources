@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/FMAudioPlayer.h</key>
 		<data>
-		t9WKYvnmVGdV5cprihVJDiD7fsY=
+		NkFVMJaUxTajv0IEKlcYU+u6mB0=
 		</data>
 		<key>Headers/FMDislikeButton.h</key>
 		<data>
@@ -56,6 +56,10 @@
 		<data>
 		sGIetThig9Masg/JNWVqn2qexZE=
 		</data>
+		<key>Headers/FMProgram.h</key>
+		<data>
+		d+jxLogzfuwtZMtYgYldBLztOsU=
+		</data>
 		<key>Headers/FMProgressView.h</key>
 		<data>
 		myfz0kF7c39hg/Tqot3D0SbTZm4=
@@ -94,23 +98,27 @@
 		</data>
 		<key>Headers/FMStationCrossfader.h</key>
 		<data>
-		3PlaSRtO/ZIG1q/3emsZoUbLQX0=
+		2d+XOlaaHktE75OBnqoqdFsTq04=
 		</data>
 		<key>Headers/FMTotalTimeLabel.h</key>
 		<data>
 		S6kpmhnP/nPZNUMw8VtZrM+yrTg=
 		</data>
+		<key>Headers/Feed.h</key>
+		<data>
+		sLyo5xB7b6mnCbl6NTtMxS/4EKo=
+		</data>
 		<key>Headers/FeedMedia.h</key>
 		<data>
-		CMOpBOyt6ne/yYCXtY/VYtu8fak=
+		BYv9tiVJBz7gmb1VZFts9e0MzCM=
 		</data>
 		<key>Headers/FeedMediaCore.h</key>
 		<data>
-		pn8jnDNdZ0zqKZVxxIDGxZJeNJs=
+		tBUe0lrFP6cktilafFGQxXYrjMk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EzoDgsdrOnt6S0hiP++6KEyg76E=
+		rCoAftGhuww6f+MPjB2mSDHqea4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -121,10 +129,6 @@
 	<dict>
 		<key>Headers/FMActivityIndicator.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jQ2zWrExWP4WpTqXJXSMKYViwgM=
-			</data>
 			<key>hash2</key>
 			<data>
 			nRXwYQEODLU+OlqBAmNjvXEVrdBSBBpAAfioyZwqfyE=
@@ -132,10 +136,6 @@
 		</dict>
 		<key>Headers/FMAudioItem.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wjZm8eKAvuY09SneBpqzmc1LqDE=
-			</data>
 			<key>hash2</key>
 			<data>
 			joXS8UlgPRZue8HhYC27rdkEZzR2ZE/3pOXY6l0jwbE=
@@ -143,21 +143,13 @@
 		</dict>
 		<key>Headers/FMAudioPlayer.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			t9WKYvnmVGdV5cprihVJDiD7fsY=
-			</data>
 			<key>hash2</key>
 			<data>
-			RKT08BctVQO4OZCFFUGIlM2GjFq69UkW4vAhgE/1mPQ=
+			Vy1ubn4Qbb55Q+H1/5nWMILDSi3WwN464aMLQRTPWoI=
 			</data>
 		</dict>
 		<key>Headers/FMDislikeButton.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QRthRfYXCLihQ3CP4S5DaY3Ksk4=
-			</data>
 			<key>hash2</key>
 			<data>
 			l0XIs80OwMR8EFAgZSAL9gooO7EzORmy6FMhVLrmIJA=
@@ -165,10 +157,6 @@
 		</dict>
 		<key>Headers/FMElapsedTimeLabel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			qkzg7/sKo1BF63U2fcRKfi+Fm9s=
-			</data>
 			<key>hash2</key>
 			<data>
 			YoIeE01DFdT2F5GF4YJS/8BjhZhDKNBeOzW6ZTTNeM4=
@@ -176,10 +164,6 @@
 		</dict>
 		<key>Headers/FMEqualizer.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			s8GETwP5q3lZpE6lN/zANQf9kQk=
-			</data>
 			<key>hash2</key>
 			<data>
 			Sb/8TbKGxly2Z+24tQXVb36vWFFl2T63qigwZ5ll1Jw=
@@ -187,10 +171,6 @@
 		</dict>
 		<key>Headers/FMError.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			AGg+dFmxXRsmH8dAkPBUnFPfRA8=
-			</data>
 			<key>hash2</key>
 			<data>
 			2GJfFDZ8lIFPBd5IC7KyxJlpXDp8CnIlF0ucXkr+O4Q=
@@ -198,10 +178,6 @@
 		</dict>
 		<key>Headers/FMLikeButton.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LIF9HdthWAaLwexDT0LAiKyiqZM=
-			</data>
 			<key>hash2</key>
 			<data>
 			NxdQ/AbfM9vFpBMgJgPG8ri5x3SySQACeMeWk2js+EY=
@@ -209,10 +185,6 @@
 		</dict>
 		<key>Headers/FMLockScreenDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LfICHFKxPC18FkaXtnyJ6iDnfKU=
-			</data>
 			<key>hash2</key>
 			<data>
 			vG4Xgy2muDViVqNl9KgfHkE2xrKuRiy0I+jLVptfwKo=
@@ -220,10 +192,6 @@
 		</dict>
 		<key>Headers/FMLog.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Bdab5go8SHFfcXI/OgMCdkPs+7g=
-			</data>
 			<key>hash2</key>
 			<data>
 			cKHKyoZETKFGxvKBooyM3sM5WR9RBmANY2Kh64SUx4U=
@@ -231,10 +199,6 @@
 		</dict>
 		<key>Headers/FMMarqueeLabel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ruz6sA6e4DnLCAJmDHnAlN8XHog=
-			</data>
 			<key>hash2</key>
 			<data>
 			tDk6PBVV9SpMPspbSFA1mOQpjYJFUgD2z/zG7HPUY8U=
@@ -242,10 +206,6 @@
 		</dict>
 		<key>Headers/FMMetadataLabel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			WRQX+fX532ireul9jFOAZbX8Slw=
-			</data>
 			<key>hash2</key>
 			<data>
 			pWyquhnm2K9jAExTqF/7F3kErj/7EJC5dCE43ftOYYQ=
@@ -253,21 +213,20 @@
 		</dict>
 		<key>Headers/FMPlayPauseButton.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sGIetThig9Masg/JNWVqn2qexZE=
-			</data>
 			<key>hash2</key>
 			<data>
 			2rB8g5pEeSDb6EGY5oSv7KnvY8+ZeTmWs9+xaJmGqyg=
 			</data>
 		</dict>
+		<key>Headers/FMProgram.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9tfr0MZTcP3PuuVYSi5sCShazJfS84BozL5/0BC53gE=
+			</data>
+		</dict>
 		<key>Headers/FMProgressView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			myfz0kF7c39hg/Tqot3D0SbTZm4=
-			</data>
 			<key>hash2</key>
 			<data>
 			oVM93Fsr+nWBeyVFbBKT0TQqOtw0XFAx+UKdQ/00nB8=
@@ -275,10 +234,6 @@
 		</dict>
 		<key>Headers/FMRemainingTimeLabel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			HvodFRAJDNOX/YtPGkVQtMUIWi8=
-			</data>
 			<key>hash2</key>
 			<data>
 			YD3WtcrNGkxu1d+Le7/zlnH+GeLISSfuLk8lDPpJSmw=
@@ -286,10 +241,6 @@
 		</dict>
 		<key>Headers/FMShareButton.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			vBF3IkN/hITPP1XKrZZ9y2SBmD8=
-			</data>
 			<key>hash2</key>
 			<data>
 			779ld87TGG3GfK7JiBEFeZQ9uJZ3AyU28OccY/wl4Lw=
@@ -297,10 +248,6 @@
 		</dict>
 		<key>Headers/FMSimulcastStreamer.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ixEfSt1yXzq6HFNCNTHwLwqGBu0=
-			</data>
 			<key>hash2</key>
 			<data>
 			dCj/BNDTzPko6uh2DrINANEHGwN7wAC3Mq6eZG/SCzA=
@@ -308,10 +255,6 @@
 		</dict>
 		<key>Headers/FMSkipButton.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			87tPeOIcZ42t0uCggdwbNxuBL24=
-			</data>
 			<key>hash2</key>
 			<data>
 			qsNfc3W7ScRGpUXXe/J5tSDAPwMSVEFmKrxxCVTG0j4=
@@ -319,10 +262,6 @@
 		</dict>
 		<key>Headers/FMSkipWarningView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			5DntSrevOBkH1qYquql8lSOcxak=
-			</data>
 			<key>hash2</key>
 			<data>
 			IJjUO9SMAkQmQeoBw7LwzA3j/R6GpPxsV4BrWqjkfrs=
@@ -330,10 +269,6 @@
 		</dict>
 		<key>Headers/FMStation.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			90m61baIy9fYp+R1s9eqiS/7X4Q=
-			</data>
 			<key>hash2</key>
 			<data>
 			VvJNRValmQvUbzzlHENlzAOetWXG2odaSe2XFKird/k=
@@ -341,10 +276,6 @@
 		</dict>
 		<key>Headers/FMStationArray.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			k6y6SkGh/Bj2rAVeRhJmC/rD/jk=
-			</data>
 			<key>hash2</key>
 			<data>
 			iDEhs3lBRx9tBzg7vjSgV2hxk3aSwQZG+p3CprRT8Uc=
@@ -352,10 +283,6 @@
 		</dict>
 		<key>Headers/FMStationButton.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4f3ZgJ5mO6yVaTUzOX90kqyO8uo=
-			</data>
 			<key>hash2</key>
 			<data>
 			qOD7S+L3BRgfq9plJ2g2uzxOEqvx1xPFqsBA4ekSRwc=
@@ -363,54 +290,41 @@
 		</dict>
 		<key>Headers/FMStationCrossfader.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3PlaSRtO/ZIG1q/3emsZoUbLQX0=
-			</data>
 			<key>hash2</key>
 			<data>
-			JO0k77ws7jwEQzD66H7LrrzJVhIgwV2mNeqDkdAMrsE=
+			9xklNjyQtI6IgIC8daA0zEy6BuZB/TQUrG3Odanf+es=
 			</data>
 		</dict>
 		<key>Headers/FMTotalTimeLabel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			S6kpmhnP/nPZNUMw8VtZrM+yrTg=
-			</data>
 			<key>hash2</key>
 			<data>
 			TzC5sq5vFp9NBGdjYLJDRvszMYbMPi3m/QCZuRoIeZk=
 			</data>
 		</dict>
-		<key>Headers/FeedMedia.h</key>
+		<key>Headers/Feed.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			CMOpBOyt6ne/yYCXtY/VYtu8fak=
-			</data>
 			<key>hash2</key>
 			<data>
-			QM7lFHcsUSOZhUa8a/xfvUOVByulYMLd7WUQi8jqsvs=
+			JYyzAMrUM/QL6FbIlydA377Q/8HcIrzYd5ZGlR26LbM=
+			</data>
+		</dict>
+		<key>Headers/FeedMedia.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M2pi3OuilEt6C6fQmRQSIz0mJJ15RuEemFJjnds7g5U=
 			</data>
 		</dict>
 		<key>Headers/FeedMediaCore.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			pn8jnDNdZ0zqKZVxxIDGxZJeNJs=
-			</data>
 			<key>hash2</key>
 			<data>
-			LC+d6vh3LkNiwzJ28hGAUxGw6yyZ09ETnWW3zhRy55s=
+			Uhtd1BTmzWBsdCVmwS3Y4XDSJp0GdjPADMTeQRZ7wvE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/TvYGAQO4I5VP89353Z6AmLKhmQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			mnGDd9zDLPZH6wxr/hprIZ4QpgwsmnbDW0fdQru8B0g=

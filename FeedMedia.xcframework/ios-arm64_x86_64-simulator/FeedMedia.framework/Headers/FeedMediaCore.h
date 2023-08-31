@@ -6,7 +6,7 @@
 //  Copyright © 2017 Feed Media. All rights reserved.
 //
 
-#define FEED_MEDIA_CLIENT_VERSION @"5.4.0"
+#define FEED_MEDIA_CLIENT_VERSION @"5.5.0"
 
 // All public headers
 
@@ -18,4 +18,5 @@
 #import <FeedMedia/FMLog.h>
 #import <FeedMedia/FMStation.h>
 #import <FeedMedia/FMStationArray.h>
+#import <FeedMedia/FMProgram.h>
 

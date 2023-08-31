@@ -24,6 +24,7 @@
 #include <FeedMedia/FMTotalTimeLabel.h>
 #include <FeedMedia/FMEqualizer.h>
 #include <FeedMedia/FMStationCrossfader.h>
+#include <FeedMedia/Feed.h>
 
 #if TARGET_OS_TV || TARGET_OS_MACCATALYST
 #else
