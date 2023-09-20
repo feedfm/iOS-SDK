@@ -10,7 +10,9 @@
 
 #import <FeedMedia/FMStationCrossfader.h>
 
-
+/**
+ * Program class with cuepoints
+ */
 
 @interface FMProgram : NSObject
 

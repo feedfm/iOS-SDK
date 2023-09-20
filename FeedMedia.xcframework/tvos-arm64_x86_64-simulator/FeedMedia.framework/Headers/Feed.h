@@ -12,6 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ *  Feed class is a simplified way to use our SDK, it does not replace any functionality of the SDK but is rather a layer on top to simplify integration.
+ *
+ *  This method associates the feed audio player with an avplayer. The feed SDK watches the associated AVPlayer and automatically finds and plays the correct station and pauses and unpause the playback etc. For more info please check out our welcome docs on business portal.
+ */
+
 @interface  Feed : NSObject
 
 /**

@@ -1056,6 +1056,24 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 
 
 
+
+/**
+ * Search for audiofiles in the current set of stations for the given token and secret. This search only returns songs that can be played on demand.
+ *
+ * @param query Search query
+ * @param stationId optional search query if you wish to narrow the search to a specific station.
+ * @param page results page starts from 0
+ * @param resultsPerPage No of results per page, must be higher then zero default is 20
+ * @param onResult the block that will be called when results are available. The parameter can be null if no results are found.
+ */
+
+-(void) searchForAudioItem:(nonnull NSString *)query
+               station:(nullable NSString *)stationId
+                pageNo:(nullable NSNumber *)page
+        resultsPerPage:(nullable NSNumber *)resultsPerPage
+              withCallback:(void (^_Nonnull)(NSArray<FMAudioItem*>*_Nonnull)) onResult ;
+   
+    
 /**
 *  Search for stations
 *  @param searchQuery A string search query

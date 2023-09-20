@@ -1,3 +1,6 @@
+- v5.5.1
+ - Hotfix for iOS 17 support. 
+ 
 - v5.5.0
  - Improve timing accuracy of play starts.
  - Added Feed class that allows for a smoother Xpress SDK integration. Please consult your portal docs for more information.
