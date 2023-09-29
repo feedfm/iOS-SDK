@@ -726,6 +726,15 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 - (void)playAudioItem: (nonnull FMAudioItem *) audioItem;
 
 /**
+ * Load preview of specific song in the player. This method only works with
+ * on-demand stations. This counts as a full song playback.
+ *
+ * @param audioItem the audio item to load
+ */
+
+- (void)preparePreview:(nonnull FMAudioItem *)audioItem;
+
+/**
  * Pauses music playback.
  */
 - (void)pause;
@@ -1101,12 +1110,12 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
     
 /**
  * Fetch tracks for an on demand station
- * @param stationId   station id of the station
+ * @param station   Associated station
  * @param page result page no
  * @param resultsPerPage No of results per page
  * @param onResult callback block
  */
--(void) requestTracksForStation:(NSString *_Nonnull)stationId
+-(void) requestTracksForStation:(FMStation *_Nonnull)station
                          pageNo:(NSNumber *_Nonnull)page
                  resultsPerPage:(NSNumber *_Nonnull)resultsPerPage
                    withCallback:(void (^_Nonnull)(NSArray<FMAudioItem*>*_Nonnull)) onResult;

@@ -1,3 +1,6 @@
+- v5.5.2
+ - Added preparePreview function for on demand stations.  
+ 
 - v5.5.1
  - Hotfix for iOS 17 support. 
  
