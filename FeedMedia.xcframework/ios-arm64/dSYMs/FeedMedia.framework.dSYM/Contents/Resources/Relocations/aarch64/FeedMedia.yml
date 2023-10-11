@@ -2,8 +2,8 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/arveenk/Library/Developer/Xcode/DerivedData/iOS-SDK-Core-dehrmkxqnnlpinapycolsimnfinz/Build/Intermediates.noindex/ArchiveIntermediates/FeedMedia/InstallationBuildProductsLocation/Library/Frameworks/FeedMedia.framework/FeedMedia'
 relocations:
-  - { offsetInCU: 0x34, offset: 0x712E1, size: 0x8, addend: 0x0, symName: _FeedMediaVersionString, symObjAddr: 0x0, symBinAddr: 0x4DDD8, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x71316, size: 0x8, addend: 0x0, symName: _FeedMediaVersionNumber, symObjAddr: 0x30, symBinAddr: 0x4DE08, symSize: 0x0 }
+  - { offsetInCU: 0x34, offset: 0x712E1, size: 0x8, addend: 0x0, symName: _FeedMediaVersionString, symObjAddr: 0x0, symBinAddr: 0x4DE40, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x71316, size: 0x8, addend: 0x0, symName: _FeedMediaVersionNumber, symObjAddr: 0x30, symBinAddr: 0x4DE70, symSize: 0x0 }
   - { offsetInCU: 0x27, offset: 0x71353, size: 0x8, addend: 0x0, symName: '-[FMShareButton initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x50 }
   - { offsetInCU: 0x184, offset: 0x714B0, size: 0x8, addend: 0x0, symName: '-[FMShareButton initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x50 }
   - { offsetInCU: 0x1C7, offset: 0x714F3, size: 0x8, addend: 0x0, symName: '-[FMShareButton initWithCoder:]', symObjAddr: 0x50, symBinAddr: 0x4050, symSize: 0x50 }
@@ -1731,83 +1731,82 @@ relocations:
   - { offsetInCU: 0x733, offset: 0xA1C76, size: 0x8, addend: 0x0, symName: '___28-[FMAsset completeWithItem:]_block_invoke', symObjAddr: 0x4E4, symBinAddr: 0x419FC, symSize: 0xA4 }
   - { offsetInCU: 0x794, offset: 0xA1CD7, size: 0x8, addend: 0x0, symName: '-[FMAsset failWithError:]', symObjAddr: 0x598, symBinAddr: 0x41AA0, symSize: 0xCC }
   - { offsetInCU: 0x7ED, offset: 0xA1D30, size: 0x8, addend: 0x0, symName: '___25-[FMAsset failWithError:]_block_invoke', symObjAddr: 0x664, symBinAddr: 0x41B6C, symSize: 0xA4 }
-  - { offsetInCU: 0x84E, offset: 0xA1D91, size: 0x8, addend: 0x0, symName: '-[FMAsset loadPlayerItem]', symObjAddr: 0x708, symBinAddr: 0x41C10, symSize: 0x300 }
-  - { offsetInCU: 0x8D0, offset: 0xA1E13, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke', symObjAddr: 0xA08, symBinAddr: 0x41F10, symSize: 0x8C }
-  - { offsetInCU: 0x945, offset: 0xA1E88, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke_2', symObjAddr: 0xA94, symBinAddr: 0x41F9C, symSize: 0x10 }
-  - { offsetInCU: 0x9A4, offset: 0xA1EE7, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s, symObjAddr: 0xAA4, symBinAddr: 0x41FAC, symSize: 0x30 }
-  - { offsetInCU: 0x9CD, offset: 0xA1F10, size: 0x8, addend: 0x0, symName: '-[FMAsset prepareToPlayAsset:withKeys:]', symObjAddr: 0xB04, symBinAddr: 0x41FDC, symSize: 0x2B4 }
-  - { offsetInCU: 0xA8D, offset: 0xA1FD0, size: 0x8, addend: 0x0, symName: '-[FMAsset description]', symObjAddr: 0xDB8, symBinAddr: 0x42290, symSize: 0xD4 }
-  - { offsetInCU: 0xAC4, offset: 0xA2007, size: 0x8, addend: 0x0, symName: '-[FMAsset audioItem]', symObjAddr: 0xE8C, symBinAddr: 0x42364, symSize: 0xC }
-  - { offsetInCU: 0xAFB, offset: 0xA203E, size: 0x8, addend: 0x0, symName: '-[FMAsset playerItem]', symObjAddr: 0xE98, symBinAddr: 0x42370, symSize: 0xC }
-  - { offsetInCU: 0xB32, offset: 0xA2075, size: 0x8, addend: 0x0, symName: '-[FMAsset loadError]', symObjAddr: 0xEA4, symBinAddr: 0x4237C, symSize: 0xC }
-  - { offsetInCU: 0xB69, offset: 0xA20AC, size: 0x8, addend: 0x0, symName: '-[FMAsset successBlock]', symObjAddr: 0xEB0, symBinAddr: 0x42388, symSize: 0x8 }
-  - { offsetInCU: 0xBA0, offset: 0xA20E3, size: 0x8, addend: 0x0, symName: '-[FMAsset setSuccessBlock:]', symObjAddr: 0xEB8, symBinAddr: 0x42390, symSize: 0x8 }
-  - { offsetInCU: 0xBDF, offset: 0xA2122, size: 0x8, addend: 0x0, symName: '-[FMAsset failureBlock]', symObjAddr: 0xEC0, symBinAddr: 0x42398, symSize: 0x8 }
-  - { offsetInCU: 0xC16, offset: 0xA2159, size: 0x8, addend: 0x0, symName: '-[FMAsset setFailureBlock:]', symObjAddr: 0xEC8, symBinAddr: 0x423A0, symSize: 0x8 }
-  - { offsetInCU: 0xC55, offset: 0xA2198, size: 0x8, addend: 0x0, symName: '-[FMAsset .cxx_destruct]', symObjAddr: 0xED0, symBinAddr: 0x423A8, symSize: 0x60 }
-  - { offsetInCU: 0x27, offset: 0xA2507, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker initWithMediaDownloader:maxLength:]', symObjAddr: 0x0, symBinAddr: 0x42408, symSize: 0x8C }
-  - { offsetInCU: 0x12E, offset: 0xA260E, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker initWithMediaDownloader:maxLength:]', symObjAddr: 0x0, symBinAddr: 0x42408, symSize: 0x8C }
-  - { offsetInCU: 0x185, offset: 0xA2665, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker startWork]', symObjAddr: 0x8C, symBinAddr: 0x42494, symSize: 0x40 }
-  - { offsetInCU: 0x1B8, offset: 0xA2698, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker cancel]', symObjAddr: 0xCC, symBinAddr: 0x424D4, symSize: 0x30 }
-  - { offsetInCU: 0x1EB, offset: 0xA26CB, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker finish]', symObjAddr: 0xFC, symBinAddr: 0x42504, symSize: 0x4 }
-  - { offsetInCU: 0x21A, offset: 0xA26FA, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker mediaDownloader:didFinishedWithError:]', symObjAddr: 0x100, symBinAddr: 0x42508, symSize: 0x68 }
-  - { offsetInCU: 0x269, offset: 0xA2749, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker delegate]', symObjAddr: 0x168, symBinAddr: 0x42570, symSize: 0x18 }
-  - { offsetInCU: 0x2A0, offset: 0xA2780, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker setDelegate:]', symObjAddr: 0x180, symBinAddr: 0x42588, symSize: 0xC }
-  - { offsetInCU: 0x2E1, offset: 0xA27C1, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker mediaDownloader]', symObjAddr: 0x18C, symBinAddr: 0x42594, symSize: 0x8 }
-  - { offsetInCU: 0x318, offset: 0xA27F8, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker setMediaDownloader:]', symObjAddr: 0x194, symBinAddr: 0x4259C, symSize: 0xC }
-  - { offsetInCU: 0x359, offset: 0xA2839, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker maxLength]', symObjAddr: 0x1A0, symBinAddr: 0x425A8, symSize: 0x8 }
-  - { offsetInCU: 0x390, offset: 0xA2870, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker setMaxLength:]', symObjAddr: 0x1A8, symBinAddr: 0x425B0, symSize: 0x8 }
-  - { offsetInCU: 0x3CD, offset: 0xA28AD, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker .cxx_destruct]', symObjAddr: 0x1B0, symBinAddr: 0x425B8, symSize: 0x2C }
-  - { offsetInCU: 0x27, offset: 0xA2929, size: 0x8, addend: 0x0, symName: '+[VICacheManager load]', symObjAddr: 0x0, symBinAddr: 0x425E4, symSize: 0x6C }
-  - { offsetInCU: 0x41, offset: 0xA2943, size: 0x8, addend: 0x0, symName: _VICacheManagerDidUpdateCacheNotification, symObjAddr: 0x1398, symBinAddr: 0x83E88, symSize: 0x0 }
-  - { offsetInCU: 0x5C, offset: 0xA295E, size: 0x8, addend: 0x0, symName: _VICacheManagerDidFinishCacheNotification, symObjAddr: 0x13A0, symBinAddr: 0x83E90, symSize: 0x0 }
-  - { offsetInCU: 0x72, offset: 0xA2974, size: 0x8, addend: 0x0, symName: _VICacheManagerDidFinishCacheExternNotification, symObjAddr: 0x13A8, symBinAddr: 0x83E98, symSize: 0x0 }
-  - { offsetInCU: 0x88, offset: 0xA298A, size: 0x8, addend: 0x0, symName: _VICacheConfigurationKey, symObjAddr: 0x13B0, symBinAddr: 0x83EA0, symSize: 0x0 }
-  - { offsetInCU: 0x9E, offset: 0xA29A0, size: 0x8, addend: 0x0, symName: _VICacheFinishedErrorKey, symObjAddr: 0x13B8, symBinAddr: 0x83EA8, symSize: 0x0 }
-  - { offsetInCU: 0xB4, offset: 0xA29B6, size: 0x8, addend: 0x0, symName: _VICacheURLKey, symObjAddr: 0x13C0, symBinAddr: 0x83EB0, symSize: 0x0 }
-  - { offsetInCU: 0xBE, offset: 0xA29C0, size: 0x8, addend: 0x0, symName: '+[VICacheManager load]', symObjAddr: 0x0, symBinAddr: 0x425E4, symSize: 0x6C }
-  - { offsetInCU: 0xE4, offset: 0xA29E6, size: 0x8, addend: 0x0, symName: _load.onceToken, symObjAddr: 0x6368, symBinAddr: 0x84038, symSize: 0x0 }
-  - { offsetInCU: 0x148, offset: 0xA2A4A, size: 0x8, addend: 0x0, symName: _kMCMediaCacheDirectory, symObjAddr: 0x6370, symBinAddr: 0x84040, symSize: 0x0 }
-  - { offsetInCU: 0x15E, offset: 0xA2A60, size: 0x8, addend: 0x0, symName: _kMCMediaCacheNotifyInterval, symObjAddr: 0x6378, symBinAddr: 0x84048, symSize: 0x0 }
-  - { offsetInCU: 0x1D3, offset: 0xA2AD5, size: 0x8, addend: 0x0, symName: '___22+[VICacheManager load]_block_invoke', symObjAddr: 0x6C, symBinAddr: 0x42650, symSize: 0xA8 }
-  - { offsetInCU: 0x28A, offset: 0xA2B8C, size: 0x8, addend: 0x0, symName: '+[VICacheManager setCacheDirectory:]', symObjAddr: 0x114, symBinAddr: 0x426F8, symSize: 0x10 }
-  - { offsetInCU: 0x2C9, offset: 0xA2BCB, size: 0x8, addend: 0x0, symName: '+[VICacheManager cacheDirectory]', symObjAddr: 0x124, symBinAddr: 0x42708, symSize: 0xC }
-  - { offsetInCU: 0x2FC, offset: 0xA2BFE, size: 0x8, addend: 0x0, symName: '+[VICacheManager setCacheUpdateNotifyInterval:]', symObjAddr: 0x130, symBinAddr: 0x42714, symSize: 0xC }
-  - { offsetInCU: 0x33A, offset: 0xA2C3C, size: 0x8, addend: 0x0, symName: '+[VICacheManager cacheUpdateNotifyInterval]', symObjAddr: 0x13C, symBinAddr: 0x42720, symSize: 0xC }
-  - { offsetInCU: 0x36D, offset: 0xA2C6F, size: 0x8, addend: 0x0, symName: '+[VICacheManager md5ForString:]', symObjAddr: 0x148, symBinAddr: 0x4272C, symSize: 0x100 }
-  - { offsetInCU: 0x447, offset: 0xA2D49, size: 0x8, addend: 0x0, symName: '+[VICacheManager cachedFilePathForURL:]', symObjAddr: 0x248, symBinAddr: 0x4282C, symSize: 0x114 }
-  - { offsetInCU: 0x49E, offset: 0xA2DA0, size: 0x8, addend: 0x0, symName: '+[VICacheManager cacheConfigurationForURL:]', symObjAddr: 0x35C, symBinAddr: 0x42940, symSize: 0x50 }
-  - { offsetInCU: 0x505, offset: 0xA2E07, size: 0x8, addend: 0x0, symName: '+[VICacheManager isFileCachedForUrl:]', symObjAddr: 0x3AC, symBinAddr: 0x42990, symSize: 0xC4 }
-  - { offsetInCU: 0x56C, offset: 0xA2E6E, size: 0x8, addend: 0x0, symName: '+[VICacheManager checkEvictFilesForCacheSize:error:]', symObjAddr: 0x470, symBinAddr: 0x42A54, symSize: 0x330 }
-  - { offsetInCU: 0x694, offset: 0xA2F96, size: 0x8, addend: 0x0, symName: '+[VICacheManager calculateCachedSizeWithError:]', symObjAddr: 0x7A0, symBinAddr: 0x42D84, symSize: 0x1D4 }
-  - { offsetInCU: 0x761, offset: 0xA3063, size: 0x8, addend: 0x0, symName: '+[VICacheManager cleanAllCacheWithError:]', symObjAddr: 0x974, symBinAddr: 0x42F58, symSize: 0x25C }
-  - { offsetInCU: 0x81A, offset: 0xA311C, size: 0x8, addend: 0x0, symName: '___41+[VICacheManager cleanAllCacheWithError:]_block_invoke', symObjAddr: 0xBD0, symBinAddr: 0x431B4, symSize: 0x7C }
-  - { offsetInCU: 0x8B4, offset: 0xA31B6, size: 0x8, addend: 0x0, symName: '+[VICacheManager cleanCacheForURL:error:]', symObjAddr: 0xC5C, symBinAddr: 0x43230, symSize: 0x230 }
-  - { offsetInCU: 0x956, offset: 0xA3258, size: 0x8, addend: 0x0, symName: '+[VICacheManager addCacheFile:forURL:error:]', symObjAddr: 0xE8C, symBinAddr: 0x43460, symSize: 0x130 }
-  - { offsetInCU: 0x9E9, offset: 0xA32EB, size: 0x8, addend: 0x0, symName: '+[VICacheManager getKeyForURL:]', symObjAddr: 0xFBC, symBinAddr: 0x43590, symSize: 0xD8 }
-  - { offsetInCU: 0x27, offset: 0xA3618, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager init]', symObjAddr: 0x0, symBinAddr: 0x43668, symSize: 0x6C }
-  - { offsetInCU: 0x3A, offset: 0xA362B, size: 0x8, addend: 0x0, symName: '+[VIResourceLoaderManager(Convenient) sharedInstance]', symObjAddr: 0x808, symBinAddr: 0x43E20, symSize: 0x40 }
-  - { offsetInCU: 0x64, offset: 0xA3655, size: 0x8, addend: 0x0, symName: _sharedInstance._sharedInstance, symObjAddr: 0x5ED8, symBinAddr: 0x84050, symSize: 0x0 }
-  - { offsetInCU: 0x7A, offset: 0xA366B, size: 0x8, addend: 0x0, symName: _sharedInstance.singletonToken, symObjAddr: 0x5EE0, symBinAddr: 0x84058, symSize: 0x0 }
-  - { offsetInCU: 0x15B, offset: 0xA374C, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager init]', symObjAddr: 0x0, symBinAddr: 0x43668, symSize: 0x6C }
-  - { offsetInCU: 0x192, offset: 0xA3783, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager cleanCache]', symObjAddr: 0x6C, symBinAddr: 0x436D4, symSize: 0x30 }
-  - { offsetInCU: 0x1C5, offset: 0xA37B6, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager cleanCacheForURL:eraseFromDisk:]', symObjAddr: 0x9C, symBinAddr: 0x43704, symSize: 0x174 }
-  - { offsetInCU: 0x309, offset: 0xA38FA, size: 0x8, addend: 0x0, symName: '___58-[VIResourceLoaderManager cleanCacheForURL:eraseFromDisk:]_block_invoke', symObjAddr: 0x210, symBinAddr: 0x43878, symSize: 0x10 }
-  - { offsetInCU: 0x368, offset: 0xA3959, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager cancelLoaders]', symObjAddr: 0x270, symBinAddr: 0x43888, symSize: 0x5C }
-  - { offsetInCU: 0x39B, offset: 0xA398C, size: 0x8, addend: 0x0, symName: '___40-[VIResourceLoaderManager cancelLoaders]_block_invoke', symObjAddr: 0x2CC, symBinAddr: 0x438E4, symSize: 0x8 }
-  - { offsetInCU: 0x3EA, offset: 0xA39DB, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager downloadURL:maxLength:]', symObjAddr: 0x2D4, symBinAddr: 0x438EC, symSize: 0x3C }
-  - { offsetInCU: 0x44D, offset: 0xA3A3E, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager resourceLoader:shouldWaitForLoadingOfRequestedResource:]', symObjAddr: 0x310, symBinAddr: 0x43928, symSize: 0xD0 }
-  - { offsetInCU: 0x4CF, offset: 0xA3AC0, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager resourceLoader:didCancelLoadingRequest:]', symObjAddr: 0x3E0, symBinAddr: 0x439F8, symSize: 0x58 }
-  - { offsetInCU: 0x52E, offset: 0xA3B1F, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager resourceLoader:didCompleteWorkOfType:withError:]', symObjAddr: 0x438, symBinAddr: 0x43A50, symSize: 0x190 }
-  - { offsetInCU: 0x591, offset: 0xA3B82, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager originURLForResourceURL:]', symObjAddr: 0x5C8, symBinAddr: 0x43BE0, symSize: 0x7C }
-  - { offsetInCU: 0x5F4, offset: 0xA3BE5, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager loaderForRequest:createIfMissing:]', symObjAddr: 0x644, symBinAddr: 0x43C5C, symSize: 0x7C }
-  - { offsetInCU: 0x64B, offset: 0xA3C3C, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager loaderForURL:createIfMissing:]', symObjAddr: 0x6C0, symBinAddr: 0x43CD8, symSize: 0xE4 }
-  - { offsetInCU: 0x6D2, offset: 0xA3CC3, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager delegate]', symObjAddr: 0x7A4, symBinAddr: 0x43DBC, symSize: 0x18 }
-  - { offsetInCU: 0x709, offset: 0xA3CFA, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager setDelegate:]', symObjAddr: 0x7BC, symBinAddr: 0x43DD4, symSize: 0xC }
-  - { offsetInCU: 0x74A, offset: 0xA3D3B, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager loaders]', symObjAddr: 0x7C8, symBinAddr: 0x43DE0, symSize: 0x8 }
-  - { offsetInCU: 0x781, offset: 0xA3D72, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager setLoaders:]', symObjAddr: 0x7D0, symBinAddr: 0x43DE8, symSize: 0xC }
-  - { offsetInCU: 0x7C2, offset: 0xA3DB3, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager .cxx_destruct]', symObjAddr: 0x7DC, symBinAddr: 0x43DF4, symSize: 0x2C }
-  - { offsetInCU: 0x82F, offset: 0xA3E20, size: 0x8, addend: 0x0, symName: '___53+[VIResourceLoaderManager(Convenient) sharedInstance]_block_invoke', symObjAddr: 0x848, symBinAddr: 0x43E60, symSize: 0x30 }
-  - { offsetInCU: 0x856, offset: 0xA3E47, size: 0x8, addend: 0x0, symName: '+[VIResourceLoaderManager(Convenient) assetURLWithURL:]', symObjAddr: 0x878, symBinAddr: 0x43E90, symSize: 0x90 }
-  - { offsetInCU: 0x8A9, offset: 0xA3E9A, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager(Convenient) playerItemWithURL:]', symObjAddr: 0x908, symBinAddr: 0x43F20, symSize: 0x90 }
+  - { offsetInCU: 0x84E, offset: 0xA1D91, size: 0x8, addend: 0x0, symName: '-[FMAsset loadPlayerItem]', symObjAddr: 0x708, symBinAddr: 0x41C10, symSize: 0x358 }
+  - { offsetInCU: 0x8E0, offset: 0xA1E23, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke', symObjAddr: 0xA60, symBinAddr: 0x41F68, symSize: 0xA4 }
+  - { offsetInCU: 0x951, offset: 0xA1E94, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke_2', symObjAddr: 0xB04, symBinAddr: 0x4200C, symSize: 0x34 }
+  - { offsetInCU: 0x9AC, offset: 0xA1EEF, size: 0x8, addend: 0x0, symName: '-[FMAsset prepareToPlayAsset:withKeys:]', symObjAddr: 0xBA0, symBinAddr: 0x42040, symSize: 0x2B4 }
+  - { offsetInCU: 0xA6C, offset: 0xA1FAF, size: 0x8, addend: 0x0, symName: '-[FMAsset description]', symObjAddr: 0xE54, symBinAddr: 0x422F4, symSize: 0xD4 }
+  - { offsetInCU: 0xAA3, offset: 0xA1FE6, size: 0x8, addend: 0x0, symName: '-[FMAsset audioItem]', symObjAddr: 0xF28, symBinAddr: 0x423C8, symSize: 0xC }
+  - { offsetInCU: 0xADA, offset: 0xA201D, size: 0x8, addend: 0x0, symName: '-[FMAsset playerItem]', symObjAddr: 0xF34, symBinAddr: 0x423D4, symSize: 0xC }
+  - { offsetInCU: 0xB11, offset: 0xA2054, size: 0x8, addend: 0x0, symName: '-[FMAsset loadError]', symObjAddr: 0xF40, symBinAddr: 0x423E0, symSize: 0xC }
+  - { offsetInCU: 0xB48, offset: 0xA208B, size: 0x8, addend: 0x0, symName: '-[FMAsset successBlock]', symObjAddr: 0xF4C, symBinAddr: 0x423EC, symSize: 0x8 }
+  - { offsetInCU: 0xB7F, offset: 0xA20C2, size: 0x8, addend: 0x0, symName: '-[FMAsset setSuccessBlock:]', symObjAddr: 0xF54, symBinAddr: 0x423F4, symSize: 0x8 }
+  - { offsetInCU: 0xBBE, offset: 0xA2101, size: 0x8, addend: 0x0, symName: '-[FMAsset failureBlock]', symObjAddr: 0xF5C, symBinAddr: 0x423FC, symSize: 0x8 }
+  - { offsetInCU: 0xBF5, offset: 0xA2138, size: 0x8, addend: 0x0, symName: '-[FMAsset setFailureBlock:]', symObjAddr: 0xF64, symBinAddr: 0x42404, symSize: 0x8 }
+  - { offsetInCU: 0xC34, offset: 0xA2177, size: 0x8, addend: 0x0, symName: '-[FMAsset .cxx_destruct]', symObjAddr: 0xF6C, symBinAddr: 0x4240C, symSize: 0x60 }
+  - { offsetInCU: 0x27, offset: 0xA24E6, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker initWithMediaDownloader:maxLength:]', symObjAddr: 0x0, symBinAddr: 0x4246C, symSize: 0x8C }
+  - { offsetInCU: 0x12E, offset: 0xA25ED, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker initWithMediaDownloader:maxLength:]', symObjAddr: 0x0, symBinAddr: 0x4246C, symSize: 0x8C }
+  - { offsetInCU: 0x185, offset: 0xA2644, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker startWork]', symObjAddr: 0x8C, symBinAddr: 0x424F8, symSize: 0x40 }
+  - { offsetInCU: 0x1B8, offset: 0xA2677, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker cancel]', symObjAddr: 0xCC, symBinAddr: 0x42538, symSize: 0x30 }
+  - { offsetInCU: 0x1EB, offset: 0xA26AA, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker finish]', symObjAddr: 0xFC, symBinAddr: 0x42568, symSize: 0x4 }
+  - { offsetInCU: 0x21A, offset: 0xA26D9, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker mediaDownloader:didFinishedWithError:]', symObjAddr: 0x100, symBinAddr: 0x4256C, symSize: 0x68 }
+  - { offsetInCU: 0x269, offset: 0xA2728, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker delegate]', symObjAddr: 0x168, symBinAddr: 0x425D4, symSize: 0x18 }
+  - { offsetInCU: 0x2A0, offset: 0xA275F, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker setDelegate:]', symObjAddr: 0x180, symBinAddr: 0x425EC, symSize: 0xC }
+  - { offsetInCU: 0x2E1, offset: 0xA27A0, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker mediaDownloader]', symObjAddr: 0x18C, symBinAddr: 0x425F8, symSize: 0x8 }
+  - { offsetInCU: 0x318, offset: 0xA27D7, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker setMediaDownloader:]', symObjAddr: 0x194, symBinAddr: 0x42600, symSize: 0xC }
+  - { offsetInCU: 0x359, offset: 0xA2818, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker maxLength]', symObjAddr: 0x1A0, symBinAddr: 0x4260C, symSize: 0x8 }
+  - { offsetInCU: 0x390, offset: 0xA284F, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker setMaxLength:]', symObjAddr: 0x1A8, symBinAddr: 0x42614, symSize: 0x8 }
+  - { offsetInCU: 0x3CD, offset: 0xA288C, size: 0x8, addend: 0x0, symName: '-[VIResourceLoadingDownloadWorker .cxx_destruct]', symObjAddr: 0x1B0, symBinAddr: 0x4261C, symSize: 0x2C }
+  - { offsetInCU: 0x27, offset: 0xA2908, size: 0x8, addend: 0x0, symName: '+[VICacheManager load]', symObjAddr: 0x0, symBinAddr: 0x42648, symSize: 0x6C }
+  - { offsetInCU: 0x41, offset: 0xA2922, size: 0x8, addend: 0x0, symName: _VICacheManagerDidUpdateCacheNotification, symObjAddr: 0x1398, symBinAddr: 0x83E88, symSize: 0x0 }
+  - { offsetInCU: 0x5C, offset: 0xA293D, size: 0x8, addend: 0x0, symName: _VICacheManagerDidFinishCacheNotification, symObjAddr: 0x13A0, symBinAddr: 0x83E90, symSize: 0x0 }
+  - { offsetInCU: 0x72, offset: 0xA2953, size: 0x8, addend: 0x0, symName: _VICacheManagerDidFinishCacheExternNotification, symObjAddr: 0x13A8, symBinAddr: 0x83E98, symSize: 0x0 }
+  - { offsetInCU: 0x88, offset: 0xA2969, size: 0x8, addend: 0x0, symName: _VICacheConfigurationKey, symObjAddr: 0x13B0, symBinAddr: 0x83EA0, symSize: 0x0 }
+  - { offsetInCU: 0x9E, offset: 0xA297F, size: 0x8, addend: 0x0, symName: _VICacheFinishedErrorKey, symObjAddr: 0x13B8, symBinAddr: 0x83EA8, symSize: 0x0 }
+  - { offsetInCU: 0xB4, offset: 0xA2995, size: 0x8, addend: 0x0, symName: _VICacheURLKey, symObjAddr: 0x13C0, symBinAddr: 0x83EB0, symSize: 0x0 }
+  - { offsetInCU: 0xBE, offset: 0xA299F, size: 0x8, addend: 0x0, symName: '+[VICacheManager load]', symObjAddr: 0x0, symBinAddr: 0x42648, symSize: 0x6C }
+  - { offsetInCU: 0xE4, offset: 0xA29C5, size: 0x8, addend: 0x0, symName: _load.onceToken, symObjAddr: 0x6368, symBinAddr: 0x84038, symSize: 0x0 }
+  - { offsetInCU: 0x148, offset: 0xA2A29, size: 0x8, addend: 0x0, symName: _kMCMediaCacheDirectory, symObjAddr: 0x6370, symBinAddr: 0x84040, symSize: 0x0 }
+  - { offsetInCU: 0x15E, offset: 0xA2A3F, size: 0x8, addend: 0x0, symName: _kMCMediaCacheNotifyInterval, symObjAddr: 0x6378, symBinAddr: 0x84048, symSize: 0x0 }
+  - { offsetInCU: 0x1D3, offset: 0xA2AB4, size: 0x8, addend: 0x0, symName: '___22+[VICacheManager load]_block_invoke', symObjAddr: 0x6C, symBinAddr: 0x426B4, symSize: 0xA8 }
+  - { offsetInCU: 0x28A, offset: 0xA2B6B, size: 0x8, addend: 0x0, symName: '+[VICacheManager setCacheDirectory:]', symObjAddr: 0x114, symBinAddr: 0x4275C, symSize: 0x10 }
+  - { offsetInCU: 0x2C9, offset: 0xA2BAA, size: 0x8, addend: 0x0, symName: '+[VICacheManager cacheDirectory]', symObjAddr: 0x124, symBinAddr: 0x4276C, symSize: 0xC }
+  - { offsetInCU: 0x2FC, offset: 0xA2BDD, size: 0x8, addend: 0x0, symName: '+[VICacheManager setCacheUpdateNotifyInterval:]', symObjAddr: 0x130, symBinAddr: 0x42778, symSize: 0xC }
+  - { offsetInCU: 0x33A, offset: 0xA2C1B, size: 0x8, addend: 0x0, symName: '+[VICacheManager cacheUpdateNotifyInterval]', symObjAddr: 0x13C, symBinAddr: 0x42784, symSize: 0xC }
+  - { offsetInCU: 0x36D, offset: 0xA2C4E, size: 0x8, addend: 0x0, symName: '+[VICacheManager md5ForString:]', symObjAddr: 0x148, symBinAddr: 0x42790, symSize: 0x100 }
+  - { offsetInCU: 0x447, offset: 0xA2D28, size: 0x8, addend: 0x0, symName: '+[VICacheManager cachedFilePathForURL:]', symObjAddr: 0x248, symBinAddr: 0x42890, symSize: 0x114 }
+  - { offsetInCU: 0x49E, offset: 0xA2D7F, size: 0x8, addend: 0x0, symName: '+[VICacheManager cacheConfigurationForURL:]', symObjAddr: 0x35C, symBinAddr: 0x429A4, symSize: 0x50 }
+  - { offsetInCU: 0x505, offset: 0xA2DE6, size: 0x8, addend: 0x0, symName: '+[VICacheManager isFileCachedForUrl:]', symObjAddr: 0x3AC, symBinAddr: 0x429F4, symSize: 0xC4 }
+  - { offsetInCU: 0x56C, offset: 0xA2E4D, size: 0x8, addend: 0x0, symName: '+[VICacheManager checkEvictFilesForCacheSize:error:]', symObjAddr: 0x470, symBinAddr: 0x42AB8, symSize: 0x330 }
+  - { offsetInCU: 0x694, offset: 0xA2F75, size: 0x8, addend: 0x0, symName: '+[VICacheManager calculateCachedSizeWithError:]', symObjAddr: 0x7A0, symBinAddr: 0x42DE8, symSize: 0x1D4 }
+  - { offsetInCU: 0x761, offset: 0xA3042, size: 0x8, addend: 0x0, symName: '+[VICacheManager cleanAllCacheWithError:]', symObjAddr: 0x974, symBinAddr: 0x42FBC, symSize: 0x25C }
+  - { offsetInCU: 0x81A, offset: 0xA30FB, size: 0x8, addend: 0x0, symName: '___41+[VICacheManager cleanAllCacheWithError:]_block_invoke', symObjAddr: 0xBD0, symBinAddr: 0x43218, symSize: 0x7C }
+  - { offsetInCU: 0x8B4, offset: 0xA3195, size: 0x8, addend: 0x0, symName: '+[VICacheManager cleanCacheForURL:error:]', symObjAddr: 0xC5C, symBinAddr: 0x43294, symSize: 0x230 }
+  - { offsetInCU: 0x956, offset: 0xA3237, size: 0x8, addend: 0x0, symName: '+[VICacheManager addCacheFile:forURL:error:]', symObjAddr: 0xE8C, symBinAddr: 0x434C4, symSize: 0x130 }
+  - { offsetInCU: 0x9E9, offset: 0xA32CA, size: 0x8, addend: 0x0, symName: '+[VICacheManager getKeyForURL:]', symObjAddr: 0xFBC, symBinAddr: 0x435F4, symSize: 0xD8 }
+  - { offsetInCU: 0x27, offset: 0xA35F7, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager init]', symObjAddr: 0x0, symBinAddr: 0x436CC, symSize: 0x6C }
+  - { offsetInCU: 0x3A, offset: 0xA360A, size: 0x8, addend: 0x0, symName: '+[VIResourceLoaderManager(Convenient) sharedInstance]', symObjAddr: 0x808, symBinAddr: 0x43E84, symSize: 0x40 }
+  - { offsetInCU: 0x64, offset: 0xA3634, size: 0x8, addend: 0x0, symName: _sharedInstance._sharedInstance, symObjAddr: 0x5ED8, symBinAddr: 0x84050, symSize: 0x0 }
+  - { offsetInCU: 0x7A, offset: 0xA364A, size: 0x8, addend: 0x0, symName: _sharedInstance.singletonToken, symObjAddr: 0x5EE0, symBinAddr: 0x84058, symSize: 0x0 }
+  - { offsetInCU: 0x15B, offset: 0xA372B, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager init]', symObjAddr: 0x0, symBinAddr: 0x436CC, symSize: 0x6C }
+  - { offsetInCU: 0x192, offset: 0xA3762, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager cleanCache]', symObjAddr: 0x6C, symBinAddr: 0x43738, symSize: 0x30 }
+  - { offsetInCU: 0x1C5, offset: 0xA3795, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager cleanCacheForURL:eraseFromDisk:]', symObjAddr: 0x9C, symBinAddr: 0x43768, symSize: 0x174 }
+  - { offsetInCU: 0x309, offset: 0xA38D9, size: 0x8, addend: 0x0, symName: '___58-[VIResourceLoaderManager cleanCacheForURL:eraseFromDisk:]_block_invoke', symObjAddr: 0x210, symBinAddr: 0x438DC, symSize: 0x10 }
+  - { offsetInCU: 0x368, offset: 0xA3938, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager cancelLoaders]', symObjAddr: 0x270, symBinAddr: 0x438EC, symSize: 0x5C }
+  - { offsetInCU: 0x39B, offset: 0xA396B, size: 0x8, addend: 0x0, symName: '___40-[VIResourceLoaderManager cancelLoaders]_block_invoke', symObjAddr: 0x2CC, symBinAddr: 0x43948, symSize: 0x8 }
+  - { offsetInCU: 0x3EA, offset: 0xA39BA, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager downloadURL:maxLength:]', symObjAddr: 0x2D4, symBinAddr: 0x43950, symSize: 0x3C }
+  - { offsetInCU: 0x44D, offset: 0xA3A1D, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager resourceLoader:shouldWaitForLoadingOfRequestedResource:]', symObjAddr: 0x310, symBinAddr: 0x4398C, symSize: 0xD0 }
+  - { offsetInCU: 0x4CF, offset: 0xA3A9F, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager resourceLoader:didCancelLoadingRequest:]', symObjAddr: 0x3E0, symBinAddr: 0x43A5C, symSize: 0x58 }
+  - { offsetInCU: 0x52E, offset: 0xA3AFE, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager resourceLoader:didCompleteWorkOfType:withError:]', symObjAddr: 0x438, symBinAddr: 0x43AB4, symSize: 0x190 }
+  - { offsetInCU: 0x591, offset: 0xA3B61, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager originURLForResourceURL:]', symObjAddr: 0x5C8, symBinAddr: 0x43C44, symSize: 0x7C }
+  - { offsetInCU: 0x5F4, offset: 0xA3BC4, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager loaderForRequest:createIfMissing:]', symObjAddr: 0x644, symBinAddr: 0x43CC0, symSize: 0x7C }
+  - { offsetInCU: 0x64B, offset: 0xA3C1B, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager loaderForURL:createIfMissing:]', symObjAddr: 0x6C0, symBinAddr: 0x43D3C, symSize: 0xE4 }
+  - { offsetInCU: 0x6D2, offset: 0xA3CA2, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager delegate]', symObjAddr: 0x7A4, symBinAddr: 0x43E20, symSize: 0x18 }
+  - { offsetInCU: 0x709, offset: 0xA3CD9, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager setDelegate:]', symObjAddr: 0x7BC, symBinAddr: 0x43E38, symSize: 0xC }
+  - { offsetInCU: 0x74A, offset: 0xA3D1A, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager loaders]', symObjAddr: 0x7C8, symBinAddr: 0x43E44, symSize: 0x8 }
+  - { offsetInCU: 0x781, offset: 0xA3D51, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager setLoaders:]', symObjAddr: 0x7D0, symBinAddr: 0x43E4C, symSize: 0xC }
+  - { offsetInCU: 0x7C2, offset: 0xA3D92, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager .cxx_destruct]', symObjAddr: 0x7DC, symBinAddr: 0x43E58, symSize: 0x2C }
+  - { offsetInCU: 0x82F, offset: 0xA3DFF, size: 0x8, addend: 0x0, symName: '___53+[VIResourceLoaderManager(Convenient) sharedInstance]_block_invoke', symObjAddr: 0x848, symBinAddr: 0x43EC4, symSize: 0x30 }
+  - { offsetInCU: 0x856, offset: 0xA3E26, size: 0x8, addend: 0x0, symName: '+[VIResourceLoaderManager(Convenient) assetURLWithURL:]', symObjAddr: 0x878, symBinAddr: 0x43EF4, symSize: 0x90 }
+  - { offsetInCU: 0x8A9, offset: 0xA3E79, size: 0x8, addend: 0x0, symName: '-[VIResourceLoaderManager(Convenient) playerItemWithURL:]', symObjAddr: 0x908, symBinAddr: 0x43F84, symSize: 0x90 }
 ...

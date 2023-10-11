@@ -52,6 +52,10 @@
 		<data>
 		sGIetThig9Masg/JNWVqn2qexZE=
 		</data>
+		<key>Headers/FMProgram.h</key>
+		<data>
+		Z4CNVb3QIPeCvIIWofo5Z7AQIfA=
+		</data>
 		<key>Headers/FMProgressView.h</key>
 		<data>
 		myfz0kF7c39hg/Tqot3D0SbTZm4=
@@ -102,7 +106,7 @@
 		</data>
 		<key>Headers/FeedMediaCore.h</key>
 		<data>
-		DJavgkkhBXDA1MwJFP3ZQyvgCZU=
+		4ORXZyzwTILUw2f7Ae/9vKAMOuU=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -199,6 +203,13 @@
 			2rB8g5pEeSDb6EGY5oSv7KnvY8+ZeTmWs9+xaJmGqyg=
 			</data>
 		</dict>
+		<key>Headers/FMProgram.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dcLa35L8lZcH64JtqDtmBjEy6q/PMIVFRxwjwNYyzsQ=
+			</data>
+		</dict>
 		<key>Headers/FMProgressView.h</key>
 		<dict>
 			<key>hash2</key>
@@ -287,7 +298,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ehVDHjKYlmUQ6AYwsmOA0aRy2tmt5rJhIGOYSEaShbE=
+			3ASyrB2lBrFO08hrp+E+5VPj/uEgZdEnaGirSy2cgZM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

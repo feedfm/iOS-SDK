@@ -1,3 +1,7 @@
+- v5.5.3
+ - Fix: Bad Access exception related to AirplaySDK.
+ - Fix: Fix tvOS regression with last version. 
+ 
 - v5.5.2
  - Added preparePreview function for on demand stations.  
  
