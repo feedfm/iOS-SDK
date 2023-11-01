@@ -1,3 +1,7 @@
+- v5.5.4
+ - Fix: Fixed an issue with first play stations not playing all the way through.
+ - Feature: Added new method to pass along the clientId while initalizing the SDK. 
+ 
 - v5.5.3
  - Fix: Bad Access exception related to AirplaySDK.
  - Fix: Fix tvOS regression with last version. 

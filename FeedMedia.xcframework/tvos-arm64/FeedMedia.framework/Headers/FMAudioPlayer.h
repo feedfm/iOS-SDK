@@ -648,6 +648,22 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 
 + (void)setClientToken:(nonnull NSString *)token secret:(nonnull NSString *)secret;
 
+///-----------------------------------------------------
+/// @name Setup
+///-----------------------------------------------------
+
+/**
+ * This method kicks off asynchronous initialization of the library and communication
+ * with the feed.fm servers. This call should be made as early as possible
+ * in the lifecycle of the app.
+ *
+ * @param token public authentication token. Use `@"demo"` during testing/development.
+ * @param secret private authentication token. Use `@"demo"` during testing/development.
+ * @param clientId Feed client id to use during this session
+ */
+
++ (void)setClientToken:(NSString *_Nonnull)token secret:(NSString *_Nonnull)secret withClientID:(NSString *_Nonnull) clientId;
+
 /**
  * There is only one global `FMAudioPlayer` instance, and it
  * is available via this static property.
