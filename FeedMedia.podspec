@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     This pod includes an example app that can be used with 'pod try FeedMedia'
     Documentation for the classes in this package can be found at
 
-    http://demo.feed.fm/sdk/docs/ios
+    https://demo.feed.fm/sdk/docs/ios/latest/index.html
 
     For a more full featured demo app, look at https://github.com/feedfm/iOS-RadioPlayer
 DESC
@@ -26,13 +26,13 @@ DESC
   s.documentation_url = 'http://demo.feed.fm/sdk/docs/ios/'
   s.author           = { "Eric Lambrecht" => "eric@feed.fm", "Arveen Kumar" => "arveen@feed.fm", "Feed Media" => "support@feed.fm" }
   s.source           = { :git => "https://github.com/feedfm/iOS-SDK.git", :tag => "v#{s.version}" }
-
+  s.resource_bundles = { "FeedMedia" => ["Sources/PrivacyInfo.xcprivacy"]}
   s.xcconfig            = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/FeedMedia/**"' }
   s.requires_arc = true
 
   s.platform         = :ios, '11.0'
   s.tvos.deployment_target = '11.0'
-
+	
   s.frameworks = 'AVFoundation', 'MediaPlayer', 'CoreMedia'
   
   s.default_subspec     = 'Core'
