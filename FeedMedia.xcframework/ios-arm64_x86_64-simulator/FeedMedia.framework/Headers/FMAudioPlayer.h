@@ -548,6 +548,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  that can legally stream music, and kick of a thread to retrieve a list of available
  streaming music stations.
  
+ If this call fails due to network issues the player will not be useful for playing any music so we recommend setting FMAudioPlayer.autoNetworkRetryEnabled = true before calling setclientToken or auto retrying if you receive onUnavailable callback
+ 
  There are a number of sample credentials you can use to assist
  in testing your app out. Use one of the following strings for your
  token and secret to get the desired behavior:

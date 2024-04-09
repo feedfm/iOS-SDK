@@ -29,7 +29,7 @@
 
 @property (readonly, nonnull) NSString *name;
 
-/*
+/**
  *  Globally unique ID for this station. This value should not be cached by
  *  clients to retrieve favorited stations - they should only use the station
  *  name (this is because as the contents of a station change, so does the
