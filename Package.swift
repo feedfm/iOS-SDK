@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "FeedMedia",
-            targets: ["FeedMedia"]),
+            targets: ["FeedMediaWrapper"]),
     ],
     dependencies: [],
     targets: [
