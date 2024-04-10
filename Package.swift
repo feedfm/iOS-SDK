@@ -7,15 +7,15 @@ let package = Package(
     products: [
         .library(
             name: "FeedMedia",
-            targets: ["FeedMedia"]),
+            targets: ["FeedMediaWrapper"]),
     ],
     dependencies: [],
     targets: [
+        .target(name: "FeedMediaWrapper",
+        dependencies: ["FeedMedia"],
+        path: "FeedMedia-wrapper",
+        resources: [.copy("../Sources/PrivacyInfo.xcprivacy")]),
+        
         .binaryTarget(name: "FeedMedia", path: "FeedMedia.xcframework")
-        .target(
-            name: "PrivacyInfo",
-            path: "Sources",
-            resources: [.process("PrivacyInfo.xcprivacy")]
-        )
     ]
 )
