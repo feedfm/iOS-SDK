@@ -12,11 +12,10 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "FeedMediaWrapper",
-        dependencies: ["FeedMedia",],
-        resources: [.process("Sources/PrivacyInfo.xcprivacy")]),
-        .binaryTarget(
-        name: "FeedMedia",
-        path: "FeedMedia.xcframework"
-        ),  
+        dependencies: ["FeedMedia"],
+        path:"Sources"
+        resources: [.process("PrivacyInfo.xcprivacy")]),
+        
+        .binaryTarget(name: "FeedMedia", path: "FeedMedia.xcframework")
     ]
 )
