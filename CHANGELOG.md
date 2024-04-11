@@ -1,3 +1,6 @@
+- v5.5.6
+ - Added Privacy Manifest for SPM.
+ 
 - v5.5.5
  - Added Privacy Manifest.
  
