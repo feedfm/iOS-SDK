@@ -14,7 +14,7 @@ let package = Package(
         .target(name: "FeedMediaWrapper",
         dependencies: ["FeedMedia"],
         path: "FeedMedia-wrapper",
-        resources: [.copy("../Sources/PrivacyInfo.xcprivacy")]),
+        resources: [.process("Resources/PrivacyInfo.xcprivacy")]),
         
         .binaryTarget(name: "FeedMedia", path: "FeedMedia.xcframework")
     ]
