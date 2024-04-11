@@ -26,7 +26,7 @@ DESC
   s.documentation_url = 'http://demo.feed.fm/sdk/docs/ios/latest/index.html'
   s.author           = { "Eric Lambrecht" => "eric@feed.fm", "Arveen Kumar" => "arveen@feed.fm", "Feed Media" => "support@feed.fm" }
   s.source           = { :git => "https://github.com/feedfm/iOS-SDK.git", :tag => "v#{s.version}" }
-  s.resource_bundles = { "FeedMedia" => ["Sources/PrivacyInfo.xcprivacy"]}
+  s.resource_bundles = { "FeedMedia" => ["FeedMedia-Wrapper/Resources/PrivacyInfo.xcprivacy"]}
   s.xcconfig            = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/FeedMedia/**"' }
   s.requires_arc = true
 
