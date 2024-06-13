@@ -1,3 +1,6 @@
+- v5.5.7
+ - Fixed edge case that caused a song to repeat if pause&play was triggered as a new song was starting.
+ 
 - v5.5.6
  - Added Privacy Manifest for SPM.
  
