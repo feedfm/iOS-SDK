@@ -1442,9 +1442,19 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * Set a location to mock for testing location. Development purpose only.
  * May stop working at any time, if too many requests are received with Mocked location.
  * @param mockLocation US or EU(Outside US)
+ * @deprecated Use setStreamingFor instead
  */
 
-+(void) setMockLocation:(MockLocation)mockLocation;
++(void) setMockLocation:(MockLocation)mockLocation DEPRECATED_MSG_ATTRIBUTE("Use setStreamingFor instead");
+
+
+/**
+ * Set an ip address to mock for testing location. Development purpose only.
+ * May stop working at any time, if too many requests are received with the same address.
+ * @param streamingFor ip address from the relevant country
+ */
+
++(void) setStreamingFor:(nonnull NSString *) streamingFor;
 
 
 
