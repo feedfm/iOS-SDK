@@ -1115,7 +1115,62 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
                   withCallback:(nonnull void (^)(NSDictionary* _Nonnull)) onSearchCompleted;
     
 /**
- *  Search for stations
+ *
+ * Search for multiple stations, this is equivalent to an OR search. This endpoint only searches in station options/metadata.
+ * 
+ * @param metaData A search query in that uses mongodb query syntax for $or or $in
+ *
+ * If you want to select stations where uuid is 1234 OR 5678 you should use the $in operator
+ *
+ * ```$in```: match if the station's value is in the array of values
+ *
+ * example query: ```{ uuid: { $in: [ "abc123", "def456" ] } }```
+ *
+ * The $or operator should be used for when you want to use OR for different attributes like
+ * select station where uuid is 1234 OR station_name is "Rock"
+ *
+ *
+ * ```$or```: match if any of the conditions are true
+ * example query: ```{ $or: [{ uuid: "abc123" }, { type: "first play" }] }```
+ *
+ * The value should be passed in as a Map
+ * example:
+ * ```
+ * NSDictionary *map = @{
+ * @"$or": @[
+ *    @{@"uuid": @"0213221230"},
+ *    @{@"BPM": @"125"}
+ *  ]
+ * };
+ * ```
+ * The above query will return all stations that have uuid of "0213221230" or have a BPM parameter of '125'
+ * example 2:
+ * ```
+ * NSDictionary *map2 = @{
+ * @"uuid": @{
+ *     @"$in": @[
+ *        @"0213221230",
+ *        @"071422800"
+ *    ]
+ *  }
+ * };
+ * ```
+ *
+ * The above query will return all stations that have uuid of "0213221230" or "071422800"
+ *
+ *
+ *  @param pageNo result page no
+ *  @param perPage No of results per page
+ *  @param onSearchCompleted callback block
+ */
+- (void)searchForStationsByMetadata:(nonnull NSDictionary *)metaData
+                        pageNo:(nonnull NSNumber *)pageNo
+                       perPage:(nonnull NSNumber *)perPage
+                      withCallback:(nonnull void (^)( NSDictionary* _Nonnull )) onSearchCompleted;
+    
+    
+/**
+ *  Search for stations. This performs an AND search by default
  *  @param metaData metadata search in station metadata for key pair values. All key pairs much match for a positive hit.
  *  @param pageNo result page no
  *  @param perPage No of results per page

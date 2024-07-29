@@ -1,3 +1,6 @@
+- v5.6.1
+ - Added Bulk station search. See searchForStationsByMetadata() for more details. 
+ 
 - v5.6.0
  - Added new method `setStreamingFor()` for mocking different locations for testing. 
  - Depreciate `setMockLocation()`. This method will be removed in a future update.   
