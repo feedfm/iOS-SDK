@@ -1,3 +1,6 @@
+- v5.6.2
+ - Enhanced logging that will help us in identifying and solving issues any end users might encounter with music playback or FeedFM SDK integration.
+ 
 - v5.6.1
  - Added Bulk station search. See searchForStationsByMetadata() for more details. 
  
