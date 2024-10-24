@@ -1,10 +1,12 @@
+
+- v5.6.3
+ - Internal publishing test. No chkanges to SDK.
+
 - v5.6.2
  - Enhanced logging that will help us in identifying and solving issues any end users might encounter with music playback or FeedFM SDK integration.
- 
+
 - v5.6.1
  - Added Bulk station search. See searchForStationsByMetadata() for more details. 
- 
-- v5.6.0
  - Added new method `setStreamingFor()` for mocking different locations for testing. 
  - Depreciate `setMockLocation()`. This method will be removed in a future update.   
  
