@@ -1,6 +1,6 @@
 
 - v5.6.3
- - Internal publishing test. No chkanges to SDK.
+ - Internal publishing test. No changes to SDK.
 
 - v5.6.2
  - Enhanced logging that will help us in identifying and solving issues any end users might encounter with music playback or FeedFM SDK integration.
