@@ -1,4 +1,10 @@
 
+- v5.7.0
+ - New return values and completions handlers for various methods on FMAudioPlayer to validate
+   that the methods completed successfully.
+ - Deprecation of NSNotifications, which are replaced with the new FMAudioPlayerDelegate.
+ - See https://docs.feed.fm/docs/SDK/iOS/errors/ for overview of new error handling.
+
 - v5.6.3
  - Internal publishing test. No changes to SDK.
 
