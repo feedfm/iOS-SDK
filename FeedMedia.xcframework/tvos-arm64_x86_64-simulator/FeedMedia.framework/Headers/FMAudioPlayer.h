@@ -18,6 +18,7 @@
 #import <FeedMedia/FMLockScreenDelegate.h>
 #import <FeedMedia/FMStationArray.h>
 #import <FeedMedia/FMProgram.h>
+#import <FeedMedia/FeedFMError.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -528,6 +529,27 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
   withParameters: (nonnull NSDictionary *)parameters;
 @end
 
+/**
+ * Delegate protocol for receiving error messages and status updates from the FMAudioPlayer.
+ */
+@protocol FMAudioPlayerDelegate
+
+/**
+ * Called when the player receives an error from the server.
+ * 
+ * @param error The error that was received.
+ */
+- (void)audioPlayerDidReceiveError:(nonnull NSError*)error;
+
+/**
+ * Called when the player received an error while trying to load audio items.
+ * 
+ * @param error The error that was received.
+ */
+- (void)didFailToLoadAudioItems:(nonnull NSArray<FMAudioItem*>*)items error:(nonnull NSError*)error;
+
+@end
+
 
 /**
  
@@ -608,12 +630,15 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  music is available), and a new `FMStation` entry in `localOfflineStationList`
  that can be passed to `setActiveStation`.
  
- The `FMAudioPlayer` registers with iOS so that
+ The `FMAudioPlayer` can register with iOS so that
  playback can be paused, skipped, liked, and disliked via the lock screen.
- Additionally, iOS will display on the lock screen whatever image
+ See the `doesHandleRemoteCommands`, `lockScreenDelegate`, and
+ `setAVAudioSessionCatetgory:mode:options`,
+ methods for more information.
+ Additionally, iOS can display on the lock screen whatever image
  you've assigned via `[FMAudioPlayer setLockScreenImage:]`.
  
- The 'prepareToPlay' method can be called before playback begins and
+ The `prepareToPlay` method can be called before playback begins and
  when the client knows that the current station will immediately be
  played next. This call is primarily useful when you want music to begin
  playback immediately upon a call to play, with no intervening network
@@ -647,7 +672,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @param token public authentication token. Use `@"demo"` during testing/development.
  * @param secret private authentication token. Use `@"demo"` during testing/development.
  */
-
 + (void)setClientToken:(nonnull NSString *)token secret:(nonnull NSString *)secret;
 
 ///-----------------------------------------------------
@@ -663,14 +687,12 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @param secret private authentication token. Use `@"demo"` during testing/development.
  * @param clientId Feed client id to use during this session
  */
-
 + (void)setClientToken:(NSString *_Nonnull)token secret:(NSString *_Nonnull)secret withClientID:(NSString *_Nonnull) clientId;
 
 /**
  * There is only one global `FMAudioPlayer` instance, and it
  * is available via this static property.
  */
-
 + (nonnull FMAudioPlayer *)sharedPlayer;
 
 /**
@@ -679,7 +701,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  */
 
 + (void) setBaseUrl: (NSString*_Nonnull) url;
-
 
 /**
  * Call one of the two callbacks as soon as we know music is available for
@@ -708,13 +729,18 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 /**
  * Called when there is need to update the stationlist from server.
  * This method can  be called periodically for long running apps that do not quit for multiple days
- * If a new nession is not available then no callback will be recived
+ * If a new nession is not available then no callback will be received
  *
  *  @param onUpdatedSessionAvailable called when session is refreshed
+ *
+ *  @return Yes if the update operation was successfully started, NO if an error occurred.
  */
-- (void)updateSession: (nonnull void (^)(void)) onUpdatedSessionAvailable;
+- (BOOL)updateSession: (nonnull void (^)(void)) onUpdatedSessionAvailable;
 
-
+/**
+ * Delegate that receives events and errors from the player.
+ */
+@property (nonatomic, weak) id<FMAudioPlayerDelegate> delegate;
 
 
 ///-----------------------------------------------------
@@ -727,30 +753,39 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * so that a future call to `play` will start music instantaneously.
  * This action runs asynchronously and, when it completes, triggers
  * an `FMAudioPlayerPreCachingCompleted` notification.
+ *
+ * @returns YES if the prepare operation was successfully started, NO if an error occurred.
  */
-- (void)prepareToPlay;
+- (BOOL)prepareToPlay;
 
 /**
  * Starts retrieval and playback of music in the active station.
+ *
+ * @returns YES if the play operation was successfully started, NO if an error occurred.
  */
-- (void)play;
+- (BOOL)play;
 
 /**
  * Start playback of specific song. This method only works with
  * on-demand stations.
  *
  * @param audioItem the audio item to immediately play
+ *
+ * @returns YES if the play operation was successfully started, NO if an error occurred.
  */
-- (void)playAudioItem: (nonnull FMAudioItem *) audioItem;
+- (BOOL)playAudioItem: (nonnull FMAudioItem *) audioItem;
 
 /**
  * Load preview of specific song in the player. This method only works with
  * on-demand stations. This counts as a full song playback.
+ * To handle any errors during the loading process, implement `didFailToLoadAudioItems:error:` delegate method.
  *
  * @param audioItem the audio item to load
+ *
+ * @returns YES if the preview operation was successfully started, NO if an error occurred.
  */
 
-- (void)preparePreview:(nonnull FMAudioItem *)audioItem;
+- (BOOL)preparePreview:(nonnull FMAudioItem *)audioItem;
 
 /**
  * Pauses music playback.
@@ -770,6 +805,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * playback.
  */
 - (void)skip;
+- (void)skipWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Calls `likeAudioItem:` with the currently playing song
@@ -778,6 +814,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)like;
+- (void)likeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Marks the specified song as 'liked'. Updates the `[FMAudioItem liked]`
@@ -793,7 +830,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem liked]
  * @see [FMAudioItem disliked]
  */
-- (void)likeAudioItem: (nonnull FMAudioItem *)audioItem;
+- (void)likeAudioItem:(nonnull FMAudioItem *)audioItem;
+- (void)likeAudioItem:(nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Calls `dislikeAudioItem:` with the currently playing song
@@ -802,6 +840,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)dislike;
+- (void)dislikeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Marks the specified song as 'disliked'. Updates the `[FMAudioItem liked]`
@@ -818,6 +857,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)dislikeAudioItem: (nonnull FMAudioItem *)audioItem;
+- (void)dislikeAudioItem: (nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Calls `unlikeAudioItem:` with the currently playing song
@@ -826,6 +866,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)unlike;
+- (void)unlikeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Marks the specified song as neither 'liked' nor 'disliked'. Updates the `[FMAudioItem liked]`
@@ -842,20 +883,19 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)unlikeAudioItem: (nonnull FMAudioItem *)audioItem;
+- (void)unlikeAudioItem: (nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Get currently Active ClientID
  */
-
-- (nullable NSString*) getClientId;
+- (nullable NSString*)getClientId;
 
 /**
  * Sets a previously generated clientid to be the active id.
  *
  * @param cid previously generated client id
  */
-
-- (void) setClientId: (nonnull NSString*) cid;
+- (void)setClientId:(nonnull NSString*)cid;
 
 /**
  * Asynchronously generate a new client id for a new user.
@@ -864,8 +904,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *
  * @see setClientId:
  */
-- (void) createNewClientId;
-
+- (void)createNewClientId;
+- (void)createNewClientIdCompletion:(void (^_Nonnull)(NSError* _Nullable error))completion;
 
 /**
  * Internal Method
@@ -875,8 +915,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 /**
  * Internal Method
  */
--(void)setPlayerControlDelegate:(id<MixingAudioPlayer>_Nonnull) newPlayerControlDelegate;
-
+- (void)setPlayerControlDelegate:(id<MixingAudioPlayer>_Nonnull) newPlayerControlDelegate;
 
 /**
  * Enable/Disable auto retrying of network failures. If network disappears and this option in enabled, player will wait until network is restored and resume music playback, insted of shutting down.
@@ -884,7 +923,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * If this opiton is set and setClientToken call fails due to network failure the SDK will call onUnAvailable but as network is restored OnAvailable will be automatically called again.
  */
 @property (class, nonatomic) BOOL autoNetworkRetryEnabled;
-
 
 
 
@@ -896,7 +934,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * Current player state. As this state changes, an `FMAudioPlayerPlaybackStateDidChangeNotification`
  * is triggered with the default notification center.
  */
-
 @property (nonatomic, readonly) FMAudioPlayerPlaybackState playbackState;
 
 /**
@@ -905,23 +942,19 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  */
 @property (nonatomic, readonly, nullable)  FMAudioItem *currentItem;
 
-
 /**
  *  The elapsed playback time of the current item.
  */
-
 @property (nonatomic, readonly) NSTimeInterval currentPlaybackTime;
 
 /**
  *  Indicates the duration of the current item.
  */
-
 @property (nonatomic, readonly) NSTimeInterval currentItemDuration;
 
 /**
  *  The current rate of playback. Slow/fast play is not supported, so this will always be 0.0 or 1.0
  */
-
 @property (nonatomic, readonly) float currentPlaybackRate;
 
 /**
@@ -935,7 +968,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *
  *  @see skip
  */
-
 @property (readonly) BOOL canSkip;
 
 /**
@@ -943,9 +975,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *  only likely to be false for canadian staions.
  *  Any likes will be ignored if canLike is false.
  */
-
 @property (readonly) BOOL canLike;
-
 
 /**
  * This array holds all the FMAudioItems that the user has heard
@@ -954,7 +984,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *
  * This history currently does not include songs from past sessions.
  */
-
 @property (nonatomic, readonly, nonnull) NSMutableArray<FMAudioItem *> *playHistory;
 
 
@@ -967,22 +996,17 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * The number of seconds to crossfade between songs. This defaults to 0.
  * If crossfading values is set in server side, setting this value will have no effect as server side values have higher priority.
  */
-
 @property (nonatomic) float secondsOfCrossfade;
-
 
 /**
  * When true (the default), adjust individual song volumes so they are perceived
  * be the same loudness.
  */
-
 @property (nonatomic) BOOL normalizeSongVolume;
-
 
 /**
  *  A value between 0.0 and 1.0 relative to system volume
  */
-
 @property (nonatomic) float mixVolume;
 
 
@@ -995,9 +1019,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * This is a list of streaming music stations retrieved from the server.
  * This array will not change once populated.
  **/
-
 @property (nonatomic, readonly, nonnull) FMStationArray *stationList;
-
 
 /**
  The list of stations available for immediate offline playback.
@@ -1018,9 +1040,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  
  @return List of stations available on disk ready for playback. never returns nil.
  */
-
 @property (readonly, nonatomic, nonnull) FMStationArray *localOfflineStationList;
-
 
 /**
  List of stations that are available for downloading.
@@ -1037,9 +1057,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  
  @return List of stations that can be downloaded for offline playback
  */
-
 @property (readonly, nonatomic) FMStationArray  * _Nullable remoteOfflineStationList;
-
 
 /**
  * The current station from which music is pulled. Any `FMStation` retrieved
@@ -1048,7 +1066,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * `FMAudioPlayerActiveStationDidChangeNotification` is sent to the default
  * notification center.
  */
-
 @property (nonatomic, copy, nonnull) FMStation *activeStation;
 
 
@@ -1062,10 +1079,11 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *    playing, the currently playing song will fade into the song in the new station
  *    as soon as it is loaded.
  *
+ *  @return YES if the station was successfully set as the active station, NO if an error occurred.
+ *
  *  @see activeStation
  */
-
-- (void) setActiveStation: (nonnull FMStation *)station withCrossfade: (BOOL) withCrossfade;
+- (BOOL)setActiveStation: (nonnull FMStation *)station withCrossfade: (BOOL) withCrossfade;
 
 
 /**
@@ -1076,12 +1094,11 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *  @param station Station to tune to.
  *  @param seconds No of seconds to advance into the station.
  *
+ *  @return YES if the station was successfully set as the active station, NO if an error occurred.
+ *
  *  @see activeStation
  */
-
-- (void) setActiveStation: (nonnull FMStation *)station withAdvance: (NSTimeInterval) seconds;
-
-
+- (BOOL)setActiveStation: (nonnull FMStation *)station withAdvance: (NSTimeInterval) seconds;
 
 
 /**
@@ -1091,15 +1108,14 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @param stationId optional search query if you wish to narrow the search to a specific station.
  * @param page results page starts from 0
  * @param resultsPerPage No of results per page, must be higher then zero default is 20
- * @param onResult the block that will be called when results are available. The parameter can be null if no results are found.
+ * @param onResult the block that will be called when results are available. The result parameter can be null if no results are found.
  */
-
--(void) searchForAudioItem:(nonnull NSString *)query
+- (void)searchForAudioItem:(nonnull NSString *)query
                station:(nullable NSString *)stationId
                 pageNo:(nullable NSNumber *)page
         resultsPerPage:(nullable NSNumber *)resultsPerPage
-              withCallback:(void (^_Nonnull)(NSArray<FMAudioItem*>*_Nonnull)) onResult ;
-   
+              withCallback:(void (^_Nonnull)(NSArray<FMAudioItem*>*_Nullable result, NSError * _Nullable error))onResult;
+
     
 /**
 *  Search for stations
@@ -1108,12 +1124,11 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 *  @param perPage No of results per page
 *  @param onSearchCompleted callback block
 */
-
-- (void)searchForStationwithQuery:(nonnull NSString *)searchQuery
+- (void)searchForStationWithQuery:(nonnull NSString *)searchQuery
                         pageNo:(nonnull NSNumber *)pageNo
                        perPage:(nonnull NSNumber *)perPage
-                  withCallback:(nonnull void (^)(NSDictionary* _Nonnull)) onSearchCompleted;
-    
+                  withCallback:(nonnull void (^)(NSDictionary* _Nullable result, NSError * _Nullable error)) onSearchCompleted;
+
 /**
  *
  * Search for multiple stations, this is equivalent to an OR search. This endpoint only searches in station options/metadata.
@@ -1166,8 +1181,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 - (void)searchForStationsByMetadata:(nonnull NSDictionary *)metaData
                         pageNo:(nonnull NSNumber *)pageNo
                        perPage:(nonnull NSNumber *)perPage
-                      withCallback:(nonnull void (^)( NSDictionary* _Nonnull )) onSearchCompleted;
-    
+                      withCallback:(nonnull void (^)(NSDictionary* _Nullable result, NSError * _Nullable error))onSearchCompleted;
+
     
 /**
  *  Search for stations. This performs an AND search by default
@@ -1179,8 +1194,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 - (void)searchForStationByMetadata:(nonnull NSDictionary *)metaData
                         pageNo:(nonnull NSNumber *)pageNo
                        perPage:(nonnull NSNumber *)perPage
-                      withCallback:(nonnull void (^)( NSDictionary* _Nonnull )) onSearchCompleted;
-    
+                      withCallback:(nonnull void (^)(NSDictionary* _Nullable result, NSError * _Nullable error))onSearchCompleted;
+
 /**
  * Fetch tracks for an on demand station
  * @param station   Associated station
@@ -1188,19 +1203,20 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @param resultsPerPage No of results per page
  * @param onResult callback block
  */
--(void) requestTracksForStation:(FMStation *_Nonnull)station
+- (void)requestTracksForStation:(FMStation *_Nonnull)station
                          pageNo:(NSNumber *_Nonnull)page
                  resultsPerPage:(NSNumber *_Nonnull)resultsPerPage
-                   withCallback:(void (^_Nonnull)(NSArray<FMAudioItem*>*_Nonnull)) onResult;
+                   withCallback:(void (^_Nonnull)(NSArray<FMAudioItem*>* _Nullable  result, NSError * _Nullable error)) onResult;
 
 /**
  * Load a list of Audioitems in the player.
  *  @param audioItems Audiofile items that are obtained from either requestTracksForStation or search or a PlayList etc.
  *  @param withCrossfade if crossfade should be used on currently playing item
  *  @param options Loop options for the items.
+ *
+ *  @return YES if the items were loaded successfully, NO otherwise.
  */
-- (void)loadAudioItems:(NSArray<FMAudioItem *> *_Nonnull)audioItems withCrossfade:(BOOL)withCrossfade loopOptions:(LoopOptions) options;
-
+- (BOOL)loadAudioItems:(NSArray<FMAudioItem *> *_Nonnull)audioItems withCrossfade:(BOOL)withCrossfade loopOptions:(LoopOptions)options;
 
 /**
  * Load a list of Audioitems in the player.
@@ -1208,29 +1224,31 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *  @param index index to start playing the songs at.
  *  @param withCrossfade if crossfade should be used on currently playing item
  *  @param options Loop options for the items.
+ *
+ *  @return YES if the items were loaded successfully, NO otherwise.
  */
-
-- (void)loadAudioItems:(NSArray<FMAudioItem *>*_Nonnull)audioItems startIndexAt:(NSUInteger)index withCrossfade:(BOOL)withCrossfade loopOptions:(LoopOptions) options;
+- (BOOL)loadAudioItems:(NSArray<FMAudioItem *>*_Nonnull)audioItems startIndexAt:(NSUInteger)index withCrossfade:(BOOL)withCrossfade loopOptions:(LoopOptions)options;
 
 /**
  * Change the looping behaviour of the current playlist.
  */
-
-- (void) setLooping:(LoopOptions) options;
+- (void)setLooping:(LoopOptions) options;
 
 /**
  * Start playback a specific index of an on demand playlist
+ *
+ * @param index The index of the item to play
+ *
+ * @return YES if the pl ay operation was successfully started, NO if an error occurred.
  */
-
-- (void)playFromIndex:(NSUInteger) index;
+- (BOOL)playFromIndex:(NSUInteger) index;
 
 /**
  *  Fetch program for URI
  *   @param uri The uri or the resource id
  *   @param onResult The callback block for the result.
  */
-
--(void) fetchProgramForURI:(NSString * _Nonnull)uri withCallback:(void (^_Nonnull)(NSArray* _Nonnull)) onResult;
+- (void)fetchProgramForURI:(NSString * _Nonnull)uri withCallback:(void (^_Nonnull)(NSArray* _Nullable result, NSError* _Nullable error))onResult;
 
 ///-----------------------------------------------------
 /// @name Offline station management
@@ -1263,7 +1281,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  @see FMStationDownloadDelegate
  
  */
-
 -(void) downloadAndSyncStation:(nonnull FMStation *)remoteStation
               forTargetMinutes:(nullable NSNumber*) minutes
                   withDelegate: (nonnull id<FMStationDownloadDelegate>) delegate;
@@ -1281,7 +1298,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  @param delegate for receiving updates about the download.
  @see FMStationDownloadDelegate
  */
-
 -(void) downloadAndSyncStation:(nonnull FMStation *)remoteStation
                   withDelegate: (nonnull id<FMStationDownloadDelegate>) delegate;
 
@@ -1295,7 +1311,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  
  @param localOfflineStation the station whose contents will be deleted.
  */
-
 - (void) deleteOfflineStation: (nonnull FMStation *) localOfflineStation;
 
 /**
@@ -1304,7 +1319,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  This call does nothing if the current active station is a local
  offline station.
  */
-
 - (void) deleteAllOfflineStations;
 
 /**
@@ -1323,7 +1337,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  @param remoteOfflineStation a station from remoteOfflineStationList
  @return nil or a station from remoteOfflineStationList
  */
-
 - (nullable FMStation *) localOfflineStationForRemoteOfflineStation: (nonnull FMStation *) remoteOfflineStation;
 
 /**
@@ -1338,7 +1351,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  @param localOfflineStation a station from localOfflineStationList
  @return a station from remoteOfflineStationList
  */
-
 - (nullable FMStation *) remoteOfflineStationForLocalOfflineStation: (nonnull FMStation *) localOfflineStation;
 
 ///-----------------------------------------------------
@@ -1351,7 +1363,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * are also sent to the logger assigned to this property, if
  * any.
  */
-
 @property (nonatomic, weak, nullable) id<FMAudioPlayerLogger> logger;
 
 /**
@@ -1379,9 +1390,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 /**
  * Disable the creation and management of  AVAudioSession by Feed SDK completely
  */
-
-
 @property (nonatomic) BOOL disableAVAudioSession;
+
 /**
  * Order specifies priority (earlier elements are preferred).
  * Nil-ing this property will allow any format to be served, but is not recommended.
@@ -1398,25 +1408,26 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  */
 @property (nonatomic) NSInteger maxBitrate;
 
-
 /**
  * If YES (the default), then the Feed.fm library will
  * register with the MPRemoteCommandCenter to handle play/pause/skip/like/dislike
- * commands upon start of playback. 
+ * commands upon start of playback.
+ *
+ * *Note*: even if this propery is YES, the AVAudioSessionCategoryOptions of the audio session
+ * can prevent the app from appearing in the iOS lock screen "Now Playing" interface. See the documentation
+ * on the `setAVAudioSessionCategory:mode:options:` command for more information.
  */
-
 @property (nonatomic) BOOL doesHandleRemoteCommands;
 
 /**
- * When not NULL, this causes the FMAudioPlayer to not update
- * the MPNowPlayingInfoCenter metadata nor enable or disable the like,
+ * When not `NULL`, this causes the `FMAudioPlayer` to not update
+ * the `MPNowPlayingInfoCenter` metadata nor enable or disable the like,
  * dislike, and next track MPFeedbackCommands. See the documentation
- * of FMLockScreenDelegate for more information. Note that the
- * FMAudioPlayer will still register to handle the MPRemoteCommandCenter
- * commands (play/pause/skip/like/dislike) unless doesHandleRemoteCommands
- * is also set to NO.
+ * of `FMLockScreenDelegate` for more information. Note that the
+ * `FMAudioPlayer` will still register to handle the `MPRemoteCommandCenter`
+ * commands (play/pause/skip/like/dislike) unless `doesHandleRemoteCommands`
+ * is also set to `NO`.
  */
-
 @property (nonatomic, nullable) id<FMLockScreenDelegate> lockScreenDelegate;
 
 /**
@@ -1424,7 +1435,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *
  *  @param image The image to be added to the lock screen
  */
-
 - (void)setLockScreenImage: (nonnull UIImage *)image;
 
 /**
@@ -1432,17 +1442,13 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *
  * @param type the playback state to map to an NSString
  */
-
 + (nonnull NSString *) nameForType:(FMAudioPlayerPlaybackState)type;
-
 
 /**
  * Destroys the instance of the player, use this call if you wish to set new tokens.
  *
  */
-
 - (void)destroy;
-
 
 /**
  * Seek station by give no of seconds.
@@ -1469,9 +1475,19 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * and the options to AVAudioSessionCategoryOptionMixWithOthers. If you would
  * like the player to use alternate settings, assign them here before playback begins.
  *
- * (note: this method does not immediately call
- * AVAudioSession setCategory:mode:options:error - it only assigns the default values
- * that the player will use when it needs to get an AVAudioSession)
+ * *Note* - the options here can affect whether or not iOS will display the currently
+ * playing song in the `Now Playing` area of the lock screen. If you want Feed.fm
+ * music to appear in the lock screen, along with playback controls, then try calling
+ *
+ *```
+ * [player setAVAudioSessionCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeDefault options: 0 ];
+ *```
+ *
+ * to clear out the `AVAudioSessionCategoryOptionMixWithOthers` option, which
+ * prevents the music from appearing in the `Now Playing` interface.
+ *
+ * (note: this method does not immediately pass these values to iOS - it only assigns the default values
+ * that the player will use when it needs to get an `AVAudioSession`)
  *
  * @param category category to request when player gets AVAudioSession
  * @param mode  mode to request when player gets AVAudioSession
@@ -1490,8 +1506,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  *
  * @param label a unique label to assist feed.fm engineers in finding this specific log
  */
-
-- (void) submitLogsForRemoteDebuggingWithLabel: (nonnull NSString *) label;
+- (void)submitLogsForRemoteDebuggingWithLabel: (nonnull NSString *) label;
 
 /**
  * Set a location to mock for testing location. Development purpose only.
@@ -1499,18 +1514,13 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @param mockLocation US or EU(Outside US)
  * @deprecated Use setStreamingFor instead
  */
-
-+(void) setMockLocation:(MockLocation)mockLocation DEPRECATED_MSG_ATTRIBUTE("Use setStreamingFor instead");
-
++ (void)setMockLocation:(MockLocation)mockLocation DEPRECATED_MSG_ATTRIBUTE("Use setStreamingFor instead");
 
 /**
  * Set an ip address to mock for testing location. Development purpose only.
  * May stop working at any time, if too many requests are received with the same address.
  * @param streamingFor ip address from the relevant country
  */
-
-+(void) setStreamingFor:(nonnull NSString *) streamingFor;
-
-
++ (void)setStreamingFor:(nonnull NSString *)streamingFor;
 
 @end

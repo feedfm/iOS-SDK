@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/FMAudioPlayer.h</key>
 		<data>
-		DiQQ+MPIu50tdv6gn96ruKDHuec=
+		Ms93JyPNowQuamVT4ahPnydX2XY=
 		</data>
 		<key>Headers/FMDislikeButton.h</key>
 		<data>
@@ -100,17 +100,21 @@
 		<data>
 		1eGT1Ae524kRYCFlxCF48WJSosw=
 		</data>
+		<key>Headers/FeedFMError.h</key>
+		<data>
+		fJxm1pEQK5Myl7gNPZA4QYA/mv8=
+		</data>
 		<key>Headers/FeedMedia.h</key>
 		<data>
 		BYv9tiVJBz7gmb1VZFts9e0MzCM=
 		</data>
 		<key>Headers/FeedMediaCore.h</key>
 		<data>
-		LQ7kWu/Le43AUjY0Y6YVqBdZB3Y=
+		j9mIJCjYLX3eG8Eytes8z0opufU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IDNZkIsBAwzICE5svurLBUKwUho=
+		OBLoeplyw9uskKYwDmb0d5L6uws=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -141,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5roesxVwLqJyBjvZyCY5c8EPwp4EmthHN4PnzDo4aNo=
+			OibAjfspOhe6FrvjgMM+daPxbsTClJXGdTYvd8hq2NM=
 			</data>
 		</dict>
 		<key>Headers/FMDislikeButton.h</key>
@@ -291,6 +295,13 @@
 			WEpzIAGjiOCVLHXso7+lTUJBkvIV1gw+4WAueJWa5w8=
 			</data>
 		</dict>
+		<key>Headers/FeedFMError.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Tq9pODooTV5/NMgIQZ8b/DqjCeYz5h/6edEPUfJ9YGU=
+			</data>
+		</dict>
 		<key>Headers/FeedMedia.h</key>
 		<dict>
 			<key>hash2</key>
@@ -302,7 +313,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KzmD2RVhfnaSic1fsINWQ7FvPDGMBDdkFIEqCTV7vrk=
+			vSLQa8GPWJkRV0Uv2YCvGzHgAytCeIZ+T467Kaf6ks4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
