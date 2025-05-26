@@ -740,7 +740,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 /**
  * Delegate that receives events and errors from the player.
  */
-@property (nonatomic, weak) id<FMAudioPlayerDelegate> delegate;
+@property (nonatomic, weak, nullable) id<FMAudioPlayerDelegate> delegate;
 
 
 ///-----------------------------------------------------

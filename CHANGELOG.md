@@ -1,4 +1,7 @@
 
+- v5.7.1
+ - Addition of 'nullable' tag to allow building for older Swift versions
+
 - v5.7.0
  - New return values and completions handlers for various methods on FMAudioPlayer to validate
    that the methods completed successfully.
