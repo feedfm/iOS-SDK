@@ -89,7 +89,7 @@ FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
 
 
 ## Tell me more!
-Find Appledocs for SDK at [demo.Feed.fm](http://demo.feed.fm/sdk/docs/ios/latest/html/index.html)
+Find Appledocs for SDK at [demo.Feed.fm](https://demo.feed.fm/sdk/docs/ios/latest/index.html)
 
 Creating a custom music station requires you to create an account on
 [Feed.fm](https://feed.fm), but you can try out our sample app here
