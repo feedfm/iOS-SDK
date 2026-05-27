@@ -18,6 +18,7 @@
 #import <FeedMedia/FMLockScreenDelegate.h>
 #import <FeedMedia/FMStationArray.h>
 #import <FeedMedia/FMProgram.h>
+#import <FeedMedia/FMStationSearchQuery.h>
 #import <FeedMedia/FeedFMError.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -101,6 +102,20 @@ extern NSString *const FMAudioPlayerTimeElapseNotification;
  *  
  */
 extern NSString *const FMAudioPlayerPreCachingCompleted;
+
+/**
+ *  @const FMAudioPlayerItemDidBeginLoadingNotification
+ *  Sent when an audio item starts loading its audio data.
+ *  The notification's userInfo contains the FMAudioItem under the FMAudioItemKey key.
+ */
+extern NSString *const FMAudioPlayerItemDidBeginLoadingNotification;
+
+/**
+ *  @const FMAudioPlayerItemDidFinishLoadingNotification
+ *  Sent when an audio item has finished loading its audio data.
+ *  The notification's userInfo contains the FMAudioItem under the FMAudioItemKey key.
+ */
+extern NSString *const FMAudioPlayerItemDidFinishLoadingNotification;
 
 /**
  * @const FMAudioPlayerNewClientIdAvailable
@@ -377,6 +392,13 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 @property (nonatomic) BOOL crossfadeInEnabled;
 
 /**
+ * When YES, audio file HTTP requests are issued with NSURLNetworkServiceTypeBackground,
+ * telling the OS to deprioritize them when competing for bandwidth.
+ * Default is NO. Takes effect on the next item loaded.
+ */
+@property (nonatomic) BOOL useBackgroundNetworkServiceType;
+
+/**
  * Current state of the player. When this is changed, any registered delegate
  * receives notice via 'mixingAudioPlayerStateDidChange' call
  */
@@ -412,9 +434,11 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 
 /**
  * Begin or resume audio playback
+ *
+ * @returns YES if the play operation was successfully started, NO if an error occurred.
  */
 
-- (void) play;
+- (BOOL) play;
 
 /**
  * Pause audio playback
@@ -633,7 +657,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  The `FMAudioPlayer` can register with iOS so that
  playback can be paused, skipped, liked, and disliked via the lock screen.
  See the `doesHandleRemoteCommands`, `lockScreenDelegate`, and
- `setAVAudioSessionCatetgory:mode:options`,
+ `setAVAudioSessionCategory:mode:options`,
  methods for more information.
  Additionally, iOS can display on the lock screen whatever image
  you've assigned via `[FMAudioPlayer setLockScreenImage:]`.
@@ -740,7 +764,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 /**
  * Delegate that receives events and errors from the player.
  */
-@property (nonatomic, weak) id<FMAudioPlayerDelegate> delegate;
+@property (nonatomic, weak, nullable) id<FMAudioPlayerDelegate> delegate;
 
 
 ///-----------------------------------------------------
@@ -800,21 +824,61 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
 /**
  * Asynchronously request that the player skip the current song. If the
  * request is successful, the current song will stop and the next will
+ * begin. If not, the currently playing song will continue playback.
+ * The completion handler is called after the request is completed.
+ *
+ * @param completion completion handler is called after the request is completed,
+ * with an error object indicating a failed skip request or nil if the skip was successful.
+ */
+ - (void)skipWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
+
+ /**
+ * Asynchronously request that the player skip the current song. If the
+ * request is successful, the current song will stop and the next will
  * begin. If not, an `FMAudioPlayerSkipFailedNotification` will be posted
  * to the default notification center and the current song will continue
  * playback.
+ *
+ * You should use the `skipWithCompletion:` method instead of this method.
  */
 - (void)skip;
-- (void)skipWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Calls `likeAudioItem:` with the currently playing song
  *
  * @see [FMAudioItem liked]
  * @see [FMAudioItem disliked]
+ *
+ * @param completion completion handler is called after the request is completed,
+ * with an error object indicating a failed like request or nil if the like was successful.
+ */
+
+- (void)likeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
+
+/**
+ * Calls `likeAudioItem:` with the currently playing song
+ *
+ * You should use the `likeWithCompletion:` method instead of this method.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
  */
 - (void)like;
-- (void)likeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
+
+
+/**
+ * Marks the specified song as 'liked'. Updates the `[FMAudioItem liked]`
+ * and `[FMAudioItem disliked]` properties.
+ *
+ * @param audioItem the audio item that is to be liked. If null, then the currently
+ *     active audio item will be liked.
+ * @param completion completion handler is called after the operation completes,
+ * with an error object indicating a failed like request or nil if the like was successful.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+ - (void)likeAudioItem:(nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Marks the specified song as 'liked'. Updates the `[FMAudioItem liked]`
@@ -824,6 +888,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * with a userInfo dictionary that contains the audioItem
  * object indexed by `FMAudioItemKey`.
  *
+ * You should use the `likeAudioItem:completion:` method instead of this method.
+ *
  * @param audioItem the audio item that is to be liked. If null, then the currently
  *     active audio item will be liked.
  *
@@ -831,16 +897,41 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)likeAudioItem:(nonnull FMAudioItem *)audioItem;
-- (void)likeAudioItem:(nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Calls `dislikeAudioItem:` with the currently playing song
+ *
+ * @param completion completion handler is called after the operation completes,
+ * with an error object indicating a failed dislike request or nil if the dislike was successful.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+ - (void)dislikeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
+
+/**
+ * Calls `dislikeAudioItem:` with the currently playing song
+ *
+ * You should use the `dislikeWithCompletion:` method instead of this method.
  *
  * @see [FMAudioItem liked]
  * @see [FMAudioItem disliked]
  */
 - (void)dislike;
-- (void)dislikeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
+
+/**
+ * Marks the specified song as 'disliked'. Updates the `[FMAudioItem liked]`
+ * and `[FMAudioItem disliked]` properties. 
+ *
+ * @param audioItem the audio item that is to be disliked. If null, then the currently
+ *     active audio item will be disliked.
+ * @param completion completion handler is called after the operation completes,
+ * with an error object indicating a failed dislike request or nil if the dislike was successful.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+ - (void)dislikeAudioItem: (nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Marks the specified song as 'disliked'. Updates the `[FMAudioItem liked]`
@@ -850,6 +941,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * with a userInfo dictionary that contains the audioItem
  * object indexed by `FMAudioItemKey`.
  *
+ * You should use the `dislikeAudioItem:completion:` method instead of this method.
+ *
  * @param audioItem the audio item that is to be disliked. If null, then the currently
  *     active audio item will be disliked.
  *
@@ -857,16 +950,41 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)dislikeAudioItem: (nonnull FMAudioItem *)audioItem;
-- (void)dislikeAudioItem: (nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Calls `unlikeAudioItem:` with the currently playing song
+ *
+ * @param completion completion handler is called after the operation completes,
+ * with an error object indicating a failed unlike request or nil if the unlike was successful.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+ - (void)unlikeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
+
+/**
+ * Calls `unlikeAudioItem:` with the currently playing song
+ *
+ * You should use the `unlikeWithCompletion:` method instead of this method.
  *
  * @see [FMAudioItem liked]
  * @see [FMAudioItem disliked]
  */
 - (void)unlike;
-- (void)unlikeWithCompletion:(void (^_Nonnull)(NSError * _Nullable error))completion;
+
+/**
+ * Marks the specified song as neither 'liked' nor 'disliked'. Updates the `[FMAudioItem liked]`
+ * and `[FMAudioItem disliked]` properties.
+ *
+ * @param audioItem the audio item that is to be unliked. If null, then the currently
+ *     active audio item will be unliked.
+ * @param completion completion handler is called after the operation completes,
+ * with an error object indicating a failed unlike request or nil if the unlike was successful.
+ *
+ * @see [FMAudioItem liked]
+ * @see [FMAudioItem disliked]
+ */
+ - (void)unlikeAudioItem: (nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Marks the specified song as neither 'liked' nor 'disliked'. Updates the `[FMAudioItem liked]`
@@ -876,6 +994,8 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * with a userInfo dictionary that contains the audioItem
  * object indexed by `FMAudioItemKey`.
  *
+ * You should use the `unlikeAudioItem:completion:` method instead of this method.
+ *
  * @param audioItem the audio item that is to be unliked. If null, then the currently
  *     active audio item will be unliked.
  *
@@ -883,7 +1003,6 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * @see [FMAudioItem disliked]
  */
 - (void)unlikeAudioItem: (nonnull FMAudioItem *)audioItem;
-- (void)unlikeAudioItem: (nonnull FMAudioItem *)audioItem completion:(void (^_Nonnull)(NSError * _Nullable error))completion;
 
 /**
  * Get currently Active ClientID
@@ -902,10 +1021,24 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * When this request is complete a NSNotification `FMAudioPlayerNewClientIdAvailable` is triggered
  * with userInfo dictionary that contains the clientid
  *
+ * @param completion completion handler is called after the operation completes,
+ * with an error object indicating a failed client ID creation or nil if the creation was successful.
+ *
+ * @see setClientId:
+ */
+ - (void)createNewClientIdCompletion:(void (^_Nonnull)(NSError* _Nullable error))completion;
+
+/**
+ * Asynchronously generate a new client id for a new user.
+ * When this request is complete a NSNotification `FMAudioPlayerNewClientIdAvailable` is triggered
+ * with userInfo dictionary that contains the clientid
+ *
+ * You should use the `createNewClientIdCompletion:` method instead of this method.
+ *
  * @see setClientId:
  */
 - (void)createNewClientId;
-- (void)createNewClientIdCompletion:(void (^_Nonnull)(NSError* _Nullable error))completion;
+
 
 /**
  * Internal Method
@@ -1003,6 +1136,13 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * be the same loudness.
  */
 @property (nonatomic) BOOL normalizeSongVolume;
+
+/**
+ * When YES, audio file HTTP requests are issued with NSURLNetworkServiceTypeBackground,
+ * telling the OS to deprioritize them when competing for bandwidth with other processes.
+ * Defaults to YES. Takes effect on the next item loaded.
+ */
+@property (nonatomic) BOOL useBackgroundNetworkServiceType;
 
 /**
  *  A value between 0.0 and 1.0 relative to system volume
@@ -1195,6 +1335,60 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
                         pageNo:(nonnull NSNumber *)pageNo
                        perPage:(nonnull NSNumber *)perPage
                       withCallback:(nonnull void (^)(NSDictionary* _Nullable result, NSError * _Nullable error))onSearchCompleted;
+
+/**
+ * Search for a station matching the given criteria and set it as the active station.
+ *
+ * This method performs a single network request to search for a matching station and
+ * optionally prepares audio for immediate playback. The searches are executed in sequence
+ * until a station is found that the client may play.
+ *
+ * This call has the same effect as multiple searchForStation calls, followed by
+ * setActiveStation and prepareToPlay, but completes in a single API request.
+ *
+ * @param stationSearches Array of FMStationSearchQuery objects specifying search criteria.
+ *                        Each query can specify a station type (radio, first_play, replay),
+ *                        an offset in seconds, and a MongoDB-style filter for matching
+ *                        station attributes. Searches are executed in order until a match
+ *                        is found.
+ *
+ * @param searchTimeoutMs Maximum time in milliseconds to wait for API response. If nil or 0,
+ *                        defaults to 2000ms (2 seconds). If the timeout is exceeded, the
+ *                        completion block is called with an error.
+ *
+ * @param prepareToPlay If YES, the SDK will start loading audio file data before calling
+ *                      completion. If NO, completion is called immediately after receiving
+ *                      the station and play object.
+ *
+ * @param prepareTimeoutMs Maximum time in milliseconds to wait for audio preparation. If nil
+ *                         or 0, defaults to 5000ms (5 seconds). If exceeded, completion is
+ *                         called with an error, but the station and audioItem will still be
+ *                         set and audio will continue loading in the background.
+ *
+ * @param completion Block called when the operation completes or fails. Guaranteed to be
+ *                   called exactly once on the main queue,
+ *                   at most (searchTimeoutMs + prepareTimeoutMs) milliseconds after invocation.
+ *                   The block receives:
+ *                   - audioItem: The FMAudioItem (play) ready for playback, or nil on failure
+ *                   - error: An NSError if the request failed, or nil on success
+ *
+ * @note If an error occurs during the API call, the player state remains unchanged.
+ *       If prepareTimeoutMs is exceeded, the station and audioItem are still set as active,
+ *       and audio will continue loading in the background.
+ *
+ * @return YES if the request was dispatched and `completion` will be invoked asynchronously.
+ *         NO if the request could not be started — either because the network monitor reports
+ *         the network is unreachable, or because `stationSearches` is nil or empty. When NO is
+ *         returned, `completion` is NOT invoked.
+ *
+ * @see FMStationSearchQuery
+ */
+- (BOOL)searchForAndSetActiveStation:(nonnull NSArray<FMStationSearchQuery *> *)stationSearches
+                     searchTimeoutMs:(nullable NSNumber *)searchTimeoutMs
+                        prepareToPlay:(BOOL)prepareToPlay
+                     prepareTimeoutMs:(nullable NSNumber *)prepareTimeoutMs
+                           completion:(nonnull void (^)(FMAudioItem *_Nullable audioItem,
+                                                       NSError *_Nullable error))completion;
 
 /**
  * Fetch tracks for an on demand station

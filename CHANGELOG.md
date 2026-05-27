@@ -1,4 +1,29 @@
 
+- v5.8.0
+ - Distribution: CocoaPods and Carthage support have been dropped. The SDK is now distributed
+   exclusively through Swift Package Manager via tags on the public FeedMedia repo.
+ - Feature: New `searchForAndSetActiveStation:` method that searches for a matching station and
+   sets it as active in a single API request, with optional audio preparation for faster playback.
+ - Feature: New `FMStationSearchQuery` class for building typed station search queries with
+   MongoDB-style filters. Supports radio, first_play, and replay station types.
+ - Feature: New `requestPlayWithStationSearches` method with support for specifying audio
+   formats and bitrate.
+ - Feature: Network throttling support via new `useBackgroundNetworkServiceType` property on
+   FMAudioPlayer. When enabled, audio downloads are deprioritized when competing for bandwidth.
+ - Feature: New `FMResourceMonitor` that tracks free disk space and available memory, with
+   low-disk and low-memory detection. Resource metrics are included in analytics events.
+ - Feature: `FMStation` now exposes a `placementID` property.
+ - Feature: New error codes `FeedFMErrorCodeRequestTimeout`, `FeedFMErrorCodePlayerCouldNotSetStation`,
+   and `FeedFMErrorCodePlayerPrepareTimeout`.
+ - Fix: Fixed skip error handling.
+ - Fix: Fixed `play` method return value (now returns `BOOL` indicating success).
+ - Improvement: Better memory management for active download tasks using `NSMapTable`.
+ - Improvement: More sophisticated logic for detecting HTTP range request support.
+ - Improvement: Updated documentation for completion handler methods.
+
+- v5.7.1
+ - Addition of 'nullable' tag to allow building for older Swift versions
+
 - v5.7.0
  - New return values and completions handlers for various methods on FMAudioPlayer to validate
    that the methods completed successfully.

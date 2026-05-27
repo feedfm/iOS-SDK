@@ -19,7 +19,7 @@
 @property (readonly) NSArray *cuepoints;
 
 
-- (id) initwithJSON:(id) cuepoints;
+- (id) initwithJSON:(id) cuepoints placementID:(NSString*)placementID;
 
 
 @end

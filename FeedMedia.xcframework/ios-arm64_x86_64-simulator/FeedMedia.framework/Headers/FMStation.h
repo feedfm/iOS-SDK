@@ -133,19 +133,28 @@
  */
 @property (readonly) BOOL canSkip;
 
+/**
+ * The placement ID associated with this station.
+ */
+@property (readonly, nullable) NSString *placementID;
+
 
 
 /*
  *  JSON representation of this object
  */
 @property (readonly, nonnull) NSMutableDictionary *dict;
+
 /*
  *  Used internally to convert the JSON representation of this
  *  station to this object.
  *
  *  @param jsonDictionary JSON dictionary
+ *  @param isOffline True if this station is an offline station, false otherwise
+ *  @param placementID The placement ID associated with this station
+ *
  *  @return returns new FMStation instance
  */
-- (nonnull id)initWithJSON:(nonnull id)jsonDictionary isTypeOffline:(BOOL)isOffline;
+- (nonnull id)initWithJSON:(nonnull id)jsonDictionary isTypeOffline:(BOOL)isOffline placementID:(nullable NSString*)placementID;
 
 @end
