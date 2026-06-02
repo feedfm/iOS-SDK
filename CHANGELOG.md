@@ -17,6 +17,10 @@
    and `FeedFMErrorCodePlayerPrepareTimeout`.
  - Fix: Fixed skip error handling.
  - Fix: Fixed `play` method return value (now returns `BOOL` indicating success).
+ - Fix: Corrected the `activeStation` nullability annotation from `nonnull` to `nullable`. It
+   returns nil before the player is initialized and whenever no station is active.
+ - Cleanup: Removed the unused `FMAudioPlayerStationListAvailableNotification` constant. The
+   notification itself was removed in v4.0; only the orphaned symbol remained.
  - Improvement: Better memory management for active download tasks using `NSMapTable`.
  - Improvement: More sophisticated logic for detecting HTTP range request support.
  - Improvement: Updated documentation for completion handler methods.

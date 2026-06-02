@@ -133,7 +133,7 @@ extern NSString *const FMAudioPlayerNewClientIdAvailable;
 extern NSString *const FMAudioPlayerStationDownloadProgress;
 /**
  *  @const FMAudioPlayerStationListKey
- *  userInfo key for NSArray of FMStations from <FMAudioPlayerStationListAvailableNotification>
+ *  userInfo key for NSArray of FMStations
  */
 extern NSString *const FMAudioPlayerStationListKey;
 
@@ -1206,7 +1206,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * `FMAudioPlayerActiveStationDidChangeNotification` is sent to the default
  * notification center.
  */
-@property (nonatomic, copy, nonnull) FMStation *activeStation;
+@property (nonatomic, copy, nullable) FMStation *activeStation;
 
 
 /**

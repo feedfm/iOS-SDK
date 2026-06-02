@@ -251,11 +251,11 @@ relocations:
   - { offset: 0x899D4, size: 0x8, addend: 0x0, symName: '-[FMProgram cuepoints]', symObjAddr: 0x2B4, symBinAddr: 0xA594, symSize: 0xC }
   - { offset: 0x89A0B, size: 0x8, addend: 0x0, symName: '-[FMProgram .cxx_destruct]', symObjAddr: 0x2C0, symBinAddr: 0xA5A0, symSize: 0xC }
   - { offset: 0x89C95, size: 0x8, addend: 0x0, symName: '+[Feed sharedInstance]', symObjAddr: 0x0, symBinAddr: 0xA5AC, symSize: 0x98 }
-  - { offset: 0x89CAF, size: 0x8, addend: 0x0, symName: _STATUS_CURRENT_ITEM, symObjAddr: 0x1378, symBinAddr: 0x81ED8, symSize: 0x0 }
-  - { offset: 0x89CCA, size: 0x8, addend: 0x0, symName: _STATUS_TIME, symObjAddr: 0x1380, symBinAddr: 0x81EE0, symSize: 0x0 }
-  - { offset: 0x89CE0, size: 0x8, addend: 0x0, symName: _STATUS_RATE, symObjAddr: 0x1388, symBinAddr: 0x81EE8, symSize: 0x0 }
-  - { offset: 0x89CF6, size: 0x8, addend: 0x0, symName: _STATUS, symObjAddr: 0x1390, symBinAddr: 0x81EF0, symSize: 0x0 }
-  - { offset: 0x89D1A, size: 0x8, addend: 0x0, symName: _sharedPlayer, symObjAddr: 0x85D0, symBinAddr: 0x823B8, symSize: 0x0 }
+  - { offset: 0x89CAF, size: 0x8, addend: 0x0, symName: _STATUS_CURRENT_ITEM, symObjAddr: 0x1378, symBinAddr: 0x81EB0, symSize: 0x0 }
+  - { offset: 0x89CCA, size: 0x8, addend: 0x0, symName: _STATUS_TIME, symObjAddr: 0x1380, symBinAddr: 0x81EB8, symSize: 0x0 }
+  - { offset: 0x89CE0, size: 0x8, addend: 0x0, symName: _STATUS_RATE, symObjAddr: 0x1388, symBinAddr: 0x81EC0, symSize: 0x0 }
+  - { offset: 0x89CF6, size: 0x8, addend: 0x0, symName: _STATUS, symObjAddr: 0x1390, symBinAddr: 0x81EC8, symSize: 0x0 }
+  - { offset: 0x89D1A, size: 0x8, addend: 0x0, symName: _sharedPlayer, symObjAddr: 0x85D0, symBinAddr: 0x82390, symSize: 0x0 }
   - { offset: 0x89EA6, size: 0x8, addend: 0x0, symName: '+[Feed sharedInstance]', symObjAddr: 0x0, symBinAddr: 0xA5AC, symSize: 0x98 }
   - { offset: 0x89ED9, size: 0x8, addend: 0x0, symName: '+[Feed initWithToken:secret:withPlayer:]', symObjAddr: 0x98, symBinAddr: 0xA644, symSize: 0xD0 }
   - { offset: 0x89F48, size: 0x8, addend: 0x0, symName: '+[Feed initWithToken:secret:withURI:withPlayer:]', symObjAddr: 0x168, symBinAddr: 0xA714, symSize: 0xE4 }
@@ -392,14 +392,14 @@ relocations:
   - { offset: 0x8EA8A, size: 0x8, addend: 0x0, symName: '-[FMTotalTimeLabel setFeedPlayer:]', symObjAddr: 0x3E0, symBinAddr: 0xD944, symSize: 0x40 }
   - { offset: 0x8EACB, size: 0x8, addend: 0x0, symName: '-[FMTotalTimeLabel .cxx_destruct]', symObjAddr: 0x420, symBinAddr: 0xD984, symSize: 0x40 }
   - { offset: 0x8EBC3, size: 0x8, addend: 0x0, symName: '+[FMAPIRequest location]', symObjAddr: 0x0, symBinAddr: 0xD9C4, symSize: 0x2C }
-  - { offset: 0x8EBDD, size: 0x8, addend: 0x0, symName: __baseUrl, symObjAddr: 0x13DD8, symBinAddr: 0x823C0, symSize: 0x0 }
-  - { offset: 0x8EBF8, size: 0x8, addend: 0x0, symName: __location, symObjAddr: 0x13DE0, symBinAddr: 0x823C8, symSize: 0x0 }
-  - { offset: 0x8EC0E, size: 0x8, addend: 0x0, symName: __streamingFor, symObjAddr: 0x13DE8, symBinAddr: 0x823D0, symSize: 0x0 }
+  - { offset: 0x8EBDD, size: 0x8, addend: 0x0, symName: __baseUrl, symObjAddr: 0x13DD8, symBinAddr: 0x82398, symSize: 0x0 }
+  - { offset: 0x8EBF8, size: 0x8, addend: 0x0, symName: __location, symObjAddr: 0x13DE0, symBinAddr: 0x823A0, symSize: 0x0 }
+  - { offset: 0x8EC0E, size: 0x8, addend: 0x0, symName: __streamingFor, symObjAddr: 0x13DE8, symBinAddr: 0x823A8, symSize: 0x0 }
   - { offset: 0x8EC26, size: 0x8, addend: 0x0, symName: '+[FMAPIRequest now]', symObjAddr: 0x2C38, symBinAddr: 0x105AC, symSize: 0x74 }
-  - { offset: 0x8EC52, size: 0x8, addend: 0x0, symName: _now.sRFC3339DateFormatter, symObjAddr: 0x13DF8, symBinAddr: 0x823E0, symSize: 0x0 }
-  - { offset: 0x8EC69, size: 0x8, addend: 0x0, symName: _now.onceToken, symObjAddr: 0x13E00, symBinAddr: 0x823E8, symSize: 0x0 }
-  - { offset: 0x8ECBC, size: 0x8, addend: 0x0, symName: _eventLogs, symObjAddr: 0x13DF0, symBinAddr: 0x823D8, symSize: 0x0 }
-  - { offset: 0x8ED14, size: 0x8, addend: 0x0, symName: _logEventsKey, symObjAddr: 0x13E08, symBinAddr: 0x823F0, symSize: 0x0 }
+  - { offset: 0x8EC52, size: 0x8, addend: 0x0, symName: _now.sRFC3339DateFormatter, symObjAddr: 0x13DF8, symBinAddr: 0x823B8, symSize: 0x0 }
+  - { offset: 0x8EC69, size: 0x8, addend: 0x0, symName: _now.onceToken, symObjAddr: 0x13E00, symBinAddr: 0x823C0, symSize: 0x0 }
+  - { offset: 0x8ECBC, size: 0x8, addend: 0x0, symName: _eventLogs, symObjAddr: 0x13DF0, symBinAddr: 0x823B0, symSize: 0x0 }
+  - { offset: 0x8ED14, size: 0x8, addend: 0x0, symName: _logEventsKey, symObjAddr: 0x13E08, symBinAddr: 0x823C8, symSize: 0x0 }
   - { offset: 0x8F005, size: 0x8, addend: 0x0, symName: '+[FMAPIRequest location]', symObjAddr: 0x0, symBinAddr: 0xD9C4, symSize: 0x2C }
   - { offset: 0x8F038, size: 0x8, addend: 0x0, symName: '+[FMAPIRequest streamingFor]', symObjAddr: 0x2C, symBinAddr: 0xD9F0, symSize: 0x2C }
   - { offset: 0x8F06B, size: 0x8, addend: 0x0, symName: '+[FMAPIRequest setLocation:]', symObjAddr: 0x58, symBinAddr: 0xDA1C, symSize: 0x30 }
@@ -527,15 +527,15 @@ relocations:
   - { offset: 0x925A7, size: 0x8, addend: 0x0, symName: '-[FMReachability setReachabilityObject:]', symObjAddr: 0x5F4, symBinAddr: 0x12E5C, symSize: 0x30 }
   - { offset: 0x925E8, size: 0x8, addend: 0x0, symName: '-[FMReachability .cxx_destruct]', symObjAddr: 0x624, symBinAddr: 0x12E8C, symSize: 0x54 }
   - { offset: 0x9274C, size: 0x8, addend: 0x0, symName: __FMLogGetLogContent, symObjAddr: 0x0, symBinAddr: 0x12EE0, symSize: 0x8C }
-  - { offset: 0x92766, size: 0x8, addend: 0x0, symName: _fileHandle, symObjAddr: 0x4590, symBinAddr: 0x823F8, symSize: 0x0 }
+  - { offset: 0x92766, size: 0x8, addend: 0x0, symName: _fileHandle, symObjAddr: 0x4590, symBinAddr: 0x823D0, symSize: 0x0 }
   - { offset: 0x92783, size: 0x8, addend: 0x0, symName: __FMLog, symObjAddr: 0x198, symBinAddr: 0x13078, symSize: 0x464 }
   - { offset: 0x92B01, size: 0x8, addend: 0x0, symName: ____FMLog_block_invoke, symObjAddr: 0x614, symBinAddr: 0x134F4, symSize: 0x300 }
-  - { offset: 0x92CC5, size: 0x8, addend: 0x0, symName: _token, symObjAddr: 0x45A0, symBinAddr: 0x82408, symSize: 0x0 }
-  - { offset: 0x92CE0, size: 0x8, addend: 0x0, symName: _ilog, symObjAddr: 0x45A8, symBinAddr: 0x82410, symSize: 0x0 }
-  - { offset: 0x92CF6, size: 0x8, addend: 0x0, symName: _filePath, symObjAddr: 0x4598, symBinAddr: 0x82400, symSize: 0x0 }
-  - { offset: 0x92D11, size: 0x8, addend: 0x0, symName: _dateFormatter, symObjAddr: 0x45B8, symBinAddr: 0x82420, symSize: 0x0 }
-  - { offset: 0x92D2C, size: 0x8, addend: 0x0, symName: _dispatch_queue, symObjAddr: 0x45B0, symBinAddr: 0x82418, symSize: 0x0 }
-  - { offset: 0x92D42, size: 0x8, addend: 0x0, symName: _fm_currentLogLevel, symObjAddr: 0xC00, symBinAddr: 0x81FB8, symSize: 0x0 }
+  - { offset: 0x92CC5, size: 0x8, addend: 0x0, symName: _token, symObjAddr: 0x45A0, symBinAddr: 0x823E0, symSize: 0x0 }
+  - { offset: 0x92CE0, size: 0x8, addend: 0x0, symName: _ilog, symObjAddr: 0x45A8, symBinAddr: 0x823E8, symSize: 0x0 }
+  - { offset: 0x92CF6, size: 0x8, addend: 0x0, symName: _filePath, symObjAddr: 0x4598, symBinAddr: 0x823D8, symSize: 0x0 }
+  - { offset: 0x92D11, size: 0x8, addend: 0x0, symName: _dateFormatter, symObjAddr: 0x45B8, symBinAddr: 0x823F8, symSize: 0x0 }
+  - { offset: 0x92D2C, size: 0x8, addend: 0x0, symName: _dispatch_queue, symObjAddr: 0x45B0, symBinAddr: 0x823F0, symSize: 0x0 }
+  - { offset: 0x92D42, size: 0x8, addend: 0x0, symName: _fm_currentLogLevel, symObjAddr: 0xC00, symBinAddr: 0x81F90, symSize: 0x0 }
   - { offset: 0x92D97, size: 0x8, addend: 0x0, symName: __FMLogGetLogContent, symObjAddr: 0x0, symBinAddr: 0x12EE0, symSize: 0x8C }
   - { offset: 0x92DDC, size: 0x8, addend: 0x0, symName: __FMLogResetLog, symObjAddr: 0x8C, symBinAddr: 0x12F6C, symSize: 0x100 }
   - { offset: 0x92E1A, size: 0x8, addend: 0x0, symName: _FMLogSetLevel, symObjAddr: 0x18C, symBinAddr: 0x1306C, symSize: 0xC }
@@ -563,7 +563,7 @@ relocations:
   - { offset: 0x93374, size: 0x8, addend: 0x0, symName: _FMCIDPrefix, symObjAddr: 0xA588, symBinAddr: 0x68880, symSize: 0x0 }
   - { offset: 0x9338A, size: 0x8, addend: 0x0, symName: _FMCUUID, symObjAddr: 0xA590, symBinAddr: 0x68888, symSize: 0x0 }
   - { offset: 0x933A0, size: 0x8, addend: 0x0, symName: _FMSessionDefaultStationSearchTimeout, symObjAddr: 0xA978, symBinAddr: 0x4C158, symSize: 0x0 }
-  - { offset: 0x933D0, size: 0x8, addend: 0x0, symName: __sharedSess, symObjAddr: 0x26CA0, symBinAddr: 0x82428, symSize: 0x0 }
+  - { offset: 0x933D0, size: 0x8, addend: 0x0, symName: __sharedSess, symObjAddr: 0x26CA0, symBinAddr: 0x82400, symSize: 0x0 }
   - { offset: 0x939E6, size: 0x8, addend: 0x0, symName: '+[FMSession setClientToken:secret:detectLocalMusic:sessionErrorReceived:]', symObjAddr: 0x0, symBinAddr: 0x13810, symSize: 0x2A4 }
   - { offset: 0x93ABB, size: 0x8, addend: 0x0, symName: '___73+[FMSession setClientToken:secret:detectLocalMusic:sessionErrorReceived:]_block_invoke', symObjAddr: 0x2A4, symBinAddr: 0x13AB4, symSize: 0x74 }
   - { offset: 0x93B90, size: 0x8, addend: 0x0, symName: '___73+[FMSession setClientToken:secret:detectLocalMusic:sessionErrorReceived:]_block_invoke_2', symObjAddr: 0x318, symBinAddr: 0x13B28, symSize: 0x134 }
@@ -918,11 +918,11 @@ relocations:
   - { offset: 0x9E13C, size: 0x8, addend: 0x0, symName: '-[CAMediaTimingFunction(MarqueeLabelHelpers) controlPoints]', symObjAddr: 0x60E0, symBinAddr: 0x224B0, symSize: 0xF8 }
   - { offset: 0x9E437, size: 0x8, addend: 0x0, symName: '-[FMSimulcastAudioPlayer initWithURL:]', symObjAddr: 0x0, symBinAddr: 0x225A8, symSize: 0xD0 }
   - { offset: 0x9E445, size: 0x8, addend: 0x0, symName: '+[FMSimulcastAudioPlayer names]', symObjAddr: 0xD0, symBinAddr: 0x22678, symSize: 0x44 }
-  - { offset: 0x9E46F, size: 0x8, addend: 0x0, symName: _names._names, symObjAddr: 0xB980, symBinAddr: 0x82430, symSize: 0x0 }
-  - { offset: 0x9E485, size: 0x8, addend: 0x0, symName: _names.onceToken, symObjAddr: 0xB988, symBinAddr: 0x82438, symSize: 0x0 }
-  - { offset: 0x9E4E5, size: 0x8, addend: 0x0, symName: _FMSimulcastAudioPlayerTimedMetadataObservationContext, symObjAddr: 0x3128, symBinAddr: 0x82080, symSize: 0x0 }
-  - { offset: 0x9E4FC, size: 0x8, addend: 0x0, symName: _FMSimulcastAudioPlayerPlayerItemStatusObservationContext, symObjAddr: 0x3130, symBinAddr: 0x82088, symSize: 0x0 }
-  - { offset: 0x9E512, size: 0x8, addend: 0x0, symName: _FMSimulcastAudioPlayerItemPlaybackBufferEmptyObservationContext, symObjAddr: 0x3138, symBinAddr: 0x82090, symSize: 0x0 }
+  - { offset: 0x9E46F, size: 0x8, addend: 0x0, symName: _names._names, symObjAddr: 0xB980, symBinAddr: 0x82408, symSize: 0x0 }
+  - { offset: 0x9E485, size: 0x8, addend: 0x0, symName: _names.onceToken, symObjAddr: 0xB988, symBinAddr: 0x82410, symSize: 0x0 }
+  - { offset: 0x9E4E5, size: 0x8, addend: 0x0, symName: _FMSimulcastAudioPlayerTimedMetadataObservationContext, symObjAddr: 0x3128, symBinAddr: 0x82058, symSize: 0x0 }
+  - { offset: 0x9E4FC, size: 0x8, addend: 0x0, symName: _FMSimulcastAudioPlayerPlayerItemStatusObservationContext, symObjAddr: 0x3130, symBinAddr: 0x82060, symSize: 0x0 }
+  - { offset: 0x9E512, size: 0x8, addend: 0x0, symName: _FMSimulcastAudioPlayerItemPlaybackBufferEmptyObservationContext, symObjAddr: 0x3138, symBinAddr: 0x82068, symSize: 0x0 }
   - { offset: 0x9E8F7, size: 0x8, addend: 0x0, symName: '-[FMSimulcastAudioPlayer initWithURL:]', symObjAddr: 0x0, symBinAddr: 0x225A8, symSize: 0xD0 }
   - { offset: 0x9E972, size: 0x8, addend: 0x0, symName: '+[FMSimulcastAudioPlayer names].cold.1', symObjAddr: 0x1C9C, symBinAddr: 0x43348, symSize: 0x14 }
   - { offset: 0x9E98E, size: 0x8, addend: 0x0, symName: '+[FMSimulcastAudioPlayer names].cold.1', symObjAddr: 0x1C9C, symBinAddr: 0x43348, symSize: 0x14 }
@@ -1037,13 +1037,13 @@ relocations:
   - { offset: 0xA1786, size: 0x8, addend: 0x0, symName: '-[FMCacheItem .cxx_destruct]', symObjAddr: 0x2FC, symBinAddr: 0x262F0, symSize: 0x3C }
   - { offset: 0xA1840, size: 0x8, addend: 0x0, symName: '-[FMAVPlayer description]', symObjAddr: 0x0, symBinAddr: 0x2632C, symSize: 0x234 }
   - { offset: 0xA185C, size: 0x8, addend: 0x0, symName: '-[FMMixingAudioPlayer bandwidthMonitorDidUpdate:]', symObjAddr: 0x67A0, symBinAddr: 0x2CA8C, symSize: 0x23C }
-  - { offset: 0xA1884, size: 0x8, addend: 0x0, symName: '_bandwidthMonitorDidUpdate:.bwTestStartTime', symObjAddr: 0x24EC0, symBinAddr: 0x82440, symSize: 0x0 }
+  - { offset: 0xA1884, size: 0x8, addend: 0x0, symName: '_bandwidthMonitorDidUpdate:.bwTestStartTime', symObjAddr: 0x24EC0, symBinAddr: 0x82418, symSize: 0x0 }
   - { offset: 0xA1912, size: 0x8, addend: 0x0, symName: '+[FMMixingAudioPlayer names]', symObjAddr: 0x69DC, symBinAddr: 0x2CCC8, symSize: 0x44 }
-  - { offset: 0xA193E, size: 0x8, addend: 0x0, symName: _names._names, symObjAddr: 0x24EC8, symBinAddr: 0x82448, symSize: 0x0 }
-  - { offset: 0xA1955, size: 0x8, addend: 0x0, symName: _names.onceToken, symObjAddr: 0x24ED0, symBinAddr: 0x82450, symSize: 0x0 }
-  - { offset: 0xA19A8, size: 0x8, addend: 0x0, symName: _FMMixingAudioPlayerPlayerCurrentItemContext, symObjAddr: 0xF788, symBinAddr: 0x820F8, symSize: 0x0 }
-  - { offset: 0xA19BF, size: 0x8, addend: 0x0, symName: _FMMixingAudioPlayerPlayerItemStatusObservationContext, symObjAddr: 0xF790, symBinAddr: 0x82100, symSize: 0x0 }
-  - { offset: 0xA19D5, size: 0x8, addend: 0x0, symName: _FMMixingAudioPlayerItemPlaybackBufferEmptyObservationContext, symObjAddr: 0xF798, symBinAddr: 0x82108, symSize: 0x0 }
+  - { offset: 0xA193E, size: 0x8, addend: 0x0, symName: _names._names, symObjAddr: 0x24EC8, symBinAddr: 0x82420, symSize: 0x0 }
+  - { offset: 0xA1955, size: 0x8, addend: 0x0, symName: _names.onceToken, symObjAddr: 0x24ED0, symBinAddr: 0x82428, symSize: 0x0 }
+  - { offset: 0xA19A8, size: 0x8, addend: 0x0, symName: _FMMixingAudioPlayerPlayerCurrentItemContext, symObjAddr: 0xF788, symBinAddr: 0x820D0, symSize: 0x0 }
+  - { offset: 0xA19BF, size: 0x8, addend: 0x0, symName: _FMMixingAudioPlayerPlayerItemStatusObservationContext, symObjAddr: 0xF790, symBinAddr: 0x820D8, symSize: 0x0 }
+  - { offset: 0xA19D5, size: 0x8, addend: 0x0, symName: _FMMixingAudioPlayerItemPlaybackBufferEmptyObservationContext, symObjAddr: 0xF798, symBinAddr: 0x820E0, symSize: 0x0 }
   - { offset: 0xA205B, size: 0x8, addend: 0x0, symName: '-[FMAVPlayer description]', symObjAddr: 0x0, symBinAddr: 0x2632C, symSize: 0x234 }
   - { offset: 0xA20D0, size: 0x8, addend: 0x0, symName: '-[TimeTracker assetId]', symObjAddr: 0x234, symBinAddr: 0x26560, symSize: 0x8 }
   - { offset: 0xA2107, size: 0x8, addend: 0x0, symName: '-[TimeTracker setAssetId:]', symObjAddr: 0x23C, symBinAddr: 0x26568, symSize: 0x30 }
@@ -1227,7 +1227,7 @@ relocations:
   - { offset: 0xA70BE, size: 0x8, addend: 0x0, symName: '-[FMDriftMonitor trackCount]', symObjAddr: 0x3B4, symBinAddr: 0x2FF88, symSize: 0x8 }
   - { offset: 0xA70F5, size: 0x8, addend: 0x0, symName: '-[FMDriftMonitor setTrackCount:]', symObjAddr: 0x3BC, symBinAddr: 0x2FF90, symSize: 0x8 }
   - { offset: 0xA717D, size: 0x8, addend: 0x0, symName: '+[FMResourceMonitor sharedInstance]', symObjAddr: 0x0, symBinAddr: 0x2FF98, symSize: 0x98 }
-  - { offset: 0xA71A5, size: 0x8, addend: 0x0, symName: __sharedInstance, symObjAddr: 0x3A20, symBinAddr: 0x82458, symSize: 0x0 }
+  - { offset: 0xA71A5, size: 0x8, addend: 0x0, symName: __sharedInstance, symObjAddr: 0x3A20, symBinAddr: 0x82430, symSize: 0x0 }
   - { offset: 0xA725E, size: 0x8, addend: 0x0, symName: '+[FMResourceMonitor sharedInstance]', symObjAddr: 0x0, symBinAddr: 0x2FF98, symSize: 0x98 }
   - { offset: 0xA7291, size: 0x8, addend: 0x0, symName: '-[FMResourceMonitor init]', symObjAddr: 0x98, symBinAddr: 0x30030, symSize: 0x58 }
   - { offset: 0xA72C8, size: 0x8, addend: 0x0, symName: '-[FMResourceMonitor dealloc]', symObjAddr: 0xF0, symBinAddr: 0x30088, symSize: 0x44 }
@@ -1355,316 +1355,315 @@ relocations:
   - { offset: 0xAA734, size: 0x8, addend: 0x0, symName: '-[FMOfflineStationManager playQueue]', symObjAddr: 0x253C, symBinAddr: 0x34604, symSize: 0x8 }
   - { offset: 0xAA76B, size: 0x8, addend: 0x0, symName: '-[FMOfflineStationManager setPlayQueue:]', symObjAddr: 0x2544, symBinAddr: 0x3460C, symSize: 0x30 }
   - { offset: 0xAA7AC, size: 0x8, addend: 0x0, symName: '-[FMOfflineStationManager .cxx_destruct]', symObjAddr: 0x2574, symBinAddr: 0x3463C, symSize: 0x90 }
-  - { offset: 0xAA93C, size: 0x8, addend: 0x0, symName: _FMAudioPlayerPlaybackStateDidChangeNotification, symObjAddr: 0xE720, symBinAddr: 0x68E38, symSize: 0x0 }
-  - { offset: 0xAA95C, size: 0x8, addend: 0x0, symName: _FMAudioPlayerCurrentItemDidBeginPlaybackNotification, symObjAddr: 0xE728, symBinAddr: 0x68E40, symSize: 0x0 }
-  - { offset: 0xAA972, size: 0x8, addend: 0x0, symName: _FMAudioPlayerActiveStationDidChangeNotification, symObjAddr: 0xE730, symBinAddr: 0x68E48, symSize: 0x0 }
-  - { offset: 0xAA988, size: 0x8, addend: 0x0, symName: _FMAudioPlayerStationListAvailableNotification, symObjAddr: 0xE738, symBinAddr: 0x68E50, symSize: 0x0 }
-  - { offset: 0xAA99E, size: 0x8, addend: 0x0, symName: _FMAudioPlayerNotAvailableNotification, symObjAddr: 0xE740, symBinAddr: 0x68E58, symSize: 0x0 }
-  - { offset: 0xAA9B4, size: 0x8, addend: 0x0, symName: _FMAudioPlayerAvailableNotification, symObjAddr: 0xE748, symBinAddr: 0x68E60, symSize: 0x0 }
-  - { offset: 0xAA9CA, size: 0x8, addend: 0x0, symName: _FMAudioPlayerSkipFailedNotification, symObjAddr: 0xE750, symBinAddr: 0x68E68, symSize: 0x0 }
-  - { offset: 0xAA9E0, size: 0x8, addend: 0x0, symName: _FMAudioPlayerMusicQueuedNotification, symObjAddr: 0xE758, symBinAddr: 0x68E70, symSize: 0x0 }
-  - { offset: 0xAA9F6, size: 0x8, addend: 0x0, symName: _FMAudioPlayerSkipFailureErrorKey, symObjAddr: 0xE760, symBinAddr: 0x68E78, symSize: 0x0 }
-  - { offset: 0xAAA0C, size: 0x8, addend: 0x0, symName: _FMAudioPlayerSkipStatusNotification, symObjAddr: 0xE768, symBinAddr: 0x68E80, symSize: 0x0 }
-  - { offset: 0xAAA22, size: 0x8, addend: 0x0, symName: _FMAudioPlayerLikeStatusChangeNotification, symObjAddr: 0xE770, symBinAddr: 0x68E88, symSize: 0x0 }
-  - { offset: 0xAAA38, size: 0x8, addend: 0x0, symName: _FMAudioPlayerTimeElapseNotification, symObjAddr: 0xE778, symBinAddr: 0x68E90, symSize: 0x0 }
-  - { offset: 0xAAA4E, size: 0x8, addend: 0x0, symName: _FMAudioPlayerPreCachingCompleted, symObjAddr: 0xE780, symBinAddr: 0x68E98, symSize: 0x0 }
-  - { offset: 0xAAA64, size: 0x8, addend: 0x0, symName: _FMAudioPlayerStationDownloadProgress, symObjAddr: 0xE788, symBinAddr: 0x68EA0, symSize: 0x0 }
-  - { offset: 0xAAA7A, size: 0x8, addend: 0x0, symName: _FMAudioPlayerNewClientIdAvailable, symObjAddr: 0xE790, symBinAddr: 0x68EA8, symSize: 0x0 }
-  - { offset: 0xAAA90, size: 0x8, addend: 0x0, symName: _FMAudioPlayerItemDidBeginLoadingNotification, symObjAddr: 0xE798, symBinAddr: 0x68EB0, symSize: 0x0 }
-  - { offset: 0xAAAA6, size: 0x8, addend: 0x0, symName: _FMAudioPlayerItemDidFinishLoadingNotification, symObjAddr: 0xE7A0, symBinAddr: 0x68EB8, symSize: 0x0 }
-  - { offset: 0xAAABC, size: 0x8, addend: 0x0, symName: _FMAudioPlayerStationListKey, symObjAddr: 0xE7A8, symBinAddr: 0x68EC0, symSize: 0x0 }
-  - { offset: 0xAAAD2, size: 0x8, addend: 0x0, symName: _FMAudioItemKey, symObjAddr: 0xE7B0, symBinAddr: 0x68EC8, symSize: 0x0 }
-  - { offset: 0xAAAEA, size: 0x8, addend: 0x0, symName: '___104-[FMAudioPlayer searchForAndSetActiveStation:searchTimeoutMs:prepareToPlay:prepareTimeoutMs:completion:]_block_invoke', symObjAddr: 0x14F8, symBinAddr: 0x35BC4, symSize: 0x2E0 }
-  - { offset: 0xAACC6, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer names]', symObjAddr: 0x51D4, symBinAddr: 0x39810, symSize: 0x44 }
-  - { offset: 0xAACF2, size: 0x8, addend: 0x0, symName: _names._names, symObjAddr: 0x33AA8, symBinAddr: 0x82470, symSize: 0x0 }
-  - { offset: 0xAAD09, size: 0x8, addend: 0x0, symName: _names.onceToken, symObjAddr: 0x33AB0, symBinAddr: 0x82478, symSize: 0x0 }
-  - { offset: 0xAAD5C, size: 0x8, addend: 0x0, symName: __sharedPlay, symObjAddr: 0x33A98, symBinAddr: 0x82460, symSize: 0x0 }
-  - { offset: 0xAB6EF, size: 0x8, addend: 0x0, symName: __autoNetworkRetryEnabled, symObjAddr: 0x33AA0, symBinAddr: 0x82468, symSize: 0x0 }
-  - { offset: 0xAB786, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer sharedPlayer]', symObjAddr: 0x0, symBinAddr: 0x346CC, symSize: 0x98 }
-  - { offset: 0xAB7B9, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer autoNetworkRetryEnabled]', symObjAddr: 0x98, symBinAddr: 0x34764, symSize: 0xC }
-  - { offset: 0xAB7EC, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setAutoNetworkRetryEnabled:]', symObjAddr: 0xA4, symBinAddr: 0x34770, symSize: 0xC }
-  - { offset: 0xAB827, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initWithoutSession]', symObjAddr: 0xB0, symBinAddr: 0x3477C, symSize: 0x4A8 }
-  - { offset: 0xAB897, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer fetchSession:]', symObjAddr: 0x558, symBinAddr: 0x34C24, symSize: 0x23C }
-  - { offset: 0xAB8EA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dealloc]', symObjAddr: 0x794, symBinAddr: 0x34E60, symSize: 0xA8 }
-  - { offset: 0xAB946, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer addEventwithTx:extras:]', symObjAddr: 0x83C, symBinAddr: 0x34F08, symSize: 0x294 }
-  - { offset: 0xABA16, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer applicationWillTerminate:]', symObjAddr: 0xAD0, symBinAddr: 0x3519C, symSize: 0x38 }
-  - { offset: 0xABA53, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer didEnterBackground:]', symObjAddr: 0xB08, symBinAddr: 0x351D4, symSize: 0x124 }
-  - { offset: 0xABAA1, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer willEnterForeground:]', symObjAddr: 0xC2C, symBinAddr: 0x352F8, symSize: 0xA8 }
-  - { offset: 0xABADE, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setClientToken:secret:]', symObjAddr: 0xCD4, symBinAddr: 0x353A0, symSize: 0x19C }
-  - { offset: 0xABB41, size: 0x8, addend: 0x0, symName: '___39+[FMAudioPlayer setClientToken:secret:]_block_invoke', symObjAddr: 0xE70, symBinAddr: 0x3553C, symSize: 0x84 }
-  - { offset: 0xABB9B, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setClientToken:secret:withClientID:]', symObjAddr: 0xEF4, symBinAddr: 0x355C0, symSize: 0x98 }
-  - { offset: 0xABBFE, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer onClientId:]', symObjAddr: 0xF8C, symBinAddr: 0x35658, symSize: 0x110 }
-  - { offset: 0xABC65, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skipStatus:]', symObjAddr: 0x109C, symBinAddr: 0x35768, symSize: 0x2C }
-  - { offset: 0xABCA6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skipStatusUpdated:]', symObjAddr: 0x10C8, symBinAddr: 0x35794, symSize: 0xFC }
-  - { offset: 0xABCEB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForStationWithQuery:pageNo:perPage:withCallback:]', symObjAddr: 0x11C4, symBinAddr: 0x35890, symSize: 0x18 }
-  - { offset: 0xABD61, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForStationByMetadata:pageNo:perPage:withCallback:]', symObjAddr: 0x11DC, symBinAddr: 0x358A8, symSize: 0x1C }
-  - { offset: 0xABDD9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForStationsByMetadata:pageNo:perPage:withCallback:]', symObjAddr: 0x11F8, symBinAddr: 0x358C4, symSize: 0x1C }
-  - { offset: 0xABE51, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer callAndRemovePrepareCompletionForAudioItem:error:]', symObjAddr: 0x1214, symBinAddr: 0x358E0, symSize: 0x104 }
-  - { offset: 0xABEE4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForAndSetActiveStation:searchTimeoutMs:prepareToPlay:prepareTimeoutMs:completion:]', symObjAddr: 0x1318, symBinAddr: 0x359E4, symSize: 0x1E0 }
-  - { offset: 0xAC03C, size: 0x8, addend: 0x0, symName: '___104-[FMAudioPlayer searchForAndSetActiveStation:searchTimeoutMs:prepareToPlay:prepareTimeoutMs:completion:]_block_invoke_2', symObjAddr: 0x17D8, symBinAddr: 0x35EA4, symSize: 0x70 }
-  - { offset: 0xAC0C4, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48b56w, symObjAddr: 0x1898, symBinAddr: 0x35F14, symSize: 0x48 }
-  - { offset: 0xAC0ED, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s56w, symObjAddr: 0x18E0, symBinAddr: 0x35F5C, symSize: 0x38 }
-  - { offset: 0xAC10C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer requestTracksForStation:pageNo:resultsPerPage:withCallback:]', symObjAddr: 0x1918, symBinAddr: 0x35F94, symSize: 0x8 }
-  - { offset: 0xAC17C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer fetchProgramForURI:withCallback:]', symObjAddr: 0x1920, symBinAddr: 0x35F9C, symSize: 0x8 }
-  - { offset: 0xAC1CE, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer activeStation]', symObjAddr: 0x1928, symBinAddr: 0x35FA4, symSize: 0xC8 }
-  - { offset: 0xAC21B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentItem]', symObjAddr: 0x19F0, symBinAddr: 0x3606C, symSize: 0x48 }
-  - { offset: 0xAC253, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setPlayerControlDelegate:]', symObjAddr: 0x1A38, symBinAddr: 0x360B4, symSize: 0x140 }
-  - { offset: 0xAC31A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDefaultControlDelegate]', symObjAddr: 0x1B78, symBinAddr: 0x361F4, symSize: 0x12C }
-  - { offset: 0xAC3A7, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setSupportedAudioFormats:]', symObjAddr: 0x1CA4, symBinAddr: 0x36320, symSize: 0x8 }
-  - { offset: 0xAC3EA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer supportedAudioFormats]', symObjAddr: 0x1CAC, symBinAddr: 0x36328, symSize: 0x8 }
-  - { offset: 0xAC422, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setMaxBitrate:]', symObjAddr: 0x1CB4, symBinAddr: 0x36330, symSize: 0x8 }
-  - { offset: 0xAC465, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer maxBitrate]', symObjAddr: 0x1CBC, symBinAddr: 0x36338, symSize: 0x8 }
-  - { offset: 0xAC49D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDisableAVAudioSession:]', symObjAddr: 0x1CC4, symBinAddr: 0x36340, symSize: 0xE4 }
-  - { offset: 0xAC4E2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer disableAVAudioSession]', symObjAddr: 0x1DA8, symBinAddr: 0x36424, symSize: 0x8 }
-  - { offset: 0xAC51A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer canLike]', symObjAddr: 0x1DB0, symBinAddr: 0x3642C, symSize: 0x70 }
-  - { offset: 0xAC552, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer canSkip]', symObjAddr: 0x1E20, symBinAddr: 0x3649C, symSize: 0x98 }
-  - { offset: 0xAC58A, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setStreamingFor:]', symObjAddr: 0x1EB8, symBinAddr: 0x36534, symSize: 0xC }
-  - { offset: 0xAC5C9, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setMockLocation:]', symObjAddr: 0x1EC4, symBinAddr: 0x36540, symSize: 0x30 }
-  - { offset: 0xAC60A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemIsReadyForPlayback:]', symObjAddr: 0x1EF4, symBinAddr: 0x36570, symSize: 0x18C }
-  - { offset: 0xAC6A3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]', symObjAddr: 0x2080, symBinAddr: 0x366FC, symSize: 0x3F8 }
-  - { offset: 0xAC754, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke', symObjAddr: 0x2478, symBinAddr: 0x36AF4, symSize: 0x8 }
-  - { offset: 0xAC796, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke.166', symObjAddr: 0x2490, symBinAddr: 0x36AFC, symSize: 0x4 }
-  - { offset: 0xAC7CC, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke_2', symObjAddr: 0x2494, symBinAddr: 0x36B00, symSize: 0x10 }
-  - { offset: 0xAC81F, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke_3', symObjAddr: 0x24A4, symBinAddr: 0x36B10, symSize: 0x4 }
-  - { offset: 0xAC855, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemDidFinishPlayback:dueToReason:withTotalTime:andError:]', symObjAddr: 0x24A8, symBinAddr: 0x36B14, symSize: 0x490 }
-  - { offset: 0xAC99D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemDidFailToPrepare:withError:]', symObjAddr: 0x2938, symBinAddr: 0x36FA4, symSize: 0x148 }
-  - { offset: 0xACA04, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerPlaybackDidElapse:]', symObjAddr: 0x2A80, symBinAddr: 0x370EC, symSize: 0x4C }
-  - { offset: 0xACA45, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerStateDidChange:]', symObjAddr: 0x2ACC, symBinAddr: 0x37138, symSize: 0xEC }
-  - { offset: 0xACAF9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer matchPlaybackStateToPlayerState]', symObjAddr: 0x2BB8, symBinAddr: 0x37224, symSize: 0x60 }
-  - { offset: 0xACB2D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer recoverFromWaitingIfPossible]', symObjAddr: 0x2C18, symBinAddr: 0x37284, symSize: 0xC8 }
-  - { offset: 0xACB61, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer recoverFromFailure]', symObjAddr: 0x2CE0, symBinAddr: 0x3734C, symSize: 0x88 }
-  - { offset: 0xACBAA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerError:]', symObjAddr: 0x2D68, symBinAddr: 0x373D4, symSize: 0xC4 }
-  - { offset: 0xACC15, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentPlaybackTime]', symObjAddr: 0x2E2C, symBinAddr: 0x37498, symSize: 0x3C }
-  - { offset: 0xACC63, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentItemDuration]', symObjAddr: 0x2E68, symBinAddr: 0x374D4, symSize: 0x3C }
-  - { offset: 0xACCB1, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentPlaybackRate]', symObjAddr: 0x2EA4, symBinAddr: 0x37510, symSize: 0x28 }
-  - { offset: 0xACCE9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setMixVolume:]', symObjAddr: 0x2ECC, symBinAddr: 0x37538, symSize: 0xF8 }
-  - { offset: 0xACD2E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixVolume]', symObjAddr: 0x2FC4, symBinAddr: 0x37630, symSize: 0x8 }
-  - { offset: 0xACD66, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setNormalizeSongVolume:]', symObjAddr: 0x2FCC, symBinAddr: 0x37638, symSize: 0x8 }
-  - { offset: 0xACDAE, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer normalizeSongVolume]', symObjAddr: 0x2FD4, symBinAddr: 0x37640, symSize: 0x8 }
-  - { offset: 0xACDE6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer whenAvailable:notAvailable:]', symObjAddr: 0x2FDC, symBinAddr: 0x37648, symSize: 0x198 }
-  - { offset: 0xACE94, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer updateSession:]', symObjAddr: 0x3174, symBinAddr: 0x377E0, symSize: 0x164 }
-  - { offset: 0xACF12, size: 0x8, addend: 0x0, symName: '___31-[FMAudioPlayer updateSession:]_block_invoke', symObjAddr: 0x32D8, symBinAddr: 0x37944, symSize: 0x6C }
-  - { offset: 0xACF85, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer notAvailable:]', symObjAddr: 0x3344, symBinAddr: 0x379B0, symSize: 0x248 }
-  - { offset: 0xAD061, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logsSent:]', symObjAddr: 0x358C, symBinAddr: 0x37BF8, symSize: 0x80 }
-  - { offset: 0xAD0A6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer available:]', symObjAddr: 0x360C, symBinAddr: 0x37C78, symSize: 0xF0 }
-  - { offset: 0xAD130, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer loadAudioItems:startIndexAt:withCrossfade:loopOptions:]', symObjAddr: 0x36FC, symBinAddr: 0x37D68, symSize: 0x27C }
-  - { offset: 0xAD254, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer loadAudioItems:withCrossfade:loopOptions:]', symObjAddr: 0x3978, symBinAddr: 0x37FE4, symSize: 0x10 }
-  - { offset: 0xAD2BB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLooping:]', symObjAddr: 0x3988, symBinAddr: 0x37FF4, symSize: 0x4C }
-  - { offset: 0xAD300, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer requestNextItem]', symObjAddr: 0x39D4, symBinAddr: 0x38040, symSize: 0x11C }
-  - { offset: 0xAD354, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer requestNextItem]_block_invoke', symObjAddr: 0x3AF0, symBinAddr: 0x3815C, symSize: 0x10 }
-  - { offset: 0xAD3A7, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer requestNextItem]_block_invoke.235', symObjAddr: 0x3B00, symBinAddr: 0x3816C, symSize: 0x48 }
-  - { offset: 0xAD407, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getNextOnDemandItem:final:]', symObjAddr: 0x3B48, symBinAddr: 0x381B4, symSize: 0x17C }
-  - { offset: 0xAD47D, size: 0x8, addend: 0x0, symName: '___43-[FMAudioPlayer getNextOnDemandItem:final:]_block_invoke', symObjAddr: 0x3CC4, symBinAddr: 0x38330, symSize: 0x58 }
-  - { offset: 0xAD4D0, size: 0x8, addend: 0x0, symName: '___43-[FMAudioPlayer getNextOnDemandItem:final:]_block_invoke_2', symObjAddr: 0x3D1C, symBinAddr: 0x38388, symSize: 0xF4 }
-  - { offset: 0xAD565, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s, symObjAddr: 0x3E10, symBinAddr: 0x3847C, symSize: 0x30 }
-  - { offset: 0xAD58E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playFromIndex:]', symObjAddr: 0x3E70, symBinAddr: 0x384AC, symSize: 0x22C }
-  - { offset: 0xAD601, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer localOfflineStationList]', symObjAddr: 0x409C, symBinAddr: 0x386D8, symSize: 0x8 }
-  - { offset: 0xAD639, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer deleteOfflineStation:]', symObjAddr: 0x40A4, symBinAddr: 0x386E0, symSize: 0xD8 }
-  - { offset: 0xAD67E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer deleteAllOfflineStations]', symObjAddr: 0x417C, symBinAddr: 0x387B8, symSize: 0x128 }
-  - { offset: 0xAD6CA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getOfflineStorageUsed]', symObjAddr: 0x42A4, symBinAddr: 0x388E0, symSize: 0x8 }
-  - { offset: 0xAD702, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer offlineStationInfoAvailable:]', symObjAddr: 0x42AC, symBinAddr: 0x388E8, symSize: 0x68 }
-  - { offset: 0xAD758, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer downloadAndSyncStation:withDelegate:]', symObjAddr: 0x4314, symBinAddr: 0x38950, symSize: 0xC }
-  - { offset: 0xAD7AA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer downloadAndSyncStation:forTargetMinutes:withDelegate:]', symObjAddr: 0x4320, symBinAddr: 0x3895C, symSize: 0x124 }
-  - { offset: 0xAD826, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer propagateDownloadProgress:]', symObjAddr: 0x4444, symBinAddr: 0x38A80, symSize: 0x100 }
-  - { offset: 0xAD894, size: 0x8, addend: 0x0, symName: '___43-[FMAudioPlayer propagateDownloadProgress:]_block_invoke', symObjAddr: 0x4544, symBinAddr: 0x38B80, symSize: 0x1B4 }
-  - { offset: 0xAD94B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer localOfflineStationForRemoteOfflineStation:]', symObjAddr: 0x46F8, symBinAddr: 0x38D34, symSize: 0x178 }
-  - { offset: 0xAD9AC, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteOfflineStationForLocalOfflineStation:]', symObjAddr: 0x4870, symBinAddr: 0x38EAC, symSize: 0x178 }
-  - { offset: 0xADA0D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionReceivedNextItem:]', symObjAddr: 0x49E8, symBinAddr: 0x39024, symSize: 0x88 }
-  - { offset: 0xADA63, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionCurrentItemChanged:]', symObjAddr: 0x4A70, symBinAddr: 0x390AC, symSize: 0x54 }
-  - { offset: 0xADAA4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionNoMoreMusic:]', symObjAddr: 0x4AC4, symBinAddr: 0x39100, symSize: 0xF0 }
-  - { offset: 0xADB0F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionStationChanged:]', symObjAddr: 0x4BB4, symBinAddr: 0x391F0, symSize: 0xA8 }
-  - { offset: 0xADB65, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionStationListAvailable:]', symObjAddr: 0x4C5C, symBinAddr: 0x39298, symSize: 0x23C }
-  - { offset: 0xADBEB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionRemoteOfflineListAvailable:]', symObjAddr: 0x4E98, symBinAddr: 0x394D4, symSize: 0x1B4 }
-  - { offset: 0xADC64, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initializeCache]', symObjAddr: 0x504C, symBinAddr: 0x39688, symSize: 0x4 }
-  - { offset: 0xADC94, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer cacheItemsAvailable:]', symObjAddr: 0x5050, symBinAddr: 0x3968C, symSize: 0x100 }
-  - { offset: 0xADD06, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer startCaching]', symObjAddr: 0x5150, symBinAddr: 0x3978C, symSize: 0x80 }
-  - { offset: 0xADD60, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer cacheDownloadObserver:]', symObjAddr: 0x51D0, symBinAddr: 0x3980C, symSize: 0x4 }
-  - { offset: 0xADDC4, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer names].cold.1', symObjAddr: 0xA718, symBinAddr: 0x43370, symSize: 0x14 }
-  - { offset: 0xADDE0, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer names].cold.1', symObjAddr: 0xA718, symBinAddr: 0x43370, symSize: 0x14 }
-  - { offset: 0xADDF3, size: 0x8, addend: 0x0, symName: '___22+[FMAudioPlayer names]_block_invoke', symObjAddr: 0x5218, symBinAddr: 0x39854, symSize: 0x108 }
-  - { offset: 0xADE1C, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer nameForType:]', symObjAddr: 0x5320, symBinAddr: 0x3995C, symSize: 0x4C }
-  - { offset: 0xADE65, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setPlaybackState:]', symObjAddr: 0x536C, symBinAddr: 0x399A8, symSize: 0x1EC }
-  - { offset: 0xADED0, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerItemDidBeginPlayback:]', symObjAddr: 0x5558, symBinAddr: 0x39B94, symSize: 0x4 }
-  - { offset: 0xADF11, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentItemDidChange:]', symObjAddr: 0x555C, symBinAddr: 0x39B98, symSize: 0x1DC }
-  - { offset: 0xADF83, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerStateDidChange:]', symObjAddr: 0x5738, symBinAddr: 0x39D74, symSize: 0x1C }
-  - { offset: 0xADFC6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerPlaybackDidElapse:]', symObjAddr: 0x5754, symBinAddr: 0x39D90, symSize: 0x4C }
-  - { offset: 0xAE007, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerError:]', symObjAddr: 0x57A0, symBinAddr: 0x39DDC, symSize: 0xA4 }
-  - { offset: 0xAE072, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initializeRemoteCommandCenter]', symObjAddr: 0x5844, symBinAddr: 0x39E80, symSize: 0x238 }
-  - { offset: 0xAE0C6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer disableRemoteCommandCenter]', symObjAddr: 0x5A7C, symBinAddr: 0x3A0B8, symSize: 0x138 }
-  - { offset: 0xAE11A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterPlayAction]', symObjAddr: 0x5BB4, symBinAddr: 0x3A1F0, symSize: 0x18 }
-  - { offset: 0xAE152, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterPauseAction]', symObjAddr: 0x5BCC, symBinAddr: 0x3A208, symSize: 0x18 }
-  - { offset: 0xAE18A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterLikeAction]', symObjAddr: 0x5BE4, symBinAddr: 0x3A220, symSize: 0x5C }
-  - { offset: 0xAE1C2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterDislikeAction]', symObjAddr: 0x5C40, symBinAddr: 0x3A27C, symSize: 0x5C }
-  - { offset: 0xAE1FA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterNextAction]', symObjAddr: 0x5C9C, symBinAddr: 0x3A2D8, symSize: 0x18 }
-  - { offset: 0xAE232, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterPlayPauseAction]', symObjAddr: 0x5CB4, symBinAddr: 0x3A2F0, symSize: 0x60 }
-  - { offset: 0xAE26A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLockScreenImage:]', symObjAddr: 0x5D14, symBinAddr: 0x3A350, symSize: 0x124 }
-  - { offset: 0xAE2AF, size: 0x8, addend: 0x0, symName: '___36-[FMAudioPlayer setLockScreenImage:]_block_invoke', symObjAddr: 0x5E38, symBinAddr: 0x3A474, symSize: 0x94 }
-  - { offset: 0xAE384, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer updateNowPlaying]', symObjAddr: 0x5ECC, symBinAddr: 0x3A508, symSize: 0x628 }
-  - { offset: 0xAE527, size: 0x8, addend: 0x0, symName: '___33-[FMAudioPlayer updateNowPlaying]_block_invoke', symObjAddr: 0x64F4, symBinAddr: 0x3AB30, symSize: 0x2C }
-  - { offset: 0xAE565, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initializeAVAudioSession]', symObjAddr: 0x6534, symBinAddr: 0x3AB5C, symSize: 0x1D4 }
-  - { offset: 0xAE5FA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer subscribeToAudioEvents]', symObjAddr: 0x6708, symBinAddr: 0x3AD30, symSize: 0x118 }
-  - { offset: 0xAE62E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer observeValueForKeyPath:ofObject:change:context:]', symObjAddr: 0x6820, symBinAddr: 0x3AE48, symSize: 0x140 }
-  - { offset: 0xAE6BA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer destroyAVAudioSession]', symObjAddr: 0x6960, symBinAddr: 0x3AF88, symSize: 0xB8 }
-  - { offset: 0xAE734, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer resetAudio:]', symObjAddr: 0x6A18, symBinAddr: 0x3B040, symSize: 0x134 }
-  - { offset: 0xAE79F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getOutputDeviceType:]', symObjAddr: 0x6B4C, symBinAddr: 0x3B174, symSize: 0x240 }
-  - { offset: 0xAE7E4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getCurrentOutputDevice]', symObjAddr: 0x6D8C, symBinAddr: 0x3B3B4, symSize: 0xE0 }
-  - { offset: 0xAE84D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer audioHardwareRouteChanged:]', symObjAddr: 0x6E6C, symBinAddr: 0x3B494, symSize: 0x1C0 }
-  - { offset: 0xAE8E5, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer caughtInterruption:]', symObjAddr: 0x702C, symBinAddr: 0x3B654, symSize: 0x2F4 }
-  - { offset: 0xAE9AD, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logEvent:]', symObjAddr: 0x7320, symBinAddr: 0x3B948, symSize: 0xC8 }
-  - { offset: 0xAE9F2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logEvent:withParameters:]', symObjAddr: 0x73E8, symBinAddr: 0x3BA10, symSize: 0xE0 }
-  - { offset: 0xAEA48, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer assert:withMessage:]', symObjAddr: 0x74C8, symBinAddr: 0x3BAF0, symSize: 0x148 }
-  - { offset: 0xAEB3A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer submitLogsForLastSession:]', symObjAddr: 0x7610, symBinAddr: 0x3BC38, symSize: 0xBC }
-  - { offset: 0xAEB9E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer submitLogsForRemoteDebuggingWithLabel:]', symObjAddr: 0x76CC, symBinAddr: 0x3BCF4, symSize: 0xF4 }
-  - { offset: 0xAEC45, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setBaseUrl:]', symObjAddr: 0x77C0, symBinAddr: 0x3BDE8, symSize: 0xC }
-  - { offset: 0xAEC84, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer seekStationBy:]', symObjAddr: 0x77CC, symBinAddr: 0x3BDF4, symSize: 0x40 }
-  - { offset: 0xAED00, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer maxSeekableLength]', symObjAddr: 0x780C, symBinAddr: 0x3BE34, symSize: 0x3C }
-  - { offset: 0xAED4E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setClientId:]', symObjAddr: 0x7848, symBinAddr: 0x3BE70, symSize: 0x194 }
-  - { offset: 0xAEDB3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer createNewClientId]', symObjAddr: 0x79DC, symBinAddr: 0x3C004, symSize: 0xC }
-  - { offset: 0xAEDE5, size: 0x8, addend: 0x0, symName: '___34-[FMAudioPlayer createNewClientId]_block_invoke', symObjAddr: 0x79E8, symBinAddr: 0x3C010, symSize: 0x64 }
-  - { offset: 0xAEE34, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer createNewClientIdCompletion:]', symObjAddr: 0x7A4C, symBinAddr: 0x3C074, symSize: 0x144 }
-  - { offset: 0xAEE79, size: 0x8, addend: 0x0, symName: '___45-[FMAudioPlayer createNewClientIdCompletion:]_block_invoke', symObjAddr: 0x7B90, symBinAddr: 0x3C1B8, symSize: 0xC }
-  - { offset: 0xAEEDB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getClientId]', symObjAddr: 0x7BAC, symBinAddr: 0x3C1C4, symSize: 0x8 }
-  - { offset: 0xAEF13, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setUseBackgroundNetworkServiceType:]', symObjAddr: 0x7BB4, symBinAddr: 0x3C1CC, symSize: 0x8 }
-  - { offset: 0xAEF5B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer useBackgroundNetworkServiceType]', symObjAddr: 0x7BBC, symBinAddr: 0x3C1D4, symSize: 0x8 }
-  - { offset: 0xAEF93, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setSecondsOfCrossfade:]', symObjAddr: 0x7BC4, symBinAddr: 0x3C1DC, symSize: 0x50 }
-  - { offset: 0xAEFD8, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer secondsOfCrossfade]', symObjAddr: 0x7C14, symBinAddr: 0x3C22C, symSize: 0x8 }
-  - { offset: 0xAF010, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:]', symObjAddr: 0x7C1C, symBinAddr: 0x3C234, symSize: 0x8 }
-  - { offset: 0xAF051, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:withAdvance:]', symObjAddr: 0x7C24, symBinAddr: 0x3C23C, symSize: 0x8 }
-  - { offset: 0xAF0A6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:withCrossfade:]', symObjAddr: 0x7C2C, symBinAddr: 0x3C244, symSize: 0x8 }
-  - { offset: 0xAF0FF, size: 0x8, addend: 0x0, symName: _setOfflineStation, symObjAddr: 0x7C34, symBinAddr: 0x3C24C, symSize: 0x1A4 }
-  - { offset: 0xAF14E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:withCrossfade:withAdvance:]', symObjAddr: 0x7DD8, symBinAddr: 0x3C3F0, symSize: 0x460 }
-  - { offset: 0xAF26C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getStationCrossfade:]', symObjAddr: 0x8238, symBinAddr: 0x3C850, symSize: 0x68 }
-  - { offset: 0xAF2B1, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForAudioItem:station:pageNo:resultsPerPage:withCallback:]', symObjAddr: 0x82A0, symBinAddr: 0x3C8B8, symSize: 0x8 }
-  - { offset: 0xAF330, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer prepareToPlayWithAudioItem:]', symObjAddr: 0x82A8, symBinAddr: 0x3C8C0, symSize: 0x10C }
-  - { offset: 0xAF3B8, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer prepareToPlay]', symObjAddr: 0x83B4, symBinAddr: 0x3C9CC, symSize: 0x8 }
-  - { offset: 0xAF3EE, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer play]', symObjAddr: 0x83BC, symBinAddr: 0x3C9D4, symSize: 0x268 }
-  - { offset: 0xAF465, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playAudioItem:]', symObjAddr: 0x8624, symBinAddr: 0x3CC3C, symSize: 0x3E4 }
-  - { offset: 0xAF4ED, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer preparePreview:]', symObjAddr: 0x8A08, symBinAddr: 0x3D020, symSize: 0x33C }
-  - { offset: 0xAF5E6, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer preparePreview:]_block_invoke', symObjAddr: 0x8D44, symBinAddr: 0x3D35C, symSize: 0x50 }
-  - { offset: 0xAF639, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer preparePreview:]_block_invoke_2', symObjAddr: 0x8D94, symBinAddr: 0x3D3AC, symSize: 0x114 }
-  - { offset: 0xAF6D2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer checkSimulcast]', symObjAddr: 0x8EA8, symBinAddr: 0x3D4C0, symSize: 0x50 }
-  - { offset: 0xAF70A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer pause]', symObjAddr: 0x8EF8, symBinAddr: 0x3D510, symSize: 0x78 }
-  - { offset: 0xAF753, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer destroy]', symObjAddr: 0x8F70, symBinAddr: 0x3D588, symSize: 0x34 }
-  - { offset: 0xAF787, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer stop]', symObjAddr: 0x8FA4, symBinAddr: 0x3D5BC, symSize: 0xB0 }
-  - { offset: 0xAF7D0, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skip]', symObjAddr: 0x9054, symBinAddr: 0x3D66C, symSize: 0xC }
-  - { offset: 0xAF802, size: 0x8, addend: 0x0, symName: '___21-[FMAudioPlayer skip]_block_invoke', symObjAddr: 0x9060, symBinAddr: 0x3D678, symSize: 0x64 }
-  - { offset: 0xAF851, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skipWithCompletion:]', symObjAddr: 0x90C4, symBinAddr: 0x3D6DC, symSize: 0x29C }
-  - { offset: 0xAF945, size: 0x8, addend: 0x0, symName: '___36-[FMAudioPlayer skipWithCompletion:]_block_invoke', symObjAddr: 0x9360, symBinAddr: 0x3D978, symSize: 0x8C }
-  - { offset: 0xAF9BC, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48b, symObjAddr: 0x93EC, symBinAddr: 0x3DA04, symSize: 0x3C }
-  - { offset: 0xAF9E5, size: 0x8, addend: 0x0, symName: '___36-[FMAudioPlayer skipWithCompletion:]_block_invoke.493', symObjAddr: 0x9428, symBinAddr: 0x3DA40, symSize: 0x13C }
-  - { offset: 0xAFA6E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer like]', symObjAddr: 0x9564, symBinAddr: 0x3DB7C, symSize: 0xC }
-  - { offset: 0xAFAA0, size: 0x8, addend: 0x0, symName: '___21-[FMAudioPlayer like]_block_invoke', symObjAddr: 0x9570, symBinAddr: 0x3DB88, symSize: 0x64 }
-  - { offset: 0xAFAEF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer likeWithCompletion:]', symObjAddr: 0x95D4, symBinAddr: 0x3DBEC, symSize: 0x60 }
-  - { offset: 0xAFB34, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer likeAudioItem:]', symObjAddr: 0x9634, symBinAddr: 0x3DC4C, symSize: 0xC }
-  - { offset: 0xAFB75, size: 0x8, addend: 0x0, symName: '___31-[FMAudioPlayer likeAudioItem:]_block_invoke', symObjAddr: 0x9640, symBinAddr: 0x3DC58, symSize: 0x64 }
-  - { offset: 0xAFBC4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer likeAudioItem:completion:]', symObjAddr: 0x96A4, symBinAddr: 0x3DCBC, symSize: 0x3D0 }
-  - { offset: 0xAFCC9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislike]', symObjAddr: 0x9A74, symBinAddr: 0x3E08C, symSize: 0xC }
-  - { offset: 0xAFCFB, size: 0x8, addend: 0x0, symName: '___24-[FMAudioPlayer dislike]_block_invoke', symObjAddr: 0x9A80, symBinAddr: 0x3E098, symSize: 0x64 }
-  - { offset: 0xAFD4A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislikeWithCompletion:]', symObjAddr: 0x9AE4, symBinAddr: 0x3E0FC, symSize: 0x60 }
-  - { offset: 0xAFD8F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislikeAudioItem:]', symObjAddr: 0x9B44, symBinAddr: 0x3E15C, symSize: 0xC }
-  - { offset: 0xAFDD0, size: 0x8, addend: 0x0, symName: '___34-[FMAudioPlayer dislikeAudioItem:]_block_invoke', symObjAddr: 0x9B50, symBinAddr: 0x3E168, symSize: 0x64 }
-  - { offset: 0xAFE1F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislikeAudioItem:completion:]', symObjAddr: 0x9BB4, symBinAddr: 0x3E1CC, symSize: 0x3B0 }
-  - { offset: 0xAFF24, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlike]', symObjAddr: 0x9F64, symBinAddr: 0x3E57C, symSize: 0xC }
-  - { offset: 0xAFF56, size: 0x8, addend: 0x0, symName: '___23-[FMAudioPlayer unlike]_block_invoke', symObjAddr: 0x9F70, symBinAddr: 0x3E588, symSize: 0x64 }
-  - { offset: 0xAFFA5, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlikeWithCompletion:]', symObjAddr: 0x9FD4, symBinAddr: 0x3E5EC, symSize: 0x60 }
-  - { offset: 0xAFFEA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlikeAudioItem:]', symObjAddr: 0xA034, symBinAddr: 0x3E64C, symSize: 0xC }
-  - { offset: 0xB002B, size: 0x8, addend: 0x0, symName: '___33-[FMAudioPlayer unlikeAudioItem:]_block_invoke', symObjAddr: 0xA040, symBinAddr: 0x3E658, symSize: 0x64 }
-  - { offset: 0xB007A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlikeAudioItem:completion:]', symObjAddr: 0xA0A4, symBinAddr: 0x3E6BC, symSize: 0x39C }
-  - { offset: 0xB017F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setAVAudioSessionCategory:mode:options:]', symObjAddr: 0xA440, symBinAddr: 0x3EA58, symSize: 0x78 }
-  - { offset: 0xB01E6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer delegate]', symObjAddr: 0xA4B8, symBinAddr: 0x3EAD0, symSize: 0x18 }
-  - { offset: 0xB021E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDelegate:]', symObjAddr: 0xA4D0, symBinAddr: 0x3EAE8, symSize: 0xC }
-  - { offset: 0xB0260, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playbackState]', symObjAddr: 0xA4DC, symBinAddr: 0x3EAF4, symSize: 0x8 }
-  - { offset: 0xB0298, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playHistory]', symObjAddr: 0xA4E4, symBinAddr: 0x3EAFC, symSize: 0x8 }
-  - { offset: 0xB02D0, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer stationList]', symObjAddr: 0xA4EC, symBinAddr: 0x3EB04, symSize: 0x8 }
-  - { offset: 0xB0308, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteOfflineStationList]', symObjAddr: 0xA4F4, symBinAddr: 0x3EB0C, symSize: 0x8 }
-  - { offset: 0xB0340, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logger]', symObjAddr: 0xA4FC, symBinAddr: 0x3EB14, symSize: 0x18 }
-  - { offset: 0xB0378, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLogger:]', symObjAddr: 0xA514, symBinAddr: 0x3EB2C, symSize: 0xC }
-  - { offset: 0xB03BA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer doesHandleRemoteCommands]', symObjAddr: 0xA520, symBinAddr: 0x3EB38, symSize: 0x8 }
-  - { offset: 0xB03F2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDoesHandleRemoteCommands:]', symObjAddr: 0xA528, symBinAddr: 0x3EB40, symSize: 0x8 }
-  - { offset: 0xB042E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer lockScreenDelegate]', symObjAddr: 0xA530, symBinAddr: 0x3EB48, symSize: 0x8 }
-  - { offset: 0xB0466, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLockScreenDelegate:]', symObjAddr: 0xA538, symBinAddr: 0x3EB50, symSize: 0x30 }
-  - { offset: 0xB04A8, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer cacheList]', symObjAddr: 0xA568, symBinAddr: 0x3EB80, symSize: 0x8 }
-  - { offset: 0xB04DF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setCacheList:]', symObjAddr: 0xA570, symBinAddr: 0x3EB88, symSize: 0x30 }
-  - { offset: 0xB0520, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playerControlDelegate]', symObjAddr: 0xA5A0, symBinAddr: 0x3EBB8, symSize: 0x8 }
-  - { offset: 0xB0557, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer .cxx_destruct]', symObjAddr: 0xA5A8, symBinAddr: 0x3EBC0, symSize: 0x160 }
-  - { offset: 0xB1546, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession init]', symObjAddr: 0x0, symBinAddr: 0x3ED20, symSize: 0x5A0 }
-  - { offset: 0xB1560, size: 0x8, addend: 0x0, symName: _FMOfflineSessionCurrentItemDidChangeNotification, symObjAddr: 0x3920, symBinAddr: 0x691D0, symSize: 0x0 }
-  - { offset: 0xB15AE, size: 0x8, addend: 0x0, symName: _FMOfflineSessionNextItemAvailableNotification, symObjAddr: 0x3928, symBinAddr: 0x691D8, symSize: 0x0 }
-  - { offset: 0xB15C4, size: 0x8, addend: 0x0, symName: _FMOfflineSessionActiveStationDidChangeNotification, symObjAddr: 0x3930, symBinAddr: 0x691E0, symSize: 0x0 }
-  - { offset: 0xB15DA, size: 0x8, addend: 0x0, symName: _FMOfflineSessionNoMoreMusicNotification, symObjAddr: 0x3938, symBinAddr: 0x691E8, symSize: 0x0 }
-  - { offset: 0xB196D, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession init]', symObjAddr: 0x0, symBinAddr: 0x3ED20, symSize: 0x5A0 }
-  - { offset: 0xB1AC8, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession dealloc]', symObjAddr: 0x5A0, symBinAddr: 0x3F2C0, symSize: 0x68 }
-  - { offset: 0xB1B0B, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getAudioItemsForLocalStationWithName:]', symObjAddr: 0x608, symBinAddr: 0x3F328, symSize: 0x198 }
-  - { offset: 0xB1B69, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession addtoLogs:]', symObjAddr: 0x7A0, symBinAddr: 0x3F4C0, symSize: 0x28 }
-  - { offset: 0xB1BAC, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getStorageDir]', symObjAddr: 0x7C8, symBinAddr: 0x3F4E8, symSize: 0x7C }
-  - { offset: 0xB1C4C, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession calculateOfflineStorageUsed]', symObjAddr: 0x844, symBinAddr: 0x3F564, symSize: 0x198 }
-  - { offset: 0xB1D02, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession copyAndResetLogs]', symObjAddr: 0x9DC, symBinAddr: 0x3F6FC, symSize: 0x3C }
-  - { offset: 0xB1D49, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession saveLogs]', symObjAddr: 0xA18, symBinAddr: 0x3F738, symSize: 0xA0 }
-  - { offset: 0xB1D9C, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession deleteLocalStationsWithName:]', symObjAddr: 0xAB8, symBinAddr: 0x3F7D8, symSize: 0x158 }
-  - { offset: 0xB1DEF, size: 0x8, addend: 0x0, symName: '___48-[FMOfflineSession deleteLocalStationsWithName:]_block_invoke', symObjAddr: 0xC10, symBinAddr: 0x3F930, symSize: 0xF4 }
-  - { offset: 0xB1E66, size: 0x8, addend: 0x0, symName: '___48-[FMOfflineSession deleteLocalStationsWithName:]_block_invoke.32', symObjAddr: 0xD54, symBinAddr: 0x3FA24, symSize: 0xA4 }
-  - { offset: 0xB1ED9, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession deleteAudioItems:inManager:]', symObjAddr: 0xDF8, symBinAddr: 0x3FAC8, symSize: 0x26C }
-  - { offset: 0xB1FAB, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession deleteAudioItems:inStationWithName:]', symObjAddr: 0x1064, symBinAddr: 0x3FD34, symSize: 0x184 }
-  - { offset: 0xB201D, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession computeAudioItemCounts]', symObjAddr: 0x11E8, symBinAddr: 0x3FEB8, symSize: 0x2AC }
-  - { offset: 0xB20DD, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession addOfflineStation:]', symObjAddr: 0x1494, symBinAddr: 0x40164, symSize: 0x694 }
-  - { offset: 0xB224B, size: 0x8, addend: 0x0, symName: '___38-[FMOfflineSession addOfflineStation:]_block_invoke', symObjAddr: 0x1B28, symBinAddr: 0x407F8, symSize: 0x70 }
-  - { offset: 0xB22B7, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getAvailableStationList]', symObjAddr: 0x1BA8, symBinAddr: 0x40868, symSize: 0x168 }
-  - { offset: 0xB2318, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getStationList]', symObjAddr: 0x1D10, symBinAddr: 0x409D0, symSize: 0x14C }
-  - { offset: 0xB2379, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession isStationAvailableWithName:]', symObjAddr: 0x1E5C, symBinAddr: 0x40B1C, symSize: 0x178 }
-  - { offset: 0xB23DA, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession reset]', symObjAddr: 0x1FD4, symBinAddr: 0x40C94, symSize: 0x3C }
-  - { offset: 0xB240E, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setActiveStationByName:]', symObjAddr: 0x2010, symBinAddr: 0x40CD0, symSize: 0x1B0 }
-  - { offset: 0xB246B, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession activeStation]', symObjAddr: 0x21C0, symBinAddr: 0x40E80, symSize: 0x44 }
-  - { offset: 0xB24A3, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession updatePlayTime:]', symObjAddr: 0x2204, symBinAddr: 0x40EC4, symSize: 0x114 }
-  - { offset: 0xB24F9, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession updatePlayCompleted]', symObjAddr: 0x2318, symBinAddr: 0x40FD8, symSize: 0xD8 }
-  - { offset: 0xB253E, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession playStarted]', symObjAddr: 0x23F0, symBinAddr: 0x410B0, symSize: 0x240 }
-  - { offset: 0xB2583, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestNextItemForced:]', symObjAddr: 0x2630, symBinAddr: 0x412F0, symSize: 0x1D0 }
-  - { offset: 0xB25EE, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestLikeForItem:]', symObjAddr: 0x2800, symBinAddr: 0x414C0, symSize: 0xE4 }
-  - { offset: 0xB2644, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestUnlikeForItem:]', symObjAddr: 0x28E4, symBinAddr: 0x415A4, symSize: 0xE4 }
-  - { offset: 0xB269A, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestDislikeForItem:]', symObjAddr: 0x29C8, symBinAddr: 0x41688, symSize: 0xE4 }
-  - { offset: 0xB26F0, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession canSkip]', symObjAddr: 0x2AAC, symBinAddr: 0x4176C, symSize: 0x8 }
-  - { offset: 0xB2724, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestSkip:]', symObjAddr: 0x2AB4, symBinAddr: 0x41774, symSize: 0x124 }
-  - { offset: 0xB277E, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession rejectItem:forReason:]', symObjAddr: 0x2BD8, symBinAddr: 0x41898, symSize: 0x298 }
-  - { offset: 0xB27E1, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession logEvent:withParameters:]', symObjAddr: 0x2E70, symBinAddr: 0x41B30, symSize: 0xF4 }
-  - { offset: 0xB2848, size: 0x8, addend: 0x0, symName: '+[FMOfflineSession getTimeStamp]', symObjAddr: 0x2F64, symBinAddr: 0x41C24, symSize: 0x4C }
-  - { offset: 0xB289A, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession applicationWillTerminate:]', symObjAddr: 0x2FB0, symBinAddr: 0x41C70, symSize: 0x38 }
-  - { offset: 0xB28D7, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession didEnterBackground:]', symObjAddr: 0x2FE8, symBinAddr: 0x41CA8, symSize: 0x38 }
-  - { offset: 0xB2914, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession currentItem]', symObjAddr: 0x3020, symBinAddr: 0x41CE0, symSize: 0x8 }
-  - { offset: 0xB294B, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession nextItem]', symObjAddr: 0x3028, symBinAddr: 0x41CE8, symSize: 0x8 }
-  - { offset: 0xB2982, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession stationManagers]', symObjAddr: 0x3030, symBinAddr: 0x41CF0, symSize: 0x8 }
-  - { offset: 0xB29B9, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setStationManagers:]', symObjAddr: 0x3038, symBinAddr: 0x41CF8, symSize: 0x30 }
-  - { offset: 0xB29FA, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession activeManager]', symObjAddr: 0x3068, symBinAddr: 0x41D28, symSize: 0xC }
-  - { offset: 0xB2A31, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setActiveManager:]', symObjAddr: 0x3074, symBinAddr: 0x41D34, symSize: 0x8 }
-  - { offset: 0xB2A70, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession playHistory]', symObjAddr: 0x307C, symBinAddr: 0x41D3C, symSize: 0x8 }
-  - { offset: 0xB2AA7, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setPlayHistory:]', symObjAddr: 0x3084, symBinAddr: 0x41D44, symSize: 0x30 }
-  - { offset: 0xB2AE8, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession logs]', symObjAddr: 0x30B4, symBinAddr: 0x41D74, symSize: 0x8 }
-  - { offset: 0xB2B1F, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setLogs:]', symObjAddr: 0x30BC, symBinAddr: 0x41D7C, symSize: 0x30 }
-  - { offset: 0xB2B60, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession .cxx_destruct]', symObjAddr: 0x30EC, symBinAddr: 0x41DAC, symSize: 0x60 }
-  - { offset: 0xB2E4A, size: 0x8, addend: 0x0, symName: '+[FMAsset assetWithAudioItem:]', symObjAddr: 0x0, symBinAddr: 0x41E0C, symSize: 0x4C }
-  - { offset: 0xB32A2, size: 0x8, addend: 0x0, symName: '+[FMAsset assetWithAudioItem:]', symObjAddr: 0x0, symBinAddr: 0x41E0C, symSize: 0x4C }
-  - { offset: 0xB32E5, size: 0x8, addend: 0x0, symName: '-[FMAsset dealloc]', symObjAddr: 0x4C, symBinAddr: 0x41E58, symSize: 0x78 }
-  - { offset: 0xB3341, size: 0x8, addend: 0x0, symName: '-[FMAsset init]', symObjAddr: 0xC4, symBinAddr: 0x41ED0, symSize: 0x8 }
-  - { offset: 0xB3376, size: 0x8, addend: 0x0, symName: '-[FMAsset initWithAudioItem:]', symObjAddr: 0xCC, symBinAddr: 0x41ED8, symSize: 0x74 }
-  - { offset: 0xB33BD, size: 0x8, addend: 0x0, symName: '-[FMAsset setCompletionBlockWithSuccess:failure:]', symObjAddr: 0x140, symBinAddr: 0x41F4C, symSize: 0x150 }
-  - { offset: 0xB3455, size: 0x8, addend: 0x0, symName: '___49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke', symObjAddr: 0x290, symBinAddr: 0x4209C, symSize: 0x50 }
-  - { offset: 0xB34C6, size: 0x8, addend: 0x0, symName: '___49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke.4', symObjAddr: 0x33C, symBinAddr: 0x420EC, symSize: 0x50 }
-  - { offset: 0xB3537, size: 0x8, addend: 0x0, symName: '-[FMAsset cancel]', symObjAddr: 0x38C, symBinAddr: 0x4213C, symSize: 0x88 }
-  - { offset: 0xB357F, size: 0x8, addend: 0x0, symName: '-[FMAsset completeWithItem:]', symObjAddr: 0x414, symBinAddr: 0x421C4, symSize: 0xD8 }
-  - { offset: 0xB35ED, size: 0x8, addend: 0x0, symName: '___28-[FMAsset completeWithItem:]_block_invoke', symObjAddr: 0x4EC, symBinAddr: 0x4229C, symSize: 0xA4 }
-  - { offset: 0xB364E, size: 0x8, addend: 0x0, symName: '-[FMAsset failWithError:]', symObjAddr: 0x5A0, symBinAddr: 0x42340, symSize: 0xD0 }
-  - { offset: 0xB36A7, size: 0x8, addend: 0x0, symName: '___25-[FMAsset failWithError:]_block_invoke', symObjAddr: 0x670, symBinAddr: 0x42410, symSize: 0xA4 }
-  - { offset: 0xB3708, size: 0x8, addend: 0x0, symName: '-[FMAsset loadPlayerItem]', symObjAddr: 0x714, symBinAddr: 0x424B4, symSize: 0x490 }
-  - { offset: 0xB37FB, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke', symObjAddr: 0xBA4, symBinAddr: 0x42944, symSize: 0xB0 }
-  - { offset: 0xB386C, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke_2', symObjAddr: 0xC54, symBinAddr: 0x429F4, symSize: 0x34 }
-  - { offset: 0xB38C7, size: 0x8, addend: 0x0, symName: '-[FMAsset prepareToPlayAsset:withKeys:]', symObjAddr: 0xCF0, symBinAddr: 0x42A28, symSize: 0x2AC }
-  - { offset: 0xB39B1, size: 0x8, addend: 0x0, symName: '-[FMAsset description]', symObjAddr: 0xF9C, symBinAddr: 0x42CD4, symSize: 0xD8 }
-  - { offset: 0xB39E8, size: 0x8, addend: 0x0, symName: '-[FMAsset audioItem]', symObjAddr: 0x1074, symBinAddr: 0x42DAC, symSize: 0xC }
-  - { offset: 0xB3A1F, size: 0x8, addend: 0x0, symName: '-[FMAsset playerItem]', symObjAddr: 0x1080, symBinAddr: 0x42DB8, symSize: 0xC }
-  - { offset: 0xB3A56, size: 0x8, addend: 0x0, symName: '-[FMAsset loadError]', symObjAddr: 0x108C, symBinAddr: 0x42DC4, symSize: 0xC }
-  - { offset: 0xB3A8D, size: 0x8, addend: 0x0, symName: '-[FMAsset useBackgroundNetworkServiceType]', symObjAddr: 0x1098, symBinAddr: 0x42DD0, symSize: 0x8 }
-  - { offset: 0xB3AC4, size: 0x8, addend: 0x0, symName: '-[FMAsset setUseBackgroundNetworkServiceType:]', symObjAddr: 0x10A0, symBinAddr: 0x42DD8, symSize: 0x8 }
-  - { offset: 0xB3AFF, size: 0x8, addend: 0x0, symName: '-[FMAsset successBlock]', symObjAddr: 0x10A8, symBinAddr: 0x42DE0, symSize: 0x8 }
-  - { offset: 0xB3B36, size: 0x8, addend: 0x0, symName: '-[FMAsset setSuccessBlock:]', symObjAddr: 0x10B0, symBinAddr: 0x42DE8, symSize: 0x8 }
-  - { offset: 0xB3B75, size: 0x8, addend: 0x0, symName: '-[FMAsset failureBlock]', symObjAddr: 0x10B8, symBinAddr: 0x42DF0, symSize: 0x8 }
-  - { offset: 0xB3BAC, size: 0x8, addend: 0x0, symName: '-[FMAsset setFailureBlock:]', symObjAddr: 0x10C0, symBinAddr: 0x42DF8, symSize: 0x8 }
-  - { offset: 0xB3BEB, size: 0x8, addend: 0x0, symName: '-[FMAsset .cxx_destruct]', symObjAddr: 0x10C8, symBinAddr: 0x42E00, symSize: 0x6C }
+  - { offset: 0xAA93C, size: 0x8, addend: 0x0, symName: _FMAudioPlayerPlaybackStateDidChangeNotification, symObjAddr: 0xE6D8, symBinAddr: 0x68E38, symSize: 0x0 }
+  - { offset: 0xAA95C, size: 0x8, addend: 0x0, symName: _FMAudioPlayerCurrentItemDidBeginPlaybackNotification, symObjAddr: 0xE6E0, symBinAddr: 0x68E40, symSize: 0x0 }
+  - { offset: 0xAA972, size: 0x8, addend: 0x0, symName: _FMAudioPlayerActiveStationDidChangeNotification, symObjAddr: 0xE6E8, symBinAddr: 0x68E48, symSize: 0x0 }
+  - { offset: 0xAA988, size: 0x8, addend: 0x0, symName: _FMAudioPlayerNotAvailableNotification, symObjAddr: 0xE6F0, symBinAddr: 0x68E50, symSize: 0x0 }
+  - { offset: 0xAA99E, size: 0x8, addend: 0x0, symName: _FMAudioPlayerAvailableNotification, symObjAddr: 0xE6F8, symBinAddr: 0x68E58, symSize: 0x0 }
+  - { offset: 0xAA9B4, size: 0x8, addend: 0x0, symName: _FMAudioPlayerSkipFailedNotification, symObjAddr: 0xE700, symBinAddr: 0x68E60, symSize: 0x0 }
+  - { offset: 0xAA9CA, size: 0x8, addend: 0x0, symName: _FMAudioPlayerMusicQueuedNotification, symObjAddr: 0xE708, symBinAddr: 0x68E68, symSize: 0x0 }
+  - { offset: 0xAA9E0, size: 0x8, addend: 0x0, symName: _FMAudioPlayerSkipFailureErrorKey, symObjAddr: 0xE710, symBinAddr: 0x68E70, symSize: 0x0 }
+  - { offset: 0xAA9F6, size: 0x8, addend: 0x0, symName: _FMAudioPlayerSkipStatusNotification, symObjAddr: 0xE718, symBinAddr: 0x68E78, symSize: 0x0 }
+  - { offset: 0xAAA0C, size: 0x8, addend: 0x0, symName: _FMAudioPlayerLikeStatusChangeNotification, symObjAddr: 0xE720, symBinAddr: 0x68E80, symSize: 0x0 }
+  - { offset: 0xAAA22, size: 0x8, addend: 0x0, symName: _FMAudioPlayerTimeElapseNotification, symObjAddr: 0xE728, symBinAddr: 0x68E88, symSize: 0x0 }
+  - { offset: 0xAAA38, size: 0x8, addend: 0x0, symName: _FMAudioPlayerPreCachingCompleted, symObjAddr: 0xE730, symBinAddr: 0x68E90, symSize: 0x0 }
+  - { offset: 0xAAA4E, size: 0x8, addend: 0x0, symName: _FMAudioPlayerStationDownloadProgress, symObjAddr: 0xE738, symBinAddr: 0x68E98, symSize: 0x0 }
+  - { offset: 0xAAA64, size: 0x8, addend: 0x0, symName: _FMAudioPlayerNewClientIdAvailable, symObjAddr: 0xE740, symBinAddr: 0x68EA0, symSize: 0x0 }
+  - { offset: 0xAAA7A, size: 0x8, addend: 0x0, symName: _FMAudioPlayerItemDidBeginLoadingNotification, symObjAddr: 0xE748, symBinAddr: 0x68EA8, symSize: 0x0 }
+  - { offset: 0xAAA90, size: 0x8, addend: 0x0, symName: _FMAudioPlayerItemDidFinishLoadingNotification, symObjAddr: 0xE750, symBinAddr: 0x68EB0, symSize: 0x0 }
+  - { offset: 0xAAAA6, size: 0x8, addend: 0x0, symName: _FMAudioPlayerStationListKey, symObjAddr: 0xE758, symBinAddr: 0x68EB8, symSize: 0x0 }
+  - { offset: 0xAAABC, size: 0x8, addend: 0x0, symName: _FMAudioItemKey, symObjAddr: 0xE760, symBinAddr: 0x68EC0, symSize: 0x0 }
+  - { offset: 0xAAAD4, size: 0x8, addend: 0x0, symName: '___104-[FMAudioPlayer searchForAndSetActiveStation:searchTimeoutMs:prepareToPlay:prepareTimeoutMs:completion:]_block_invoke', symObjAddr: 0x14F8, symBinAddr: 0x35BC4, symSize: 0x2E0 }
+  - { offset: 0xAACB0, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer names]', symObjAddr: 0x51D4, symBinAddr: 0x39810, symSize: 0x44 }
+  - { offset: 0xAACDC, size: 0x8, addend: 0x0, symName: _names._names, symObjAddr: 0x33A00, symBinAddr: 0x82448, symSize: 0x0 }
+  - { offset: 0xAACF3, size: 0x8, addend: 0x0, symName: _names.onceToken, symObjAddr: 0x33A08, symBinAddr: 0x82450, symSize: 0x0 }
+  - { offset: 0xAAD46, size: 0x8, addend: 0x0, symName: __sharedPlay, symObjAddr: 0x339F0, symBinAddr: 0x82438, symSize: 0x0 }
+  - { offset: 0xAB6D9, size: 0x8, addend: 0x0, symName: __autoNetworkRetryEnabled, symObjAddr: 0x339F8, symBinAddr: 0x82440, symSize: 0x0 }
+  - { offset: 0xAB770, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer sharedPlayer]', symObjAddr: 0x0, symBinAddr: 0x346CC, symSize: 0x98 }
+  - { offset: 0xAB7A3, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer autoNetworkRetryEnabled]', symObjAddr: 0x98, symBinAddr: 0x34764, symSize: 0xC }
+  - { offset: 0xAB7D6, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setAutoNetworkRetryEnabled:]', symObjAddr: 0xA4, symBinAddr: 0x34770, symSize: 0xC }
+  - { offset: 0xAB811, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initWithoutSession]', symObjAddr: 0xB0, symBinAddr: 0x3477C, symSize: 0x4A8 }
+  - { offset: 0xAB881, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer fetchSession:]', symObjAddr: 0x558, symBinAddr: 0x34C24, symSize: 0x23C }
+  - { offset: 0xAB8D4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dealloc]', symObjAddr: 0x794, symBinAddr: 0x34E60, symSize: 0xA8 }
+  - { offset: 0xAB930, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer addEventwithTx:extras:]', symObjAddr: 0x83C, symBinAddr: 0x34F08, symSize: 0x294 }
+  - { offset: 0xAB9FF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer applicationWillTerminate:]', symObjAddr: 0xAD0, symBinAddr: 0x3519C, symSize: 0x38 }
+  - { offset: 0xABA3C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer didEnterBackground:]', symObjAddr: 0xB08, symBinAddr: 0x351D4, symSize: 0x124 }
+  - { offset: 0xABA8A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer willEnterForeground:]', symObjAddr: 0xC2C, symBinAddr: 0x352F8, symSize: 0xA8 }
+  - { offset: 0xABAC7, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setClientToken:secret:]', symObjAddr: 0xCD4, symBinAddr: 0x353A0, symSize: 0x19C }
+  - { offset: 0xABB2A, size: 0x8, addend: 0x0, symName: '___39+[FMAudioPlayer setClientToken:secret:]_block_invoke', symObjAddr: 0xE70, symBinAddr: 0x3553C, symSize: 0x84 }
+  - { offset: 0xABB84, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setClientToken:secret:withClientID:]', symObjAddr: 0xEF4, symBinAddr: 0x355C0, symSize: 0x98 }
+  - { offset: 0xABBE7, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer onClientId:]', symObjAddr: 0xF8C, symBinAddr: 0x35658, symSize: 0x110 }
+  - { offset: 0xABC4E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skipStatus:]', symObjAddr: 0x109C, symBinAddr: 0x35768, symSize: 0x2C }
+  - { offset: 0xABC8F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skipStatusUpdated:]', symObjAddr: 0x10C8, symBinAddr: 0x35794, symSize: 0xFC }
+  - { offset: 0xABCD4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForStationWithQuery:pageNo:perPage:withCallback:]', symObjAddr: 0x11C4, symBinAddr: 0x35890, symSize: 0x18 }
+  - { offset: 0xABD4A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForStationByMetadata:pageNo:perPage:withCallback:]', symObjAddr: 0x11DC, symBinAddr: 0x358A8, symSize: 0x1C }
+  - { offset: 0xABDC2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForStationsByMetadata:pageNo:perPage:withCallback:]', symObjAddr: 0x11F8, symBinAddr: 0x358C4, symSize: 0x1C }
+  - { offset: 0xABE3A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer callAndRemovePrepareCompletionForAudioItem:error:]', symObjAddr: 0x1214, symBinAddr: 0x358E0, symSize: 0x104 }
+  - { offset: 0xABECD, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForAndSetActiveStation:searchTimeoutMs:prepareToPlay:prepareTimeoutMs:completion:]', symObjAddr: 0x1318, symBinAddr: 0x359E4, symSize: 0x1E0 }
+  - { offset: 0xAC025, size: 0x8, addend: 0x0, symName: '___104-[FMAudioPlayer searchForAndSetActiveStation:searchTimeoutMs:prepareToPlay:prepareTimeoutMs:completion:]_block_invoke_2', symObjAddr: 0x17D8, symBinAddr: 0x35EA4, symSize: 0x70 }
+  - { offset: 0xAC0AD, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48b56w, symObjAddr: 0x1898, symBinAddr: 0x35F14, symSize: 0x48 }
+  - { offset: 0xAC0D6, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s56w, symObjAddr: 0x18E0, symBinAddr: 0x35F5C, symSize: 0x38 }
+  - { offset: 0xAC0F5, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer requestTracksForStation:pageNo:resultsPerPage:withCallback:]', symObjAddr: 0x1918, symBinAddr: 0x35F94, symSize: 0x8 }
+  - { offset: 0xAC165, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer fetchProgramForURI:withCallback:]', symObjAddr: 0x1920, symBinAddr: 0x35F9C, symSize: 0x8 }
+  - { offset: 0xAC1B7, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer activeStation]', symObjAddr: 0x1928, symBinAddr: 0x35FA4, symSize: 0xC8 }
+  - { offset: 0xAC204, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentItem]', symObjAddr: 0x19F0, symBinAddr: 0x3606C, symSize: 0x48 }
+  - { offset: 0xAC23C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setPlayerControlDelegate:]', symObjAddr: 0x1A38, symBinAddr: 0x360B4, symSize: 0x140 }
+  - { offset: 0xAC303, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDefaultControlDelegate]', symObjAddr: 0x1B78, symBinAddr: 0x361F4, symSize: 0x12C }
+  - { offset: 0xAC390, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setSupportedAudioFormats:]', symObjAddr: 0x1CA4, symBinAddr: 0x36320, symSize: 0x8 }
+  - { offset: 0xAC3D3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer supportedAudioFormats]', symObjAddr: 0x1CAC, symBinAddr: 0x36328, symSize: 0x8 }
+  - { offset: 0xAC40B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setMaxBitrate:]', symObjAddr: 0x1CB4, symBinAddr: 0x36330, symSize: 0x8 }
+  - { offset: 0xAC44E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer maxBitrate]', symObjAddr: 0x1CBC, symBinAddr: 0x36338, symSize: 0x8 }
+  - { offset: 0xAC486, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDisableAVAudioSession:]', symObjAddr: 0x1CC4, symBinAddr: 0x36340, symSize: 0xE4 }
+  - { offset: 0xAC4CB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer disableAVAudioSession]', symObjAddr: 0x1DA8, symBinAddr: 0x36424, symSize: 0x8 }
+  - { offset: 0xAC503, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer canLike]', symObjAddr: 0x1DB0, symBinAddr: 0x3642C, symSize: 0x70 }
+  - { offset: 0xAC53B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer canSkip]', symObjAddr: 0x1E20, symBinAddr: 0x3649C, symSize: 0x98 }
+  - { offset: 0xAC573, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setStreamingFor:]', symObjAddr: 0x1EB8, symBinAddr: 0x36534, symSize: 0xC }
+  - { offset: 0xAC5B2, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setMockLocation:]', symObjAddr: 0x1EC4, symBinAddr: 0x36540, symSize: 0x30 }
+  - { offset: 0xAC5F3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemIsReadyForPlayback:]', symObjAddr: 0x1EF4, symBinAddr: 0x36570, symSize: 0x18C }
+  - { offset: 0xAC68C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]', symObjAddr: 0x2080, symBinAddr: 0x366FC, symSize: 0x3F8 }
+  - { offset: 0xAC73D, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke', symObjAddr: 0x2478, symBinAddr: 0x36AF4, symSize: 0x8 }
+  - { offset: 0xAC77F, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke.164', symObjAddr: 0x2490, symBinAddr: 0x36AFC, symSize: 0x4 }
+  - { offset: 0xAC7B5, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke_2', symObjAddr: 0x2494, symBinAddr: 0x36B00, symSize: 0x10 }
+  - { offset: 0xAC808, size: 0x8, addend: 0x0, symName: '___99-[FMAudioPlayer mixingAudioPlayerItemDidBeginPlayback:waitingTimeForPlayBack:bufferingTimeforItem:]_block_invoke_3', symObjAddr: 0x24A4, symBinAddr: 0x36B10, symSize: 0x4 }
+  - { offset: 0xAC83E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemDidFinishPlayback:dueToReason:withTotalTime:andError:]', symObjAddr: 0x24A8, symBinAddr: 0x36B14, symSize: 0x490 }
+  - { offset: 0xAC986, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerItemDidFailToPrepare:withError:]', symObjAddr: 0x2938, symBinAddr: 0x36FA4, symSize: 0x148 }
+  - { offset: 0xAC9ED, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerPlaybackDidElapse:]', symObjAddr: 0x2A80, symBinAddr: 0x370EC, symSize: 0x4C }
+  - { offset: 0xACA2E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerStateDidChange:]', symObjAddr: 0x2ACC, symBinAddr: 0x37138, symSize: 0xEC }
+  - { offset: 0xACAE2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer matchPlaybackStateToPlayerState]', symObjAddr: 0x2BB8, symBinAddr: 0x37224, symSize: 0x60 }
+  - { offset: 0xACB16, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer recoverFromWaitingIfPossible]', symObjAddr: 0x2C18, symBinAddr: 0x37284, symSize: 0xC8 }
+  - { offset: 0xACB4A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer recoverFromFailure]', symObjAddr: 0x2CE0, symBinAddr: 0x3734C, symSize: 0x88 }
+  - { offset: 0xACB93, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixingAudioPlayerError:]', symObjAddr: 0x2D68, symBinAddr: 0x373D4, symSize: 0xC4 }
+  - { offset: 0xACBFE, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentPlaybackTime]', symObjAddr: 0x2E2C, symBinAddr: 0x37498, symSize: 0x3C }
+  - { offset: 0xACC4C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentItemDuration]', symObjAddr: 0x2E68, symBinAddr: 0x374D4, symSize: 0x3C }
+  - { offset: 0xACC9A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentPlaybackRate]', symObjAddr: 0x2EA4, symBinAddr: 0x37510, symSize: 0x28 }
+  - { offset: 0xACCD2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setMixVolume:]', symObjAddr: 0x2ECC, symBinAddr: 0x37538, symSize: 0xF8 }
+  - { offset: 0xACD17, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer mixVolume]', symObjAddr: 0x2FC4, symBinAddr: 0x37630, symSize: 0x8 }
+  - { offset: 0xACD4F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setNormalizeSongVolume:]', symObjAddr: 0x2FCC, symBinAddr: 0x37638, symSize: 0x8 }
+  - { offset: 0xACD97, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer normalizeSongVolume]', symObjAddr: 0x2FD4, symBinAddr: 0x37640, symSize: 0x8 }
+  - { offset: 0xACDCF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer whenAvailable:notAvailable:]', symObjAddr: 0x2FDC, symBinAddr: 0x37648, symSize: 0x198 }
+  - { offset: 0xACE7D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer updateSession:]', symObjAddr: 0x3174, symBinAddr: 0x377E0, symSize: 0x164 }
+  - { offset: 0xACEFB, size: 0x8, addend: 0x0, symName: '___31-[FMAudioPlayer updateSession:]_block_invoke', symObjAddr: 0x32D8, symBinAddr: 0x37944, symSize: 0x6C }
+  - { offset: 0xACF6E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer notAvailable:]', symObjAddr: 0x3344, symBinAddr: 0x379B0, symSize: 0x248 }
+  - { offset: 0xAD04A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logsSent:]', symObjAddr: 0x358C, symBinAddr: 0x37BF8, symSize: 0x80 }
+  - { offset: 0xAD08F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer available:]', symObjAddr: 0x360C, symBinAddr: 0x37C78, symSize: 0xF0 }
+  - { offset: 0xAD119, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer loadAudioItems:startIndexAt:withCrossfade:loopOptions:]', symObjAddr: 0x36FC, symBinAddr: 0x37D68, symSize: 0x27C }
+  - { offset: 0xAD23D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer loadAudioItems:withCrossfade:loopOptions:]', symObjAddr: 0x3978, symBinAddr: 0x37FE4, symSize: 0x10 }
+  - { offset: 0xAD2A4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLooping:]', symObjAddr: 0x3988, symBinAddr: 0x37FF4, symSize: 0x4C }
+  - { offset: 0xAD2E9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer requestNextItem]', symObjAddr: 0x39D4, symBinAddr: 0x38040, symSize: 0x11C }
+  - { offset: 0xAD33D, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer requestNextItem]_block_invoke', symObjAddr: 0x3AF0, symBinAddr: 0x3815C, symSize: 0x10 }
+  - { offset: 0xAD390, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer requestNextItem]_block_invoke.233', symObjAddr: 0x3B00, symBinAddr: 0x3816C, symSize: 0x48 }
+  - { offset: 0xAD3F0, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getNextOnDemandItem:final:]', symObjAddr: 0x3B48, symBinAddr: 0x381B4, symSize: 0x17C }
+  - { offset: 0xAD466, size: 0x8, addend: 0x0, symName: '___43-[FMAudioPlayer getNextOnDemandItem:final:]_block_invoke', symObjAddr: 0x3CC4, symBinAddr: 0x38330, symSize: 0x58 }
+  - { offset: 0xAD4B9, size: 0x8, addend: 0x0, symName: '___43-[FMAudioPlayer getNextOnDemandItem:final:]_block_invoke_2', symObjAddr: 0x3D1C, symBinAddr: 0x38388, symSize: 0xF4 }
+  - { offset: 0xAD54E, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s, symObjAddr: 0x3E10, symBinAddr: 0x3847C, symSize: 0x30 }
+  - { offset: 0xAD577, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playFromIndex:]', symObjAddr: 0x3E70, symBinAddr: 0x384AC, symSize: 0x22C }
+  - { offset: 0xAD5EA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer localOfflineStationList]', symObjAddr: 0x409C, symBinAddr: 0x386D8, symSize: 0x8 }
+  - { offset: 0xAD622, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer deleteOfflineStation:]', symObjAddr: 0x40A4, symBinAddr: 0x386E0, symSize: 0xD8 }
+  - { offset: 0xAD667, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer deleteAllOfflineStations]', symObjAddr: 0x417C, symBinAddr: 0x387B8, symSize: 0x128 }
+  - { offset: 0xAD6B3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getOfflineStorageUsed]', symObjAddr: 0x42A4, symBinAddr: 0x388E0, symSize: 0x8 }
+  - { offset: 0xAD6EB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer offlineStationInfoAvailable:]', symObjAddr: 0x42AC, symBinAddr: 0x388E8, symSize: 0x68 }
+  - { offset: 0xAD741, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer downloadAndSyncStation:withDelegate:]', symObjAddr: 0x4314, symBinAddr: 0x38950, symSize: 0xC }
+  - { offset: 0xAD793, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer downloadAndSyncStation:forTargetMinutes:withDelegate:]', symObjAddr: 0x4320, symBinAddr: 0x3895C, symSize: 0x124 }
+  - { offset: 0xAD80F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer propagateDownloadProgress:]', symObjAddr: 0x4444, symBinAddr: 0x38A80, symSize: 0x100 }
+  - { offset: 0xAD87D, size: 0x8, addend: 0x0, symName: '___43-[FMAudioPlayer propagateDownloadProgress:]_block_invoke', symObjAddr: 0x4544, symBinAddr: 0x38B80, symSize: 0x1B4 }
+  - { offset: 0xAD934, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer localOfflineStationForRemoteOfflineStation:]', symObjAddr: 0x46F8, symBinAddr: 0x38D34, symSize: 0x178 }
+  - { offset: 0xAD995, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteOfflineStationForLocalOfflineStation:]', symObjAddr: 0x4870, symBinAddr: 0x38EAC, symSize: 0x178 }
+  - { offset: 0xAD9F6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionReceivedNextItem:]', symObjAddr: 0x49E8, symBinAddr: 0x39024, symSize: 0x88 }
+  - { offset: 0xADA4C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionCurrentItemChanged:]', symObjAddr: 0x4A70, symBinAddr: 0x390AC, symSize: 0x54 }
+  - { offset: 0xADA8D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionNoMoreMusic:]', symObjAddr: 0x4AC4, symBinAddr: 0x39100, symSize: 0xF0 }
+  - { offset: 0xADAF8, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionStationChanged:]', symObjAddr: 0x4BB4, symBinAddr: 0x391F0, symSize: 0xA8 }
+  - { offset: 0xADB4E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionStationListAvailable:]', symObjAddr: 0x4C5C, symBinAddr: 0x39298, symSize: 0x23C }
+  - { offset: 0xADBD4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer sessionRemoteOfflineListAvailable:]', symObjAddr: 0x4E98, symBinAddr: 0x394D4, symSize: 0x1B4 }
+  - { offset: 0xADC4D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initializeCache]', symObjAddr: 0x504C, symBinAddr: 0x39688, symSize: 0x4 }
+  - { offset: 0xADC7D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer cacheItemsAvailable:]', symObjAddr: 0x5050, symBinAddr: 0x3968C, symSize: 0x100 }
+  - { offset: 0xADCEF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer startCaching]', symObjAddr: 0x5150, symBinAddr: 0x3978C, symSize: 0x80 }
+  - { offset: 0xADD49, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer cacheDownloadObserver:]', symObjAddr: 0x51D0, symBinAddr: 0x3980C, symSize: 0x4 }
+  - { offset: 0xADDAD, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer names].cold.1', symObjAddr: 0xA718, symBinAddr: 0x43370, symSize: 0x14 }
+  - { offset: 0xADDC9, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer names].cold.1', symObjAddr: 0xA718, symBinAddr: 0x43370, symSize: 0x14 }
+  - { offset: 0xADDDC, size: 0x8, addend: 0x0, symName: '___22+[FMAudioPlayer names]_block_invoke', symObjAddr: 0x5218, symBinAddr: 0x39854, symSize: 0x108 }
+  - { offset: 0xADE05, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer nameForType:]', symObjAddr: 0x5320, symBinAddr: 0x3995C, symSize: 0x4C }
+  - { offset: 0xADE4E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setPlaybackState:]', symObjAddr: 0x536C, symBinAddr: 0x399A8, symSize: 0x1EC }
+  - { offset: 0xADEB9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerItemDidBeginPlayback:]', symObjAddr: 0x5558, symBinAddr: 0x39B94, symSize: 0x4 }
+  - { offset: 0xADEFA, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer currentItemDidChange:]', symObjAddr: 0x555C, symBinAddr: 0x39B98, symSize: 0x1DC }
+  - { offset: 0xADF6C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerStateDidChange:]', symObjAddr: 0x5738, symBinAddr: 0x39D74, symSize: 0x1C }
+  - { offset: 0xADFAF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerPlaybackDidElapse:]', symObjAddr: 0x5754, symBinAddr: 0x39D90, symSize: 0x4C }
+  - { offset: 0xADFF0, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer simulcastAudioPlayerError:]', symObjAddr: 0x57A0, symBinAddr: 0x39DDC, symSize: 0xA4 }
+  - { offset: 0xAE05B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initializeRemoteCommandCenter]', symObjAddr: 0x5844, symBinAddr: 0x39E80, symSize: 0x238 }
+  - { offset: 0xAE0AF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer disableRemoteCommandCenter]', symObjAddr: 0x5A7C, symBinAddr: 0x3A0B8, symSize: 0x138 }
+  - { offset: 0xAE103, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterPlayAction]', symObjAddr: 0x5BB4, symBinAddr: 0x3A1F0, symSize: 0x18 }
+  - { offset: 0xAE13B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterPauseAction]', symObjAddr: 0x5BCC, symBinAddr: 0x3A208, symSize: 0x18 }
+  - { offset: 0xAE173, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterLikeAction]', symObjAddr: 0x5BE4, symBinAddr: 0x3A220, symSize: 0x5C }
+  - { offset: 0xAE1AB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterDislikeAction]', symObjAddr: 0x5C40, symBinAddr: 0x3A27C, symSize: 0x5C }
+  - { offset: 0xAE1E3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterNextAction]', symObjAddr: 0x5C9C, symBinAddr: 0x3A2D8, symSize: 0x18 }
+  - { offset: 0xAE21B, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteCommandCenterPlayPauseAction]', symObjAddr: 0x5CB4, symBinAddr: 0x3A2F0, symSize: 0x60 }
+  - { offset: 0xAE253, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLockScreenImage:]', symObjAddr: 0x5D14, symBinAddr: 0x3A350, symSize: 0x124 }
+  - { offset: 0xAE298, size: 0x8, addend: 0x0, symName: '___36-[FMAudioPlayer setLockScreenImage:]_block_invoke', symObjAddr: 0x5E38, symBinAddr: 0x3A474, symSize: 0x94 }
+  - { offset: 0xAE36D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer updateNowPlaying]', symObjAddr: 0x5ECC, symBinAddr: 0x3A508, symSize: 0x628 }
+  - { offset: 0xAE510, size: 0x8, addend: 0x0, symName: '___33-[FMAudioPlayer updateNowPlaying]_block_invoke', symObjAddr: 0x64F4, symBinAddr: 0x3AB30, symSize: 0x2C }
+  - { offset: 0xAE54E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer initializeAVAudioSession]', symObjAddr: 0x6534, symBinAddr: 0x3AB5C, symSize: 0x1D4 }
+  - { offset: 0xAE5E3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer subscribeToAudioEvents]', symObjAddr: 0x6708, symBinAddr: 0x3AD30, symSize: 0x118 }
+  - { offset: 0xAE617, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer observeValueForKeyPath:ofObject:change:context:]', symObjAddr: 0x6820, symBinAddr: 0x3AE48, symSize: 0x140 }
+  - { offset: 0xAE6A3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer destroyAVAudioSession]', symObjAddr: 0x6960, symBinAddr: 0x3AF88, symSize: 0xB8 }
+  - { offset: 0xAE71D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer resetAudio:]', symObjAddr: 0x6A18, symBinAddr: 0x3B040, symSize: 0x134 }
+  - { offset: 0xAE788, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getOutputDeviceType:]', symObjAddr: 0x6B4C, symBinAddr: 0x3B174, symSize: 0x240 }
+  - { offset: 0xAE7CD, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getCurrentOutputDevice]', symObjAddr: 0x6D8C, symBinAddr: 0x3B3B4, symSize: 0xE0 }
+  - { offset: 0xAE836, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer audioHardwareRouteChanged:]', symObjAddr: 0x6E6C, symBinAddr: 0x3B494, symSize: 0x1C0 }
+  - { offset: 0xAE8CE, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer caughtInterruption:]', symObjAddr: 0x702C, symBinAddr: 0x3B654, symSize: 0x2F4 }
+  - { offset: 0xAE996, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logEvent:]', symObjAddr: 0x7320, symBinAddr: 0x3B948, symSize: 0xC8 }
+  - { offset: 0xAE9DB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logEvent:withParameters:]', symObjAddr: 0x73E8, symBinAddr: 0x3BA10, symSize: 0xE0 }
+  - { offset: 0xAEA31, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer assert:withMessage:]', symObjAddr: 0x74C8, symBinAddr: 0x3BAF0, symSize: 0x148 }
+  - { offset: 0xAEB23, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer submitLogsForLastSession:]', symObjAddr: 0x7610, symBinAddr: 0x3BC38, symSize: 0xBC }
+  - { offset: 0xAEB87, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer submitLogsForRemoteDebuggingWithLabel:]', symObjAddr: 0x76CC, symBinAddr: 0x3BCF4, symSize: 0xF4 }
+  - { offset: 0xAEC2E, size: 0x8, addend: 0x0, symName: '+[FMAudioPlayer setBaseUrl:]', symObjAddr: 0x77C0, symBinAddr: 0x3BDE8, symSize: 0xC }
+  - { offset: 0xAEC6D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer seekStationBy:]', symObjAddr: 0x77CC, symBinAddr: 0x3BDF4, symSize: 0x40 }
+  - { offset: 0xAECE9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer maxSeekableLength]', symObjAddr: 0x780C, symBinAddr: 0x3BE34, symSize: 0x3C }
+  - { offset: 0xAED37, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setClientId:]', symObjAddr: 0x7848, symBinAddr: 0x3BE70, symSize: 0x194 }
+  - { offset: 0xAED9C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer createNewClientId]', symObjAddr: 0x79DC, symBinAddr: 0x3C004, symSize: 0xC }
+  - { offset: 0xAEDCE, size: 0x8, addend: 0x0, symName: '___34-[FMAudioPlayer createNewClientId]_block_invoke', symObjAddr: 0x79E8, symBinAddr: 0x3C010, symSize: 0x64 }
+  - { offset: 0xAEE1D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer createNewClientIdCompletion:]', symObjAddr: 0x7A4C, symBinAddr: 0x3C074, symSize: 0x144 }
+  - { offset: 0xAEE62, size: 0x8, addend: 0x0, symName: '___45-[FMAudioPlayer createNewClientIdCompletion:]_block_invoke', symObjAddr: 0x7B90, symBinAddr: 0x3C1B8, symSize: 0xC }
+  - { offset: 0xAEEC4, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getClientId]', symObjAddr: 0x7BAC, symBinAddr: 0x3C1C4, symSize: 0x8 }
+  - { offset: 0xAEEFC, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setUseBackgroundNetworkServiceType:]', symObjAddr: 0x7BB4, symBinAddr: 0x3C1CC, symSize: 0x8 }
+  - { offset: 0xAEF44, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer useBackgroundNetworkServiceType]', symObjAddr: 0x7BBC, symBinAddr: 0x3C1D4, symSize: 0x8 }
+  - { offset: 0xAEF7C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setSecondsOfCrossfade:]', symObjAddr: 0x7BC4, symBinAddr: 0x3C1DC, symSize: 0x50 }
+  - { offset: 0xAEFC1, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer secondsOfCrossfade]', symObjAddr: 0x7C14, symBinAddr: 0x3C22C, symSize: 0x8 }
+  - { offset: 0xAEFF9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:]', symObjAddr: 0x7C1C, symBinAddr: 0x3C234, symSize: 0x8 }
+  - { offset: 0xAF03A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:withAdvance:]', symObjAddr: 0x7C24, symBinAddr: 0x3C23C, symSize: 0x8 }
+  - { offset: 0xAF08F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:withCrossfade:]', symObjAddr: 0x7C2C, symBinAddr: 0x3C244, symSize: 0x8 }
+  - { offset: 0xAF0E8, size: 0x8, addend: 0x0, symName: _setOfflineStation, symObjAddr: 0x7C34, symBinAddr: 0x3C24C, symSize: 0x1A4 }
+  - { offset: 0xAF137, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setActiveStation:withCrossfade:withAdvance:]', symObjAddr: 0x7DD8, symBinAddr: 0x3C3F0, symSize: 0x460 }
+  - { offset: 0xAF255, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer getStationCrossfade:]', symObjAddr: 0x8238, symBinAddr: 0x3C850, symSize: 0x68 }
+  - { offset: 0xAF29A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer searchForAudioItem:station:pageNo:resultsPerPage:withCallback:]', symObjAddr: 0x82A0, symBinAddr: 0x3C8B8, symSize: 0x8 }
+  - { offset: 0xAF319, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer prepareToPlayWithAudioItem:]', symObjAddr: 0x82A8, symBinAddr: 0x3C8C0, symSize: 0x10C }
+  - { offset: 0xAF3A1, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer prepareToPlay]', symObjAddr: 0x83B4, symBinAddr: 0x3C9CC, symSize: 0x8 }
+  - { offset: 0xAF3D7, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer play]', symObjAddr: 0x83BC, symBinAddr: 0x3C9D4, symSize: 0x268 }
+  - { offset: 0xAF44E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playAudioItem:]', symObjAddr: 0x8624, symBinAddr: 0x3CC3C, symSize: 0x3E4 }
+  - { offset: 0xAF4D6, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer preparePreview:]', symObjAddr: 0x8A08, symBinAddr: 0x3D020, symSize: 0x33C }
+  - { offset: 0xAF5CF, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer preparePreview:]_block_invoke', symObjAddr: 0x8D44, symBinAddr: 0x3D35C, symSize: 0x50 }
+  - { offset: 0xAF622, size: 0x8, addend: 0x0, symName: '___32-[FMAudioPlayer preparePreview:]_block_invoke_2', symObjAddr: 0x8D94, symBinAddr: 0x3D3AC, symSize: 0x114 }
+  - { offset: 0xAF6BB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer checkSimulcast]', symObjAddr: 0x8EA8, symBinAddr: 0x3D4C0, symSize: 0x50 }
+  - { offset: 0xAF6F3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer pause]', symObjAddr: 0x8EF8, symBinAddr: 0x3D510, symSize: 0x78 }
+  - { offset: 0xAF73C, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer destroy]', symObjAddr: 0x8F70, symBinAddr: 0x3D588, symSize: 0x34 }
+  - { offset: 0xAF770, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer stop]', symObjAddr: 0x8FA4, symBinAddr: 0x3D5BC, symSize: 0xB0 }
+  - { offset: 0xAF7B9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skip]', symObjAddr: 0x9054, symBinAddr: 0x3D66C, symSize: 0xC }
+  - { offset: 0xAF7EB, size: 0x8, addend: 0x0, symName: '___21-[FMAudioPlayer skip]_block_invoke', symObjAddr: 0x9060, symBinAddr: 0x3D678, symSize: 0x64 }
+  - { offset: 0xAF83A, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer skipWithCompletion:]', symObjAddr: 0x90C4, symBinAddr: 0x3D6DC, symSize: 0x29C }
+  - { offset: 0xAF92E, size: 0x8, addend: 0x0, symName: '___36-[FMAudioPlayer skipWithCompletion:]_block_invoke', symObjAddr: 0x9360, symBinAddr: 0x3D978, symSize: 0x8C }
+  - { offset: 0xAF9A5, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48b, symObjAddr: 0x93EC, symBinAddr: 0x3DA04, symSize: 0x3C }
+  - { offset: 0xAF9CE, size: 0x8, addend: 0x0, symName: '___36-[FMAudioPlayer skipWithCompletion:]_block_invoke.491', symObjAddr: 0x9428, symBinAddr: 0x3DA40, symSize: 0x13C }
+  - { offset: 0xAFA57, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer like]', symObjAddr: 0x9564, symBinAddr: 0x3DB7C, symSize: 0xC }
+  - { offset: 0xAFA89, size: 0x8, addend: 0x0, symName: '___21-[FMAudioPlayer like]_block_invoke', symObjAddr: 0x9570, symBinAddr: 0x3DB88, symSize: 0x64 }
+  - { offset: 0xAFAD8, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer likeWithCompletion:]', symObjAddr: 0x95D4, symBinAddr: 0x3DBEC, symSize: 0x60 }
+  - { offset: 0xAFB1D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer likeAudioItem:]', symObjAddr: 0x9634, symBinAddr: 0x3DC4C, symSize: 0xC }
+  - { offset: 0xAFB5E, size: 0x8, addend: 0x0, symName: '___31-[FMAudioPlayer likeAudioItem:]_block_invoke', symObjAddr: 0x9640, symBinAddr: 0x3DC58, symSize: 0x64 }
+  - { offset: 0xAFBAD, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer likeAudioItem:completion:]', symObjAddr: 0x96A4, symBinAddr: 0x3DCBC, symSize: 0x3D0 }
+  - { offset: 0xAFCB2, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislike]', symObjAddr: 0x9A74, symBinAddr: 0x3E08C, symSize: 0xC }
+  - { offset: 0xAFCE4, size: 0x8, addend: 0x0, symName: '___24-[FMAudioPlayer dislike]_block_invoke', symObjAddr: 0x9A80, symBinAddr: 0x3E098, symSize: 0x64 }
+  - { offset: 0xAFD33, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislikeWithCompletion:]', symObjAddr: 0x9AE4, symBinAddr: 0x3E0FC, symSize: 0x60 }
+  - { offset: 0xAFD78, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislikeAudioItem:]', symObjAddr: 0x9B44, symBinAddr: 0x3E15C, symSize: 0xC }
+  - { offset: 0xAFDB9, size: 0x8, addend: 0x0, symName: '___34-[FMAudioPlayer dislikeAudioItem:]_block_invoke', symObjAddr: 0x9B50, symBinAddr: 0x3E168, symSize: 0x64 }
+  - { offset: 0xAFE08, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer dislikeAudioItem:completion:]', symObjAddr: 0x9BB4, symBinAddr: 0x3E1CC, symSize: 0x3B0 }
+  - { offset: 0xAFF0D, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlike]', symObjAddr: 0x9F64, symBinAddr: 0x3E57C, symSize: 0xC }
+  - { offset: 0xAFF3F, size: 0x8, addend: 0x0, symName: '___23-[FMAudioPlayer unlike]_block_invoke', symObjAddr: 0x9F70, symBinAddr: 0x3E588, symSize: 0x64 }
+  - { offset: 0xAFF8E, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlikeWithCompletion:]', symObjAddr: 0x9FD4, symBinAddr: 0x3E5EC, symSize: 0x60 }
+  - { offset: 0xAFFD3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlikeAudioItem:]', symObjAddr: 0xA034, symBinAddr: 0x3E64C, symSize: 0xC }
+  - { offset: 0xB0014, size: 0x8, addend: 0x0, symName: '___33-[FMAudioPlayer unlikeAudioItem:]_block_invoke', symObjAddr: 0xA040, symBinAddr: 0x3E658, symSize: 0x64 }
+  - { offset: 0xB0063, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer unlikeAudioItem:completion:]', symObjAddr: 0xA0A4, symBinAddr: 0x3E6BC, symSize: 0x39C }
+  - { offset: 0xB0168, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setAVAudioSessionCategory:mode:options:]', symObjAddr: 0xA440, symBinAddr: 0x3EA58, symSize: 0x78 }
+  - { offset: 0xB01CF, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer delegate]', symObjAddr: 0xA4B8, symBinAddr: 0x3EAD0, symSize: 0x18 }
+  - { offset: 0xB0207, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDelegate:]', symObjAddr: 0xA4D0, symBinAddr: 0x3EAE8, symSize: 0xC }
+  - { offset: 0xB0249, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playbackState]', symObjAddr: 0xA4DC, symBinAddr: 0x3EAF4, symSize: 0x8 }
+  - { offset: 0xB0281, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playHistory]', symObjAddr: 0xA4E4, symBinAddr: 0x3EAFC, symSize: 0x8 }
+  - { offset: 0xB02B9, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer stationList]', symObjAddr: 0xA4EC, symBinAddr: 0x3EB04, symSize: 0x8 }
+  - { offset: 0xB02F1, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer remoteOfflineStationList]', symObjAddr: 0xA4F4, symBinAddr: 0x3EB0C, symSize: 0x8 }
+  - { offset: 0xB0329, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer logger]', symObjAddr: 0xA4FC, symBinAddr: 0x3EB14, symSize: 0x18 }
+  - { offset: 0xB0361, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLogger:]', symObjAddr: 0xA514, symBinAddr: 0x3EB2C, symSize: 0xC }
+  - { offset: 0xB03A3, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer doesHandleRemoteCommands]', symObjAddr: 0xA520, symBinAddr: 0x3EB38, symSize: 0x8 }
+  - { offset: 0xB03DB, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setDoesHandleRemoteCommands:]', symObjAddr: 0xA528, symBinAddr: 0x3EB40, symSize: 0x8 }
+  - { offset: 0xB0417, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer lockScreenDelegate]', symObjAddr: 0xA530, symBinAddr: 0x3EB48, symSize: 0x8 }
+  - { offset: 0xB044F, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setLockScreenDelegate:]', symObjAddr: 0xA538, symBinAddr: 0x3EB50, symSize: 0x30 }
+  - { offset: 0xB0491, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer cacheList]', symObjAddr: 0xA568, symBinAddr: 0x3EB80, symSize: 0x8 }
+  - { offset: 0xB04C8, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer setCacheList:]', symObjAddr: 0xA570, symBinAddr: 0x3EB88, symSize: 0x30 }
+  - { offset: 0xB0509, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer playerControlDelegate]', symObjAddr: 0xA5A0, symBinAddr: 0x3EBB8, symSize: 0x8 }
+  - { offset: 0xB0540, size: 0x8, addend: 0x0, symName: '-[FMAudioPlayer .cxx_destruct]', symObjAddr: 0xA5A8, symBinAddr: 0x3EBC0, symSize: 0x160 }
+  - { offset: 0xB152F, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession init]', symObjAddr: 0x0, symBinAddr: 0x3ED20, symSize: 0x5A0 }
+  - { offset: 0xB1549, size: 0x8, addend: 0x0, symName: _FMOfflineSessionCurrentItemDidChangeNotification, symObjAddr: 0x3920, symBinAddr: 0x691C8, symSize: 0x0 }
+  - { offset: 0xB1597, size: 0x8, addend: 0x0, symName: _FMOfflineSessionNextItemAvailableNotification, symObjAddr: 0x3928, symBinAddr: 0x691D0, symSize: 0x0 }
+  - { offset: 0xB15AD, size: 0x8, addend: 0x0, symName: _FMOfflineSessionActiveStationDidChangeNotification, symObjAddr: 0x3930, symBinAddr: 0x691D8, symSize: 0x0 }
+  - { offset: 0xB15C3, size: 0x8, addend: 0x0, symName: _FMOfflineSessionNoMoreMusicNotification, symObjAddr: 0x3938, symBinAddr: 0x691E0, symSize: 0x0 }
+  - { offset: 0xB1956, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession init]', symObjAddr: 0x0, symBinAddr: 0x3ED20, symSize: 0x5A0 }
+  - { offset: 0xB1AB1, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession dealloc]', symObjAddr: 0x5A0, symBinAddr: 0x3F2C0, symSize: 0x68 }
+  - { offset: 0xB1AF4, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getAudioItemsForLocalStationWithName:]', symObjAddr: 0x608, symBinAddr: 0x3F328, symSize: 0x198 }
+  - { offset: 0xB1B52, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession addtoLogs:]', symObjAddr: 0x7A0, symBinAddr: 0x3F4C0, symSize: 0x28 }
+  - { offset: 0xB1B95, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getStorageDir]', symObjAddr: 0x7C8, symBinAddr: 0x3F4E8, symSize: 0x7C }
+  - { offset: 0xB1C35, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession calculateOfflineStorageUsed]', symObjAddr: 0x844, symBinAddr: 0x3F564, symSize: 0x198 }
+  - { offset: 0xB1CEB, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession copyAndResetLogs]', symObjAddr: 0x9DC, symBinAddr: 0x3F6FC, symSize: 0x3C }
+  - { offset: 0xB1D32, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession saveLogs]', symObjAddr: 0xA18, symBinAddr: 0x3F738, symSize: 0xA0 }
+  - { offset: 0xB1D85, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession deleteLocalStationsWithName:]', symObjAddr: 0xAB8, symBinAddr: 0x3F7D8, symSize: 0x158 }
+  - { offset: 0xB1DD8, size: 0x8, addend: 0x0, symName: '___48-[FMOfflineSession deleteLocalStationsWithName:]_block_invoke', symObjAddr: 0xC10, symBinAddr: 0x3F930, symSize: 0xF4 }
+  - { offset: 0xB1E4F, size: 0x8, addend: 0x0, symName: '___48-[FMOfflineSession deleteLocalStationsWithName:]_block_invoke.32', symObjAddr: 0xD54, symBinAddr: 0x3FA24, symSize: 0xA4 }
+  - { offset: 0xB1EC2, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession deleteAudioItems:inManager:]', symObjAddr: 0xDF8, symBinAddr: 0x3FAC8, symSize: 0x26C }
+  - { offset: 0xB1F94, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession deleteAudioItems:inStationWithName:]', symObjAddr: 0x1064, symBinAddr: 0x3FD34, symSize: 0x184 }
+  - { offset: 0xB2006, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession computeAudioItemCounts]', symObjAddr: 0x11E8, symBinAddr: 0x3FEB8, symSize: 0x2AC }
+  - { offset: 0xB20C6, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession addOfflineStation:]', symObjAddr: 0x1494, symBinAddr: 0x40164, symSize: 0x694 }
+  - { offset: 0xB2234, size: 0x8, addend: 0x0, symName: '___38-[FMOfflineSession addOfflineStation:]_block_invoke', symObjAddr: 0x1B28, symBinAddr: 0x407F8, symSize: 0x70 }
+  - { offset: 0xB22A0, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getAvailableStationList]', symObjAddr: 0x1BA8, symBinAddr: 0x40868, symSize: 0x168 }
+  - { offset: 0xB2301, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession getStationList]', symObjAddr: 0x1D10, symBinAddr: 0x409D0, symSize: 0x14C }
+  - { offset: 0xB2362, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession isStationAvailableWithName:]', symObjAddr: 0x1E5C, symBinAddr: 0x40B1C, symSize: 0x178 }
+  - { offset: 0xB23C3, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession reset]', symObjAddr: 0x1FD4, symBinAddr: 0x40C94, symSize: 0x3C }
+  - { offset: 0xB23F7, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setActiveStationByName:]', symObjAddr: 0x2010, symBinAddr: 0x40CD0, symSize: 0x1B0 }
+  - { offset: 0xB2454, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession activeStation]', symObjAddr: 0x21C0, symBinAddr: 0x40E80, symSize: 0x44 }
+  - { offset: 0xB248C, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession updatePlayTime:]', symObjAddr: 0x2204, symBinAddr: 0x40EC4, symSize: 0x114 }
+  - { offset: 0xB24E2, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession updatePlayCompleted]', symObjAddr: 0x2318, symBinAddr: 0x40FD8, symSize: 0xD8 }
+  - { offset: 0xB2527, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession playStarted]', symObjAddr: 0x23F0, symBinAddr: 0x410B0, symSize: 0x240 }
+  - { offset: 0xB256C, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestNextItemForced:]', symObjAddr: 0x2630, symBinAddr: 0x412F0, symSize: 0x1D0 }
+  - { offset: 0xB25D7, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestLikeForItem:]', symObjAddr: 0x2800, symBinAddr: 0x414C0, symSize: 0xE4 }
+  - { offset: 0xB262D, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestUnlikeForItem:]', symObjAddr: 0x28E4, symBinAddr: 0x415A4, symSize: 0xE4 }
+  - { offset: 0xB2683, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestDislikeForItem:]', symObjAddr: 0x29C8, symBinAddr: 0x41688, symSize: 0xE4 }
+  - { offset: 0xB26D9, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession canSkip]', symObjAddr: 0x2AAC, symBinAddr: 0x4176C, symSize: 0x8 }
+  - { offset: 0xB270D, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession requestSkip:]', symObjAddr: 0x2AB4, symBinAddr: 0x41774, symSize: 0x124 }
+  - { offset: 0xB2767, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession rejectItem:forReason:]', symObjAddr: 0x2BD8, symBinAddr: 0x41898, symSize: 0x298 }
+  - { offset: 0xB27CA, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession logEvent:withParameters:]', symObjAddr: 0x2E70, symBinAddr: 0x41B30, symSize: 0xF4 }
+  - { offset: 0xB2831, size: 0x8, addend: 0x0, symName: '+[FMOfflineSession getTimeStamp]', symObjAddr: 0x2F64, symBinAddr: 0x41C24, symSize: 0x4C }
+  - { offset: 0xB2883, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession applicationWillTerminate:]', symObjAddr: 0x2FB0, symBinAddr: 0x41C70, symSize: 0x38 }
+  - { offset: 0xB28C0, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession didEnterBackground:]', symObjAddr: 0x2FE8, symBinAddr: 0x41CA8, symSize: 0x38 }
+  - { offset: 0xB28FD, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession currentItem]', symObjAddr: 0x3020, symBinAddr: 0x41CE0, symSize: 0x8 }
+  - { offset: 0xB2934, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession nextItem]', symObjAddr: 0x3028, symBinAddr: 0x41CE8, symSize: 0x8 }
+  - { offset: 0xB296B, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession stationManagers]', symObjAddr: 0x3030, symBinAddr: 0x41CF0, symSize: 0x8 }
+  - { offset: 0xB29A2, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setStationManagers:]', symObjAddr: 0x3038, symBinAddr: 0x41CF8, symSize: 0x30 }
+  - { offset: 0xB29E3, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession activeManager]', symObjAddr: 0x3068, symBinAddr: 0x41D28, symSize: 0xC }
+  - { offset: 0xB2A1A, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setActiveManager:]', symObjAddr: 0x3074, symBinAddr: 0x41D34, symSize: 0x8 }
+  - { offset: 0xB2A59, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession playHistory]', symObjAddr: 0x307C, symBinAddr: 0x41D3C, symSize: 0x8 }
+  - { offset: 0xB2A90, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setPlayHistory:]', symObjAddr: 0x3084, symBinAddr: 0x41D44, symSize: 0x30 }
+  - { offset: 0xB2AD1, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession logs]', symObjAddr: 0x30B4, symBinAddr: 0x41D74, symSize: 0x8 }
+  - { offset: 0xB2B08, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession setLogs:]', symObjAddr: 0x30BC, symBinAddr: 0x41D7C, symSize: 0x30 }
+  - { offset: 0xB2B49, size: 0x8, addend: 0x0, symName: '-[FMOfflineSession .cxx_destruct]', symObjAddr: 0x30EC, symBinAddr: 0x41DAC, symSize: 0x60 }
+  - { offset: 0xB2E33, size: 0x8, addend: 0x0, symName: '+[FMAsset assetWithAudioItem:]', symObjAddr: 0x0, symBinAddr: 0x41E0C, symSize: 0x4C }
+  - { offset: 0xB328B, size: 0x8, addend: 0x0, symName: '+[FMAsset assetWithAudioItem:]', symObjAddr: 0x0, symBinAddr: 0x41E0C, symSize: 0x4C }
+  - { offset: 0xB32CE, size: 0x8, addend: 0x0, symName: '-[FMAsset dealloc]', symObjAddr: 0x4C, symBinAddr: 0x41E58, symSize: 0x78 }
+  - { offset: 0xB332A, size: 0x8, addend: 0x0, symName: '-[FMAsset init]', symObjAddr: 0xC4, symBinAddr: 0x41ED0, symSize: 0x8 }
+  - { offset: 0xB335F, size: 0x8, addend: 0x0, symName: '-[FMAsset initWithAudioItem:]', symObjAddr: 0xCC, symBinAddr: 0x41ED8, symSize: 0x74 }
+  - { offset: 0xB33A6, size: 0x8, addend: 0x0, symName: '-[FMAsset setCompletionBlockWithSuccess:failure:]', symObjAddr: 0x140, symBinAddr: 0x41F4C, symSize: 0x150 }
+  - { offset: 0xB343E, size: 0x8, addend: 0x0, symName: '___49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke', symObjAddr: 0x290, symBinAddr: 0x4209C, symSize: 0x50 }
+  - { offset: 0xB34AF, size: 0x8, addend: 0x0, symName: '___49-[FMAsset setCompletionBlockWithSuccess:failure:]_block_invoke.4', symObjAddr: 0x33C, symBinAddr: 0x420EC, symSize: 0x50 }
+  - { offset: 0xB3520, size: 0x8, addend: 0x0, symName: '-[FMAsset cancel]', symObjAddr: 0x38C, symBinAddr: 0x4213C, symSize: 0x88 }
+  - { offset: 0xB3568, size: 0x8, addend: 0x0, symName: '-[FMAsset completeWithItem:]', symObjAddr: 0x414, symBinAddr: 0x421C4, symSize: 0xD8 }
+  - { offset: 0xB35D6, size: 0x8, addend: 0x0, symName: '___28-[FMAsset completeWithItem:]_block_invoke', symObjAddr: 0x4EC, symBinAddr: 0x4229C, symSize: 0xA4 }
+  - { offset: 0xB3637, size: 0x8, addend: 0x0, symName: '-[FMAsset failWithError:]', symObjAddr: 0x5A0, symBinAddr: 0x42340, symSize: 0xD0 }
+  - { offset: 0xB3690, size: 0x8, addend: 0x0, symName: '___25-[FMAsset failWithError:]_block_invoke', symObjAddr: 0x670, symBinAddr: 0x42410, symSize: 0xA4 }
+  - { offset: 0xB36F1, size: 0x8, addend: 0x0, symName: '-[FMAsset loadPlayerItem]', symObjAddr: 0x714, symBinAddr: 0x424B4, symSize: 0x490 }
+  - { offset: 0xB37E4, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke', symObjAddr: 0xBA4, symBinAddr: 0x42944, symSize: 0xB0 }
+  - { offset: 0xB3855, size: 0x8, addend: 0x0, symName: '___25-[FMAsset loadPlayerItem]_block_invoke_2', symObjAddr: 0xC54, symBinAddr: 0x429F4, symSize: 0x34 }
+  - { offset: 0xB38B0, size: 0x8, addend: 0x0, symName: '-[FMAsset prepareToPlayAsset:withKeys:]', symObjAddr: 0xCF0, symBinAddr: 0x42A28, symSize: 0x2AC }
+  - { offset: 0xB399A, size: 0x8, addend: 0x0, symName: '-[FMAsset description]', symObjAddr: 0xF9C, symBinAddr: 0x42CD4, symSize: 0xD8 }
+  - { offset: 0xB39D1, size: 0x8, addend: 0x0, symName: '-[FMAsset audioItem]', symObjAddr: 0x1074, symBinAddr: 0x42DAC, symSize: 0xC }
+  - { offset: 0xB3A08, size: 0x8, addend: 0x0, symName: '-[FMAsset playerItem]', symObjAddr: 0x1080, symBinAddr: 0x42DB8, symSize: 0xC }
+  - { offset: 0xB3A3F, size: 0x8, addend: 0x0, symName: '-[FMAsset loadError]', symObjAddr: 0x108C, symBinAddr: 0x42DC4, symSize: 0xC }
+  - { offset: 0xB3A76, size: 0x8, addend: 0x0, symName: '-[FMAsset useBackgroundNetworkServiceType]', symObjAddr: 0x1098, symBinAddr: 0x42DD0, symSize: 0x8 }
+  - { offset: 0xB3AAD, size: 0x8, addend: 0x0, symName: '-[FMAsset setUseBackgroundNetworkServiceType:]', symObjAddr: 0x10A0, symBinAddr: 0x42DD8, symSize: 0x8 }
+  - { offset: 0xB3AE8, size: 0x8, addend: 0x0, symName: '-[FMAsset successBlock]', symObjAddr: 0x10A8, symBinAddr: 0x42DE0, symSize: 0x8 }
+  - { offset: 0xB3B1F, size: 0x8, addend: 0x0, symName: '-[FMAsset setSuccessBlock:]', symObjAddr: 0x10B0, symBinAddr: 0x42DE8, symSize: 0x8 }
+  - { offset: 0xB3B5E, size: 0x8, addend: 0x0, symName: '-[FMAsset failureBlock]', symObjAddr: 0x10B8, symBinAddr: 0x42DF0, symSize: 0x8 }
+  - { offset: 0xB3B95, size: 0x8, addend: 0x0, symName: '-[FMAsset setFailureBlock:]', symObjAddr: 0x10C0, symBinAddr: 0x42DF8, symSize: 0x8 }
+  - { offset: 0xB3BD4, size: 0x8, addend: 0x0, symName: '-[FMAsset .cxx_destruct]', symObjAddr: 0x10C8, symBinAddr: 0x42E00, symSize: 0x6C }
 ...
