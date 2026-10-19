@@ -1,4 +1,12 @@
 
+- v5.8.1
+ - Fix: The SDK no longer posts play lifecycle events with a nil play id (e.g.
+   `POST play/(null)/complete`). The play id of the finished item is now captured before the
+   session's current item can be cleared by a reset, station change or skip, and lifecycle
+   requests refuse to build without an id.
+ - Fix: Missing-play-id diagnostics now identify the item that triggered the start or
+   completion event, even after the session advances or clears its current item.
+
 - v5.8.0
  - Distribution: CocoaPods and Carthage support have been dropped. The SDK is now distributed
    exclusively through Swift Package Manager via tags on the public FeedMedia repo.

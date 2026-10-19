@@ -1666,7 +1666,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * When playback starts, the FMAudioPlayer needs to ensure there is an
  * active AVAudioSession. By default, the player sets the AVAudioSessionCategory to
  * AVAudioSessionCategoryPlayback, the mode to AVAudioSessionModeDefault,
- * and the options to AVAudioSessionCategoryOptionMixWithOthers. If you would
+ * and the options to AVAudioSessionCategoryOptionDuckOthers. If you would
  * like the player to use alternate settings, assign them here before playback begins.
  *
  * *Note* - the options here can affect whether or not iOS will display the currently
@@ -1677,7 +1677,7 @@ typedef NS_ENUM(NSInteger, FMMixingAudioPlayerCompletionReason) {
  * [player setAVAudioSessionCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeDefault options: 0 ];
  *```
  *
- * to clear out the `AVAudioSessionCategoryOptionMixWithOthers` option, which
+ * to clear out the `AVAudioSessionCategoryOptionDuckOthers` option, which
  * prevents the music from appearing in the `Now Playing` interface.
  *
  * (note: this method does not immediately pass these values to iOS - it only assigns the default values
